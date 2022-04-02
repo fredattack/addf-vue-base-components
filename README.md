@@ -1,24 +1,58 @@
+https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax#lists
+
 # addf-vue-base-components-tailwind
 
 ## Project setup
 ```
-yarn install
+yarn install addf-vue-base-components-tailwind
 ```
 
-### Compiles and hot-reloads for development
-```
-yarn serve
+## Project global declaration
+
 ```
 
-### Compiles and minifies for production
-```
-yarn build
+import baseComponents from 'addf-vue-base-components'
+
+const app = createApp(App)
+    .use(baseComponents)
 ```
 
-### Lints and fixes files
-```
-yarn lint
-```
+# Components
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+## BaseButton
+
+### - BaseButton:
+> pros: tooltip, title, icon, linkTarget, color, isOutline, isRounded, isSoft, isElevated, size, scopedClasses, type, cursor, textColor
+>
+> slots: 
+>
+
+
+## BaseCard
+
+### - BaseCard:
+> pros: headerTitle
+>
+> slots: header, default, actions
+
+### - BaseCardSection:
+> pros: headerTitle
+>
+> slots:headerTitle
+
+### - BaseSimpleCard:
+> pros: title, name, borderedHeader, classes, buttonBackLeft, buttonBackLeftRoute,
+>
+> slots: header, cta, default
+
+
+
+## BasePage
+### - BasePageFull:
+> pros : 
+> 
+> slots : title, cta, body
+### - SettingsPageFull:
+> pros :
+>
+> slots : title, cta, body
