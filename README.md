@@ -23,9 +23,6 @@ const app = createApp(App)
 
 ### - BaseButton:
 > pros: tooltip, title, icon, linkTarget, color, isOutline, isRounded, isSoft, isElevated, size, scopedClasses, type, cursor, textColor
->
-> slots: 
->
 
 
 ## BaseCard

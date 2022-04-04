@@ -3,7 +3,7 @@ import BaseCard from "./components/BaseCard/BaseCard.vue";
 import BaseCardSection from "./components/BaseCard/BaseCardSection.vue";
 import BasePageFull from "./components/BasePage/BasePageFull.vue"
 import SettingsPageFull from "./components/BasePage/SettingsPageFull.vue"
-import ZZZHelloWorld from './components/HelloWorld.vue'
+import HelloWorld from './components/HelloWorld.vue'
 
 export default {
     BaseButton,
@@ -11,5 +11,5 @@ export default {
     BaseCardSection,
     BasePageFull,
     SettingsPageFull,
-    ZZZHelloWorld,
+   HelloWorld,
 }
