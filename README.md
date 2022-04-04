@@ -69,8 +69,45 @@ errors
 ### - BasePageFull:
 > pros : 
 > 
-> slots : title, cta, body
+> slots : title, cta, body## BasePage
 ### - SettingsPageFull:
 > pros :
 >
 > slots : title, cta, body
+> ### - BasePageFull:
+> pros : name
+value
+disabled
+required
+type
+parseType
+placeholder
+label
+groupClass
+labelClass
+inputClass
+errors
+min
+max
+>
+> slots : title, cta, body
+
+## - BaseForm
+### - BaseInput:
+> pros : 
+name,
+value,
+disabled,
+required,
+type,
+parseType,
+placeholder,
+label,
+groupClass,
+labelClass,
+inputClass,
+errors,
+min,
+max,
+>
+> slots : 
