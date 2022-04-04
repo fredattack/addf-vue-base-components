@@ -21,7 +21,7 @@
 </template>
 
 <script>
-import BaseButton from '@c/baseComponents/button/BaseButton'
+import BaseButton from "../BaseButton/BaseButton.vue";
 
 export default {
   name: 'BaseSimpleCard',
@@ -53,6 +53,7 @@ export default {
     buttonBackLeftRoute: {
       type: Object,
       required: false,
+      // eslint-disable-next-line vue/require-valid-default-prop
       default: false
     }
   },

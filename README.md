@@ -43,6 +43,27 @@ const app = createApp(App)
 > slots: header, cta, default
 
 
+## BaseDatePicker
+
+### - BaseSimpleDatePicker:
+> pros: defaultValue,
+label,
+name,
+required,
+disabled,
+canTypeDateManually,
+clearButtonVisible,
+viewType,
+monthFormat,
+weekFormat,
+startingDayOfTheWeek,
+format,
+groupClass,
+labelClass,
+errors
+>
+> slots:
+
 
 ## BasePage
 ### - BasePageFull:
