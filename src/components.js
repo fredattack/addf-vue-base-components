@@ -3,6 +3,7 @@ import BaseCard from "./components/BaseCard/BaseCard.vue";
 import BaseCardSection from "./components/BaseCard/BaseCardSection.vue";
 import BaseEditLabel from "./components/BaseLabel/BaseEditLabel.vue";
 import BaseInput from "./components/BaseForm/BaseInput.vue";
+import BaseLabel from "./components/BaseLabel/BaseLabel.vue";
 import BasePageFull from "./components/BasePage/BasePageFull.vue"
 import BaseSelectMultiple from "./components/BaseFormSelect/BaseSelectMultiple.vue";
 import BaseSelectSimple from "./components/BaseFormSelect/BaseSelectSimple.vue";
@@ -26,6 +27,7 @@ export default {
     BaseCardSection,
     BaseEditLabel,
     BaseInput,
+    BaseLabel,
     BasePageFull,
     BaseSelectMultiple,
     BaseSelectSimple,
@@ -33,8 +35,8 @@ export default {
     BaseShowEditDateInput,
     BaseShowEditInput,
     BaseShowEditSelectAjax,
-    BaseShowEditSelectSimple,
     BaseShowEditSelectMultiple,
+    BaseShowEditSelectSimple,
     BaseShowEditTextArea,
     BaseShowEditTimeInput,
     BaseShowLabel,

@@ -214,6 +214,15 @@ labelClass,
 isVertical
 >
 > slots :
+## - BaseLabel
+### - BaseLabel:
+> pros :
+content,
+color,
+icon,
+big,
+>
+> slots :
 ## - BaseFormSelect
 ### - BaseSelectSimple:
 > pros :
