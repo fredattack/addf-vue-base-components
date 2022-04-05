@@ -268,3 +268,23 @@ labelClass
 fullModelResponse
 >
 > slots : 
+## - BaseShowEditFormSelect
+### - BaseSelectSimpleAjax:
+> pros :
+editionMode,
+trackBy,
+attributeLabel,
+modelValue,
+defaultAjax,
+url,
+selectLabel,
+name,
+isRequired,
+isDisabled,
+label,
+selectedValue,
+groupClass,
+labelClass,
+fullModelResponse,
+>
+> slots : 
