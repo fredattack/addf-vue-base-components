@@ -233,3 +233,19 @@ required,
 searchable,
 >
 > slots : 
+## - BaseFormSelect
+### - BaseSelectMultiple:
+> pros :
+name,
+label,
+placeholder,
+errors,
+options,
+defaultValue,
+trackBy,
+attributeLabel,
+disabled,
+required,
+searchable,
+>
+> slots : 
