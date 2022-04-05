@@ -288,3 +288,24 @@ labelClass,
 fullModelResponse,
 >
 > slots : 
+## - BaseShowEditFormSelect
+### - BaseShowEditSelectMultiple:
+> pros :
+name,
+label,
+placeholder,
+modelValue,
+errors,
+metadata,
+defaultValue,
+trackBy,
+attributeLabel,
+disabled,
+required,
+searchable,
+groupClass,
+labelClass,
+selectClass,
+editionMode
+>
+> slots : 
