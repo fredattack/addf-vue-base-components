@@ -6,6 +6,7 @@ import BaseInput from "./components/BaseForm/BaseInput.vue";
 import BasePageFull from "./components/BasePage/BasePageFull.vue"
 import BaseSelectMultiple from "./components/BaseFormSelect/BaseSelectMultiple.vue";
 import BaseSelectSimple from "./components/BaseFormSelect/BaseSelectSimple.vue";
+import BaseSelectSimpleAjax from "./components/BaseFormSelect/BaseSelectSimpleAjax.vue";
 import BaseShowEditDateInput from "./components/BaseShowEditForm/BaseShowEditDateInput.vue";
 import BaseShowEditInput from "./components/BaseShowEditForm/BaseShowEditInput.vue";
 import BaseShowEditSelectSimple from "./components/BaseShowEditFormSelect/BaseShowEditSelectSimple.vue";
@@ -26,6 +27,7 @@ export default {
     BasePageFull,
     BaseSelectMultiple,
     BaseSelectSimple,
+    BaseSelectSimpleAjax,
     BaseShowEditDateInput,
     BaseShowEditInput,
     BaseShowEditSelectSimple,

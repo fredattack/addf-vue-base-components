@@ -249,3 +249,22 @@ required,
 searchable,
 >
 > slots : 
+## - BaseFormSelect
+### - BaseSelectSimpleAjax:
+> pros :
+trackBy
+attributeLabel
+modelValue
+defaultAjax
+url
+selectLabel
+name
+isRequired
+isDisabled
+label
+selectedValue
+groupClass
+labelClass
+fullModelResponse
+>
+> slots : 
