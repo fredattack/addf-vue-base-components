@@ -132,3 +132,18 @@ max,
 parseType,
 >
 > slots : 
+## - BaseShowEditForm
+### - BaseShowEditTextArea:
+> pros :
+editionMode,
+id,
+label,
+modelValue,
+errors,
+groupClass,
+required,
+placeholder,
+disabled,
+
+>
+> slots : 

@@ -24,8 +24,8 @@ label et error traduction: le code qui retourne la trad d'i18n
            :max='max'
            :class="cInputClass"
            :placeholder="placeholder"
-           :disabled="isDisabled"
-           :required="isRequired"
+           :disabled="disabled"
+           :required="required"
            class='border-gray-400 focus:border-blue-300 focus:ring-blue-300 focus:ring-1'
            @input="updateInput"
     />
@@ -38,8 +38,6 @@ label et error traduction: le code qui retourne la trad d'i18n
 </template>
 
 <script>
-
-
 export default {
 
   name: 'BaseInput',
@@ -119,12 +117,6 @@ export default {
     },
   },
   computed: {
-    isDisabled() {
-      return this.disabled
-    },
-    isRequired() {
-      return this.required
-    },
     cGroupClass() {
       return this.groupClass === '' ? 'mt-3 w-full' : this.groupClass
     },
@@ -160,6 +152,3 @@ export default {
 }
 </script>
 
-<style scoped>
-
-</style>
