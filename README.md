@@ -177,6 +177,26 @@ errors,
 modelValue,
 >
 > slots : 
+## - BaseShowEditForm
+### - BaseShowEditSelectSimple:
+> pros :
+editionMode,
+modelValue,
+trackBy,
+attributeLabel,
+label,
+name,
+placeholder,
+groupClass,
+labelClass,
+selectClass,
+errors,
+options,
+disabled,
+required,
+searchable
+>
+> slots : 
 ## - BaseLabel
 ### - BaseEditLabel:
 > pros :
