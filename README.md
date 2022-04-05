@@ -162,6 +162,21 @@ errors,
 modelValue,
 >
 > slots : 
+## - BaseShowEditForm
+### - BaseShowEditTimeInput:
+> pros :
+editionMode,
+name,
+required,
+placeholder,
+label,
+groupClass,
+mask,
+inputClass,
+errors,
+modelValue,
+>
+> slots : 
 ## - BaseLabel
 ### - BaseEditLabel:
 > pros :

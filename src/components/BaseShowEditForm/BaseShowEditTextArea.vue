@@ -23,8 +23,8 @@
 </template>
 
 <script>
-import BaseShowLabel from "@c/baseComponents/form/label/BaseShowLabel";
-import BaseEditLabel from "@c/baseComponents/form/label/BaseEditLabel";
+import BaseEditLabel from '../BaseLabel/BaseEditLabel.vue'
+import BaseShowLabel from '../BaseLabel/BaseShowLabel.vue'
 
 export default {
   name: "BaseShowEditTextArea",

@@ -29,8 +29,8 @@
 </template>
 
 <script>
-import BaseShowLabel from "../BaseLabel/BaseShowLabel";
-import BaseEditLabel from "../BaseLabel/BaseEditLabel";
+import BaseEditLabel from '../BaseLabel/BaseEditLabel.vue'
+import BaseShowLabel from '../BaseLabel/BaseShowLabel.vue'
 
 export default {
   name: "BaseShowEditInput",
