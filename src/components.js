@@ -16,6 +16,7 @@ import BaseShowEditSelectSimple from "./components/BaseShowEditFormSelect/BaseSh
 import BaseShowEditTextArea from "./components/BaseShowEditForm/BaseShowEditTextArea.vue";
 import BaseShowEditTimeInput from "./components/BaseShowEditForm/BaseShowEditTimeInput.vue";
 import BaseShowLabel from "./components/BaseLabel/BaseShowLabel.vue";
+import BaseShowPhoneLabel from "./components/BaseLabel/BaseShowPhoneLabel.vue";
 import BaseSimpleCard from "./components/BaseCard/BaseSimpleCard.vue";
 import BaseSimpleDatePicker from "./components/BaseDatepicker/BaseSimpleDatePicker.vue";
 import SettingsPageFull from "./components/BasePage/SettingsPageFull.vue"
@@ -40,6 +41,7 @@ export default {
     BaseShowEditTextArea,
     BaseShowEditTimeInput,
     BaseShowLabel,
+    BaseShowPhoneLabel,
     BaseSimpleCard,
     BaseSimpleDatePicker,
     SettingsPageFull,

@@ -206,6 +206,16 @@ labelClass
 >
 > slots : 
 ## - BaseLabel
+### - BaseShowPhoneLabel:
+> pros :
+label,
+modelValue,
+labelClass,
+isVertical,
+countryValue,
+>
+> slots : 
+## - BaseLabel
 ### - BaseShowLabel:
 > pros :
 label,
