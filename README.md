@@ -213,4 +213,23 @@ modelValue,
 labelClass,
 isVertical
 >
+> slots :
+## - BaseFormSelect
+### - BaseSelectSimple:
+> pros :
+name,
+label,
+placeholder,
+groupClass,
+labelClass,
+selectClass,
+errors,
+options,
+defaultValue,
+trackBy,
+attributeLabel,
+disabled,
+required,
+searchable,
+>
 > slots : 
