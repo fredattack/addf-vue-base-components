@@ -1,5 +1,6 @@
 import BaseButton from "./components/BaseButton/BaseButton.vue";
 import BaseCard from "./components/BaseCard/BaseCard.vue";
+import BaseEditLabel from "./components/BaseLabel/BaseEditLabel";
 import BaseInput from "./components/BaseForm/BaseInput.vue";
 import BaseShowEditInput from "./components/BaseShowEditForm/BaseShowEditInput.vue";
 import BaseShowEditTextArea from "./components/BaseShowEditForm/BaseShowEditTextArea.vue";
@@ -13,6 +14,7 @@ import HelloWorld from './components/HelloWorld.vue'
 export default {
     BaseButton,
     BaseCard,
+    BaseEditLabel,
     BaseInput,
     BaseShowEditInput,
     BaseShowEditTextArea,
