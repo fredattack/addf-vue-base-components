@@ -1,20 +1,9 @@
-<!--
-Comment Ca Fonctionne:
-----------------------
-
-si on donne au component le nom de 'pomme' (le nom doit être unique et identique à la key de l'objet qu'il vas modifier dans le parent)
-Le Parent doit écouter l'event @change=""
-la fonction qui sera passée dans le @change recevra en argument {attribute, name}
-
-label et error traduction: le code qui retourne la trad d'i18n
--->
-
 <template>
   <div :class="cGroupClass">
     <label v-if="label"
            :for="name"
            class='capitalize-first'
-           :class="cLabelClass">{{ label }}&nbsp;<span class="text-red-600" v-if="label && isRequired">*</span>
+           :class="cLabelClass">{{ label }}&nbsp;<span class="text-red-600" v-if="label && required">*</span>
     </label>
     <input :name="name"
            :type="type"

@@ -144,6 +144,38 @@ groupClass,
 required,
 placeholder,
 disabled,
-
+>
+> slots : 
+## - BaseShowEditForm
+### - BaseShowEditDateInput:
+> pros :
+editionMode,
+name,
+required,
+placeholder,
+label,
+groupClass,
+labelClass,
+mask,
+inputClass,
+errors,
+modelValue,
+>
+> slots : 
+## - BaseLabel
+### - BaseEditLabel:
+> pros :
+label,
+required,
+labelClass
+>
+> slots : 
+## - BaseLabel
+### - BaseShowLabel:
+> pros :
+label,
+modelValue,
+labelClass,
+isVertical
 >
 > slots : 

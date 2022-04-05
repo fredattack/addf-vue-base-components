@@ -29,8 +29,8 @@
 </template>
 
 <script>
-import BaseShowLabel from "@c/baseComponents/form/label/BaseShowLabel";
-import BaseEditLabel from "@c/baseComponents/form/label/BaseEditLabel";
+import BaseShowLabel from "../BaseLabel/BaseShowLabel";
+import BaseEditLabel from "../BaseLabel/BaseEditLabel";
 
 export default {
   name: "BaseShowEditInput",
