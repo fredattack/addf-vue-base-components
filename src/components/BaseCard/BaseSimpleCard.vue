@@ -51,10 +51,9 @@ export default {
       default: false
     },
     buttonBackLeftRoute: {
-      type: Object,
+      type: Boolean,
       required: false,
-      // eslint-disable-next-line vue/require-valid-default-prop
-      default: false
+      default: false,
     }
   },
   computed: {

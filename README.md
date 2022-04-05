@@ -111,3 +111,24 @@ min,
 max,
 >
 > slots : 
+
+## - BaseShowEditForm
+### - BaseShowEditInput:
+> pros :
+name,
+editionMode,
+id,
+label,
+modelValue,
+type,
+errors,
+groupClass,
+inputClass,
+required,
+placeholder,
+disabled,
+min,
+max,
+parseType,
+>
+> slots : 
