@@ -92,7 +92,7 @@ max
 >
 > slots : title, cta, body
 
-## - BaseForm
+## - BaseFormInput
 ### - BaseInput:
 > pros : 
 name,
@@ -111,7 +111,7 @@ min,
 max,
 >
 > slots : 
-## - BaseForm
+## - BaseFormInput
 ### - BaseInputMasked:
 > pros :
 name,
@@ -130,7 +130,7 @@ errors
 >
 > slots : 
 
-## - BaseForm
+## - BaseFormInput
 ### - BaseDateInput:
 > pros :
 errors,
@@ -147,7 +147,7 @@ value,
 errors
 >
 > slots : 
-## - BaseForm
+## - BaseFormInput
 ### - BaseTimeInput:
 > pros :
 errors
@@ -160,8 +160,28 @@ index
 value
 >
 > slots : 
+## - BaseFormInput
+### - BaseButtonInput:
+> pros :
+isClickable,
+buttonFunction,
+icon,
+name,
+value,
+disabled,
+required,
+placeholder,
+label,
+errors,
+type,
+parseType,
+inputClass,
+min,
+max,
+>
+> slots : 
 
-## - BaseShowEditForm
+## - BaseShowEditFormInput
 ### - BaseShowEditInput:
 > pros :
 name,
@@ -181,7 +201,7 @@ max,
 parseType,
 >
 > slots : 
-## - BaseShowEditForm
+## - BaseShowEditFormInput
 ### - BaseShowEditTextArea:
 > pros :
 editionMode,
@@ -195,7 +215,7 @@ placeholder,
 disabled,
 >
 > slots : 
-## - BaseShowEditForm
+## - BaseShowEditFormInput
 ### - BaseShowEditDateInput:
 > pros :
 editionMode,
@@ -211,7 +231,7 @@ errors,
 modelValue,
 >
 > slots : 
-## - BaseShowEditForm
+## - BaseShowEditFormInput
 ### - BaseShowEditTimeInput:
 > pros :
 editionMode,
@@ -226,7 +246,7 @@ errors,
 modelValue,
 >
 > slots : 
-## - BaseShowEditForm
+## - BaseShowEditFormSelect
 ### - BaseShowEditSelectSimple:
 > pros :
 editionMode,
