@@ -199,6 +199,43 @@ disabled,
 groupClass
 >
 > slots : 
+## - BaseFormInput
+### - BaseTextArea:
+> pros :
+name
+value
+disabled
+required
+placeholder
+label
+errors
+>
+> slots : 
+## - BaseCheckbox
+### - BaseCheckbox
+> pros :
+label,
+name,
+errors,
+disabled,
+required,
+value,
+>
+> slots : 
+## - BaseCheckbox
+### - BaseSimpleCheckBoxGroup
+> pros :
+options,
+name,
+label,
+defaultValue,
+translationExtention,
+translatable,
+attributeLabel,
+errors,
+trackBy,
+>
+> slots : 
 
 ## - BaseShowEditFormInput
 ### - BaseShowEditInput:
@@ -414,5 +451,21 @@ groupClass,
 labelClass,
 selectClass,
 editionMode
+>
+> slots : 
+## - BaseShowEditCheckbox
+### - BaseSimpleShowEditCheckboxGroup:
+> pros :
+options,
+name,
+label,
+translationExtention,
+translatable,
+attributeLabel,
+trackBy,
+editionMode,
+modelValue,
+required,
+errors,
 >
 > slots : 

@@ -2,6 +2,8 @@ import BaseButton from "./components/BaseButton/BaseButton.vue";
 import BaseCard from "./components/BaseCard/BaseCard.vue";
 import BaseCardSection from "./components/BaseCard/BaseCardSection.vue";
 import BaseDateInput from "./components/BaseFormInput/BaseDateInput.vue";
+import BaseTextArea from "./components/BaseFormInput/BaseTextArea.vue";
+import BaseCheckBox from "./components/BaseCheckBox/BaseCheckBox.vue";
 import BasePhoneInput from "./components/BaseFormInput/BasePhoneInput.vue";
 import BaseEditLabel from "./components/BaseLabel/BaseEditLabel.vue";
 import BaseInput from "./components/BaseFormInput/BaseInput.vue";
@@ -26,12 +28,18 @@ import BaseSimpleCard from "./components/BaseCard/BaseSimpleCard.vue";
 import BaseSimpleDatePicker from "./components/BaseDatepicker/BaseSimpleDatePicker.vue";
 import BaseTimeInput from "./components/BaseFormInput/BaseTimeInput.vue";
 import HelloWorld from './components/HelloWorld.vue'
+import BaseSimpleCheckboxGroup from "./components/BaseCheckBox/BaseSimpleCheckboxGroup.vue";
+import BaseSimpleShowEditCheckboxGroup from "./components/BaseShowEditCheckBox/BaseSimpleShowEditCheckboxGroup.vue";
 import SettingsPageFull from "./components/BasePage/SettingsPageFull.vue"
 
 export default {
     BaseButton,
     BaseCard,
     BaseCardSection,
+    BaseTextArea,
+    BaseSimpleShowEditCheckboxGroup,
+    BaseSimpleCheckboxGroup,
+    BaseCheckBox,
     BaseDateInput,
     BasePhoneInput,
     BaseButtonInput,

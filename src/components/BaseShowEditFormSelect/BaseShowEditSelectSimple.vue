@@ -1,5 +1,7 @@
 <template>
   <div v-if='editionMode' class='mt-3'>
+    {{ cDefautlValue }}
+    {{ modelValue }}
     <BaseEditLabel :label="label" :required="required"/>
     <multiselect :options="options"
                  :placeholder="placeholder"
@@ -121,13 +123,17 @@ export default {
     },
     cDefautlValue(){
       // return this.options?.find( item => item.id === this.modelValue )
-      return this.modelValue
+      // return this.modelValue
+      if(this.options && this.options.find(t => t.id === this.modelValue)) return this.options.find(t => t.id === this.modelValue).name
+      else return null
     },
   },
   methods: {
     updateValueAction( newValue ) {
+      console.log("ok", newValue)
       if(newValue){
         this.$emit("update:modelValue", newValue[this.trackBy]);
+        console.log(this.modelValue)
       } else {
         this.$emit("update:modelValue",null);
       }
