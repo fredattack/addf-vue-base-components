@@ -116,7 +116,6 @@ export default {
       return this.inputClass === '' ? 'form-control' : this.inputClass
     }
   },
-
   methods: {
     updateInput(event){
       if(this.type === 'number'){

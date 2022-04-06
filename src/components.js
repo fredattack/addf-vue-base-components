@@ -1,8 +1,10 @@
 import BaseButton from "./components/BaseButton/BaseButton.vue";
 import BaseCard from "./components/BaseCard/BaseCard.vue";
 import BaseCardSection from "./components/BaseCard/BaseCardSection.vue";
+import BaseDateInput from "./components/BaseForm/BaseDateInput.vue";
 import BaseEditLabel from "./components/BaseLabel/BaseEditLabel.vue";
 import BaseInput from "./components/BaseForm/BaseInput.vue";
+import BaseInputMasked from "./components/BaseForm/BaseInputMasked.vue";
 import BaseLabel from "./components/BaseLabel/BaseLabel.vue";
 import BasePageFull from "./components/BasePage/BasePageFull.vue"
 import BaseSelectMultiple from "./components/BaseFormSelect/BaseSelectMultiple.vue";
@@ -26,8 +28,10 @@ export default {
     BaseButton,
     BaseCard,
     BaseCardSection,
+    BaseDateInput,
     BaseEditLabel,
     BaseInput,
+    BaseInputMasked,
     BaseLabel,
     BasePageFull,
     BaseSelectMultiple,

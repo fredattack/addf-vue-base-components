@@ -111,6 +111,42 @@ min,
 max,
 >
 > slots : 
+## - BaseForm
+### - BaseInputMasked:
+> pros :
+name,
+value,
+disabled,
+required,
+type,
+placeholder,
+label,
+groupClass,
+labelClass,
+mask,
+token,
+inputClass,
+errors
+>
+> slots : 
+
+## - BaseForm
+### - BaseDateInput:
+> pros :
+errors,
+event,
+format,
+required,
+getInputValue,
+placeholder,
+label,
+name,
+index,
+disabled,
+value,
+errors
+>
+> slots : 
 
 ## - BaseShowEditForm
 ### - BaseShowEditInput:
