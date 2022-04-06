@@ -13,7 +13,7 @@
 </template>
 
 <script>
-import BaseInputMasked from "./BaseInputMasked.vue";
+import BaseInputMasked from "./BaseMaskedInput.vue";
 
 export default {
   name: 'BaseDateInput',
@@ -44,6 +44,4 @@ export default {
   },
 }
 </script>
-<style scoped>
 
-</style>

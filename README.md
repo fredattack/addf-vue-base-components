@@ -147,6 +147,19 @@ value,
 errors
 >
 > slots : 
+## - BaseForm
+### - BaseTimeInput:
+> pros :
+errors
+event
+getInputValue
+placeholder
+label
+name
+index
+value
+>
+> slots : 
 
 ## - BaseShowEditForm
 ### - BaseShowEditInput:

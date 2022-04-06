@@ -26,7 +26,7 @@ import {mask} from 'vue-the-mask'
 
 export default {
   directives: {mask},
-  name: 'BaseInputMasked',
+  name: 'BaseMaskedInput',
   props: {
     name: { type: String, required: true },
     value: { type: String, required: false },

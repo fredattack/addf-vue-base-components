@@ -4,7 +4,7 @@ import BaseCardSection from "./components/BaseCard/BaseCardSection.vue";
 import BaseDateInput from "./components/BaseForm/BaseDateInput.vue";
 import BaseEditLabel from "./components/BaseLabel/BaseEditLabel.vue";
 import BaseInput from "./components/BaseForm/BaseInput.vue";
-import BaseInputMasked from "./components/BaseForm/BaseInputMasked.vue";
+import BaseMaskedInput from "./components/BaseForm/BaseMaskedInput.vue";
 import BaseLabel from "./components/BaseLabel/BaseLabel.vue";
 import BasePageFull from "./components/BasePage/BasePageFull.vue"
 import BaseSelectMultiple from "./components/BaseFormSelect/BaseSelectMultiple.vue";
@@ -21,6 +21,7 @@ import BaseShowLabel from "./components/BaseLabel/BaseShowLabel.vue";
 import BaseShowPhoneLabel from "./components/BaseLabel/BaseShowPhoneLabel.vue";
 import BaseSimpleCard from "./components/BaseCard/BaseSimpleCard.vue";
 import BaseSimpleDatePicker from "./components/BaseDatepicker/BaseSimpleDatePicker.vue";
+import BaseTimeInput from "./components/BaseForm/BaseTimeInput.vue";
 import SettingsPageFull from "./components/BasePage/SettingsPageFull.vue"
 import HelloWorld from './components/HelloWorld.vue'
 
@@ -31,7 +32,7 @@ export default {
     BaseDateInput,
     BaseEditLabel,
     BaseInput,
-    BaseInputMasked,
+    BaseMaskedInput,
     BaseLabel,
     BasePageFull,
     BaseSelectMultiple,
@@ -48,6 +49,7 @@ export default {
     BaseShowPhoneLabel,
     BaseSimpleCard,
     BaseSimpleDatePicker,
+    BaseTimeInput,
     SettingsPageFull,
     HelloWorld,
 }
