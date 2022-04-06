@@ -177,7 +177,20 @@ type,
 parseType,
 inputClass,
 min,
-max,
+max
+>
+> slots : 
+## - BaseFormInput
+### - BasePhoneInput:
+> pros :
+name,
+label,
+model,
+countryPlaceholder,
+numberPlaceholder,
+errors,
+countries,
+disabled,
 >
 > slots : 
 

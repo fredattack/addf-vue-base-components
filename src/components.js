@@ -2,6 +2,7 @@ import BaseButton from "./components/BaseButton/BaseButton.vue";
 import BaseCard from "./components/BaseCard/BaseCard.vue";
 import BaseCardSection from "./components/BaseCard/BaseCardSection.vue";
 import BaseDateInput from "./components/BaseFormInput/BaseDateInput.vue";
+import BasePhoneInput from "./components/BaseFormInput/BasePhoneInput.vue";
 import BaseEditLabel from "./components/BaseLabel/BaseEditLabel.vue";
 import BaseInput from "./components/BaseFormInput/BaseInput.vue";
 import BaseButtonInput from "./components/BaseFormInput/BaseButtonInput.vue";
@@ -31,6 +32,7 @@ export default {
     BaseCard,
     BaseCardSection,
     BaseDateInput,
+    BasePhoneInput,
     BaseButtonInput,
     BaseEditLabel,
     BaseInput,
