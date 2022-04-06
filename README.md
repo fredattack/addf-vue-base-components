@@ -193,6 +193,12 @@ countries,
 disabled,
 >
 > slots : 
+## - BaseFormInput
+### - BaseSearchInput:
+> pros :
+groupClass
+>
+> slots : 
 
 ## - BaseShowEditFormInput
 ### - BaseShowEditInput:
