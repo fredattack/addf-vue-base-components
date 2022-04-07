@@ -41,7 +41,17 @@ const app = createApp(App)
 > pros: title, name, borderedHeader, classes, buttonBackLeft, buttonBackLeftRoute,
 >
 > slots: header, cta, default
+> 
+## BaseTable
 
+### - BaseThComponent:
+> pros:
+column,
+thClasses,
+currentSort,
+width,
+>
+> slots:
 
 ## BaseDatePicker
 
