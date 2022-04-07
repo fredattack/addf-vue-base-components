@@ -490,6 +490,21 @@ required,
 errors,
 >
 > slots : 
+## - BaseShowEditRadioGroup
+### - BaseTrueFalseShowEditRadioGroup:
+> pros :
+name,
+label,
+editionMode,
+defaultValue,
+modelValue,
+required,
+extra_id,
+errors,
+groupClass,
+labelClass,
+>
+> slots : 
 ## - BaseShowEditDatePicker
 ### - BaseShowEditDatePicker:
 > pros :
