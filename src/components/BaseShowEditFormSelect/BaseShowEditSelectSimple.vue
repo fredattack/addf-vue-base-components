@@ -1,7 +1,5 @@
 <template>
   <div v-if='editionMode' class='mt-3'>
-    {{ cDefautlValue }}
-    {{ modelValue }}
     <BaseEditLabel :label="label" :required="required"/>
     <multiselect :options="options"
                  :placeholder="placeholder"
@@ -18,7 +16,7 @@
   </div>
 
   <div v-else class='mt-3'>
-    <BaseShowLabel :label="label" :model-value="cDefautlValue"/>
+    <BaseShowLabel :label="label" :model-value="cDefautlValue.name"/>
   </div>
 
 </template>
@@ -110,30 +108,15 @@ export default {
     }
   },
   computed: {
-    cDisplayedValueWhenNotEditionMode() {
-      if (this.cDefautlValue) {
-        if (this.attributeLabel){
-          return this.cDefautlValue[this.attributeLabel]
-        } else {
-          return this.cDefautlValue
-        }
-      } else {
-        return '-'
-      }
-    },
     cDefautlValue(){
-      // return this.options?.find( item => item.id === this.modelValue )
-      // return this.modelValue
-      if(this.options && this.options.find(t => t.id === this.modelValue)) return this.options.find(t => t.id === this.modelValue).name
-      else return null
+      if(this.options && this.options.find(t => t.id === this.modelValue)) return this.options.find(t => t.id === this.modelValue)
+      else return this.options.find(t => t.id === this.modelValue)
     },
   },
   methods: {
     updateValueAction( newValue ) {
-      console.log("ok", newValue)
       if(newValue){
         this.$emit("update:modelValue", newValue[this.trackBy]);
-        console.log(this.modelValue)
       } else {
         this.$emit("update:modelValue",null);
       }
