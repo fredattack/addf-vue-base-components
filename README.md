@@ -237,6 +237,18 @@ groupClass
 disabled
 >
 > slots:
+### - BaseBooleanRadioGroup
+> pros :
+name
+label
+defaultValue
+disabled
+required
+extra_id
+errors
+isVertical
+>
+> slots:
 ## - BaseFormSelect
 ### - BaseSelectSimple:
 > pros :

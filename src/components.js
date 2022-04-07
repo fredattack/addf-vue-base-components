@@ -27,10 +27,11 @@ import BaseSimpleCard from "./components/BaseCard/BaseSimpleCard.vue";
 import BaseSimpleDatePicker from "./components/BaseDatepicker/BaseSimpleDatePicker.vue";
 import BaseTimeInput from "./components/BaseFormInput/BaseTimeInput.vue";
 import HelloWorld from './components/HelloWorld.vue'
-import BaseRadioGroup from "./components/BaseRadio/BaseRadioGroup.vue";
+import BaseRadioGroup from "./components/BaseRadioGroup/BaseRadioGroup.vue";
 import BaseSimpleCheckboxGroup from "./components/BaseCheckBox/BaseSimpleCheckboxGroup.vue";
 import BaseSimpleShowEditCheckboxGroup from "./components/BaseShowEditCheckBox/BaseSimpleShowEditCheckboxGroup.vue";
-import SettingsPageFull from "./components/BasePage/SettingsPageFull.vue"
+import SettingsPageFull from "./components/BasePage/SettingsPageFull.vue";
+import BaseBooleanRadioGroup from "./components/BaseRadioGroup/BaseBooleanRadioGroup.vue";
 
 export default {
     BaseButton,
@@ -42,6 +43,7 @@ export default {
     BaseSimpleCheckboxGroup,
     BaseCheckBox,
     BaseDateInput,
+    BaseBooleanRadioGroup,
     BasePhoneInput,
     BaseButtonInput,
     BaseInput,
