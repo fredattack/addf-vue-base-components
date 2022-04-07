@@ -38,6 +38,9 @@ import BaseShowLabel from "./components/BaseLabel/BaseShowLabel.vue";
 import BaseEditLabel from "./components/BaseLabel/BaseEditLabel.vue";
 import BaseShowEditRadioGroup from "./components/BaseShowEditRadioGroup/BaseShowEditRadioGroup.vue";
 import BaseThComponent from "./components/BaseTable/BaseThComponent.vue";
+import ColumnVisibilityDropDownComponent from "./components/BaseTable/ColumnVisibilityDropDownComponent.vue";
+import ContentTableCell from "./components/BaseTable/ContentTableCell.vue";
+import BaseSimpleTab from "./components/BaseTabs/BaseSimpleTab.vue";
 
 export default {
     BaseButton,
@@ -47,6 +50,9 @@ export default {
     BaseTextArea,
     BaseThComponent,
     BaseEditLabel,
+    BaseSimpleTab,
+    ContentTableCell,
+    ColumnVisibilityDropDownComponent,
     BaseShowEditRadioGroup,
     BaseShowLabel,
     BaseSimpleRadioGroup,

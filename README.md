@@ -52,7 +52,24 @@ currentSort,
 width,
 >
 > slots:
+### - BaseTableCell:
+> pros:
+model
+column
+>
+> slots:
+### - ColumnVisibilityDropDownComponent:
+> pros:
+modelValue,
+>
+> slots:
+## BaseTabs
 
+### - BaseSimpleTab:
+> pros:
+tabs
+>
+> slots:
 ## BaseDatePicker
 
 ### - BaseSimpleDatePicker:
