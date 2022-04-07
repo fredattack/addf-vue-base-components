@@ -111,7 +111,6 @@ min,
 max,
 >
 > slots : 
-## - BaseFormInput
 ### - BaseInputMasked:
 > pros :
 name,
@@ -128,9 +127,7 @@ token,
 inputClass,
 errors
 >
-> slots : 
-
-## - BaseFormInput
+> slots :
 ### - BaseDateInput:
 > pros :
 errors,
@@ -147,7 +144,6 @@ value,
 errors
 >
 > slots : 
-## - BaseFormInput
 ### - BaseTimeInput:
 > pros :
 errors
@@ -160,7 +156,6 @@ index
 value
 >
 > slots : 
-## - BaseFormInput
 ### - BaseButtonInput:
 > pros :
 isClickable,
@@ -180,7 +175,6 @@ min,
 max
 >
 > slots : 
-## - BaseFormInput
 ### - BasePhoneInput:
 > pros :
 name,
@@ -193,13 +187,11 @@ countries,
 disabled,
 >
 > slots : 
-## - BaseFormInput
 ### - BaseSearchInput:
 > pros :
 groupClass
 >
 > slots : 
-## - BaseFormInput
 ### - BaseTextArea:
 > pros :
 name
@@ -222,7 +214,6 @@ required,
 value,
 >
 > slots : 
-## - BaseCheckbox
 ### - BaseSimpleCheckBoxGroup
 > pros :
 options,
@@ -236,7 +227,101 @@ errors,
 trackBy,
 >
 > slots : 
-
+##BaseRadio
+### - BaseRadioGroup
+> pros :
+options
+value
+name
+groupClass
+disabled
+>
+> slots:
+## - BaseFormSelect
+### - BaseSelectSimple:
+> pros :
+name,
+label,
+placeholder,
+groupClass,
+labelClass,
+selectClass,
+errors,
+options,
+defaultValue,
+trackBy,
+attributeLabel,
+disabled,
+required,
+searchable,
+>
+> slots :
+### - BaseSelectMultiple:
+> pros :
+name,
+label,
+placeholder,
+errors,
+options,
+defaultValue,
+trackBy,
+attributeLabel,
+disabled,
+required,
+searchable,
+>
+> slots :
+### - BaseSelectSimpleAjax:
+> pros :
+trackBy
+attributeLabel
+modelValue
+defaultAjax
+url
+selectLabel
+name
+isRequired
+isDisabled
+label
+selectedValue
+groupClass
+labelClass
+fullModelResponse
+>
+> slots :
+## - BaseLabel
+### - BaseEditLabel:
+> pros :
+label,
+required,
+labelClass
+>
+> slots : 
+### - BaseShowPhoneLabel:
+> pros :
+label,
+modelValue,
+labelClass,
+isVertical,
+countryValue,
+>
+> slots : 
+### - BaseShowLabel:
+> pros :
+label,
+modelValue,
+labelClass,
+isVertical
+>
+> slots :
+### - BaseLabel:
+> pros :
+content,
+color,
+icon,
+big,
+>
+> slots :
 ## - BaseShowEditFormInput
 ### - BaseShowEditInput:
 > pros :
@@ -256,8 +341,7 @@ min,
 max,
 parseType,
 >
-> slots : 
-## - BaseShowEditFormInput
+> slots :
 ### - BaseShowEditTextArea:
 > pros :
 editionMode,
@@ -270,8 +354,7 @@ required,
 placeholder,
 disabled,
 >
-> slots : 
-## - BaseShowEditFormInput
+> slots :
 ### - BaseShowEditDateInput:
 > pros :
 editionMode,
@@ -286,8 +369,7 @@ inputClass,
 errors,
 modelValue,
 >
-> slots : 
-## - BaseShowEditFormInput
+> slots :
 ### - BaseShowEditTimeInput:
 > pros :
 editionMode,
@@ -301,119 +383,9 @@ inputClass,
 errors,
 modelValue,
 >
-> slots : 
-## - BaseShowEditFormSelect
-### - BaseShowEditSelectSimple:
-> pros :
-editionMode,
-modelValue,
-trackBy,
-attributeLabel,
-label,
-name,
-placeholder,
-groupClass,
-labelClass,
-selectClass,
-errors,
-options,
-disabled,
-required,
-searchable
->
-> slots : 
-## - BaseLabel
-### - BaseEditLabel:
-> pros :
-label,
-required,
-labelClass
->
-> slots : 
-## - BaseLabel
-### - BaseShowPhoneLabel:
-> pros :
-label,
-modelValue,
-labelClass,
-isVertical,
-countryValue,
->
-> slots : 
-## - BaseLabel
-### - BaseShowLabel:
-> pros :
-label,
-modelValue,
-labelClass,
-isVertical
->
 > slots :
-## - BaseLabel
-### - BaseLabel:
-> pros :
-content,
-color,
-icon,
-big,
->
-> slots :
-## - BaseFormSelect
-### - BaseSelectSimple:
-> pros :
-name,
-label,
-placeholder,
-groupClass,
-labelClass,
-selectClass,
-errors,
-options,
-defaultValue,
-trackBy,
-attributeLabel,
-disabled,
-required,
-searchable,
->
-> slots : 
-## - BaseFormSelect
-### - BaseSelectMultiple:
-> pros :
-name,
-label,
-placeholder,
-errors,
-options,
-defaultValue,
-trackBy,
-attributeLabel,
-disabled,
-required,
-searchable,
->
-> slots : 
-## - BaseFormSelect
-### - BaseSelectSimpleAjax:
-> pros :
-trackBy
-attributeLabel
-modelValue
-defaultAjax
-url
-selectLabel
-name
-isRequired
-isDisabled
-label
-selectedValue
-groupClass
-labelClass
-fullModelResponse
->
-> slots : 
 ## - BaseShowEditFormSelect
-### - BaseSelectSimpleAjax:
+### - BaseShowEditSelectAjax:
 > pros :
 editionMode,
 trackBy,
@@ -432,7 +404,25 @@ labelClass,
 fullModelResponse,
 >
 > slots : 
-## - BaseShowEditFormSelect
+### - BaseShowEditSelectSimple:
+> pros :
+editionMode,
+modelValue,
+trackBy,
+attributeLabel,
+label,
+name,
+placeholder,
+groupClass,
+labelClass,
+selectClass,
+errors,
+options,
+disabled,
+required,
+searchable
+>
+> slots :
 ### - BaseShowEditSelectMultiple:
 > pros :
 name,
@@ -466,6 +456,27 @@ trackBy,
 editionMode,
 modelValue,
 required,
+errors,
+>
+> slots : 
+## - BaseShowEditDatePicker
+### - BaseShowEditDatePicker:
+> pros :
+editionMode,
+modelValue,
+label,
+name,
+required,
+disabled,
+canTypeDateManually,
+clearButtonVisible,
+viewType,
+monthFormat,
+weekFormat,
+startingDayOfTheWeek,
+format,
+groupClass,
+labelClass,
 errors,
 >
 > slots : 

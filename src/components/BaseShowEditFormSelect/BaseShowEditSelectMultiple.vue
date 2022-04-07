@@ -21,7 +21,7 @@
     <div v-if='modelValue.length >= 1'>
       <span v-for="(item, index) in modelValue" class="inline-block mr-3" :key="index">
         <font-awesome-icon :icon='["fal","check-square"]' class='mr-1 text-blue-900 mt-2' />
-<!--        {{  metadata?.find(data => data.id === item).name }}-->
+        {{ getElement(item) }}
       </span>
     </div>
     <template v-else>
@@ -53,8 +53,10 @@ export default {
       required: false
     },
     modelValue: {
-      type: String,
-      default: "",
+      type: Array,
+      default() {
+        return []
+      },
       require: true,
     },
     errors: {
@@ -118,14 +120,17 @@ export default {
   computed: {
     cDefaultValue(){
       // let defaultValues = []
-      // for(let i of this.modelValue) {
+      // for(let i in this.modelValue) {
       //   defaultValues.push(this.metadata.find( item => item?.id === i ))
       // }
-      // return defaultValues
-      return []
+      return this.modelValue
     },
   },
   methods: {
+    getElement(item) {
+      if(this.metadata && this.metadata.find(data => data.id === item).name) return this.metadata.find(data => data.id === item).name
+      else return
+    },
     updateInput( newValue ) {
       let updateModelValue = []
       for(let i of newValue) {

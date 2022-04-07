@@ -5,7 +5,6 @@ import BaseDateInput from "./components/BaseFormInput/BaseDateInput.vue";
 import BaseTextArea from "./components/BaseFormInput/BaseTextArea.vue";
 import BaseCheckBox from "./components/BaseCheckBox/BaseCheckBox.vue";
 import BasePhoneInput from "./components/BaseFormInput/BasePhoneInput.vue";
-import BaseEditLabel from "./components/BaseLabel/BaseEditLabel.vue";
 import BaseInput from "./components/BaseFormInput/BaseInput.vue";
 import BaseButtonInput from "./components/BaseFormInput/BaseButtonInput.vue";
 import BaseLabel from "./components/BaseLabel/BaseLabel.vue";
@@ -21,13 +20,14 @@ import BaseShowEditSelectMultiple from "./components/BaseShowEditFormSelect/Base
 import BaseShowEditSelectSimple from "./components/BaseShowEditFormSelect/BaseShowEditSelectSimple.vue";
 import BaseShowEditTextArea from "./components/BaseShowEditFormInput/BaseShowEditTextArea.vue";
 import BaseShowEditTimeInput from "./components/BaseShowEditFormInput/BaseShowEditTimeInput.vue";
-import BaseShowLabel from "./components/BaseLabel/BaseShowLabel.vue";
 import BaseShowPhoneLabel from "./components/BaseLabel/BaseShowPhoneLabel.vue";
+import BaseShowEditDatePicker from "./components/BaseShowEditDatePicker/BaseShowEditDatePicker.vue";
 import BaseSearchInput from "./components/BaseFormInput/BaseSearchInput.vue";
 import BaseSimpleCard from "./components/BaseCard/BaseSimpleCard.vue";
 import BaseSimpleDatePicker from "./components/BaseDatepicker/BaseSimpleDatePicker.vue";
 import BaseTimeInput from "./components/BaseFormInput/BaseTimeInput.vue";
 import HelloWorld from './components/HelloWorld.vue'
+import BaseRadioGroup from "./components/BaseRadio/BaseRadioGroup.vue";
 import BaseSimpleCheckboxGroup from "./components/BaseCheckBox/BaseSimpleCheckboxGroup.vue";
 import BaseSimpleShowEditCheckboxGroup from "./components/BaseShowEditCheckBox/BaseSimpleShowEditCheckboxGroup.vue";
 import SettingsPageFull from "./components/BasePage/SettingsPageFull.vue"
@@ -35,6 +35,7 @@ import SettingsPageFull from "./components/BasePage/SettingsPageFull.vue"
 export default {
     BaseButton,
     BaseCard,
+    BaseShowEditDatePicker,
     BaseCardSection,
     BaseTextArea,
     BaseSimpleShowEditCheckboxGroup,
@@ -43,12 +44,12 @@ export default {
     BaseDateInput,
     BasePhoneInput,
     BaseButtonInput,
-    BaseEditLabel,
     BaseInput,
     BaseMaskedInput,
     BaseSearchInput,
     BaseLabel,
     BasePageFull,
+    BaseRadioGroup,
     BaseSelectMultiple,
     BaseSelectSimple,
     BaseSelectSimpleAjax,
@@ -59,7 +60,6 @@ export default {
     BaseShowEditSelectSimple,
     BaseShowEditTextArea,
     BaseShowEditTimeInput,
-    BaseShowLabel,
     BaseShowPhoneLabel,
     BaseSimpleCard,
     BaseSimpleDatePicker,
