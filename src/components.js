@@ -36,6 +36,7 @@ import BaseSimpleRadioGroup from "./components/BaseRadioGroup/BaseSimpleRadioGro
 import BaseTrueFalseShowEditRadioGroup from "./components/BaseShowEditRadioGroup/BaseTrueFalseShowEditRadioGroup.vue";
 import BaseShowLabel from "./components/BaseLabel/BaseShowLabel.vue";
 import BaseEditLabel from "./components/BaseLabel/BaseEditLabel.vue";
+import BaseShowEditRadioGroup from "./components/BaseShowEditRadioGroup/BaseShowEditRadioGroup.vue";
 
 export default {
     BaseButton,
@@ -44,6 +45,7 @@ export default {
     BaseCardSection,
     BaseTextArea,
     BaseEditLabel,
+    BaseShowEditRadioGroup,
     BaseShowLabel,
     BaseSimpleRadioGroup,
     BaseSimpleShowEditCheckboxGroup,

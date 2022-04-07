@@ -16,7 +16,7 @@
   </div>
 
   <div v-else class='mt-3'>
-    <BaseShowLabel :label="label" :model-value="cDefautlValue.name"/>
+    <BaseShowLabel :label="label" v-if="cDefautlValue" :model-value="cDefautlValue.name"/>
   </div>
 
 </template>
