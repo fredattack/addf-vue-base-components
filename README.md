@@ -230,22 +230,41 @@ trackBy,
 ##BaseRadio
 ### - BaseRadioGroup
 > pros :
-options
-value
-name
-groupClass
-disabled
+options,
+value,
+name,
+groupClass,
+disabled,
 >
 > slots:
 ### - BaseBooleanRadioGroup
 > pros :
-name
-label
-defaultValue
-disabled
-required
-extra_id
-errors
+name,
+label,
+defaultValue,
+disabled,
+required,
+extra_id,
+errors,
+isVertical
+>
+> slots:
+### - BaseSimpleRadioGroup
+> pros :
+options,
+name,
+label,
+defaultValue,
+translationExtention,
+isReturningKey,
+isShowingKey,
+attributeLabel,
+trackBy,
+translatable,
+disabled,
+required,
+extra_id,
+errors,
 isVertical
 >
 > slots:

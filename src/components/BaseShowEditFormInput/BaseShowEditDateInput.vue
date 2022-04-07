@@ -6,7 +6,7 @@
            :value="modelValue"
            @input="updateInput"
            :id="name"
-           :class="inputClass"
+           :class="cInputClass"
            :placeholder="placeholder"
            v-mask="mask"
            class='border-gray-400 focus:border-blue-300 focus:ring-blue-300 focus:ring-1' />
@@ -88,6 +88,9 @@ export default {
   computed: {
     cGroupClass() {
       return this.groupClass === '' ? 'mt-3 w-full' : this.groupClass
+    },
+    cInputClass() {
+      return this.inputClass === '' ? 'form-control' : this.inputClass
     }
   },
   methods: {

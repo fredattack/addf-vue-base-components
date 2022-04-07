@@ -32,6 +32,7 @@ import BaseSimpleCheckboxGroup from "./components/BaseCheckBox/BaseSimpleCheckbo
 import BaseSimpleShowEditCheckboxGroup from "./components/BaseShowEditCheckBox/BaseSimpleShowEditCheckboxGroup.vue";
 import SettingsPageFull from "./components/BasePage/SettingsPageFull.vue";
 import BaseBooleanRadioGroup from "./components/BaseRadioGroup/BaseBooleanRadioGroup.vue";
+import BaseSimpleRadioGroup from "./components/BaseRadioGroup/BaseSimpleRadioGroup.vue";
 
 export default {
     BaseButton,
@@ -39,6 +40,7 @@ export default {
     BaseShowEditDatePicker,
     BaseCardSection,
     BaseTextArea,
+    BaseSimpleRadioGroup,
     BaseSimpleShowEditCheckboxGroup,
     BaseSimpleCheckboxGroup,
     BaseCheckBox,
