@@ -35,6 +35,8 @@
 
 <script>
 
+import _ from "core-js/internals/internal-state";
+
 export default {
   name: 'PhoneInput',
   props: {
@@ -106,9 +108,9 @@ export default {
         attribute: `${this.name}_country`
       });
     },
-    // errors(newValue){
-    //   this.phoneErrors =  _.pick(newValue,[`${this.name}_country`,`${this.name}_field`])
-    // },
+    errors(newValue){
+      this.phoneErrors =  _.pick(newValue,[`${this.name}_country`,`${this.name}_field`])
+    },
   }
 }
 </script>

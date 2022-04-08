@@ -54,11 +54,13 @@ import BaseDocShowEditSelectMultiple from "./components/BaseShowEditFormSelect/B
 import CheckboxWithInput from "./components/BaseShowEditCheckBox/components/CheckboxWithInput.vue";
 import LabelWitchCheckBoxChecked from "./components/BaseShowEditCheckBox/components/LabelWitchCheckBoxChecked.vue";
 import BaseSwitch from "./components/BaseSwitch/BaseSwitch.vue";
+import BaseShowEditPhoneInput from "./components/BaseShowEditFormInput/BaseShowEditPhoneInput.vue";
 
 export default {
     BaseButton,
     BaseSwitch,
     LabelWitchCheckBoxChecked,
+    BaseShowEditPhoneInput,
     BaseCard,
     CheckboxWithInput,
     BaseDocShowEditSelectMultiple,

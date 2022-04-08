@@ -427,6 +427,20 @@ errors,
 modelValue,
 >
 > slots :
+### - BaseShowEditPhoneInput:
+> pros :
+countryValue,
+numberValue,
+editionMode,
+name,
+label,
+countryPlaceholder,
+numberPlaceholder,
+errors,
+metadata,
+required
+>
+> slots :
 ## - BaseShowEditFormSelect
 ### - BaseShowEditSelectAjax:
 > pros :
