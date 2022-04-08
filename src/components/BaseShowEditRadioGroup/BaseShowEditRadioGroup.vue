@@ -106,10 +106,10 @@ export default {
     findModelValue() {
       if(this.getByKey) {
         if(this.options && Object.keys(this.options).find(item => item.id === this.modelValue)) return Object.keys(this.options).find(item => item.id === this.modelValue)
-        return Object.keys(this.options).find(item => item.id === this.modelValue)
+        return null
       } else {
         if(this.options && this.options.find(item => item.id === this.modelValue)) return this.options.find(item => item.id === this.modelValue).name
-        return this.options.find(item => item.id === this.modelValue).name
+        return null
       }
 
     },

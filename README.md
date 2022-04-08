@@ -60,6 +60,24 @@ isStriped,
 theadRowClasses,
 >
 > slots:
+## BaseActivityTable
+
+### - LogTableRow:
+> pros: values,
+>
+> slots:
+### - LogTable:
+> pros: model,
+>
+> slots:
+### - ActivityTableRow:
+> pros: indexValue, activity
+>
+> slots:
+### - ActivityTable:
+> pros: activities,
+>
+> slots:
 ### - BaseThComponent:
 > pros: column, thClasses, currentSort, width,
 >
