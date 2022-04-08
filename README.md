@@ -559,31 +559,45 @@ searchable
 > slots : 
 ### - BaseLanguageShowEditSelectSimple:
 > pros :
-editionMode
-modelValue
-trackBy
-attributeLabel
-label
-name
-errors
-metadata
-required
-searchable
+editionMode,
+modelValue,
+trackBy,
+attributeLabel,
+label,
+name,
+errors,
+metadata,
+required,
+searchable,
 >
 > slots : 
 ### - BaseLanguageShowEditSelectSimple:
 > pros :
-editionMode
-modelValue
-trackBy
-attributeLabel
-label
-name
-errors
-metadata
-required
-searchable
-adata
+editionMode,
+modelValue,
+trackBy,
+attributeLabel,
+label,
+name,
+errors,
+metadata,
+required,
+searchable,
+data
+>
+> slots :
+### - BaseEventTypeShowEditSelectSimple:
+> pros :
+editionMode,
+modelValue,
+trackBy,
+attributeLabel,
+label,
+name,
+errors,
+metadata,
+required,
+searchable,
 >
 > slots : 
 ## - BaseShowEditCheckbox

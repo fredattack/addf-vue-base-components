@@ -119,11 +119,11 @@ export default {
   },
   computed: {
     cDefaultValue(){
-      // let defaultValues = []
-      // for(let i in this.modelValue) {
-      //   defaultValues.push(this.metadata.find( item => item?.id === i ))
-      // }
-      return this.modelValue
+      let defaultValues = []
+      for(let i in this.modelValue) {
+        defaultValues.push(this.metadata.find( item => item.id === i ))
+      }
+      return defaultValues
     },
   },
   methods: {

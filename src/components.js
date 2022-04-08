@@ -47,10 +47,12 @@ import BaseCountryShowEditSelectSimple from "./components/BaseShowEditFormSelect
 import BaseCustomerShowEditSelectSimple from "./components/BaseShowEditFormSelect/BaseShowEditFormSelectSimple/BaseCustomerShowEditSelectSimple.vue";
 import BaseLanguageShowEditSelectSimple from "./components/BaseShowEditFormSelect/BaseShowEditFormSelectSimple/BaseLanguageShowEditSelectSimple.vue";
 import BaseUserShowEditSelectSimple from "./components/BaseShowEditFormSelect/BaseShowEditFormSelectSimple/BaseUserShowEditSelectSimple.vue";
+import BaseEventTypeShowEditSelectSimple from "./components/BaseShowEditFormSelect/BaseShowEditFormSelectSimple/BaseEventTypeShowEditSelectSimple.vue";
 
 export default {
     BaseButton,
     BaseCard,
+    BaseEventTypeShowEditSelectSimple,
     BaseCompanyShowEditSelectSimple,
     BaseUserShowEditSelectSimple,
     BaseCountryShowEditSelectSimple,
