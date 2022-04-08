@@ -1,9 +1,9 @@
 <template>
   <div v-if='editionMode' class='mt-3'>
-    <BaseEditLabel :label="label ? label : $t('attributes.bank_id')" :required="required"/>
-    <multiselect v-if="metadata && metadata.banks"
-                 :options="metadata.banks"
-                 :placeholder="label ? label : $t('attributes.bank_id')"
+    <BaseEditLabel :label="label ? label : $t('attributes.country')" :required="required"/>
+    <multiselect v-if="metadata && metadata.countries"
+                 :options="metadata.countries"
+                 :placeholder="label ? label : $t('attributes.country')"
                  :modelValue="cDefautlValue"
                  @update:modelValue="updateValueAction"
                  :searchable="searchable"
@@ -11,28 +11,24 @@
                  :track-by="trackBy"
                  :required="required" />
 
-    <template v-if="errors.bank_id">
-      <div v-for='(error,index) in errors.bank_id' :key='index' class="form-help text-red-600">
+    <template v-if="errors.country">
+      <div v-for='(error,index) in errors.country' :key='index' class="form-help text-red-600">
         {{ $t(error, {'attribute': $t('attributes.' + name)}) }}
       </div>
     </template>
   </div>
 
-
   <div v-else class='mt-3'>
-    <BaseShowLabel :label="label ? label : $t('attributes.bank_id')" :model-value="cDisplayedValueWhenNotEditionMode"/>
+    <BaseShowLabel :label="label ? label : $t('attributes.country')" :model-value="cDisplayedValueWhenNotEditionMode"/>
   </div>
-
 </template>
 
 <script>
 import multiselect from 'vue-multiselect'
-import BaseShowLabel from "../../BaseLabel/BaseShowLabel.vue";
-import BaseEditLabel from "../../BaseLabel/BaseEditLabel.vue";
 
 export default {
-  name: 'BaseBankShowEditSelectSimple',
-  components: { multiselect, BaseShowLabel, BaseEditLabel},
+  name: 'BaseCountryShowEditSelectSimple',
+  components: { multiselect },
   props: {
     editionMode: {
       type: Boolean,
@@ -41,7 +37,7 @@ export default {
     modelValue: {
       type: Object,
       required: false,
-      default() {return {}},
+      default() {return {}}
     },
     trackBy: {
       type: String,
@@ -55,18 +51,17 @@ export default {
     },
     label: {
       type: String,
-      required: true,
-      default: ''
+      required: false,
     },
     name: {
       type: String,
       required: false,
-      default: 'banks_id',
+      default: 'country',
     },
     errors: {
       type: Object,
       required: false,
-      default() {return {}},
+      default() {return {}}
     },
     metadata: {
       type: Array,
@@ -96,14 +91,17 @@ export default {
       }
     },
     cDefautlValue(){
-      if(this.metadata && this.metadata.banks && this.metadata.banks.find( item => item.id === this.modelValue )) return this.metadata.banks.find( item => item.id === this.modelValue )
+      if(this.metadata && this.metadata.countries && this.metadata.countries.find( item => item.id === this.modelValue )) return this.metadata.countries.find( item => item.id === this.modelValue )
       else return null
     },
+
   },
   methods: {
     updateValueAction(newValue) {
       if(newValue != null) {
         this.$emit("update:modelValue", newValue[this.trackBy]);
+      } else {
+        this.$emit("update:modelValue", null);
       }
     }
   }

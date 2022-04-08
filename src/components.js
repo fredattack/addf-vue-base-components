@@ -41,15 +41,17 @@ import BaseThComponent from "./components/BaseTable/BaseThComponent.vue";
 import ColumnVisibilityDropDownComponent from "./components/BaseTable/ColumnVisibilityDropDownComponent.vue";
 import ContentTableCell from "./components/BaseTable/ContentTableCell.vue";
 import BaseSimpleTab from "./components/BaseTabs/BaseSimpleTab.vue";
-import BaseBankShowEditSelectSimple
-    from "./components/BaseShowEditFormSelect/BaseShowEditFormSelectSimple/BaseBankShowEditSelectSimple.vue";
-import BaseCompanyShowEditSelectSimple
-    from "./components/BaseShowEditFormSelect/BaseShowEditFormSelectSimple/BaseCompanyShowEditSelectSimple.vue";
+import BaseBankShowEditSelectSimple from "./components/BaseShowEditFormSelect/BaseShowEditFormSelectSimple/BaseBankShowEditSelectSimple.vue";
+import BaseCompanyShowEditSelectSimple from "./components/BaseShowEditFormSelect/BaseShowEditFormSelectSimple/BaseCompanyShowEditSelectSimple.vue";
+import BaseCountryShowEditSelectSimple from "./components/BaseShowEditFormSelect/BaseShowEditFormSelectSimple/BaseCountryShowEditSelectSimple.vue";
+import BaseCustomerShowEditSelectSimple from "./components/BaseShowEditFormSelect/BaseShowEditFormSelectSimple/BaseCustomerShowEditSelectSimple.vue";
 
 export default {
     BaseButton,
     BaseCard,
     BaseCompanyShowEditSelectSimple,
+    BaseCountryShowEditSelectSimple,
+    BaseCustomerShowEditSelectSimple,
     BaseShowEditDatePicker,
     BaseCardSection,
     BaseTextArea,

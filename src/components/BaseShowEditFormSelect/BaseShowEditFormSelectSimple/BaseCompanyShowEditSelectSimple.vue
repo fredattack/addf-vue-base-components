@@ -1,7 +1,7 @@
 <template>
   <div v-if='editionMode' class='mt-3'>
     <BaseEditLabel :label="label ? label : $t('attributes.company')" :required="required"/>
-    <multiselect
+    <multiselect v-if="metadata && metadata.companies"
                  :options="metadata.companies"
                  :placeholder="label ? label : $t('attributes.company')"
                  :modelValue="cDefautlValue"

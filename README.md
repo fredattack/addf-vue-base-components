@@ -517,16 +517,45 @@ searchable
 > slots : 
 ### - BaseCompanyShowEditSelectSimple:
 > pros :
-editionMode
-modelValue
-trackBy
-attributeLabel
-label
-name
-errors
-metadata
-required
+editionMode,
+modelValue,
+trackBy,
+attributeLabel,
+label,
+name,
+errors,
+metadata,
+required,
 searchable
+>
+> slots : 
+### - BaseCountryShowEditSelectSimple:
+> pros :
+editionMode,
+modelValue,
+trackBy,
+attributeLabel,
+label,
+name,
+errors,
+metadata,
+required,
+searchable
+>
+> slots : 
+### - BaseCustomerShowEditSelectSimple:
+> pros :
+editionMode,
+modelValue,
+trackBy,
+attributeLabel,
+label,
+name,
+errors,
+metadata,
+required,
+searchable
+:
 >
 > slots : 
 ## - BaseShowEditCheckbox
