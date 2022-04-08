@@ -49,6 +49,17 @@ const app = createApp(App)
 > 
 ## BaseTable
 
+### - BaseTable:
+> pros: titles
+rows,
+isBordered,
+isHoverable,
+isSmallTable,
+isResponsive,
+isStriped,
+theadRowClasses,
+>
+> slots:
 ### - BaseThComponent:
 > pros: column, thClasses, currentSort, width,
 >

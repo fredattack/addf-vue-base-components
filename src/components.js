@@ -55,9 +55,11 @@ import CheckboxWithInput from "./components/BaseShowEditCheckBox/components/Chec
 import LabelWitchCheckBoxChecked from "./components/BaseShowEditCheckBox/components/LabelWitchCheckBoxChecked.vue";
 import BaseSwitch from "./components/BaseSwitch/BaseSwitch.vue";
 import BaseShowEditPhoneInput from "./components/BaseShowEditFormInput/BaseShowEditPhoneInput.vue";
+import BaseTable from "./components/BaseTable/BaseTable.vue";
 
 export default {
     BaseButton,
+    BaseTable,
     BaseSwitch,
     LabelWitchCheckBoxChecked,
     BaseShowEditPhoneInput,

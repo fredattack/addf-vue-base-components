@@ -110,7 +110,7 @@ export default {
   computed: {
     cDefautlValue(){
       if(this.options && this.options.find(t => t.id === this.modelValue)) return this.options.find(t => t.id === this.modelValue)
-      else return this.options.find(t => t.id === this.modelValue)
+      else return null
     },
   },
   methods: {
