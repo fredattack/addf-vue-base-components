@@ -555,7 +555,35 @@ errors,
 metadata,
 required,
 searchable
-:
+>
+> slots : 
+### - BaseLanguageShowEditSelectSimple:
+> pros :
+editionMode
+modelValue
+trackBy
+attributeLabel
+label
+name
+errors
+metadata
+required
+searchable
+>
+> slots : 
+### - BaseLanguageShowEditSelectSimple:
+> pros :
+editionMode
+modelValue
+trackBy
+attributeLabel
+label
+name
+errors
+metadata
+required
+searchable
+adata
 >
 > slots : 
 ## - BaseShowEditCheckbox

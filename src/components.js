@@ -45,13 +45,17 @@ import BaseBankShowEditSelectSimple from "./components/BaseShowEditFormSelect/Ba
 import BaseCompanyShowEditSelectSimple from "./components/BaseShowEditFormSelect/BaseShowEditFormSelectSimple/BaseCompanyShowEditSelectSimple.vue";
 import BaseCountryShowEditSelectSimple from "./components/BaseShowEditFormSelect/BaseShowEditFormSelectSimple/BaseCountryShowEditSelectSimple.vue";
 import BaseCustomerShowEditSelectSimple from "./components/BaseShowEditFormSelect/BaseShowEditFormSelectSimple/BaseCustomerShowEditSelectSimple.vue";
+import BaseLanguageShowEditSelectSimple from "./components/BaseShowEditFormSelect/BaseShowEditFormSelectSimple/BaseLanguageShowEditSelectSimple.vue";
+import BaseUserShowEditSelectSimple from "./components/BaseShowEditFormSelect/BaseShowEditFormSelectSimple/BaseUserShowEditSelectSimple.vue";
 
 export default {
     BaseButton,
     BaseCard,
     BaseCompanyShowEditSelectSimple,
+    BaseUserShowEditSelectSimple,
     BaseCountryShowEditSelectSimple,
     BaseCustomerShowEditSelectSimple,
+    BaseLanguageShowEditSelectSimple,
     BaseShowEditDatePicker,
     BaseCardSection,
     BaseTextArea,
