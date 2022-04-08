@@ -23,7 +23,12 @@ const app = createApp(App)
 
 ### - BaseButton:
 > pros: tooltip, title, icon, linkTarget, color, isOutline, isRounded, isSoft, isElevated, size, scopedClasses, type, cursor, textColor
+## BaseSwitch
 
+### - BaseSwitch:
+> pros: modelValue, label, name
+>
+> slots: 
 
 ## BaseCard
 
@@ -45,17 +50,11 @@ const app = createApp(App)
 ## BaseTable
 
 ### - BaseThComponent:
-> pros:
-column,
-thClasses,
-currentSort,
-width,
+> pros: column, thClasses, currentSort, width,
 >
 > slots:
 ### - BaseTableCell:
-> pros:
-model
-column
+> pros: model, column
 >
 > slots:
 ### - ColumnVisibilityDropDownComponent:
@@ -73,21 +72,7 @@ tabs
 ## BaseDatePicker
 
 ### - BaseSimpleDatePicker:
-> pros: defaultValue,
-label,
-name,
-required,
-disabled,
-canTypeDateManually,
-clearButtonVisible,
-viewType,
-monthFormat,
-weekFormat,
-startingDayOfTheWeek,
-format,
-groupClass,
-labelClass,
-errors
+> pros: defaultValue, label, name, required, disabled, canTypeDateManually, clearButtonVisible, viewType, monthFormat, weekFormat, startingDayOfTheWeek, format, groupClass, labelClass, errors
 >
 > slots:
 
