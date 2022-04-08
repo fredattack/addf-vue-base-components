@@ -23,8 +23,8 @@
 
 <script>
 import multiselect from 'vue-multiselect'
-import BaseEditLabel from '../BaseLabel/BaseEditLabel.vue'
-import BaseShowLabel from '../BaseLabel/BaseShowLabel.vue'
+import BaseEditLabel from '../../BaseLabel/BaseEditLabel.vue'
+import BaseShowLabel from '../../BaseLabel/BaseShowLabel.vue'
 
 export default {
   name: 'BaseShowEditSelectSimple',

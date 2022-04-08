@@ -501,6 +501,34 @@ selectClass,
 editionMode
 >
 > slots : 
+### - BaseBankShowEditSelectSimple:
+> pros :
+editionMode,
+modelValue,
+trackBy,
+attributeLabel,
+label,
+name,
+errors,
+metadata,
+required,
+searchable
+>
+> slots : 
+### - BaseCompanyShowEditSelectSimple:
+> pros :
+editionMode
+modelValue
+trackBy
+attributeLabel
+label
+name
+errors
+metadata
+required
+searchable
+>
+> slots : 
 ## - BaseShowEditCheckbox
 ### - BaseSimpleShowEditCheckboxGroup:
 > pros :

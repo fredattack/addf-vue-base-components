@@ -15,9 +15,9 @@ import BaseSelectSimple from "./components/BaseFormSelect/BaseSelectSimple.vue";
 import BaseSelectSimpleAjax from "./components/BaseFormSelect/BaseSelectSimpleAjax.vue";
 import BaseShowEditDateInput from "./components/BaseShowEditFormInput/BaseShowEditDateInput.vue";
 import BaseShowEditInput from "./components/BaseShowEditFormInput/BaseShowEditInput.vue";
-import BaseShowEditSelectAjax from "./components/BaseShowEditFormSelect/BaseShowEditSelectAjax.vue";
-import BaseShowEditSelectMultiple from "./components/BaseShowEditFormSelect/BaseShowEditSelectMultiple.vue";
-import BaseShowEditSelectSimple from "./components/BaseShowEditFormSelect/BaseShowEditSelectSimple.vue";
+import BaseShowEditSelectAjax from "./components/BaseShowEditFormSelect/BaseShowEditFormSelectSimple/BaseShowEditSelectAjax.vue";
+import BaseShowEditSelectMultiple from "./components/BaseShowEditFormSelect/BaseShowEditFormSelectMultiple/BaseShowEditSelectMultiple.vue";
+import BaseShowEditSelectSimple from "./components/BaseShowEditFormSelect/BaseShowEditFormSelectSimple/BaseShowEditSelectSimple.vue";
 import BaseShowEditTextArea from "./components/BaseShowEditFormInput/BaseShowEditTextArea.vue";
 import BaseShowEditTimeInput from "./components/BaseShowEditFormInput/BaseShowEditTimeInput.vue";
 import BaseShowPhoneLabel from "./components/BaseLabel/BaseShowPhoneLabel.vue";
@@ -41,16 +41,22 @@ import BaseThComponent from "./components/BaseTable/BaseThComponent.vue";
 import ColumnVisibilityDropDownComponent from "./components/BaseTable/ColumnVisibilityDropDownComponent.vue";
 import ContentTableCell from "./components/BaseTable/ContentTableCell.vue";
 import BaseSimpleTab from "./components/BaseTabs/BaseSimpleTab.vue";
+import BaseBankShowEditSelectSimple
+    from "./components/BaseShowEditFormSelect/BaseShowEditFormSelectSimple/BaseBankShowEditSelectSimple.vue";
+import BaseCompanyShowEditSelectSimple
+    from "./components/BaseShowEditFormSelect/BaseShowEditFormSelectSimple/BaseCompanyShowEditSelectSimple.vue";
 
 export default {
     BaseButton,
     BaseCard,
+    BaseCompanyShowEditSelectSimple,
     BaseShowEditDatePicker,
     BaseCardSection,
     BaseTextArea,
     BaseThComponent,
     BaseEditLabel,
     BaseSimpleTab,
+    BaseBankShowEditSelectSimple,
     ContentTableCell,
     ColumnVisibilityDropDownComponent,
     BaseShowEditRadioGroup,

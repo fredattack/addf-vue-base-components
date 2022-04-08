@@ -33,7 +33,7 @@
 </template>
 
 <script>
-import BaseEditLabel from '../BaseLabel/BaseEditLabel.vue'
+import BaseEditLabel from '../../BaseLabel/BaseEditLabel.vue'
 import multiselect from 'vue-multiselect'
 
 export default {
