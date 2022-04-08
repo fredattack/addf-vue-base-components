@@ -21,9 +21,11 @@
       <font-awesome-icon v-else class='absolute right-0 top-0 h-full flex item-center  mx-1 dark:bg-dark-2 mr-4 w-3' :icon="['fal', icon]" size='2x' />
     </div>
 
-    <div v-for='(error,index) in errors' :key='index' class="form-help text-red-600">
-      {{ $t(error, {attribute: $t('attributes.' + name), max: this.max, min: this.min}) }}
-    </div>
+    <template v-if="errors">
+      <div v-for='(error,index) in errors' :key='index' class="form-help text-red-600">
+        {{ $t(error, {attribute: $t('attributes.' + name), max: this.max, min: this.min}) }}
+      </div>
+    </template>
   </div>
 </template>
 

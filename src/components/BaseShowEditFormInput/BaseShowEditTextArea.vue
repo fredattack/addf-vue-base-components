@@ -11,9 +11,11 @@
           @input="updateInput"
           class="form-control border-gray-400 focus:border-blue-300 focus:ring-blue-300 focus:ring-1"
       />
-      <div v-for='(error,index) in errors' :key='index' class="form-help text-red-600">
-        {{ $t(error, {attribute: $t('attributes.' + name)}) }}
-      </div>
+      <template v-if="errors">
+        <div v-for='(error,index) in errors' :key='index' class="form-help text-red-600">
+          {{ $t(error, {attribute: $t('attributes.' + name)}) }}
+        </div>
+      </template>
     </template>
 
     <template v-else>

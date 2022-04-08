@@ -11,7 +11,7 @@
                  :track-by="trackBy"
                  :required="required" />
 
-    <template v-if="errors.language">
+    <template v-if="errors && errors.language">
       <div v-for='(error,index) in errors.language' :key='index' class="form-help text-red-600">
         {{ $t(error, {'attribute': $t('attributes.' + name)}) }}
       </div>

@@ -5,9 +5,9 @@
       <input :id="`checkbox-${name}`" class="form-check-input" type="checkbox" :name="name" :disabled="disabled" v-model="newValue" >
     </div>
   </div>
-  <div v-if="errors"  class="form-help text-red-600">
-    <div v-for='(error,index) in errors' :key='index'>{{ $t(error, {'attribute': $t('attributes.' + name)}) }}</div>
-  </div>
+  <template v-if="errors">
+    <div v-for='(error,index) in errors' :key='index' class="form-help text-red-600">{{ $t(error, {'attribute': $t('attributes.' + name)}) }}</div>
+  </template>
 </template>
 
 <script>

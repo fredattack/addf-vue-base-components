@@ -11,7 +11,7 @@
                  :track-by="trackBy"
                  :required="required" />
 
-    <template v-if="errors.event_type">
+    <template v-if="errors && errors.event_type">
       <div v-for='(error,index) in errors.event_type' :key='index'
            class="form-help text-red-600">
         {{ $t(error, {'attribute': $t('attributes.' + name)}) }}

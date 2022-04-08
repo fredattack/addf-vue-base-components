@@ -20,13 +20,24 @@ const app = createApp(App)
 # Components
 
 ## BaseButton
-
 ### - BaseButton:
 > pros: tooltip, title, icon, linkTarget, color, isOutline, isRounded, isSoft, isElevated, size, scopedClasses, type, cursor, textColor
-## BaseSwitch
 
+## BaseSwitch
 ### - BaseSwitch:
 > pros: modelValue, label, name
+>
+> slots: 
+
+## BaseIFramePDF
+### - IFramePdf:
+> pros: src,
+>
+> slots: 
+
+## BaseToast
+### - ToastUndoComponent:
+> pros: text,
 >
 > slots: 
 
@@ -46,7 +57,7 @@ const app = createApp(App)
 > pros: title, name, borderedHeader, classes, buttonBackLeft, buttonBackLeftRoute,
 >
 > slots: header, cta, default
-> 
+
 ## BaseTable
 
 ### - BaseTable:
@@ -58,6 +69,20 @@ isSmallTable,
 isResponsive,
 isStriped,
 theadRowClasses,
+>
+> slots:
+
+### - BaseThComponent:
+> pros: column, thClasses, currentSort, width,
+>
+> slots:
+### - BaseTableCell:
+> pros: model, column
+>
+> slots:
+### - ColumnVisibilityDropDownComponent:
+> pros:
+modelValue,
 >
 > slots:
 ## BaseActivityTable
@@ -78,19 +103,7 @@ theadRowClasses,
 > pros: activities,
 >
 > slots:
-### - BaseThComponent:
-> pros: column, thClasses, currentSort, width,
->
-> slots:
-### - BaseTableCell:
-> pros: model, column
->
-> slots:
-### - ColumnVisibilityDropDownComponent:
-> pros:
-modelValue,
->
-> slots:
+
 ## BaseTabs
 
 ### - BaseSimpleTab:
@@ -115,7 +128,7 @@ tabs
 > pros :
 >
 > slots : title, cta, body
-> ### - BasePageFull:
+### - BasePageFull:
 > pros : name
 value
 disabled
@@ -215,7 +228,7 @@ inputClass,
 min,
 max
 >
-> slots : 
+> slots :
 ### - BasePhoneInput:
 > pros :
 name,

@@ -13,9 +13,11 @@
                   :style='style'
                   :locale='locale'
                   :class='cInputClass' />
+    <template v-if="errors">
       <div v-for='(error,index) in errors' :key='index' class="form-help text-red-600">
         {{ $t(error, {attribute: $t('attributes.' + name)}) }}
       </div>
+    </template>
   </div>
   <div v-else :class='cGroupClass'>
     <BaseShowLabel :label="label" :model-value="cDisplayedValueWhenNotEditionMode"/>
