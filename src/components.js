@@ -48,10 +48,20 @@ import BaseCustomerShowEditSelectSimple from "./components/BaseShowEditFormSelec
 import BaseLanguageShowEditSelectSimple from "./components/BaseShowEditFormSelect/BaseShowEditFormSelectSimple/BaseLanguageShowEditSelectSimple.vue";
 import BaseUserShowEditSelectSimple from "./components/BaseShowEditFormSelect/BaseShowEditFormSelectSimple/BaseUserShowEditSelectSimple.vue";
 import BaseEventTypeShowEditSelectSimple from "./components/BaseShowEditFormSelect/BaseShowEditFormSelectSimple/BaseEventTypeShowEditSelectSimple.vue";
+import BaseCompanyShowEditSelectMultiple from "./components/BaseShowEditFormSelect/BaseShowEditFormSelectMultiple/BaseCompanyShowEditSelectMultiple.vue";
+import BaseLanguageShowEditSelectMultiple from "./components/BaseShowEditFormSelect/BaseShowEditFormSelectMultiple/BaseLanguageShowEditSelectMultiple.vue";
+import BaseDocShowEditSelectMultiple from "./components/BaseShowEditFormSelect/BaseShowEditFormSelectMultiple/BaseDocShowEditSelectMultiple.vue";
+import CheckboxWithInput from "./components/BaseShowEditCheckBox/components/CheckboxWithInput.vue";
+import LabelWitchCheckBoxChecked from "./components/BaseShowEditCheckBox/components/LabelWitchCheckBoxChecked.vue";
 
 export default {
     BaseButton,
+    LabelWitchCheckBoxChecked,
     BaseCard,
+    CheckboxWithInput,
+    BaseDocShowEditSelectMultiple,
+    BaseLanguageShowEditSelectMultiple,
+    BaseCompanyShowEditSelectMultiple,
     BaseEventTypeShowEditSelectSimple,
     BaseCompanyShowEditSelectSimple,
     BaseUserShowEditSelectSimple,

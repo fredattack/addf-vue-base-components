@@ -571,7 +571,7 @@ required,
 searchable,
 >
 > slots : 
-### - BaseLanguageShowEditSelectSimple:
+### - BaseUserShowEditSelectSimple:
 > pros :
 editionMode,
 modelValue,
@@ -598,6 +598,66 @@ errors,
 metadata,
 required,
 searchable,
+>
+> slots : 
+### - BaseCompanyShowEditSelectMultiple:
+> pros :
+name,
+label,
+placeholder,
+modelValue,
+errors,
+metadata,
+defaultValue,
+trackBy,
+attributeLabel,
+disabled,
+required,
+searchable,
+groupClass,
+labelClass,
+selectClass,
+editionMode
+>
+> slots : 
+### - BaseLanguageShowEditSelectMultiple:
+> pros :
+name,
+label,
+placeholder,
+modelValue,
+errors,
+metadata,
+defaultValue,
+trackBy,
+attributeLabel,
+disabled,
+required,
+searchable,
+groupClass,
+labelClass,
+selectClass,
+editionMode
+>
+> slots : 
+### - BaseDocShowEditSelectMultiple:
+> pros :
+name,
+label,
+placeholder,
+modelValue,
+errors,
+metadata,
+defaultValue,
+trackBy,
+attributeLabel,
+disabled,
+required,
+searchable,
+groupClass,
+labelClass,
+selectClass,
+editionMode
 >
 > slots : 
 ## - BaseShowEditCheckbox

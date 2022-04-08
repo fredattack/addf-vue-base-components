@@ -3,7 +3,7 @@
     <template v-if='editionMode'>
 
       <div>
-        <BaseEditLabel :label="label" :required="required"/>
+        <BaseEditLabel :label="label" :required="required" v-if="options.length > 0"/>
         <div :class="cPlacement">
           <div class='form-check mr-4 sm:mt-0' v-for='(element, key) in options' :key='key'>
 
@@ -28,16 +28,21 @@
     </template>
 
     <template v-else>
-      <BaseEditLabel :label="label" :required="required"/>
+      <template v-if="options.length > 0">
+      <BaseEditLabel :label="label" :required="required" v-if="modelValue.length > 0"/>
       <br>
-      <span v-for="(item, index) in modelValue" class="inline-block mr-3" :key="index">
+        <span v-for="(item, index) in modelValue" class="inline-block mr-3" :key="index">
         <labelWitchCheckBoxChecked
             v-if="getElement(item)"
             :element="getElement(item)"
             :translatable="translatable"
             :translation-extention="translationExtention"
         />
-      </span>
+        </span>
+      </template>
+      <template v-else>
+        <span> </span>
+      </template>
     </template>
   </div>
 </template>
