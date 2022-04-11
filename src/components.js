@@ -1,42 +1,42 @@
 import ActivityTable from "./components/BaseActivityTable/ActivityTable.vue";
 import ActivityTableRow from "./components/BaseActivityTable/ActivityTableRow.vue";
-import BaseBankShowEditSelectSimple from "./components/BaseShowEditFormSelect/BaseShowEditFormSelectSimple/BaseBankShowEditSelectSimple.vue";
+import BaseBankShowEditSelectSimple from "./components/BaseShowEditSelect/BaseShowEditFormSelectSimple/BaseBankShowEditSelectSimple.vue";
 import BaseBooleanRadioGroup from "./components/BaseRadioGroup/BaseBooleanRadioGroup.vue";
 import BaseButton from "./components/BaseButton/BaseButton.vue";
-import BaseButtonInput from "./components/BaseFormInput/BaseButtonInput.vue";
+import BaseButtonInput from "./components/BaseInput/BaseButtonInput.vue";
 import BaseCard from "./components/BaseCard/BaseCard.vue";
 import BaseCardSection from "./components/BaseCard/BaseCardSection.vue";
 import BaseCheckBox from "./components/BaseCheckBox/BaseCheckBox.vue";
-import BaseCompanyShowEditSelectMultiple from "./components/BaseShowEditFormSelect/BaseShowEditFormSelectMultiple/BaseCompanyShowEditSelectMultiple.vue";
-import BaseCompanyShowEditSelectSimple from "./components/BaseShowEditFormSelect/BaseShowEditFormSelectSimple/BaseCompanyShowEditSelectSimple.vue";
-import BaseCountryShowEditSelectSimple from "./components/BaseShowEditFormSelect/BaseShowEditFormSelectSimple/BaseCountryShowEditSelectSimple.vue";
-import BaseCustomerShowEditSelectSimple from "./components/BaseShowEditFormSelect/BaseShowEditFormSelectSimple/BaseCustomerShowEditSelectSimple.vue";
-import BaseDateInput from "./components/BaseFormInput/BaseDateInput.vue";
-import BaseDocShowEditSelectMultiple from "./components/BaseShowEditFormSelect/BaseShowEditFormSelectMultiple/BaseDocShowEditSelectMultiple.vue";
+import BaseCompanyShowEditSelectMultiple from "./components/BaseShowEditSelect/BaseShowEditFormSelectMultiple/BaseCompanyShowEditSelectMultiple.vue";
+import BaseCompanyShowEditSelectSimple from "./components/BaseShowEditSelect/BaseShowEditFormSelectSimple/BaseCompanyShowEditSelectSimple.vue";
+import BaseCountryShowEditSelectSimple from "./components/BaseShowEditSelect/BaseShowEditFormSelectSimple/BaseCountryShowEditSelectSimple.vue";
+import BaseCustomerShowEditSelectSimple from "./components/BaseShowEditSelect/BaseShowEditFormSelectSimple/BaseCustomerShowEditSelectSimple.vue";
+import BaseDateInput from "./components/BaseInput/BaseDateInput.vue";
+import BaseDocShowEditSelectMultiple from "./components/BaseShowEditSelect/BaseShowEditFormSelectMultiple/BaseDocShowEditSelectMultiple.vue";
 import BaseEditLabel from "./components/BaseLabel/BaseEditLabel.vue";
-import BaseEventTypeShowEditSelectSimple from "./components/BaseShowEditFormSelect/BaseShowEditFormSelectSimple/BaseEventTypeShowEditSelectSimple.vue";
-import BaseInput from "./components/BaseFormInput/BaseInput.vue";
+import BaseEventTypeShowEditSelectSimple from "./components/BaseShowEditSelect/BaseShowEditFormSelectSimple/BaseEventTypeShowEditSelectSimple.vue";
+import BaseInput from "./components/BaseInput/BaseInput.vue";
 import BaseLabel from "./components/BaseLabel/BaseLabel.vue";
-import BaseLanguageShowEditSelectMultiple from "./components/BaseShowEditFormSelect/BaseShowEditFormSelectMultiple/BaseLanguageShowEditSelectMultiple.vue";
-import BaseLanguageShowEditSelectSimple from "./components/BaseShowEditFormSelect/BaseShowEditFormSelectSimple/BaseLanguageShowEditSelectSimple.vue";
-import BaseMaskedInput from "./components/BaseFormInput/BaseMaskedInput.vue";
+import BaseLanguageShowEditSelectMultiple from "./components/BaseShowEditSelect/BaseShowEditFormSelectMultiple/BaseLanguageShowEditSelectMultiple.vue";
+import BaseLanguageShowEditSelectSimple from "./components/BaseShowEditSelect/BaseShowEditFormSelectSimple/BaseLanguageShowEditSelectSimple.vue";
+import BaseMaskedInput from "./components/BaseInput/BaseMaskedInput.vue";
 import BasePageFull from "./components/BasePage/BasePageFull.vue"
-import BasePhoneInput from "./components/BaseFormInput/BasePhoneInput.vue";
+import BasePhoneInput from "./components/BaseInput/BasePhoneInput.vue";
 import BaseRadioGroup from "./components/BaseRadioGroup/BaseRadioGroup.vue";
-import BaseSearchInput from "./components/BaseFormInput/BaseSearchInput.vue";
-import BaseSelectMultiple from "./components/BaseFormSelect/BaseSelectMultiple.vue";
-import BaseSelectSimple from "./components/BaseFormSelect/BaseSelectSimple.vue";
-import BaseSelectSimpleAjax from "./components/BaseFormSelect/BaseSelectSimpleAjax.vue";
-import BaseShowEditDateInput from "./components/BaseShowEditFormInput/BaseShowEditDateInput.vue";
+import BaseSearchInput from "./components/BaseInput/BaseSearchInput.vue";
+import BaseSelectMultiple from "./components/BaseSelect/BaseSelectFormMultiple/BaseSelectMultiple.vue";
+import BaseSelectSimple from "./components/BaseSelect/BaseSelectFormSimple/BaseSelectSimple.vue";
+import BaseSelectSimpleAjax from "./components/BaseSelect/BaseSelectFormSimple/BaseSelectSimpleAjax.vue";
+import BaseShowEditDateInput from "./components/BaseShowEditInput/BaseShowEditDateInput.vue";
 import BaseShowEditDatePicker from "./components/BaseShowEditDatePicker/BaseShowEditDatePicker.vue";
-import BaseShowEditInput from "./components/BaseShowEditFormInput/BaseShowEditInput.vue";
-import BaseShowEditPhoneInput from "./components/BaseShowEditFormInput/BaseShowEditPhoneInput.vue";
+import BaseShowEditInput from "./components/BaseShowEditInput/BaseShowEditInput.vue";
+import BaseShowEditPhoneInput from "./components/BaseShowEditInput/BaseShowEditPhoneInput.vue";
 import BaseShowEditRadioGroup from "./components/BaseShowEditRadioGroup/BaseShowEditRadioGroup.vue";
-import BaseShowEditSelectAjax from "./components/BaseShowEditFormSelect/BaseShowEditFormSelectSimple/BaseShowEditSelectAjax.vue";
-import BaseShowEditSelectMultiple from "./components/BaseShowEditFormSelect/BaseShowEditFormSelectMultiple/BaseShowEditSelectMultiple.vue";
-import BaseShowEditSelectSimple from "./components/BaseShowEditFormSelect/BaseShowEditFormSelectSimple/BaseShowEditSelectSimple.vue";
-import BaseShowEditTextArea from "./components/BaseShowEditFormInput/BaseShowEditTextArea.vue";
-import BaseShowEditTimeInput from "./components/BaseShowEditFormInput/BaseShowEditTimeInput.vue";
+import BaseShowEditSelectAjax from "./components/BaseShowEditSelect/BaseShowEditFormSelectSimple/BaseShowEditSelectAjax.vue";
+import BaseShowEditSelectMultiple from "./components/BaseShowEditSelect/BaseShowEditFormSelectMultiple/BaseShowEditSelectMultiple.vue";
+import BaseShowEditSelectSimple from "./components/BaseShowEditSelect/BaseShowEditFormSelectSimple/BaseShowEditSelectSimple.vue";
+import BaseShowEditTextArea from "./components/BaseShowEditInput/BaseShowEditTextArea.vue";
+import BaseShowEditTimeInput from "./components/BaseShowEditInput/BaseShowEditTimeInput.vue";
 import BaseShowLabel from "./components/BaseLabel/BaseShowLabel.vue";
 import BaseShowPhoneLabel from "./components/BaseLabel/BaseShowPhoneLabel.vue";
 import BaseSimpleCard from "./components/BaseCard/BaseSimpleCard.vue";
@@ -47,11 +47,11 @@ import BaseSimpleShowEditCheckboxGroup from "./components/BaseShowEditCheckBox/B
 import BaseSimpleTab from "./components/BaseTabs/BaseSimpleTab.vue";
 import BaseSwitch from "./components/BaseSwitch/BaseSwitch.vue";
 import BaseTable from "./components/BaseTable/BaseTable.vue";
-import BaseTextArea from "./components/BaseFormInput/BaseTextArea.vue";
+import BaseTextArea from "./components/BaseInput/BaseTextArea.vue";
 import BaseThComponent from "./components/BaseTable/BaseThComponent.vue";
-import BaseTimeInput from "./components/BaseFormInput/BaseTimeInput.vue";
+import BaseTimeInput from "./components/BaseInput/BaseTimeInput.vue";
 import BaseTrueFalseShowEditRadioGroup from "./components/BaseShowEditRadioGroup/BaseTrueFalseShowEditRadioGroup.vue";
-import BaseUserShowEditSelectSimple from "./components/BaseShowEditFormSelect/BaseShowEditFormSelectSimple/BaseUserShowEditSelectSimple.vue";
+import BaseUserShowEditSelectSimple from "./components/BaseShowEditSelect/BaseShowEditFormSelectSimple/BaseUserShowEditSelectSimple.vue";
 import CheckboxWithInput from "./components/BaseShowEditCheckBox/components/CheckboxWithInput.vue";
 import ColumnVisibilityDropDownComponent from "./components/BaseTable/ColumnVisibilityDropDownComponent.vue";
 import ContentTableCell from "./components/BaseTable/ContentTableCell.vue";
@@ -59,12 +59,16 @@ import IFramePdf from "./components/BaseIFramePDF/IFramePdf.vue";
 import LabelWitchCheckBoxChecked from "./components/BaseShowEditCheckBox/components/LabelWitchCheckBoxChecked.vue";
 import SettingsPageFull from "./components/BasePage/SettingsPageFull.vue";
 import ToastUndoComponent from "./components/BaseToast/ToastUndoComponent.vue";
+import SelectCompaniesMultiple from "./components/BaseSelect/BaseSelectFormMultiple/SelectCompaniesMultiple.vue";
+import SelectCompanySimple from "./components/BaseSelect/BaseSelectFormSimple/SelectCompanySimple.vue";
 
 import HelloWorld from './components/HelloWorld.vue'
 
 
 export default {
     ActivityTable,
+    SelectCompaniesMultiple,
+    SelectCompanySimple,
     ActivityTableRow,
     BaseBankShowEditSelectSimple,
     BaseBooleanRadioGroup,

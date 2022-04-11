@@ -146,7 +146,7 @@ max
 >
 > slots : title, cta, body
 
-## - BaseFormInput
+## - BaseInput
 ### - BaseInput:
 > pros : 
 name,
@@ -322,7 +322,7 @@ errors,
 isVertical
 >
 > slots:
-## - BaseFormSelect
+## - BaseSelect
 ### - BaseSelectSimple:
 > pros :
 name,
@@ -358,20 +358,38 @@ searchable,
 > slots :
 ### - BaseSelectSimpleAjax:
 > pros :
-trackBy
-attributeLabel
-modelValue
-defaultAjax
-url
-selectLabel
-name
-isRequired
-isDisabled
-label
-selectedValue
-groupClass
-labelClass
+trackBy,
+attributeLabel,
+modelValue,
+defaultAjax,
+url,
+selectLabel,
+name,
+isRequired,
+isDisabled,
+label,
+selectedValue,
+groupClass,
+labelClass,
 fullModelResponse
+>
+> slots :
+### - SelectCompanySimple:
+> pros :
+errors,
+getInputValue,
+metadata,
+model,
+permission
+>
+> slots :
+### - SelectCompanieMultiple:
+> pros :
+errors,
+getInputValue,
+metadata,
+defaultValue,
+permission
 >
 > slots :
 ## - BaseLabel
