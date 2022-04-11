@@ -50,7 +50,12 @@ export default [
             '@tiptap/extension-text ',
             '@tiptap/extension-text',
             '@tiptap/starter-kit',
-            '@tiptap/extension-mention'
+            '@tiptap/extension-mention',
+            'vue-filepond',
+            'filepond/dist/filepond.min.css',
+            'filepond-plugin-file-validate-type',
+            'filepond-plugin-image-preview',
+            'filepond-plugin-image-preview/dist/filepond-plugin-image-preview.min.css',
         ]
     }
 ]

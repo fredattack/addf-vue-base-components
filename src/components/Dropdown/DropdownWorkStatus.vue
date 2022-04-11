@@ -12,6 +12,7 @@
 import DropdownStatus from './DropdownStatus.vue'
 
 export default {
+  name: 'DropdownWorkStatus',
   components: {
     DropdownStatus
   },

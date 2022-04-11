@@ -70,12 +70,14 @@ import DropdownColoredStatus from "./components/Dropdown/DropdownColoredStatus.v
 import DropdownStatus from "./components/Dropdown/DropdownStatus.vue";
 import DropdownTaskStatusSquare from "./components/Dropdown/DropdownTaskStatusSquare.vue";
 import DropdownWorkStatus from "./components/Dropdown/DropdownWorkStatus.vue";
+import BaseFileDropComponent from "./components/fileDrop/BaseFileDropComponent.vue";
 
 import HelloWorld from './components/HelloWorld.vue'
 
 
 export default {
     ActivityTable,
+    BaseFileDropComponent,
     DropdownStatus,
     DropdownColoredStatus,
     DropdownWorkStatus,
