@@ -66,12 +66,20 @@ import SelectLanguage from "./components/BaseSelect/BaseSelectFormSimple/SelectL
 import SelectUserSimple from "./components/BaseSelect/BaseSelectFormSimple/SelectUserSimple.vue";
 import BaseWysiwyg from "./components/Wysiwyg/BaseWysiwyg.vue";
 import DynamicFormInput from "./components/DynamicForm/DynamicFormInput.vue";
+import DropdownColoredStatus from "./components/Dropdown/DropdownColoredStatus.vue";
+import DropdownStatus from "./components/Dropdown/DropdownStatus.vue";
+import DropdownTaskStatusSquare from "./components/Dropdown/DropdownTaskStatusSquare.vue";
+import DropdownWorkStatus from "./components/Dropdown/DropdownWorkStatus.vue";
 
 import HelloWorld from './components/HelloWorld.vue'
 
 
 export default {
     ActivityTable,
+    DropdownStatus,
+    DropdownColoredStatus,
+    DropdownWorkStatus,
+    DropdownTaskStatusSquare,
     DynamicFormInput,
     SelectCustomer,
     SelectUserSimple,
