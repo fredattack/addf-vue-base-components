@@ -1,5 +1,6 @@
 import vue from 'rollup-plugin-vue'
 import styles from "rollup-plugin-styles";
+import path from "path";
 import peerDepsExternal from 'rollup-plugin-peer-deps-external'
 
 export default [
@@ -9,16 +10,28 @@ export default [
         output: [
             {
                 format: 'esm',
-                file: 'dist/index.mjs'
+                file: 'dist/index.mjs',
+                assetFileNames: "[name][extname]"
             },
             {
                 format: 'cjs',
-                file: 'dist/index.js'
+                file: 'dist/index.js',
+                assetFileNames: "[name][extname]"
             },
 
         ],
         plugins: [
-            vue(), peerDepsExternal(),styles({mode: "extract"})
+            vue(), peerDepsExternal(),styles({
+                mode: "extract",
+                extensions: [".scss", ".css", ".pcss", ".postcss", ".sss"],
+                import: {
+                    extensions: [".scss", ".css", ".pcss", ".postcss", ".sss"]
+                },
+                sass: {
+                    impl: "sass",
+                    includePaths: [path.resolve("../../node_modules")]
+                }
+            })
         ],
 
         external: [
