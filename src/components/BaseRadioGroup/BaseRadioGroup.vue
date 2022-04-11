@@ -23,9 +23,10 @@
 
 <script>
 import { ref } from 'vue'
-import { RadioGroup, RadioGroupLabel, RadioGroupOption } from '@headlessui/vue'
+import { RadioGroup,  RadioGroupLabel, RadioGroupOption } from '@headlessui/vue'
 
 export default {
+  name: 'BaseRadioGroup',
   props: {
     options: {
       type: Object,
@@ -62,5 +63,7 @@ export default {
       });
     }
   },
+
+
 }
 </script>

@@ -64,6 +64,7 @@ import SelectCompanySimple from "./components/BaseSelect/BaseSelectFormSimple/Se
 import SelectCustomer from "./components/BaseSelect/BaseSelectFormSimple/SelectCustomer.vue";
 import SelectLanguage from "./components/BaseSelect/BaseSelectFormSimple/SelectLanguage.vue";
 import SelectUserSimple from "./components/BaseSelect/BaseSelectFormSimple/SelectUserSimple.vue";
+import BaseWysiwyg from "./components/Wysiwyg/BaseWysiwyg.vue";
 import DynamicFormInput from "./components/DynamicForm/DynamicFormInput.vue";
 
 import HelloWorld from './components/HelloWorld.vue'
@@ -74,6 +75,7 @@ export default {
     DynamicFormInput,
     SelectCustomer,
     SelectUserSimple,
+    BaseWysiwyg,
     SelectLanguage,
     SelectCompaniesMultiple,
     SelectCompanySimple,

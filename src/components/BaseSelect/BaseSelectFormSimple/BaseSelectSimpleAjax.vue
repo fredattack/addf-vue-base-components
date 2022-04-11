@@ -39,6 +39,7 @@
 <script>
 import apiClient from '@u/apiClient'
 import multiselect from 'vue-multiselect'
+
 export default {
   name: 'BaseSelectSimpleAjax',
   components: {multiselect},
@@ -62,6 +63,7 @@ export default {
       default: 'name'
     },
     modelValue: {type: Object, required: false, default: null},
+    apiClient: {type: Object, required: true},
     defaultAjax: {type: Object, required: false, default() { return {} }},
     url: {},
     selectLabel: {type: String},
@@ -114,33 +116,33 @@ export default {
 
 <style>
 
-/*.v-select{*/
-/*  background-repeat: no-repeat;*/
-/*  background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='rgb(74 85 104)' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='feather feather-chevron-down'><polyline points='6 9 12 15 18 9'/></svg>");*/
-/*  background-size: 18px;*/
-/*  background-position: center right 0.6rem;*/
-/*}*/
+.v-select{
+  background-repeat: no-repeat;
+  background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='rgb(74 85 104)' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='feather feather-chevron-down'><polyline points='6 9 12 15 18 9'/></svg>");
+  background-size: 18px;
+  background-position: center right 0.6rem;
+}
 
-/*.v-select .vs__dropdown-toggle{*/
-/*  border-radius: 0.375rem;*/
-/*  border-width: 1px;*/
-/*  border-color: #cbd5e0;*/
-/*  background-repeat: no-repeat;*/
-/*  padding-left: 0.75rem;*/
-/*  padding-top: 0.25rem;*/
-/*  padding-bottom: 0.25rem;*/
-/*  padding-right: 0.75rem;*/
-/*}*/
+.v-select .vs__dropdown-toggle{
+  border-radius: 0.375rem;
+  border-width: 1px;
+  border-color: #cbd5e0;
+  background-repeat: no-repeat;
+  padding-left: 0.75rem;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+  padding-right: 0.75rem;
+}
 
-/*.v-select .vs__open-indicator{*/
-/*  display: none;*/
-/*}*/
+.v-select .vs__open-indicator{
+  display: none;
+}
 
-/*.v-select .vs__search {*/
-/*  margin-block: 5px;*/
-/*}*/
+.v-select .vs__search {
+  margin-block: 5px;
+}
 
-/*.v-select .vs__search {*/
-/*  padding: 0;*/
-/*}*/
+.v-select .vs__search {
+  padding: 0;
+}
 </style>

@@ -357,6 +357,13 @@ searchable,
 >
 > slots :
 ### - BaseSelectSimpleAjax:
+
+```
+ !!! dépendance avec axios via apiClient. 
+ 
+import apiClient from '@u/apiClient'
+'@u': path.resolve(__dirname, 'src/utils')
+```
 > pros :
 trackBy,
 attributeLabel,
@@ -422,6 +429,15 @@ label,
 name
 >
 > slots :
+### - SelectEventType:
+> pros :
+errors,
+model,
+getInputValue,
+metadata,
+permission
+>
+> slots :
 ## - BaseLabel
 ### - BaseEditLabel:
 > pros :
@@ -453,6 +469,30 @@ content,
 color,
 icon,
 big,
+>
+> slots :
+>## - DynamicForm
+### - DynamicFormInput:
+> pros :
+question,
+questionIndex,
+radioTrackBy,
+classLabel,
+vertical_align,
+typeInput,
+defaultValue,
+classes,
+>
+> slots :
+### - SelectSettingsDefaultMessage:
+> pros :
+errors,
+getInputValue,
+options,
+label,
+placeholder,
+required,
+model
 >
 > slots :
 ## - BaseShowEditFormInput
