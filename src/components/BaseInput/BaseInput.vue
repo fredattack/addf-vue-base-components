@@ -39,6 +39,7 @@ export default {
       type: [String, Number],
       required: false
     },
+    defaultValue: {},
     disabled: {
       type: Boolean,
       required: false,
@@ -137,6 +138,15 @@ export default {
     },
 
   },
+  watch: {
+    modelValue(newValue) {
+      console.log(newValue)
+      this.$emit('input',  {
+        value: newValue,
+        attribute: this.name
+      });
+    }
+  }
 }
 </script>
 
