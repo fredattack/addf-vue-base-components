@@ -392,6 +392,36 @@ defaultValue,
 permission
 >
 > slots :
+### - SelectCustomer:
+> pros :
+errors,
+model,
+permission,
+getInputValue,
+metadata,
+name
+>
+> slots :
+### - SelectLanguage:
+> pros :
+errors,
+getInputValue,
+metadata,
+model,
+permission
+>
+> slots :
+### - SelectUserSimple:
+> pros :
+errors,
+getInputValue,
+metadata,
+permission,
+model,
+label,
+name
+>
+> slots :
 ## - BaseLabel
 ### - BaseEditLabel:
 > pros :

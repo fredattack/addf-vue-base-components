@@ -61,12 +61,18 @@ import SettingsPageFull from "./components/BasePage/SettingsPageFull.vue";
 import ToastUndoComponent from "./components/BaseToast/ToastUndoComponent.vue";
 import SelectCompaniesMultiple from "./components/BaseSelect/BaseSelectFormMultiple/SelectCompaniesMultiple.vue";
 import SelectCompanySimple from "./components/BaseSelect/BaseSelectFormSimple/SelectCompanySimple.vue";
+import SelectCustomer from "./components/BaseSelect/BaseSelectFormSimple/SelectCustomer.vue";
+import SelectLanguage from "./components/BaseSelect/BaseSelectFormSimple/SelectLanguage.vue";
+import SelectUserSimple from "./components/BaseSelect/BaseSelectFormSimple/SelectUserSimple.vue";
 
 import HelloWorld from './components/HelloWorld.vue'
 
 
 export default {
     ActivityTable,
+    SelectCustomer,
+    SelectUserSimple,
+    SelectLanguage,
     SelectCompaniesMultiple,
     SelectCompanySimple,
     ActivityTableRow,
