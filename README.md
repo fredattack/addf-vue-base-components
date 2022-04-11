@@ -19,27 +19,32 @@ const app = createApp(App)
 
 # Components
 
-## BaseButton
-### - BaseButton:
-> pros: tooltip, title, icon, linkTarget, color, isOutline, isRounded, isSoft, isElevated, size, scopedClasses, type, cursor, textColor
-
-## BaseSwitch
-### - BaseSwitch:
-> pros: modelValue, label, name
+## BasePage
+### - BasePageFull:
+> pros :
 >
-> slots: 
-
-## BaseIFramePDF
-### - IFramePdf:
-> pros: src,
+> slots : title, cta, body## BasePage
+### - SettingsPageFull:
+> pros :
 >
-> slots: 
-
-## BaseToast
-### - ToastUndoComponent:
-> pros: text,
+> slots : title, cta, body
+### - BasePageFull:
+> pros : name
+value
+disabled
+required
+type
+parseType
+placeholder
+label
+groupClass
+labelClass
+inputClass
+errors
+min
+max
 >
-> slots: 
+> slots : title, cta, body
 
 ## BaseCard
 
@@ -111,40 +116,118 @@ modelValue,
 tabs
 >
 > slots:
+
+## DropDownFiles
+### - DropdownStatus:
+> pros:
+options,
+current,
+displayChevron,
+label,
+with_label,
+icon,
+trackBy,
+color,
+btnStyle
+>
+> slots:
+### - DropDownColoredStatus:
+> pros:
+options,
+current,
+color_attribute,
+icon,
+with_label,
+displayChevron,
+btnStyle
+>
+> slots:
+### - DropdownTaskStatusSquare:
+> pros:
+options,
+current,
+label,
+icon,
+trackBy,
+color,
+btnStyle
+>
+> slots:
+### - DropdownWorkStatus:
+> pros:
+options,
+current
+>
+> slots:
+
+## BaseToast
+### - ToastUndoComponent:
+> pros: text,
+>
+> slots:
+
+## FileDrop
+### - BaseFileDropComponent:
+> pros: url,
+>
+> slots:
+
+## BaseIFramePDF
+### - IFramePdf:
+> pros: src,
+>
+> slots:
+
+## BaseSwitch
+### - BaseSwitch:
+> pros: modelValue, label, name
+>
+> slots:
+
+## - BaseLabel
+### - BaseEditLabel:
+> pros :
+label,
+required,
+labelClass
+>
+> slots :
+### - BaseShowPhoneLabel:
+> pros :
+label,
+modelValue,
+labelClass,
+isVertical,
+countryValue,
+>
+> slots :
+### - BaseShowLabel:
+> pros :
+label,
+modelValue,
+labelClass,
+isVertical
+>
+> slots :
+### - BaseLabel:
+> pros :
+content,
+color,
+icon,
+big,
+>
+> slots :
+> 
+## BaseButton
+### - BaseButton:
+> pros: tooltip, title, icon, linkTarget, color, isOutline, isRounded, isSoft, isElevated, size, scopedClasses, type, cursor, textColor
+
 ## BaseDatePicker
 
 ### - BaseSimpleDatePicker:
 > pros: defaultValue, label, name, required, disabled, canTypeDateManually, clearButtonVisible, viewType, monthFormat, weekFormat, startingDayOfTheWeek, format, groupClass, labelClass, errors
 >
 > slots:
-
-
-## BasePage
-### - BasePageFull:
-> pros : 
-> 
-> slots : title, cta, body## BasePage
-### - SettingsPageFull:
-> pros :
->
-> slots : title, cta, body
-### - BasePageFull:
-> pros : name
-value
-disabled
-required
-type
-parseType
-placeholder
-label
-groupClass
-labelClass
-inputClass
-errors
-min
-max
->
-> slots : title, cta, body
 
 ## - BaseInput
 ### - BaseInput:
@@ -438,40 +521,8 @@ metadata,
 permission
 >
 > slots :
-## - BaseLabel
-### - BaseEditLabel:
-> pros :
-label,
-required,
-labelClass
->
-> slots : 
-### - BaseShowPhoneLabel:
-> pros :
-label,
-modelValue,
-labelClass,
-isVertical,
-countryValue,
->
-> slots : 
-### - BaseShowLabel:
-> pros :
-label,
-modelValue,
-labelClass,
-isVertical
->
-> slots :
-### - BaseLabel:
-> pros :
-content,
-color,
-icon,
-big,
->
-> slots :
->## - DynamicForm
+
+## - DynamicForm
 ### - DynamicFormInput:
 > pros :
 question,

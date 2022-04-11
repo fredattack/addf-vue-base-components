@@ -66,11 +66,11 @@ import SelectLanguage from "./components/BaseSelect/BaseSelectFormSimple/SelectL
 import SelectUserSimple from "./components/BaseSelect/BaseSelectFormSimple/SelectUserSimple.vue";
 import BaseWysiwyg from "./components/Wysiwyg/BaseWysiwyg.vue";
 import DynamicFormInput from "./components/DynamicForm/DynamicFormInput.vue";
-import DropdownColoredStatus from "./components/Dropdown/DropdownColoredStatus.vue";
-import DropdownStatus from "./components/Dropdown/DropdownStatus.vue";
-import DropdownTaskStatusSquare from "./components/Dropdown/DropdownTaskStatusSquare.vue";
-import DropdownWorkStatus from "./components/Dropdown/DropdownWorkStatus.vue";
-import BaseFileDropComponent from "./components/fileDrop/BaseFileDropComponent.vue";
+import DropdownColoredStatus from "./components/DropdownFiles/DropdownColoredStatus.vue";
+import DropdownStatus from "./components/DropdownFiles/DropdownStatus.vue";
+import DropdownTaskStatusSquare from "./components/DropdownFiles/DropdownTaskStatusSquare.vue";
+import DropdownWorkStatus from "./components/DropdownFiles/DropdownWorkStatus.vue";
+import BaseFileDropComponent from "./components/FileDrop/BaseFileDropComponent.vue";
 
 import HelloWorld from './components/HelloWorld.vue'
 
