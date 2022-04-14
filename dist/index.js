@@ -7317,6 +7317,9 @@ var script$6 = {
     },
   },
   methods: {
+    setQuestionValue({attribute, value}){
+      this.question.value[attribute] = value;
+    },
     getOptionInputValue({attribute, value}){
       this.$emit('questionValue', {attribute: attribute, value: value, index: this.questionIndex});
     },
@@ -7441,7 +7444,8 @@ function render$6(_ctx, _cache, $props, $setup, $data, $options) {
                     key: 6,
                     class: vue.normalizeClass($props.classes)
                   }, [
-                    vue.createVNode(_component_BaseSelectSimpleAjax, {
+                    (vue.openBlock(), vue.createBlock(_component_BaseSelectSimpleAjax, {
+                      key: $props.question,
                       url: $props.question.url,
                       label: $props.question.question,
                       name: $props.question.name,
@@ -7450,7 +7454,7 @@ function render$6(_ctx, _cache, $props, $setup, $data, $options) {
                       trackBy: "title",
                       attributeLabel: $props.question.question,
                       onSetSelected: $options.getOptionInputValue
-                    }, null, 8 /* PROPS */, ["url", "label", "name", "modelValue", "attributeLabel", "onSetSelected"])
+                    }, null, 8 /* PROPS */, ["url", "label", "name", "modelValue", "attributeLabel", "onSetSelected"]))
                   ], 2 /* CLASS */))
                 : ($props.question.type === 'SelectSettingDefaultMessage')
                   ? (vue.openBlock(), vue.createElementBlock(vue.Fragment, { key: 7 }, [
@@ -7467,8 +7471,8 @@ function render$6(_ctx, _cache, $props, $setup, $data, $options) {
                               options: $props.question.options,
                               modelValue: $data.questionValue.value,
                               "onUpdate:modelValue": _cache[3] || (_cache[3] = $event => (($data.questionValue.value) = $event)),
-                              onSetSelected: $options.getOptionInputValue,
-                              onSetDelected: $options.getOptionInputValue,
+                              onSetSelected: $options.setQuestionValue,
+                              onSetDelected: $options.setQuestionValue,
                               model: $props.defaultValue,
                               class: vue.normalizeClass($props.classLabel)
                             }, null, 8 /* PROPS */, ["label", "placeholder", "name", "options", "modelValue", "onSetSelected", "onSetDelected", "model", "class"]))

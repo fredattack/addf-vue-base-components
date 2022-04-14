@@ -68,6 +68,7 @@
   </div>
   <div v-else-if="question.type === 'selectAjax'" :class='classes'>
     <BaseSelectSimpleAjax
+        :key="question"
         :url='question.url'
         :label="question.question"
         :name="question.name"
@@ -86,8 +87,8 @@
         :name="question.name"
         :options="question.options"
         v-model="questionValue.value"
-        @setSelected="getOptionInputValue"
-        @setDelected="getOptionInputValue"
+        @setSelected="setQuestionValue"
+        @setDelected="setQuestionValue"
         :model="defaultValue"
         :class="classLabel"
 
@@ -159,6 +160,9 @@ export default {
     },
   },
   methods: {
+    setQuestionValue({attribute, value}){
+      this.question.value[attribute] = value
+    },
     getOptionInputValue({attribute, value}){
       this.$emit('questionValue', {attribute: attribute, value: value, index: this.questionIndex})
     },
