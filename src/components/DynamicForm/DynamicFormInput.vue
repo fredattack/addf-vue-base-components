@@ -67,14 +67,13 @@
         @change.self='getOptionInputValue'/>
   </div>
   <div v-else-if="question.type === 'selectAjax'" :class='classes'>
-    ici
     <BaseSelectSimpleAjax
         :key="question"
         :url='question.url'
         :label="question.question"
         :name="question.name"
         v-model="questionValue.value"
-        trackBy='id'
+        trackBy='title'
         :attributeLabel="question.question"
         @setSelected="getOptionInputValue"
     />
