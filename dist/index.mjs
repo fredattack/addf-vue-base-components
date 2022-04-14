@@ -3383,7 +3383,7 @@ var script$L = {
         }else {
           console.log('watch defaultvalue 3b');
         this.$emit('update:modelValue', newValue[this.trackBy]);
-          this.$emit('selected',newValue[this.trackBy]);
+          this.$emit('selected', {attribute: this.name || 'selectAjax' ,value: newValue[this.trackBy]});
         }
       }
     },
@@ -7301,9 +7301,6 @@ var script$6 = {
     },
   },
   methods: {
-    setOptionValue(payload){
-      this.question.value = payload;
-    },
     getOptionInputValue({attribute, value}){
       console.log(
           `attribute: ${attribute}`,
@@ -7438,7 +7435,7 @@ function render$6(_ctx, _cache, $props, $setup, $data, $options) {
                       label: $props.question.question,
                       name: $props.question.name,
                       attributeLabel: "title",
-                      onSelected: $options.setOptionValue
+                      onSelected: $options.getOptionInputValue
                     }, null, 8 /* PROPS */, ["url", "label", "name", "onSelected"]))
                   ], 2 /* CLASS */))
                 : ($props.question.type === 'SelectSettingDefaultMessage')
