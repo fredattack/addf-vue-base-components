@@ -159,6 +159,10 @@ export default {
   },
   methods: {
     getOptionInputValue({attribute, value}){
+      console.log(
+          `attribute: ${attribute}`,
+          `value: ${value}`,
+      )
       this.$emit('questionValue', {attribute: attribute, value: value, index: this.questionIndex})
     },
   },
