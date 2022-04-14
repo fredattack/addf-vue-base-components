@@ -68,7 +68,6 @@
   </div>
   <div v-else-if="question.type === 'selectAjax'" :class='classes'>
     <BaseSelectSimpleAjax
-        :key="question"
         :url='question.url'
         :label="question.question"
         :name="question.name"

@@ -105,7 +105,6 @@ export default {
             .then(async response => {
               this.loading=false
               this.options = response.data
-              console.log('ajax options', this.options)
             })
       }
     },

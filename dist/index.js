@@ -3420,7 +3420,6 @@ var script$L = {
             .then(async response => {
               this.loading=false;
               this.options = response.data;
-              console.log('ajax options', this.options);
             });
       }
     },
@@ -7442,8 +7441,7 @@ function render$6(_ctx, _cache, $props, $setup, $data, $options) {
                     key: 6,
                     class: vue.normalizeClass($props.classes)
                   }, [
-                    (vue.openBlock(), vue.createBlock(_component_BaseSelectSimpleAjax, {
-                      key: $props.question,
+                    vue.createVNode(_component_BaseSelectSimpleAjax, {
                       url: $props.question.url,
                       label: $props.question.question,
                       name: $props.question.name,
@@ -7452,7 +7450,7 @@ function render$6(_ctx, _cache, $props, $setup, $data, $options) {
                       trackBy: "title",
                       attributeLabel: $props.question.question,
                       onSetSelected: $options.getOptionInputValue
-                    }, null, 8 /* PROPS */, ["url", "label", "name", "modelValue", "attributeLabel", "onSetSelected"]))
+                    }, null, 8 /* PROPS */, ["url", "label", "name", "modelValue", "attributeLabel", "onSetSelected"])
                   ], 2 /* CLASS */))
                 : ($props.question.type === 'SelectSettingDefaultMessage')
                   ? (vue.openBlock(), vue.createElementBlock(vue.Fragment, { key: 7 }, [
