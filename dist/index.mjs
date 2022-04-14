@@ -7426,12 +7426,9 @@ function render$6(_ctx, _cache, $props, $setup, $data, $options) {
                       url: $props.question.url,
                       label: $props.question.question,
                       name: $props.question.name,
-                      modelValue: $data.questionValue.value,
-                      "onUpdate:modelValue": _cache[2] || (_cache[2] = $event => (($data.questionValue.value) = $event)),
-                      trackBy: "id",
                       attributeLabel: "title",
                       onSetSelected: $options.getOptionInputValue
-                    }, null, 8 /* PROPS */, ["url", "label", "name", "modelValue", "onSetSelected"]))
+                    }, null, 8 /* PROPS */, ["url", "label", "name", "onSetSelected"]))
                   ], 2 /* CLASS */))
                 : ($props.question.type === 'SelectSettingDefaultMessage')
                   ? (openBlock(), createElementBlock(Fragment, { key: 7 }, [
@@ -7447,7 +7444,7 @@ function render$6(_ctx, _cache, $props, $setup, $data, $options) {
                               name: $props.question.name,
                               options: $props.question.options,
                               modelValue: $data.questionValue.value,
-                              "onUpdate:modelValue": _cache[3] || (_cache[3] = $event => (($data.questionValue.value) = $event)),
+                              "onUpdate:modelValue": _cache[2] || (_cache[2] = $event => (($data.questionValue.value) = $event)),
                               onSetSelected: $options.getOptionInputValue,
                               onSetDelected: $options.getOptionInputValue,
                               model: $props.defaultValue,

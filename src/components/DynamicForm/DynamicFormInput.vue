@@ -72,8 +72,6 @@
         :url='question.url'
         :label="question.question"
         :name="question.name"
-        v-model="questionValue.value"
-        trackBy='id'
         attributeLabel="title"
         @setSelected="getOptionInputValue"
     />
