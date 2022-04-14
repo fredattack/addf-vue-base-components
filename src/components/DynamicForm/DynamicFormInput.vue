@@ -74,7 +74,6 @@
         :name="question.name"
         v-model="questionValue.value"
         trackBy='title'
-        :attributeLabel="question.question"
         @setSelected="getOptionInputValue"
     />
   </div>
@@ -87,8 +86,8 @@
         :name="question.name"
         :options="question.options"
         v-model="questionValue.value"
-        @setSelected="setQuestionValue"
-        @setDelected="setQuestionValue"
+        @setSelected="getOptionInputValue"
+        @setDelected="getOptionInputValue"
         :model="defaultValue"
         :class="classLabel"
 
@@ -160,9 +159,6 @@ export default {
     },
   },
   methods: {
-    setQuestionValue({attribute, value}){
-      this.question.value[attribute] = value
-    },
     getOptionInputValue({attribute, value}){
       this.$emit('questionValue', {attribute: attribute, value: value, index: this.questionIndex})
     },

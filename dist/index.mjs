@@ -7297,9 +7297,6 @@ var script$6 = {
     },
   },
   methods: {
-    setQuestionValue({attribute, value}){
-      this.question.value[attribute] = value;
-    },
     getOptionInputValue({attribute, value}){
       this.$emit('questionValue', {attribute: attribute, value: value, index: this.questionIndex});
     },
@@ -7432,9 +7429,8 @@ function render$6(_ctx, _cache, $props, $setup, $data, $options) {
                       modelValue: $data.questionValue.value,
                       "onUpdate:modelValue": _cache[2] || (_cache[2] = $event => (($data.questionValue.value) = $event)),
                       trackBy: "title",
-                      attributeLabel: $props.question.question,
                       onSetSelected: $options.getOptionInputValue
-                    }, null, 8 /* PROPS */, ["url", "label", "name", "modelValue", "attributeLabel", "onSetSelected"]))
+                    }, null, 8 /* PROPS */, ["url", "label", "name", "modelValue", "onSetSelected"]))
                   ], 2 /* CLASS */))
                 : ($props.question.type === 'SelectSettingDefaultMessage')
                   ? (openBlock(), createElementBlock(Fragment, { key: 7 }, [
@@ -7451,8 +7447,8 @@ function render$6(_ctx, _cache, $props, $setup, $data, $options) {
                               options: $props.question.options,
                               modelValue: $data.questionValue.value,
                               "onUpdate:modelValue": _cache[3] || (_cache[3] = $event => (($data.questionValue.value) = $event)),
-                              onSetSelected: $options.setQuestionValue,
-                              onSetDelected: $options.setQuestionValue,
+                              onSetSelected: $options.getOptionInputValue,
+                              onSetDelected: $options.getOptionInputValue,
                               model: $props.defaultValue,
                               class: normalizeClass($props.classLabel)
                             }, null, 8 /* PROPS */, ["label", "placeholder", "name", "options", "modelValue", "onSetSelected", "onSetDelected", "model", "class"]))
