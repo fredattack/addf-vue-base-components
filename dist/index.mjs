@@ -7431,8 +7431,8 @@ function render$6(_ctx, _cache, $props, $setup, $data, $options) {
                       label: $props.question.question,
                       name: $props.question.name,
                       attributeLabel: "title",
-                      onSetSelected: $options.getOptionInputValue
-                    }, null, 8 /* PROPS */, ["url", "label", "name", "onSetSelected"]))
+                      onSelected: $options.getOptionInputValue
+                    }, null, 8 /* PROPS */, ["url", "label", "name", "onSelected"]))
                   ], 2 /* CLASS */))
                 : ($props.question.type === 'SelectSettingDefaultMessage')
                   ? (openBlock(), createElementBlock(Fragment, { key: 7 }, [
@@ -7449,11 +7449,11 @@ function render$6(_ctx, _cache, $props, $setup, $data, $options) {
                               options: $props.question.options,
                               modelValue: $data.questionValue.value,
                               "onUpdate:modelValue": _cache[2] || (_cache[2] = $event => (($data.questionValue.value) = $event)),
-                              onSetSelected: $options.getOptionInputValue,
+                              onSelected: $options.getOptionInputValue,
                               onSetDelected: $options.getOptionInputValue,
                               model: $props.defaultValue,
                               class: normalizeClass($props.classLabel)
-                            }, null, 8 /* PROPS */, ["label", "placeholder", "name", "options", "modelValue", "onSetSelected", "onSetDelected", "model", "class"]))
+                            }, null, 8 /* PROPS */, ["label", "placeholder", "name", "options", "modelValue", "onSelected", "onSetDelected", "model", "class"]))
                           : createCommentVNode("v-if", true)
                       ], 2 /* CLASS */)
                     ], 2112 /* STABLE_FRAGMENT, DEV_ROOT_FRAGMENT */))

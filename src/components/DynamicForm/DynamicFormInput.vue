@@ -73,7 +73,7 @@
         :label="question.question"
         :name="question.name"
         attributeLabel="title"
-        @setSelected="getOptionInputValue"
+        @selected="getOptionInputValue"
     />
   </div>
 <!--  attributeLabel='title'-->
@@ -85,7 +85,7 @@
         :name="question.name"
         :options="question.options"
         v-model="questionValue.value"
-        @setSelected="getOptionInputValue"
+        @selected="getOptionInputValue"
         @setDelected="getOptionInputValue"
         :model="defaultValue"
         :class="classLabel"
