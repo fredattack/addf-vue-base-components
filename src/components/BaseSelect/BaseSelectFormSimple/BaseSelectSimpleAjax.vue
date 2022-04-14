@@ -63,7 +63,6 @@ export default {
       default: 'name'
     },
     modelValue: {type: Object, required: false, default: null},
-    apiClient: {type: Object, required: true},
     defaultAjax: {type: Object, required: false, default() { return {} }},
     url: {},
     selectLabel: {type: String},

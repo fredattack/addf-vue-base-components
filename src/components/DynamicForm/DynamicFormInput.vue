@@ -73,7 +73,7 @@
         :label="question.question"
         :name="question.name"
         v-model="questionValue.value"
-        trackBy='title'
+        trackBy='id'
         :attributeLabel="question.question"
         @setSelected="getOptionInputValue"
     />

@@ -3358,7 +3358,6 @@ var script$L = {
       default: 'name'
     },
     modelValue: {type: Object, required: false, default: null},
-    apiClient: {type: Object, required: true},
     defaultAjax: {type: Object, required: false, default() { return {} }},
     url: {},
     selectLabel: {type: String},
@@ -7429,7 +7428,7 @@ function render$6(_ctx, _cache, $props, $setup, $data, $options) {
                       name: $props.question.name,
                       modelValue: $data.questionValue.value,
                       "onUpdate:modelValue": _cache[2] || (_cache[2] = $event => (($data.questionValue.value) = $event)),
-                      trackBy: "title",
+                      trackBy: "id",
                       attributeLabel: $props.question.question,
                       onSetSelected: $options.getOptionInputValue
                     }, null, 8 /* PROPS */, ["url", "label", "name", "modelValue", "attributeLabel", "onSetSelected"]))
