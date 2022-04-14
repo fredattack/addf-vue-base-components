@@ -77,12 +77,16 @@ export default {
   },
   watch: {
     defaultValue(newValue) {
+      console.log('watch defaultvalue')
       if (newValue != null && newValue !== '') {
+        console.log('watch defaultvalue 2')
         if(this.fullModelResponse){
+          console.log('watch defaultvalue 3a')
           this.$emit('update:modelValue', newValue);
           this.$emit('workSelect',newValue);
 
         }else{
+          console.log('watch defaultvalue 3b')
         this.$emit('update:modelValue', newValue[this.trackBy]);
           this.$emit('selected:value',newValue[this.trackBy]);
         }
