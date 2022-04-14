@@ -2698,7 +2698,7 @@ var script$T = {
   name: 'BasePageHeaderActions'
 };
 
-const _hoisted_1$F = { class: "flex flex-col md:flex-row flex-1 justify-end mt-4 sm:mt-0" };
+const _hoisted_1$F = { class: "flex flex-row md:flex-row flex-1 justify-end mt-4 sm:mt-0" };
 
 function render$T(_ctx, _cache, $props, $setup, $data, $options) {
   return (vue.openBlock(), vue.createElementBlock("div", _hoisted_1$F, [
