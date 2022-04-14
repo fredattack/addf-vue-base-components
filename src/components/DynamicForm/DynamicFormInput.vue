@@ -73,7 +73,7 @@
         :label="question.question"
         :name="question.name"
         attributeLabel="title"
-        @selected="getOptionInputValue"
+        @selected="setOptionValue"
     />
   </div>
 <!--  attributeLabel='title'-->
@@ -158,6 +158,9 @@ export default {
     },
   },
   methods: {
+    setOptionValue(payload){
+      this.question.value = payload
+    },
     getOptionInputValue({attribute, value}){
       console.log(
           `attribute: ${attribute}`,

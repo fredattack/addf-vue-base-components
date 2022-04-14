@@ -88,7 +88,7 @@ export default {
         }else{
           console.log('watch defaultvalue 3b')
         this.$emit('update:modelValue', newValue[this.trackBy]);
-          this.$emit('selected:value',newValue[this.trackBy]);
+          this.$emit('selected',newValue[this.trackBy]);
         }
       }
     },
