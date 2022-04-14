@@ -3392,16 +3392,12 @@ var script$L = {
   },
   watch: {
     defaultValue(newValue) {
-      console.log('watch defaultvalue');
       if (newValue != null && newValue !== '') {
-        console.log('watch defaultvalue 2');
         if(this.fullModelResponse){
-          console.log('watch defaultvalue 3a');
           this.$emit('update:modelValue', newValue);
           this.$emit('workSelect',newValue);
 
         }else {
-          console.log('watch defaultvalue 3b');
         this.$emit('update:modelValue', newValue[this.trackBy]);
           this.$emit('selected', {attribute: this.name || 'selectAjax' ,value: newValue[this.trackBy]});
         }
@@ -7322,10 +7318,6 @@ var script$6 = {
   },
   methods: {
     getOptionInputValue({attribute, value}){
-      console.log(
-          `attribute: ${attribute}`,
-          `value: ${value}`,
-      );
       this.$emit('questionValue', {attribute: attribute, value: value, index: this.questionIndex});
     },
   },
