@@ -73,6 +73,7 @@
         :label="question.question"
         :name="question.name"
         attributeLabel="title"
+        :full-model-response="true"
         @selected="getOptionInputValue"
     />
   </div>
