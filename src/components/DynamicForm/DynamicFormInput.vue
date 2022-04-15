@@ -72,7 +72,8 @@
         :url='question.url'
         :label="question.question"
         :name="question.name"
-        attributeLabel="title"
+        :track-by="ajaxTrackBy"
+        :attributeLabel="ajaxAttributeLabel"
         @selected="getOptionInputValue"
     />
   </div>
@@ -117,6 +118,8 @@ export default {
     SelectSettingDefaultMessage,
   },
   props: {
+    ajaxTrackBy: {type: String, required: false, default: 'id'},
+    ajaxAttributeLabel: {type: String, required: false, default: 'name'},
     question: {required: true},
     questionIndex: {},
     radioTrackBy:{

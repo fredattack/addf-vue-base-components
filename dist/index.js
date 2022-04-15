@@ -7276,6 +7276,8 @@ var script$6 = {
     SelectSettingDefaultMessage: script$7,
   },
   props: {
+    ajaxTrackBy: {type: String, required: false, default: 'id'},
+    ajaxAttributeLabel: {type: String, required: false, default: 'name'},
     question: {required: true},
     questionIndex: {},
     radioTrackBy:{
@@ -7446,9 +7448,10 @@ function render$6(_ctx, _cache, $props, $setup, $data, $options) {
                       url: $props.question.url,
                       label: $props.question.question,
                       name: $props.question.name,
-                      attributeLabel: "title",
+                      "track-by": $props.ajaxTrackBy,
+                      attributeLabel: $props.ajaxAttributeLabel,
                       onSelected: $options.getOptionInputValue
-                    }, null, 8 /* PROPS */, ["url", "label", "name", "onSelected"]))
+                    }, null, 8 /* PROPS */, ["url", "label", "name", "track-by", "attributeLabel", "onSelected"]))
                   ], 2 /* CLASS */))
                 : ($props.question.type === 'SelectSettingDefaultMessage')
                   ? (vue.openBlock(), vue.createElementBlock(vue.Fragment, { key: 7 }, [
