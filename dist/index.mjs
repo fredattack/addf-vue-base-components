@@ -7427,6 +7427,7 @@ function render$6(_ctx, _cache, $props, $setup, $data, $options) {
                       label: $props.question.question,
                       name: $props.question.name,
                       attributeLabel: "title",
+                      "full-model-response": true,
                       onSelected: $options.getOptionInputValue
                     }, null, 8 /* PROPS */, ["url", "label", "name", "onSelected"]))
                   ], 2 /* CLASS */))
