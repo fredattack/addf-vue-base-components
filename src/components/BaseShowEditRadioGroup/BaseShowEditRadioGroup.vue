@@ -105,7 +105,8 @@ export default {
   methods: {
     findModelValue() {
       if(this.getByKey) {
-        if(this.options && Object.keys(this.options).find(item => item.id === this.modelValue)) return Object.keys(this.options).find(item => item.id === this.modelValue)
+        // // console.log(Object.keys(this.options).find(item => item.id === this.modelValue))
+        if(this.options && Object.keys(this.options).find(item => this.options[item] === this.modelValue)) return Object.keys(this.options).find(item => this.options[item] === this.modelValue)
         return null
       } else {
         if(this.options && this.options.find(item => item.id === this.modelValue)) return this.options.find(item => item.id === this.modelValue).name
@@ -114,7 +115,6 @@ export default {
 
     },
     updateInput(event) {
-      console.log(event.target.value)
       let modelValueUpdate = this.isNumber ? Number(event.target.value) : event.target.value
       this.$emit("update:modelValue", modelValueUpdate);
     }

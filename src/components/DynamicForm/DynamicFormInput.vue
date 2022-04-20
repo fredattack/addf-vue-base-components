@@ -1,28 +1,33 @@
 <template>
 
   <div v-if="question.type === 'input'" :class='classes'>
-    <BaseInput
+    <BaseInputDynamicForm
         :label="question.question"
-               :placeholder="question.question"
-               :name="question.name"
-               v-model="questionValue.value"
-               :disabled="permission"
-               :required="true"
-               :defaultValue="defaultValue"
-               />
+        :placeholder="question.question"
+        :name="question.name"
+        :value="questionValue.value"
+        :disabled="permission"
+        :required="true"
+        :defaultValue="defaultValue"
+        @change.self="getOptionInputValue"
+        :labelClass="classLabel"
+        :isDefaultValue="isDefaultValue"
+    />
   </div>
   <div v-if="question.type === 'input number'" :class='classes'>
-    <BaseInput :label="question.question"
-               :placeholder="question.question"
-               :name="question.name"
-               v-model="questionValue.value"
-               :disabled="permission"
-               :required="true"
-               :default-value="defaultValue"
-               type="number"
-               :labelClass="classLabel"
-               @input="getOptionInputValue"
-               />
+    <BaseInputDynamicForm
+        :label="question.question"
+        :placeholder="question.question"
+        :name="question.name"
+        :value="questionValue.value"
+        :disabled="permission"
+        :required="true"
+        type="number"
+        :defaultValue="questionValue.value"
+        @change.self="getOptionInputValue"
+        :labelClass="classLabel"
+        :isDefaultValue="isDefaultValue"
+    />
   </div>
   <div v-else-if="question.type === 'textArea'"  :class='classes'>
     <BaseTextArea :label="question.question"
@@ -45,6 +50,7 @@
 
     <div v-else-if="question.type === 'radio'" :class='classes'>
       <BaseSimpleRadioGroup
+          :key="defaultValue"
                             :name="question.name"
                             :label="question.question"
                             :isShowingKey='false'
@@ -141,6 +147,10 @@ export default {
     classes:{
       required:false,
       default:'col-start-2'
+    },
+    isDefaultValue: {
+      type: Boolean,
+      default: false
     }
   },
   data() {

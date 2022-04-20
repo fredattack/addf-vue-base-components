@@ -6,15 +6,14 @@ on peux changer ce comportement avec les options isReturningKey et isShowingKey-
     <label v-if='label' class="form-label capitalize-first" >{{ label }}&nbsp;<span class="text-red-600" v-if="label && required">*</span></label>
     <div :class="cPlacement">
       <div class='form-check mr-2' v-for='(val, key) in options' :key='key'>
-        <input v-if='isReturningKey === true' :id='`${name}-${key}-${extra_id}`' class='form-check-input' type='radio' :name='temp_name'
-               :value='trackBy ===null ? key : val[trackBy]' v-model='value' :disabled="disabled">
-        <input v-else :id='`${name}-${key}-${extra_id}`' class='form-check-input' type='radio' :name='temp_name'
-               :value='trackBy ===null ? val : val[trackBy]' v-model='value' :disabled="disabled">
-
+        <input v-if='isReturningKey === true' :id='`${name}-${key}-${extra_id || ""}`' class='form-check-input' type='radio' :name="temp_name"
+               :value='trackBy ===null ? key : val[trackBy]' v-model='valueChecked' :disabled="disabled">
+        <input v-else :id='`${name}-${key}-${extra_id || ""}`' class='form-check-input' type='radio'
+               :value='trackBy ===null ? val : val[trackBy]' v-model='valueChecked'  :disabled="disabled" :name="temp_name">
         <label v-if='isShowingKey === true ' class='form-check-label capitalize-first'
-               :for='`${name}-${key}-${extra_id}`'>{{ this.translatable ? $t(`${translationExtention}.${key}`) : val[attributeLabel]
-          }}</label>
-        <label v-else class='form-check-label capitalize-first' :for='`${name}-${key}-${extra_id}`'>
+                           :for='`${name}-${key}-${extra_id || ""}`'>{{ this.translatable ? $t(`${translationExtention}.${key}`) : val[attributeLabel]
+        }}</label>
+        <label v-else class='form-check-label capitalize-first' :for='`${name}-${key}-${extra_id || ""}`' >
           {{ this.translatable ? $t(`${translationExtention}.${trackBy ===null ? key : val[attributeLabel]}`) : val[attributeLabel] }}</label>
       </div>
     </div>
@@ -32,7 +31,7 @@ export default {
   emits: ['change'],
   data() {
     return {
-      value: this.defaultValue,
+      valueChecked: this.defaultValue,
       temp_name: this.name + this.extra_id
     }
   },
@@ -60,9 +59,12 @@ export default {
     },
   },
   watch: {
-    value(newValue) {
+    valueChecked(newValue) {
       if (newValue) {
+        this.valueChecked = newValue
         this.$emit('change', { attribute: this.name, value: newValue })
+        console.log(this.valueChecked)
+
       }
     }
   },
