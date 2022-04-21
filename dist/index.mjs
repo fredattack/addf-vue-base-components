@@ -5448,7 +5448,7 @@ function render$w(_ctx, _cache, $props, $setup, $data, $options) {
       }, [
         (openBlock(true), createElementBlock(Fragment, null, renderList($props.options, (val, key) => {
           return (openBlock(), createElementBlock("div", {
-            class: "form-check mr-2",
+            class: "form-check mr-2 mt-2",
             key: key
           }, [
             ($props.isReturningKey === true)

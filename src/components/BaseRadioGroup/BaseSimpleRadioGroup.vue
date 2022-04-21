@@ -5,7 +5,7 @@ on peux changer ce comportement avec les options isReturningKey et isShowingKey-
   <div class='mt-3'>
     <label v-if='label' class="form-label capitalize-first" >{{ label }}&nbsp;<span class="text-red-600" v-if="label && required">*</span></label>
     <div :class="cPlacement">
-      <div class='form-check mr-2' v-for='(val, key) in options' :key='key'>
+      <div class='form-check mr-2 mt-2' v-for='(val, key) in options' :key='key'>
         <input v-if='isReturningKey === true' :id='`${name}-${key}-${extra_id || ""}`' class='form-check-input' type='radio' :name="temp_name"
                :value='trackBy ===null ? key : val[trackBy]' v-model='valueChecked' :disabled="disabled">
         <input v-else :id='`${name}-${key}-${extra_id || ""}`' class='form-check-input' type='radio'
@@ -63,8 +63,6 @@ export default {
       if (newValue) {
         this.valueChecked = newValue
         this.$emit('change', { attribute: this.name, value: newValue })
-        console.log(this.valueChecked)
-
       }
     }
   },

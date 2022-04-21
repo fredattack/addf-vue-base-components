@@ -5468,7 +5468,7 @@ function render$w(_ctx, _cache, $props, $setup, $data, $options) {
       }, [
         (vue.openBlock(true), vue.createElementBlock(vue.Fragment, null, vue.renderList($props.options, (val, key) => {
           return (vue.openBlock(), vue.createElementBlock("div", {
-            class: "form-check mr-2",
+            class: "form-check mr-2 mt-2",
             key: key
           }, [
             ($props.isReturningKey === true)
