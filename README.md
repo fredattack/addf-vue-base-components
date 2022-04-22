@@ -77,6 +77,23 @@ theadRowClasses,
 >
 > slots:
 
+### - BaseContentTable:
+> pros: 
+columns,
+rowClick,
+redirect_to_field,
+search,
+rows,
+modelList,
+isBordered,
+isHoverable,
+isSmallTable,
+isResponsive,
+isStriped,
+theadRowClasses
+>
+> slots:
+
 ### - BaseThComponent:
 > pros: column, thClasses, currentSort, width,
 >
@@ -564,6 +581,49 @@ disabled,
 min,
 max,
 parseType,
+>
+> slots :
+### - BaseShowEditInputButton:
+> pros :
+name,
+editionMode,
+id,
+label,
+modelValue,
+type,
+errors,
+groupClass,
+inputClass,
+required,
+placeholder,
+disabled,
+min,
+max,
+parseType,
+buttonLabel,
+buttonColor,
+isOutline,
+isRounded,
+isSoft,
+isElevated,
+size,
+buttonIcon,
+buttonFunction
+>
+> slots :
+### - BaseShowEditTreeInput:
+> pros :
+firstName,
+secondName,
+thirdName,
+firstLabel,
+secondLabel,
+thirdLabel,
+legend,
+firstValue,
+secondValue,
+thirdValue,
+editionMode
 >
 > slots :
 ### - BaseShowEditTextArea:

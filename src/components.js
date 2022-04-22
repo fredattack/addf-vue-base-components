@@ -71,7 +71,10 @@ import DropdownStatus from "./components/DropdownFiles/DropdownStatus.vue";
 import DropdownTaskStatusSquare from "./components/DropdownFiles/DropdownTaskStatusSquare.vue";
 import DropdownWorkStatus from "./components/DropdownFiles/DropdownWorkStatus.vue";
 import BaseFileDropComponent from "./components/FileDrop/BaseFileDropComponent.vue";
-import BaseInputDynamicForm from "./components/BaseInput/BaseInputDynamicForm.vue";
+import BaseInputDynamicForm from "./components/DynamicForm/components/BaseInputDynamicForm.vue";
+import BaseContentTable from "./components/BaseTable/BaseContentTable.vue";
+import BaseShowEditInputButton from "./components/BaseShowEditInput/BaseShowEditInputButton.vue";
+import BaseShowEditTreeInput from "./components/BaseShowEditInput/BaseShowEditTreeInput.vue";
 
 import HelloWorld from './components/HelloWorld.vue'
 
@@ -79,8 +82,11 @@ import HelloWorld from './components/HelloWorld.vue'
 export default {
     ActivityTable,
     BaseInputDynamicForm,
+    BaseShowEditTreeInput,
+    BaseShowEditInputButton,
     BaseFileDropComponent,
     DropdownStatus,
+    BaseContentTable,
     DropdownColoredStatus,
     DropdownWorkStatus,
     DropdownTaskStatusSquare,

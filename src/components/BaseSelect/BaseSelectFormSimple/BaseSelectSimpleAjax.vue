@@ -65,29 +65,12 @@ export default {
     modelValue: {type: Object, required: false, default: null},
     defaultAjax: {type: Object, required: false, default() { return {} }},
     url: {},
-    selectLabel: {type: String},
     name: {},
     isRequired: {type: Boolean, required: false, default: false},
-    isDisabled: {type: Boolean, required: false, default: false},
     label: {type: String, required: false},
-    selectedValue: null,
     groupClass:{ type: String, required: false, default:'' },
     labelClass:{ type: String, required: false, default:'' },
     fullModelResponse:{ type: Boolean, required: false, default:false },
-  },
-  watch: {
-    defaultValue(newValue) {
-      if (newValue != null && newValue !== '') {
-        if(this.fullModelResponse){
-          this.$emit('update:modelValue', newValue);
-          this.$emit('workSelect',newValue);
-
-        }else{
-        this.$emit('update:modelValue', newValue[this.trackBy]);
-          this.$emit('selected', {attribute: this.name || 'selectAjax' ,value: newValue[this.trackBy]});
-        }
-      }
-    },
   },
   computed:{
     cGroupClass(){
@@ -109,6 +92,20 @@ export default {
       }
     },
 
+  },
+  watch: {
+    defaultValue(newValue) {
+      if (newValue != null && newValue !== '') {
+        if(this.fullModelResponse){
+          this.$emit('update:modelValue', newValue);
+          this.$emit('workSelect',newValue);
+
+        }else{
+        this.$emit('update:modelValue', newValue[this.trackBy]);
+          this.$emit('selected', {attribute: this.name || 'selectAjax' ,value: newValue[this.trackBy]});
+        }
+      }
+    },
   },
 }
 </script>
