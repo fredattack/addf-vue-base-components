@@ -140,7 +140,6 @@ export default {
   },
   watch: {
     modelValue(newValue) {
-      console.log(newValue)
       this.$emit('input',  {
         value: newValue,
         attribute: this.name

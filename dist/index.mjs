@@ -2190,7 +2190,6 @@ var script$11 = {
   },
   watch: {
     modelValue(newValue) {
-      console.log(newValue);
       this.$emit('input',  {
         value: newValue,
         attribute: this.name
@@ -4220,6 +4219,7 @@ var script$J = {
     },
 
   },
+  emits: ['update:modelValue', 'change'],
   data() {
     return {
       value: this.defaultValue,
@@ -4256,6 +4256,7 @@ var script$J = {
     updateInput(event) {
       let modelValueUpdate = this.isNumber ? Number(event.target.value) : event.target.value;
       this.$emit("update:modelValue", modelValueUpdate);
+      this.$emit('change', event.target.value);
     }
   },
 };

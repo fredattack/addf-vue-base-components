@@ -30,6 +30,7 @@ import BaseEditLabel from "../BaseLabel/BaseEditLabel.vue";
 export default {
   name: "BaseTrueFalseShowEditRadioGroup",
   components: {BaseShowLabel, BaseEditLabel},
+  emits: ['update:modelValue', 'change'],
   props: {
     name: {
       type: String,
@@ -92,6 +93,7 @@ export default {
   methods: {
     updateInput(event) {
       this.$emit("update:modelValue", event.target.value === 'true');
+      this.$emit('change', event.target.value)
     }
   }
 }

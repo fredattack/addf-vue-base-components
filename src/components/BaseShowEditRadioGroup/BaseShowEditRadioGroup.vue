@@ -81,6 +81,7 @@ export default {
     },
 
   },
+  emits: ['update:modelValue', 'change'],
   data() {
     return {
       value: this.defaultValue,
@@ -117,6 +118,7 @@ export default {
     updateInput(event) {
       let modelValueUpdate = this.isNumber ? Number(event.target.value) : event.target.value
       this.$emit("update:modelValue", modelValueUpdate);
+      this.$emit('change', event.target.value)
     }
   },
 }
