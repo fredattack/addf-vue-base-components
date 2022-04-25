@@ -185,6 +185,12 @@ current
 
 ## FileDrop
 ### - BaseFileDropComponent:
+```
+ !!! dépendance avec axios via apiClient. 
+ 
+import apiClient from '@u/apiClient'
+'@u': path.resolve(__dirname, 'src/utils')
+```
 > pros: url,
 >
 > slots:
@@ -684,6 +690,12 @@ required
 > slots :
 ## - BaseShowEditFormSelect
 ### - BaseShowEditSelectAjax:
+```
+ !!! dépendance avec axios via apiClient. 
+ 
+import apiClient from '@u/apiClient'
+'@u': path.resolve(__dirname, 'src/utils')
+```
 > pros :
 editionMode,
 trackBy,

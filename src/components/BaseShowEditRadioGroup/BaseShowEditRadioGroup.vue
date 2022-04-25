@@ -34,7 +34,7 @@
     <!--region mode affichage-->
     <template v-else>
       <BaseShowLabel :label="label" :required="required" :class="cLabelClass"/>
-      <div v-if="modelValue" class="capitalize-first"> {{ cGetLabel }}</div>
+      <div v-if="modelValue" class="capitalize-first"><font-awesome-icon :icon='["fal","check-square"]' class='mr-2 text-blue-900 ' /> {{ cGetLabel }}</div>
       <div v-else>- </div>
     </template>
     <!--endregion-->
@@ -97,7 +97,11 @@ export default {
     },
     cGetLabel() {
       if(this.isShowingKey) {
-        return this.translatable ? this.$t(`${this.translationExtention}.${this.modelValue}`) : this.modelValue
+        if(!this.isReturningKey) {
+          return this.translatable ? this.$t(`${this.translationExtention}.${this.modelValue}`) : this.modelValue
+        } else {
+          return this.options[this.modelValue]
+        }
       } else {
         return this.translatable ? this.$t(`${this.translationExtention}.${this.findModelValue()}`) : this.findModelValue()
       }

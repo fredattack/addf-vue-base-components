@@ -4131,7 +4131,7 @@ var script$K = {
         if(this.getByKey) {
           return this.$t(`${this.translationExtention}.${this.trackBy === null ? this.index : this.element[this.attributeLabel]}`)
         } else {
-          return this.$t(`${this.translationExtention}.${this.element}`)
+          return this.translatable ? this.$t(`${this.translationExtention}.${this.element}`) : this.element
         }
       } else {
         if(this.translatable) {
@@ -4240,7 +4240,11 @@ var script$J = {
     },
     cGetLabel() {
       if(this.isShowingKey) {
-        return this.translatable ? this.$t(`${this.translationExtention}.${this.modelValue}`) : this.modelValue
+        if(!this.isReturningKey) {
+          return this.translatable ? this.$t(`${this.translationExtention}.${this.modelValue}`) : this.modelValue
+        } else {
+          return this.options[this.modelValue]
+        }
       } else {
         return this.translatable ? this.$t(`${this.translationExtention}.${this.findModelValue()}`) : this.findModelValue()
       }
@@ -4276,6 +4280,7 @@ function render$J(_ctx, _cache, $props, $setup, $data, $options) {
   const _component_BaseEditLabel = resolveComponent("BaseEditLabel");
   const _component_LabelButtonRadioWithInput = resolveComponent("LabelButtonRadioWithInput");
   const _component_BaseShowLabel = resolveComponent("BaseShowLabel");
+  const _component_font_awesome_icon = resolveComponent("font-awesome-icon");
 
   return (openBlock(), createElementBlock("div", {
     class: normalizeClass($options.cGroupClass)
@@ -4332,7 +4337,13 @@ function render$J(_ctx, _cache, $props, $setup, $data, $options) {
             class: normalizeClass(_ctx.cLabelClass)
           }, null, 8 /* PROPS */, ["label", "required", "class"]),
           ($props.modelValue)
-            ? (openBlock(), createElementBlock("div", _hoisted_1$x, toDisplayString($options.cGetLabel), 1 /* TEXT */))
+            ? (openBlock(), createElementBlock("div", _hoisted_1$x, [
+                createVNode(_component_font_awesome_icon, {
+                  icon: ["fal","check-square"],
+                  class: "mr-2 text-blue-900"
+                }),
+                createTextVNode(" " + toDisplayString($options.cGetLabel), 1 /* TEXT */)
+              ]))
             : (openBlock(), createElementBlock("div", _hoisted_2$s, "- "))
         ], 64 /* STABLE_FRAGMENT */)),
     createCommentVNode("endregion")

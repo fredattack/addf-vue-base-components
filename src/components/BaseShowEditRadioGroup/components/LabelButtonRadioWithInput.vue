@@ -57,7 +57,7 @@ export default {
         if(this.getByKey) {
           return this.$t(`${this.translationExtention}.${this.trackBy === null ? this.index : this.element[this.attributeLabel]}`)
         } else {
-          return this.$t(`${this.translationExtention}.${this.element}`)
+          return this.translatable ? this.$t(`${this.translationExtention}.${this.element}`) : this.element
         }
       } else {
         if(this.translatable) {

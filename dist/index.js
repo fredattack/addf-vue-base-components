@@ -4151,7 +4151,7 @@ var script$K = {
         if(this.getByKey) {
           return this.$t(`${this.translationExtention}.${this.trackBy === null ? this.index : this.element[this.attributeLabel]}`)
         } else {
-          return this.$t(`${this.translationExtention}.${this.element}`)
+          return this.translatable ? this.$t(`${this.translationExtention}.${this.element}`) : this.element
         }
       } else {
         if(this.translatable) {
@@ -4260,7 +4260,11 @@ var script$J = {
     },
     cGetLabel() {
       if(this.isShowingKey) {
-        return this.translatable ? this.$t(`${this.translationExtention}.${this.modelValue}`) : this.modelValue
+        if(!this.isReturningKey) {
+          return this.translatable ? this.$t(`${this.translationExtention}.${this.modelValue}`) : this.modelValue
+        } else {
+          return this.options[this.modelValue]
+        }
       } else {
         return this.translatable ? this.$t(`${this.translationExtention}.${this.findModelValue()}`) : this.findModelValue()
       }
@@ -4296,6 +4300,7 @@ function render$J(_ctx, _cache, $props, $setup, $data, $options) {
   const _component_BaseEditLabel = vue.resolveComponent("BaseEditLabel");
   const _component_LabelButtonRadioWithInput = vue.resolveComponent("LabelButtonRadioWithInput");
   const _component_BaseShowLabel = vue.resolveComponent("BaseShowLabel");
+  const _component_font_awesome_icon = vue.resolveComponent("font-awesome-icon");
 
   return (vue.openBlock(), vue.createElementBlock("div", {
     class: vue.normalizeClass($options.cGroupClass)
@@ -4352,7 +4357,13 @@ function render$J(_ctx, _cache, $props, $setup, $data, $options) {
             class: vue.normalizeClass(_ctx.cLabelClass)
           }, null, 8 /* PROPS */, ["label", "required", "class"]),
           ($props.modelValue)
-            ? (vue.openBlock(), vue.createElementBlock("div", _hoisted_1$x, vue.toDisplayString($options.cGetLabel), 1 /* TEXT */))
+            ? (vue.openBlock(), vue.createElementBlock("div", _hoisted_1$x, [
+                vue.createVNode(_component_font_awesome_icon, {
+                  icon: ["fal","check-square"],
+                  class: "mr-2 text-blue-900"
+                }),
+                vue.createTextVNode(" " + vue.toDisplayString($options.cGetLabel), 1 /* TEXT */)
+              ]))
             : (vue.openBlock(), vue.createElementBlock("div", _hoisted_2$s, "- "))
         ], 64 /* STABLE_FRAGMENT */)),
     vue.createCommentVNode("endregion")
