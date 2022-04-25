@@ -1,7 +1,7 @@
 <template>
-  <label v-if="label" class="text-sm text-gray-500 capitalize">
+  <div v-if="label" class="text-sm text-gray-500 capitalize-first">
     {{ label }} <span v-if="required" class="text-red-500 capitalize">*</span>
-  </label>
+  </div>
 </template>
 <script>
 export default {

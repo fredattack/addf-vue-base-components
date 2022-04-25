@@ -33,8 +33,8 @@
 
     <!--region mode affichage-->
     <template v-else>
-      <BaseEditLabel :label="label" :required="required" :class="cLabelClass"/><br>
-      <div v-if="modelValue"> {{ cGetLabel }}</div>
+      <BaseShowLabel :label="label" :required="required" :class="cLabelClass"/>
+      <div v-if="modelValue" class="capitalize-first"> {{ cGetLabel }}</div>
       <div v-else>- </div>
     </template>
     <!--endregion-->

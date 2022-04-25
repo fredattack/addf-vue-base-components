@@ -1,5 +1,5 @@
 <template>
-<div :class="cGroupClass">
+<div :class="groupClass">
 <template v-if='editionMode'>
   <div>
     <BaseEditLabel :label="label" :required="required"/>

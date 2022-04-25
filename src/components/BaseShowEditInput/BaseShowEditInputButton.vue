@@ -44,11 +44,8 @@
 </template>
 
 <script>
-// import BaseShowLabel from "@/components/BaseLabel/BaseShowLabel.vue";
-// import BaseEditLabel from "@/components/BaseLabel/BaseEditLabel";
 export default {
   name: "BaseShowEditInput",
-  // components: {BaseEditLabel, BaseShowLabel},
   props: {
     name: {
       type: String,

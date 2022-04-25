@@ -17,7 +17,7 @@
     </div>
   </div>
   <div v-else class='mt-3 flex flex-col '>
-    <BaseEditLabel :label="label" :required="required"/>
+    <BaseShowLabel :label="label" :required="required"/>
     <div v-if='modelValue.length >= 1'>
       <span v-for="(item, index) in modelValue" class="inline-block mr-3" :key="index">
         <font-awesome-icon :icon='["fal","check-square"]' class='mr-1 text-blue-900 mt-2' />
