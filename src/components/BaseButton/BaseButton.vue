@@ -140,11 +140,11 @@ export default {
 }
 </script>
 
-<!--<style scoped>-->
-<!--.btn-outline-danger:hover{-->
-<!--  color: white;-->
-<!--}-->
-<!--.tippy-popper .tippy-tooltip.customized-theme * {-->
-<!--  background-color: rgb(28, 43, 83)!important;-->
-<!--}-->
-<!--</style>-->
+<style scoped>
+.btn-outline-danger:hover{
+  color: white;
+}
+.tippy-popper .tippy-tooltip.customized-theme * {
+  background-color: rgb(28, 43, 83)!important;
+}
+</style>

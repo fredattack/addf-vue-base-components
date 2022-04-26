@@ -751,6 +751,7 @@ function render$1e(_ctx, _cache, $props, $setup, $data, $options) {
 }
 
 script$1e.render = render$1e;
+script$1e.__scopeId = "data-v-d498a3a2";
 script$1e.__file = "src/components/BaseButton/BaseButton.vue";
 
 var script$1d = {
