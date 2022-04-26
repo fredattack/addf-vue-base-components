@@ -4263,7 +4263,7 @@ var script$J = {
         if(!this.isReturningKey) {
           return this.translatable ? this.$t(`${this.translationExtention}.${this.modelValue}`) : this.modelValue
         } else {
-          return this.options[this.modelValue]
+          return this.options ? this.options[this.modelValue] : ''
         }
       } else {
         return this.translatable ? this.$t(`${this.translationExtention}.${this.findModelValue()}`) : this.findModelValue()
