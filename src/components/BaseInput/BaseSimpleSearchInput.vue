@@ -3,7 +3,6 @@
     <div class="relative rounded-md shadow-sm" :class="cGroupClass">
       <input type="text"
              name="account-number"
-             id="account-number"
              class="focus:ring-indigo-500 focus:border-indigo-500 block w-full pr-10 sm:text-sm border-gray-300 rounded-md"
              @input="updateInput"
              :placeholder="$t('global.placeholder.search')"

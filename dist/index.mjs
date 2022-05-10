@@ -20,6 +20,7 @@ import 'filepond/dist/filepond.min.css';
 import 'filepond-plugin-image-preview/dist/filepond-plugin-image-preview.min.css';
 import FilePondPluginFileValidateType from 'filepond-plugin-file-validate-type';
 import FilePondPluginImagePreview from 'filepond-plugin-image-preview';
+import BaseSimpleSearchInput from '@/components/BaseInput/BaseSimpleSearchInput.vue';
 
 var script$1m = {
   name: 'LogTableRow',
@@ -8984,6 +8985,7 @@ var components = {
     LabelWitchCheckBoxChecked: script$y,
     SettingsPageFull: script$k,
     ToastUndoComponent: script$j,
+    BaseSimpleSearchInput,
 
     HelloWorld: script,
 };
