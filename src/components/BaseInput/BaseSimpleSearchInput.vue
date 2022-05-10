@@ -1,5 +1,4 @@
 <template>
-    BaseSimpleSearch
     <div class="relative rounded-md shadow-sm" :class="cGroupClass">
       <input type="text"
              name="account-number"
