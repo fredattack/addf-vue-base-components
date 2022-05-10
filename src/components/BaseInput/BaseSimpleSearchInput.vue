@@ -1,5 +1,5 @@
 <template>
-  <div>
+    ici
     <div class="relative rounded-md shadow-sm" :class="cGroupClass">
       <input type="text"
              name="account-number"
@@ -11,7 +11,6 @@
         <font-awesome-icon :icon="['fal', 'search']" />
       </div>
     </div>
-  </div>
 </template>
 
 <script>
