@@ -55,11 +55,9 @@ export default {
     translatedLabel() {
       if(this.isShowingKey) {
         if(this.getByKey) {
-          console.log('ok', this.index)
           return this.$t(`${this.translationExtention}.${this.trackBy === null ? this.index : this.element[this.attributeLabel]}`)
         } else {
-          console.log('ok', this.getByKey)
-          return this.$t(`${this.translationExtention}.${this.element}`)
+          return this.translatable ? this.$t(`${this.translationExtention}.${this.element}`) : this.element
         }
       } else {
         if(this.translatable) {

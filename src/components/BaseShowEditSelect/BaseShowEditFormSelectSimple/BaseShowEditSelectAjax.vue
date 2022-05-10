@@ -52,14 +52,6 @@ import multiselect from 'vue-multiselect'
 export default {
   name: 'BaseShowEditSelectAjax',
   components: {multiselect},
-  emits: ['update:modelValue'],
-  data() {
-    return {
-      options: [],
-      loading:false,
-      defaultValue : this.defaultAjax
-    }
-  },
   props: {
     editionMode: { type: Boolean, required: true },
     trackBy: {
@@ -75,15 +67,19 @@ export default {
     modelValue: {type: Object, required: false, default: null},
     defaultAjax: {type: Object, required: false, default() { return {}}},
     url: {},
-    selectLabel: {type: String},
     name: {},
-    isRequired: {type: Boolean, required: false, default: false},
-    isDisabled: {type: Boolean, required: false, default: false},
     label: {type: String, required: false},
-    selectedValue: null,
     groupClass:{ type: String, required: false, default:'' },
     labelClass:{ type: String, required: false, default:'' },
     fullModelResponse:{ type: Boolean, required: false, default:false },
+  },
+  emits: ['update:modelValue'],
+  data() {
+    return {
+      options: [],
+      loading:false,
+      defaultValue : this.defaultAjax
+    }
   },
   watch: {
     defaultValue(newValue) {
@@ -103,17 +99,8 @@ export default {
     cDisplayedValueWhenNotEditionMode(){
       return this.defaultValue.title ? this.defaultValue.title : '-'
     },
-    cIsDisabled(){
-      return this.isDisabled
-    },
-    cIsRequired(){
-      return this.isRequired
-    },
     cGroupClass(){
       return this.groupClass === '' ? 'mt-3' : this.groupClass
-    },
-    cLabelClass(){
-      return this.labelClass === '' ? 'form-label' : this.labelClass
     },
   },
   methods: {

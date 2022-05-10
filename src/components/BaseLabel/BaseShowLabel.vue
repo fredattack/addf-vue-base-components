@@ -1,8 +1,8 @@
 <template>
-  <label v-if="label" :class="cLabelClass">
+  <div v-if="label" :class="cLabelClass">
     {{ label }}
-  </label>
-  <dd>
+  </div>
+  <dd class="capitalize-first">
     {{ modelValue === null || modelValue === '' ?  '-' : modelValue}}
   </dd>
 </template>
@@ -26,10 +26,11 @@ export default {
   },
   computed: {
     cLabelClass() {
-      return this.labelClass === '' ? 'text-sm font-medium text-gray-500 capitalize' : this.labelClass
+      return this.labelClass === '' ? 'text-sm font-medium text-gray-500 capitalize-first' : this.labelClass
     },
 
   }
 
 }
 </script>
+

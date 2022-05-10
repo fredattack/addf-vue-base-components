@@ -33,8 +33,8 @@
 
     <!--region mode affichage-->
     <template v-else>
-      <BaseEditLabel :label="label" :required="required" :class="cLabelClass"/><br>
-      <div v-if="modelValue"> {{ cGetLabel }}</div>
+      <BaseShowLabel :label="label" :required="required" :class="cLabelClass"/>
+      <div v-if="modelValue" class="capitalize-first"><font-awesome-icon :icon='["fal","check-square"]' class='mr-2 text-blue-900 ' /> {{ cGetLabel }}</div>
       <div v-else>- </div>
     </template>
     <!--endregion-->
@@ -81,6 +81,7 @@ export default {
     },
 
   },
+  emits: ['update:modelValue', 'change'],
   data() {
     return {
       value: this.defaultValue,
@@ -96,7 +97,11 @@ export default {
     },
     cGetLabel() {
       if(this.isShowingKey) {
-        return this.translatable ? this.$t(`${this.translationExtention}.${this.modelValue}`) : this.modelValue
+        if(!this.isReturningKey) {
+          return this.translatable ? this.$t(`${this.translationExtention}.${this.modelValue}`) : this.modelValue
+        } else {
+          return this.options ? this.options[this.modelValue] : ''
+        }
       } else {
         return this.translatable ? this.$t(`${this.translationExtention}.${this.findModelValue()}`) : this.findModelValue()
       }
@@ -105,7 +110,8 @@ export default {
   methods: {
     findModelValue() {
       if(this.getByKey) {
-        if(this.options && Object.keys(this.options).find(item => item.id === this.modelValue)) return Object.keys(this.options).find(item => item.id === this.modelValue)
+        // // console.log(Object.keys(this.options).find(item => item.id === this.modelValue))
+        if(this.options && Object.keys(this.options).find(item => this.options[item] === this.modelValue)) return Object.keys(this.options).find(item => this.options[item] === this.modelValue)
         return null
       } else {
         if(this.options && this.options.find(item => item.id === this.modelValue)) return this.options.find(item => item.id === this.modelValue).name
@@ -114,9 +120,9 @@ export default {
 
     },
     updateInput(event) {
-      console.log(event.target.value)
       let modelValueUpdate = this.isNumber ? Number(event.target.value) : event.target.value
       this.$emit("update:modelValue", modelValueUpdate);
+      this.$emit('change', event.target.value)
     }
   },
 }

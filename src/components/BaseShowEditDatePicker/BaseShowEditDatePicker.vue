@@ -1,6 +1,6 @@
 <template>
   <div v-if='editionMode' :class='cGroupClass'>
-      <BaseEditLabel :label="label" :required="required"/>
+      <BaseEditLabel :label="label" class="cLabelClass" :required="required"/>
       <datepicker v-model='cInjectedValue'
                   @update:modelValue="updateValueAction"
                   :monthHeadingFormat='monthFormat'

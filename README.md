@@ -77,6 +77,23 @@ theadRowClasses,
 >
 > slots:
 
+### - BaseContentTable:
+> pros: 
+columns,
+rowClick,
+redirect_to_field,
+search,
+rows,
+modelList,
+isBordered,
+isHoverable,
+isSmallTable,
+isResponsive,
+isStriped,
+theadRowClasses
+>
+> slots:
+
 ### - BaseThComponent:
 > pros: column, thClasses, currentSort, width,
 >
@@ -168,6 +185,12 @@ current
 
 ## FileDrop
 ### - BaseFileDropComponent:
+```
+ !!! dépendance avec axios via apiClient. 
+ 
+import apiClient from '@u/apiClient'
+'@u': path.resolve(__dirname, 'src/utils')
+```
 > pros: url,
 >
 > slots:
@@ -566,6 +589,49 @@ max,
 parseType,
 >
 > slots :
+### - BaseShowEditInputButton:
+> pros :
+name,
+editionMode,
+id,
+label,
+modelValue,
+type,
+errors,
+groupClass,
+inputClass,
+required,
+placeholder,
+disabled,
+min,
+max,
+parseType,
+buttonLabel,
+buttonColor,
+isOutline,
+isRounded,
+isSoft,
+isElevated,
+size,
+buttonIcon,
+buttonFunction
+>
+> slots :
+### - BaseShowEditTreeInput:
+> pros :
+firstName,
+secondName,
+thirdName,
+firstLabel,
+secondLabel,
+thirdLabel,
+legend,
+firstValue,
+secondValue,
+thirdValue,
+editionMode
+>
+> slots :
 ### - BaseShowEditTextArea:
 > pros :
 editionMode,
@@ -624,6 +690,12 @@ required
 > slots :
 ## - BaseShowEditFormSelect
 ### - BaseShowEditSelectAjax:
+```
+ !!! dépendance avec axios via apiClient. 
+ 
+import apiClient from '@u/apiClient'
+'@u': path.resolve(__dirname, 'src/utils')
+```
 > pros :
 editionMode,
 trackBy,

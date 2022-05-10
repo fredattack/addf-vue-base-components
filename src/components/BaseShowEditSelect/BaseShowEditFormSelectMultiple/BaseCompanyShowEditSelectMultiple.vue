@@ -21,7 +21,7 @@
     </template>
   </div>
   <div v-else class='mt-3 flex flex-col '>
-    <BaseEditLabel :label="label ? label : $t('attributes.companies')" :required="required"/>
+    <BaseShowLabel :label="label ? label : $t('attributes.companies')" :required="required"/>
     <div v-if='metadata && metadata.companies && modelValue.length >= 1'>
       <span v-for="(item, index) in modelValue" class="inline-block mr-3" :key="index">
         <font-awesome-icon :icon='["fal","check-square"]' class='mr-1 text-blue-900 mt-2' />

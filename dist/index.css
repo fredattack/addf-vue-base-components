@@ -1,4 +1,12 @@
 
+.btn-outline-danger[data-v-d498a3a2]:hover{
+  color: white;
+}
+.tippy-popper .tippy-tooltip.customized-theme *[data-v-d498a3a2] {
+  background-color: rgb(28, 43, 83)!important;
+}
+
+
 .v-select{
   background-repeat: no-repeat;
   background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='rgb(74 85 104)' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='feather feather-chevron-down'><polyline points='6 9 12 15 18 9'/></svg>");

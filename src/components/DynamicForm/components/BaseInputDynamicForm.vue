@@ -3,20 +3,20 @@
     <label v-if="label"
            :for="name"
            class='capitalize-first'
-           :class="cLabelClass">{{ label }}&nbsp;<span class="text-red-600" v-if="label && required">*</span>
+           :class="cLabelClass">{{ label }}&nbsp;<span class="text-red-600" v-if="label && isRequired">*</span>
     </label>
     <input :name="name"
            :type="type"
-           :value="modelValue"
+           v-model="modelValue"
+           :value="cDefaultValue"
            :id="name"
            :min='min'
            :max='max'
            :class="cInputClass"
            :placeholder="placeholder"
-           :disabled="disabled"
-           :required="required"
+           :disabled="isDisabled"
+           :required="isRequired"
            class='border-gray-400 focus:border-blue-300 focus:ring-blue-300 focus:ring-1'
-           @input="updateInput"
     />
 
     <div v-for='(error,index) in errors' :key='index' class="form-help text-red-600">
@@ -28,18 +28,16 @@
 
 <script>
 export default {
-
-  name: 'BaseInput',
+  name: 'BaseInputDynamicForm',
   props: {
     name: {
       type: String,
       required: true
     },
-    modelValue: {
+    value: {
       type: [String, Number],
       required: false
     },
-    defaultValue: {},
     disabled: {
       type: Boolean,
       required: false,
@@ -105,8 +103,23 @@ export default {
       type: Number,
       required: false
     },
+    isDefaultValue: {
+      type: Boolean,
+      default: false
+    }
+  },
+  data() {
+    return {
+      modelValue: ""
+    }
   },
   computed: {
+    isDisabled() {
+      return this.disabled
+    },
+    isRequired() {
+      return this.required
+    },
     cGroupClass() {
       return this.groupClass === '' ? 'mt-3 w-full' : this.groupClass
     },
@@ -115,37 +128,39 @@ export default {
     },
     cInputClass() {
       return this.inputClass === '' ? 'form-control' : this.inputClass
+    },
+    cDefaultValue() {
+      return this.isDefaultValue ? this.value : this.modelValue
     }
   },
-  methods: {
-    updateInput(event){
-      if(this.type === 'number'){
-        let newValue
-        switch (this.parseType) {
-          case 'int':
-            newValue = event.target.value !== '' && !isNaN(event.target.value)  ? parseInt(event.target.value) : '';
-            break
-          case 'float':
-            newValue = event.target.value !== '' && !isNaN(event.target.value) ? parseFloat(event.target.value) : '';
-            break
-          default:
-            newValue = this.max && parseInt(this.max) < event.target.value ?  parseInt(this.max) : event.target.value;
-        }
-            this.$emit("update:modelValue", newValue);
-      } else {
-        this.$emit("update:modelValue", event.target.value);
+  watch: {
+    modelValue(newValue) {
+      switch (this.parseType) {
+        case 'int':
+          this.$emit('change', {
+            value: newValue != '' && !isNaN(newValue) ? parseInt(newValue) : '',
+            attribute: this.name
+          });
+          break
+        case 'float':
+          this.$emit('change', {
+            value: newValue != '' && !isNaN(newValue) ? parseFloat(newValue) : '',
+            attribute: this.name
+          });
+          break
+        default:
+          this.$emit('change', {
+            value: this.modelValue,
+            attribute: this.name
+          });
+
       }
     },
 
   },
-  watch: {
-    modelValue(newValue) {
-      this.$emit('input',  {
-        value: newValue,
-        attribute: this.name
-      });
-    }
-  }
+
 }
 </script>
 
+<style scoped>
+</style>
