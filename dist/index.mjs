@@ -5749,7 +5749,12 @@ script$x.__file = "src/components/BaseShowEditCheckBox/BaseSimpleShowEditCheckbo
 var script$w = {
   name: 'BaseSimpleTab',
   props: {
-    tabs: { type: Array, required: true}
+    tabs: { type: Array, required: true},
+    colorWhenSelected: {
+      type: String,
+      required: false,
+      default: 'red-lighter'
+    }
   },
   computed:{
     cVisibility(){
@@ -5783,7 +5788,7 @@ function render$w(_ctx, _cache, $props, $setup, $data, $options) {
                     key: 0,
                     href: tab.href,
                     onClick: $event => (this.$router.push({name: tab.routeName})),
-                    class: normalizeClass([this.$route.name === tab.routeName ? 'border-theme-red-lighter text-theme-red-lighter' :
+                    class: normalizeClass([this.$route.name === tab.routeName ? `border-theme-${$props.colorWhenSelected} text-theme-${$props.colorWhenSelected}` :
              'border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300', 'group inline-flex items-center py-4 px-1 border-b-2 font-medium text-sm']),
                     "aria-current": tab.current ? 'page' : undefined
                   }, [
