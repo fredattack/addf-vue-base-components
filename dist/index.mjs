@@ -8891,7 +8891,7 @@ script$2.render = render$2;
 script$2.__file = "src/components/BaseShowEditInput/BaseShowEditTreeInput.vue";
 
 var script$1 = {
-  name: "BaseSearchInput",
+  name: "BaseSimpleSearchInput",
   emits: ['update:modelValue'],
   props:{
     groupClass: {
@@ -8916,14 +8916,14 @@ var script$1 = {
   }
 };
 
-const _hoisted_1$1 = /*#__PURE__*/createTextVNode(" ici ");
+const _hoisted_1$1 = /*#__PURE__*/createTextVNode(" BaseSimpleSearch ");
 const _hoisted_2$1 = ["placeholder"];
 const _hoisted_3 = { class: "absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none" };
 
 function render$1(_ctx, _cache, $props, $setup, $data, $options) {
   const _component_font_awesome_icon = resolveComponent("font-awesome-icon");
 
-  return (openBlock(), createElementBlock("div", null, [
+  return (openBlock(), createElementBlock(Fragment, null, [
     _hoisted_1$1,
     createElementVNode("div", {
       class: normalizeClass(["relative rounded-md shadow-sm", $options.cGroupClass])
@@ -8939,7 +8939,7 @@ function render$1(_ctx, _cache, $props, $setup, $data, $options) {
         createVNode(_component_font_awesome_icon, { icon: ['fal', 'search'] })
       ])
     ], 2 /* CLASS */)
-  ]))
+  ], 64 /* STABLE_FRAGMENT */))
 }
 
 script$1.render = render$1;

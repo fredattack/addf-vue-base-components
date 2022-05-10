@@ -1,5 +1,5 @@
 <template>
-    ici
+    BaseSimpleSearch
     <div class="relative rounded-md shadow-sm" :class="cGroupClass">
       <input type="text"
              name="account-number"
@@ -15,7 +15,7 @@
 
 <script>
 export default {
-  name: "BaseSearchInput",
+  name: "BaseSimpleSearchInput",
   emits: ['update:modelValue'],
   props:{
     groupClass: {
