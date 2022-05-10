@@ -75,7 +75,7 @@ import BaseInputDynamicForm from "./components/DynamicForm/components/BaseInputD
 import BaseContentTable from "./components/BaseTable/BaseContentTable.vue";
 import BaseShowEditInputButton from "./components/BaseShowEditInput/BaseShowEditInputButton.vue";
 import BaseShowEditTreeInput from "./components/BaseShowEditInput/BaseShowEditTreeInput.vue";
-import BaseSimpleSearchInput from "@/components/BaseInput/BaseSimpleSearchInput.vue";
+import BaseSimpleSearchInput from "./components/BaseInput/BaseSimpleSearchInput.vue";
 
 import HelloWorld from './components/HelloWorld.vue'
 
