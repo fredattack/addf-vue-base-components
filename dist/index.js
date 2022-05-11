@@ -6631,28 +6631,28 @@ var script$l = {
 
 const _hoisted_1$c = {
   key: 0,
-  class: "flex p-5"
+  class: "md:w-full sm:w-2/6 md:flex sm:flex md:flex-row sm:flex-col p-5 md:justify-between sm:justify-center mx-auto text-center gap-3"
 };
-const _hoisted_2$b = {
-  key: 0,
-  class: "flex-1 pt-2"
-};
-const _hoisted_3$8 = {
-  key: 1,
-  class: "flex flex-row gap-x-3"
-};
+const _hoisted_2$b = { class: "flex justify-center gap-x-3" };
+const _hoisted_3$8 = { key: 0 };
 const _hoisted_4$5 = { class: "flex p-5" };
 const _hoisted_5$2 = { class: "flex-1" };
 
 function render$l(_ctx, _cache, $props, $setup, $data, $options) {
   return (vue.openBlock(), vue.createElementBlock(vue.Fragment, null, [
+    vue.createCommentVNode("  <div class='flex p-5' v-if='this.$slots.title || this.$slots.cta'>"),
+    vue.createCommentVNode("    <div class='flex-1 pt-2'  v-if='this.$slots.title'>"),
+    vue.createCommentVNode("      <slot name=\"title\"></slot>"),
+    vue.createCommentVNode("    </div>"),
+    vue.createCommentVNode("    <div class='flex flex-row gap-x-3' >"),
+    vue.createCommentVNode("      <slot name=\"cta\"></slot>"),
+    vue.createCommentVNode("    </div>"),
+    vue.createCommentVNode("  </div>"),
     (this.$slots.title || this.$slots.cta)
       ? (vue.openBlock(), vue.createElementBlock("div", _hoisted_1$c, [
-          (this.$slots.title)
-            ? (vue.openBlock(), vue.createElementBlock("div", _hoisted_2$b, [
-                vue.renderSlot(_ctx.$slots, "title")
-              ]))
-            : vue.createCommentVNode("v-if", true),
+          vue.createElementVNode("div", _hoisted_2$b, [
+            vue.renderSlot(_ctx.$slots, "title")
+          ]),
           (this.$slots.cta)
             ? (vue.openBlock(), vue.createElementBlock("div", _hoisted_3$8, [
                 vue.renderSlot(_ctx.$slots, "cta")
