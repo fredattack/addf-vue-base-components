@@ -1,7 +1,7 @@
 <template>
   <div v-show='cVisibility'>
 
-    <div class="hidden md:block sm:block">
+    <div class="md:block sm:block">
       <div class="border-b border-gray-200">
         <nav class="-mb-px md:flex sm:grid sm:grid-cols-5 space-x-8 cursor-pointer" aria-label="Tabs">
           <template v-for="tab in tabs" :key="tab.label" >
