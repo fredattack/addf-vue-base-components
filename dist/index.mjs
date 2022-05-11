@@ -5763,7 +5763,7 @@ var script$w = {
   }
 };
 
-const _hoisted_1$l = { class: "hidden sm:block" };
+const _hoisted_1$l = { class: "hidden md:block sm:block" };
 const _hoisted_2$h = { class: "border-b border-gray-200" };
 const _hoisted_3$d = {
   class: "-mb-px flex space-x-8 cursor-pointer",
