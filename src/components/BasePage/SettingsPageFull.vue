@@ -14,7 +14,7 @@
     <div class="flex justify-center gap-x-3">
       <slot name="title"></slot>
     </div>
-    <div v-if='this.$slots.cta'>
+    <div v-if='this.$slots.cta' class="flex justify-center" >
       <slot name="cta"></slot>
     </div>
   </div>

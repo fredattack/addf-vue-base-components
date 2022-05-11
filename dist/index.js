@@ -6634,7 +6634,10 @@ const _hoisted_1$c = {
   class: "md:w-full sm:w-2/6 md:flex sm:flex md:flex-row sm:flex-col p-5 md:justify-between sm:justify-center mx-auto text-center gap-3"
 };
 const _hoisted_2$b = { class: "flex justify-center gap-x-3" };
-const _hoisted_3$8 = { key: 0 };
+const _hoisted_3$8 = {
+  key: 0,
+  class: "flex justify-center"
+};
 const _hoisted_4$5 = { class: "flex p-5" };
 const _hoisted_5$2 = { class: "flex-1" };
 
