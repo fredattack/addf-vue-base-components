@@ -5786,7 +5786,7 @@ var script$w = {
 const _hoisted_1$l = { class: "hidden md:block sm:block" };
 const _hoisted_2$h = { class: "border-b border-gray-200" };
 const _hoisted_3$d = {
-  class: "-mb-px md:flex sm:grid sm:grid-cols-8 space-x-8 cursor-pointer",
+  class: "-mb-px md:flex sm:grid sm:grid-cols-5 space-x-8 cursor-pointer",
   "aria-label": "Tabs"
 };
 const _hoisted_4$9 = ["href", "onClick", "aria-current"];
