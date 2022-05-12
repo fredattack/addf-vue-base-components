@@ -3,7 +3,7 @@
 
     <div class="block">
       <div class="border-b border-gray-200">
-        <nav class="-mb-px md:flex sm:grid sm:grid-cols-2 md:space-x-8 sm:space-x-3 cursor-pointer" aria-label="Tabs">
+        <nav class="-mb-px md:flex sm:grid sm:grid-cols-2 xs:grid-cols-1 md:space-x-8 sm:space-x-3 cursor-pointer" aria-label="Tabs">
           <template v-for="tab in tabs" :key="tab.label" >
 
             <router-link v-if='tab.gate !== false' :to="{name: tab.routeName}" :class="[this.$route.name === tab.routeName ? `border-theme-${colorWhenSelected} text-theme-${colorWhenSelected}` :
