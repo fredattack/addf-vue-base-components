@@ -4611,8 +4611,10 @@ var script$I = {
   },
   methods: {
     getElement(item) {
-      if(this.metadata && this.metadata.find(data => data.id === item).name) return this.metadata.find(data => data.id === item).name
-      else return
+      if (this.metadata && this.metadata.find(data => data.id === item).name) {
+        return this.metadata.find(data => data.id === item).name
+      }
+      return null
     },
     updateInput( newValue ) {
       let updateModelValue = [];
