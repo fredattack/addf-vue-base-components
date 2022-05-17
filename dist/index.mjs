@@ -5849,20 +5849,16 @@ var script$v = {
     }
   },
   mounted() {
-    console.log('mounted switch');
     this.isChecked = this.modelValue;
-    console.log('modelValue', this.modelValue);
-    console.log('isChecked', this.isChecked);
   },
   methods: {
     toggleSwicth() {
       this.isChecked = !this.isChecked;
-      this.$emit('update:modelValue', this.isChecked);
-      this.$emit('change');
     }
   },
   watch: {
     isChecked(newValue) {
+      this.$emit('update:modelValue', this.isChecked);
       this.$emit('change', {attribute: this.name, value: newValue});
     }
   }
