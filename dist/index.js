@@ -5868,9 +5868,17 @@ var script$v = {
       return this.isChecked ? 'translate-x-5' : 'translate-x-0'
     }
   },
+  mounted() {
+    console.log('mounted switch');
+    this.isChecked = this.modelValue;
+    console.log('modelValue', this.modelValue);
+    console.log('isChecked', this.isChecked);
+  },
   methods: {
     toggleSwicth() {
       this.isChecked = !this.isChecked;
+      this.$emit('update:modelValue', this.isChecked);
+      this.$emit('change');
     }
   },
   watch: {

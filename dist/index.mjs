@@ -4591,8 +4591,10 @@ var script$I = {
   },
   methods: {
     getElement(item) {
-      if(this.metadata && this.metadata.find(data => data.id === item).name) return this.metadata.find(data => data.id === item).name
-      else return
+      if (this.metadata && this.metadata.find(data => data.id === item).name) {
+        return this.metadata.find(data => data.id === item).name
+      }
+      return null
     },
     updateInput( newValue ) {
       let updateModelValue = [];
@@ -5846,9 +5848,17 @@ var script$v = {
       return this.isChecked ? 'translate-x-5' : 'translate-x-0'
     }
   },
+  mounted() {
+    console.log('mounted switch');
+    this.isChecked = this.modelValue;
+    console.log('modelValue', this.modelValue);
+    console.log('isChecked', this.isChecked);
+  },
   methods: {
     toggleSwicth() {
       this.isChecked = !this.isChecked;
+      this.$emit('update:modelValue', this.isChecked);
+      this.$emit('change');
     }
   },
   watch: {
