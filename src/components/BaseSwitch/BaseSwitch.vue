@@ -4,7 +4,7 @@
     <label v-if="label" class='mb-3 text-xl mr-6'>{{ label }}</label>
     <button @click="toggleSwicth"
             type="button"
-            class="relative inline-flex flex-shrink-0 h-6 w-11 border-2 border-transparent rounded-full cursor-pointer transition-colors ease-in-out duration-200"
+            class="relative inline-flex flex-shrink-0 h-6 w-11 border-2 border-transparent rounded-full cursor-pointer transition-co  lors ease-in-out duration-200"
             :class="buttonClasses"
             role="switch"
             aria-checked="false">

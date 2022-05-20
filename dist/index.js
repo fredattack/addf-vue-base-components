@@ -5899,7 +5899,7 @@ function render$v(_ctx, _cache, $props, $setup, $data, $options) {
     vue.createElementVNode("button", {
       onClick: _cache[0] || (_cache[0] = (...args) => ($options.toggleSwicth && $options.toggleSwicth(...args))),
       type: "button",
-      class: vue.normalizeClass(["relative inline-flex flex-shrink-0 h-6 w-11 border-2 border-transparent rounded-full cursor-pointer transition-colors ease-in-out duration-200", $options.buttonClasses]),
+      class: vue.normalizeClass(["relative inline-flex flex-shrink-0 h-6 w-11 border-2 border-transparent rounded-full cursor-pointer transition-co lors ease-in-out duration-200", $options.buttonClasses]),
       role: "switch",
       "aria-checked": "false"
     }, [
@@ -7043,7 +7043,7 @@ var script$d = {
       required: false
     },
   },
-  emits :['modelValue'],
+  emits :['update:modelValue', 'change'],
   data() {
     return {
       editor: null,
@@ -7133,7 +7133,9 @@ var script$d = {
       ],
       content: this.modelValue,
       onUpdate: () => {
+        
         this.$emit('update:modelValue', this.editor.getHTML());
+        this.$emit('change', this.editor.getHTML());
       }
     });
   },
