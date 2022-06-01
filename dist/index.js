@@ -22,7 +22,7 @@ require('filepond/dist/filepond.min.css');
 require('filepond-plugin-image-preview/dist/filepond-plugin-image-preview.min.css');
 var FilePondPluginFileValidateType = require('filepond-plugin-file-validate-type');
 var FilePondPluginImagePreview = require('filepond-plugin-image-preview');
-var BaseShowEditIsoDateInput = require('@/components/BaseShowEditInput/BaseShowEditIsoDateInput');
+var BaseShowEditIsoDateInput = require('@/components/BaseShowEditInput/BaseShowEditIsoDateInput.vue');
 
 function _interopDefaultLegacy (e) { return e && typeof e === 'object' && 'default' in e ? e : { 'default': e }; }
 
