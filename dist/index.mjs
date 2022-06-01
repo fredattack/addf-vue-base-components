@@ -20,6 +20,7 @@ import 'filepond/dist/filepond.min.css';
 import 'filepond-plugin-image-preview/dist/filepond-plugin-image-preview.min.css';
 import FilePondPluginFileValidateType from 'filepond-plugin-file-validate-type';
 import FilePondPluginImagePreview from 'filepond-plugin-image-preview';
+import BaseShowEditIsoDateInput from '@/components/BaseShowEditInput/BaseShowEditIsoDateInput';
 
 var script$1n = {
   name: 'LogTableRow',
@@ -4696,7 +4697,6 @@ var script$H = {
     modelValue: {
       type: String,
       default: "",
-      require: true,
     },
     trackBy: {
       type: String,
@@ -5879,7 +5879,7 @@ function render$v(_ctx, _cache, $props, $setup, $data, $options) {
     createElementVNode("button", {
       onClick: _cache[0] || (_cache[0] = (...args) => ($options.toggleSwicth && $options.toggleSwicth(...args))),
       type: "button",
-      class: normalizeClass(["relative inline-flex flex-shrink-0 h-6 w-11 border-2 border-transparent rounded-full cursor-pointer transition-colors ease-in-out duration-200", $options.buttonClasses]),
+      class: normalizeClass(["relative inline-flex flex-shrink-0 h-6 w-11 border-2 border-transparent rounded-full cursor-pointer transition-co lors ease-in-out duration-200", $options.buttonClasses]),
       role: "switch",
       "aria-checked": "false"
     }, [
@@ -7023,7 +7023,7 @@ var script$d = {
       required: false
     },
   },
-  emits :['modelValue'],
+  emits :['update:modelValue', 'change'],
   data() {
     return {
       editor: null,
@@ -7113,7 +7113,9 @@ var script$d = {
       ],
       content: this.modelValue,
       onUpdate: () => {
+        
         this.$emit('update:modelValue', this.editor.getHTML());
+        this.$emit('change', this.editor.getHTML());
       }
     });
   },
@@ -9052,6 +9054,7 @@ var components = {
     SettingsPageFull: script$l,
     ToastUndoComponent: script$k,
     BaseSimpleSearchInput: script$1,
+    BaseShowEditIsoDateInput,
 
     HelloWorld: script,
 };

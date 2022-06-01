@@ -78,6 +78,7 @@ import BaseShowEditTreeInput from "./components/BaseShowEditInput/BaseShowEditTr
 import BaseSimpleSearchInput from "./components/BaseInput/BaseSimpleSearchInput.vue";
 
 import HelloWorld from './components/HelloWorld.vue'
+import BaseShowEditIsoDateInput from "@/components/BaseShowEditInput/BaseShowEditIsoDateInput";
 
 
 export default {
@@ -159,6 +160,7 @@ export default {
     SettingsPageFull,
     ToastUndoComponent,
     BaseSimpleSearchInput,
+    BaseShowEditIsoDateInput,
 
     HelloWorld,
 }

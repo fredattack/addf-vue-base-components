@@ -22,6 +22,7 @@ require('filepond/dist/filepond.min.css');
 require('filepond-plugin-image-preview/dist/filepond-plugin-image-preview.min.css');
 var FilePondPluginFileValidateType = require('filepond-plugin-file-validate-type');
 var FilePondPluginImagePreview = require('filepond-plugin-image-preview');
+var BaseShowEditIsoDateInput = require('@/components/BaseShowEditInput/BaseShowEditIsoDateInput');
 
 function _interopDefaultLegacy (e) { return e && typeof e === 'object' && 'default' in e ? e : { 'default': e }; }
 
@@ -40,6 +41,7 @@ var Mention__default = /*#__PURE__*/_interopDefaultLegacy(Mention);
 var vueFilePond__default = /*#__PURE__*/_interopDefaultLegacy(vueFilePond);
 var FilePondPluginFileValidateType__default = /*#__PURE__*/_interopDefaultLegacy(FilePondPluginFileValidateType);
 var FilePondPluginImagePreview__default = /*#__PURE__*/_interopDefaultLegacy(FilePondPluginImagePreview);
+var BaseShowEditIsoDateInput__default = /*#__PURE__*/_interopDefaultLegacy(BaseShowEditIsoDateInput);
 
 var script$1n = {
   name: 'LogTableRow',
@@ -4716,7 +4718,6 @@ var script$H = {
     modelValue: {
       type: String,
       default: "",
-      require: true,
     },
     trackBy: {
       type: String,
@@ -9074,6 +9075,7 @@ var components = {
     SettingsPageFull: script$l,
     ToastUndoComponent: script$k,
     BaseSimpleSearchInput: script$1,
+    BaseShowEditIsoDateInput: BaseShowEditIsoDateInput__default["default"],
 
     HelloWorld: script,
 };
