@@ -4718,6 +4718,7 @@ var script$H = {
     modelValue: {
       type: String,
       default: "",
+      require: true,
     },
     trackBy: {
       type: String,
