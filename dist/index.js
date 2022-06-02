@@ -2870,7 +2870,7 @@ const _hoisted_7$5 = {
 };
 const _hoisted_8$4 = ["value", "disabled"];
 const _hoisted_9$2 = ["name", "id", "disabled", "placeholder"];
-const _hoisted_10$2 = {
+const _hoisted_10$1 = {
   key: 0,
   class: "form-help text-red-600"
 };
@@ -2915,7 +2915,7 @@ function render$W(_ctx, _cache, $props, $setup, $data, $options) {
       ])
     ]),
     ($props.errors)
-      ? (vue.openBlock(), vue.createElementBlock("div", _hoisted_10$2, [
+      ? (vue.openBlock(), vue.createElementBlock("div", _hoisted_10$1, [
           (vue.openBlock(true), vue.createElementBlock(vue.Fragment, null, vue.renderList($props.errors, (error, key) => {
             return (vue.openBlock(), vue.createElementBlock("div", { key: key }, vue.toDisplayString(_ctx.$t(error[0], {attribute: _ctx.$t('attributes.' + key)})), 1 /* TEXT */))
           }), 128 /* KEYED_FRAGMENT */))
@@ -4029,8 +4029,12 @@ var script$N = {
     this.dCountryValue = this.countryValue;
   },
   watch: {
-    errors(newValue){
+    errors:{
+      handler(newValue) {
       this.phoneErrors =  ___default["default"].pick(newValue,[`${this.name}_country`,`${this.name}_field`]);
+      },
+      deep: true,
+        immediate: true,
     },
     numberValue(){
       this.dNumberValue = this.numberValue;
@@ -4052,8 +4056,7 @@ const _hoisted_5$7 = ["name"];
 const _hoisted_6$4 = { selected: "" };
 const _hoisted_7$4 = ["value"];
 const _hoisted_8$3 = ["name", "id", "placeholder"];
-const _hoisted_9$1 = /*#__PURE__*/vue.createTextVNode(" kkk ");
-const _hoisted_10$1 = { key: 1 };
+const _hoisted_9$1 = { key: 1 };
 
 function render$N(_ctx, _cache, $props, $setup, $data, $options) {
   const _component_BaseEditLabel = vue.resolveComponent("BaseEditLabel");
@@ -4099,7 +4102,7 @@ function render$N(_ctx, _cache, $props, $setup, $data, $options) {
               [vue.vModelText, $data.dNumberValue]
             ])
           ]),
-          _hoisted_9$1,
+          vue.createTextVNode(" kkk " + vue.toDisplayString($data.phoneErrors) + " ", 1 /* TEXT */),
           ($data.phoneErrors)
             ? (vue.openBlock(true), vue.createElementBlock(vue.Fragment, { key: 0 }, vue.renderList($data.phoneErrors, (error, index) => {
                 return (vue.openBlock(), vue.createElementBlock("div", {
@@ -4109,7 +4112,7 @@ function render$N(_ctx, _cache, $props, $setup, $data, $options) {
               }), 128 /* KEYED_FRAGMENT */))
             : vue.createCommentVNode("v-if", true)
         ]))
-      : (vue.openBlock(), vue.createElementBlock("div", _hoisted_10$1, [
+      : (vue.openBlock(), vue.createElementBlock("div", _hoisted_9$1, [
           vue.createVNode(_component_BaseShowPhoneLabel, {
             label: $props.label,
             "model-value": $data.dNumberValue,

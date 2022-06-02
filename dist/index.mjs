@@ -2850,7 +2850,7 @@ const _hoisted_7$5 = {
 };
 const _hoisted_8$4 = ["value", "disabled"];
 const _hoisted_9$2 = ["name", "id", "disabled", "placeholder"];
-const _hoisted_10$2 = {
+const _hoisted_10$1 = {
   key: 0,
   class: "form-help text-red-600"
 };
@@ -2895,7 +2895,7 @@ function render$W(_ctx, _cache, $props, $setup, $data, $options) {
       ])
     ]),
     ($props.errors)
-      ? (openBlock(), createElementBlock("div", _hoisted_10$2, [
+      ? (openBlock(), createElementBlock("div", _hoisted_10$1, [
           (openBlock(true), createElementBlock(Fragment, null, renderList($props.errors, (error, key) => {
             return (openBlock(), createElementBlock("div", { key: key }, toDisplayString(_ctx.$t(error[0], {attribute: _ctx.$t('attributes.' + key)})), 1 /* TEXT */))
           }), 128 /* KEYED_FRAGMENT */))
@@ -4009,8 +4009,12 @@ var script$N = {
     this.dCountryValue = this.countryValue;
   },
   watch: {
-    errors(newValue){
+    errors:{
+      handler(newValue) {
       this.phoneErrors =  _.pick(newValue,[`${this.name}_country`,`${this.name}_field`]);
+      },
+      deep: true,
+        immediate: true,
     },
     numberValue(){
       this.dNumberValue = this.numberValue;
@@ -4032,8 +4036,7 @@ const _hoisted_5$7 = ["name"];
 const _hoisted_6$4 = { selected: "" };
 const _hoisted_7$4 = ["value"];
 const _hoisted_8$3 = ["name", "id", "placeholder"];
-const _hoisted_9$1 = /*#__PURE__*/createTextVNode(" kkk ");
-const _hoisted_10$1 = { key: 1 };
+const _hoisted_9$1 = { key: 1 };
 
 function render$N(_ctx, _cache, $props, $setup, $data, $options) {
   const _component_BaseEditLabel = resolveComponent("BaseEditLabel");
@@ -4079,7 +4082,7 @@ function render$N(_ctx, _cache, $props, $setup, $data, $options) {
               [vModelText, $data.dNumberValue]
             ])
           ]),
-          _hoisted_9$1,
+          createTextVNode(" kkk " + toDisplayString($data.phoneErrors) + " ", 1 /* TEXT */),
           ($data.phoneErrors)
             ? (openBlock(true), createElementBlock(Fragment, { key: 0 }, renderList($data.phoneErrors, (error, index) => {
                 return (openBlock(), createElementBlock("div", {
@@ -4089,7 +4092,7 @@ function render$N(_ctx, _cache, $props, $setup, $data, $options) {
               }), 128 /* KEYED_FRAGMENT */))
             : createCommentVNode("v-if", true)
         ]))
-      : (openBlock(), createElementBlock("div", _hoisted_10$1, [
+      : (openBlock(), createElementBlock("div", _hoisted_9$1, [
           createVNode(_component_BaseShowPhoneLabel, {
             label: $props.label,
             "model-value": $data.dNumberValue,

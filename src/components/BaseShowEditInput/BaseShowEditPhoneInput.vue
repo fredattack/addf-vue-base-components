@@ -25,6 +25,7 @@
                :placeholder="numberPlaceholder" v-model='dNumberValue' @input='updateNumberField'>
       </div>
       kkk
+      {{ phoneErrors }}
       <template v-if="phoneErrors">
         <div v-for='(error,index) in phoneErrors' :key="index" class="form-help text-red-600">
           {{ $t(error[0], {attribute: $t('attributes.' + index)}) }}
@@ -121,8 +122,12 @@ export default {
     this.dCountryValue = this.countryValue
   },
   watch: {
-    errors(newValue){
+    errors:{
+      handler(newValue) {
       this.phoneErrors =  _.pick(newValue,[`${this.name}_country`,`${this.name}_field`])
+      },
+      deep: true,
+        immediate: true,
     },
     numberValue(){
       this.dNumberValue = this.numberValue
