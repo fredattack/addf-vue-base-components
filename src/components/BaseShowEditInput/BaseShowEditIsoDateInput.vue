@@ -3,7 +3,6 @@
   <div v-if='editionMode' :class="cGroupClass" class='mt-3'>
     <BaseEditLabel :label="label" :required="required"/>
     <input :name="name"
-           :key="internalValue"
            type="text"
            v-model="internalValue"
            @input="updateInput"
