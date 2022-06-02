@@ -1,14 +1,20 @@
 <template>
   <div v-if='editionMode' :class="cGroupClass" class='mt-3'>
     <BaseEditLabel :label="label" :required="required"/>
-    <input :name="name"
-           type="text"
-           v-model="internalValue"
-           @input="updateInput"
-           :id="name"
-           :class="[ internalValueIsAFullDate ? 'focus:border-green-300 focus:ring-green-300' : 'focus:border-red-300 focus:ring-red-300', 'border-gray-400 focus:ring-1', cInputClass]"
-           :placeholder="placeholder"
-           v-mask="mask" />
+    <div class="flex" >
+      <input :name="name"
+                 type="text"
+                 v-model="internalValue"
+                 @input="updateInput"
+                 :id="name"
+                 :class="[ internalValueIsAFullDate ? 'focus:border-green-300 focus:ring-green-300' : 'focus:border-red-300 focus:ring-red-300', 'border-gray-400 focus:ring-1', cInputClass]"
+                 :placeholder="placeholder"
+                 v-mask="mask"
+      />
+      <div>
+        aaaaaah
+      </div>
+    </div >
 
     <div v-for='(error,index) in errors' :key='index' class="form-help text-red-600">
       {{ $t(error, {attribute: $t('attributes.' + name)}) }}
