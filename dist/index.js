@@ -9121,43 +9121,40 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
   const _component_BaseShowLabel = vue.resolveComponent("BaseShowLabel");
   const _directive_mask = vue.resolveDirective("mask");
 
-  return (vue.openBlock(), vue.createElementBlock(vue.Fragment, null, [
-    vue.createTextVNode(vue.toDisplayString($options.internalValueIsAFullDate) + " " + vue.toDisplayString($data.internalValue) + " ", 1 /* TEXT */),
-    ($props.editionMode)
-      ? (vue.openBlock(), vue.createElementBlock("div", {
-          key: 0,
-          class: vue.normalizeClass([$options.cGroupClass, "mt-3"])
-        }, [
-          vue.createVNode(_component_BaseEditLabel, {
-            label: $props.label,
-            required: $props.required
-          }, null, 8 /* PROPS */, ["label", "required"]),
-          vue.withDirectives(vue.createElementVNode("input", {
-            name: $props.name,
-            type: "text",
-            "onUpdate:modelValue": _cache[0] || (_cache[0] = $event => (($data.internalValue) = $event)),
-            onInput: _cache[1] || (_cache[1] = (...args) => ($options.updateInput && $options.updateInput(...args))),
-            id: $props.name,
-            class: vue.normalizeClass([ $options.internalValueIsAFullDate ? 'focus:border-green-400 focus:ring-green-400' : 'focus:border-red-500 focus:ring-red-500', 'border-gray-400 focus:ring-1', $options.cInputClass]),
-            placeholder: $props.placeholder
-          }, null, 42 /* CLASS, PROPS, HYDRATE_EVENTS */, _hoisted_1), [
-            [vue.vModelText, $data.internalValue],
-            [_directive_mask, $props.mask]
-          ]),
-          (vue.openBlock(true), vue.createElementBlock(vue.Fragment, null, vue.renderList($props.errors, (error, index) => {
-            return (vue.openBlock(), vue.createElementBlock("div", {
-              key: index,
-              class: "form-help text-red-600"
-            }, vue.toDisplayString(_ctx.$t(error, {attribute: _ctx.$t('attributes.' + $props.name)})), 1 /* TEXT */))
-          }), 128 /* KEYED_FRAGMENT */))
-        ], 2 /* CLASS */))
-      : (vue.openBlock(), vue.createElementBlock("div", _hoisted_2, [
-          vue.createVNode(_component_BaseShowLabel, {
-            label: $props.label,
-            "model-value": $options.cDisplayedValueWhenNotEditionMode
-          }, null, 8 /* PROPS */, ["label", "model-value"])
-        ]))
-  ], 64 /* STABLE_FRAGMENT */))
+  return ($props.editionMode)
+    ? (vue.openBlock(), vue.createElementBlock("div", {
+        key: 0,
+        class: vue.normalizeClass([$options.cGroupClass, "mt-3"])
+      }, [
+        vue.createVNode(_component_BaseEditLabel, {
+          label: $props.label,
+          required: $props.required
+        }, null, 8 /* PROPS */, ["label", "required"]),
+        vue.withDirectives(vue.createElementVNode("input", {
+          name: $props.name,
+          type: "text",
+          "onUpdate:modelValue": _cache[0] || (_cache[0] = $event => (($data.internalValue) = $event)),
+          onInput: _cache[1] || (_cache[1] = (...args) => ($options.updateInput && $options.updateInput(...args))),
+          id: $props.name,
+          class: vue.normalizeClass([ $options.internalValueIsAFullDate ? 'focus:border-green-400 focus:ring-green-400' : 'focus:border-red-500 focus:ring-red-500', 'border-gray-400 focus:ring-1', $options.cInputClass]),
+          placeholder: $props.placeholder
+        }, null, 42 /* CLASS, PROPS, HYDRATE_EVENTS */, _hoisted_1), [
+          [vue.vModelText, $data.internalValue],
+          [_directive_mask, $props.mask]
+        ]),
+        (vue.openBlock(true), vue.createElementBlock(vue.Fragment, null, vue.renderList($props.errors, (error, index) => {
+          return (vue.openBlock(), vue.createElementBlock("div", {
+            key: index,
+            class: "form-help text-red-600"
+          }, vue.toDisplayString(_ctx.$t(error, {attribute: _ctx.$t('attributes.' + $props.name)})), 1 /* TEXT */))
+        }), 128 /* KEYED_FRAGMENT */))
+      ], 2 /* CLASS */))
+    : (vue.openBlock(), vue.createElementBlock("div", _hoisted_2, [
+        vue.createVNode(_component_BaseShowLabel, {
+          label: $props.label,
+          "model-value": $options.cDisplayedValueWhenNotEditionMode
+        }, null, 8 /* PROPS */, ["label", "model-value"])
+      ]))
 }
 
 script.render = render;
