@@ -24,6 +24,7 @@
                 border-gray-400 focus:border-blue-300 focus:ring-blue-300 focus:ring-1"
                :placeholder="numberPlaceholder" v-model='dNumberValue' @input='updateNumberField'>
       </div>
+      kkkk
       <template v-if="phoneErrors">
         <div v-for='(error,index) in phoneErrors' :key="index" class="form-help text-red-600">
           {{ $t(error[0], {attribute: $t('attributes.' + index)}) }}
