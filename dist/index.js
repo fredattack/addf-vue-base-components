@@ -9111,7 +9111,7 @@ var script = {
 };
 
 const _hoisted_1 = { class: "flex" };
-const _hoisted_2 = /*#__PURE__*/vue.createElementVNode("div", null, " aaaaaah ", -1 /* HOISTED */);
+const _hoisted_2 = /*#__PURE__*/vue.createElementVNode("div", { class: "ml-2 text-sm text-gray-500 capitalize-first" }, " ( aaaah ) ", -1 /* HOISTED */);
 const _hoisted_3 = ["name", "id", "placeholder"];
 const _hoisted_4 = {
   key: 1,

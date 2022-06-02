@@ -2,8 +2,8 @@
   <div v-if='editionMode' :class="cGroupClass" class='mt-3'>
     <div class="flex" >
     <BaseEditLabel :label="label" :required="required"/>
-      <div>
-        aaaaaah
+      <div class=" ml-2 text-sm text-gray-500 capitalize-first">
+        ( aaaah )
       </div>
     </div >
     <input :name="name"
