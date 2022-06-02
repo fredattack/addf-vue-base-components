@@ -121,7 +121,11 @@ export default {
     },
     timeDifference(){
       // return moment(moment().format()).lang('fr').from(moment(this.modelValue))
-      return moment(this.modelValue).from(moment()).lang('fr')
+      
+      let modelValueMoment = moment(this.modelValue);
+      let now = moment();
+      console.log(modelValueMoment,now );
+      return modelValueMoment.lang('fr').from(now)
     }
   },
   watch: {

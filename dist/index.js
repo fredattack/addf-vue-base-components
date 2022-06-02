@@ -9093,7 +9093,11 @@ var script = {
     },
     timeDifference(){
       // return moment(moment().format()).lang('fr').from(moment(this.modelValue))
-      return moment__default["default"](this.modelValue).from(moment__default["default"]()).lang('fr')
+      
+      let modelValueMoment = moment__default["default"](this.modelValue);
+      let now = moment__default["default"]();
+      console.log(modelValueMoment,now );
+      return modelValueMoment.lang('fr').from(now)
     }
   },
   watch: {
