@@ -4083,7 +4083,6 @@ function render$N(_ctx, _cache, $props, $setup, $data, $options) {
               [vModelText, $data.dNumberValue]
             ])
           ]),
-          createTextVNode(" kkk " + toDisplayString($data.phoneErrors) + " ", 1 /* TEXT */),
           ($data.phoneErrors)
             ? (openBlock(true), createElementBlock(Fragment, { key: 0 }, renderList($data.phoneErrors, (error, index) => {
                 return (openBlock(), createElementBlock("div", {

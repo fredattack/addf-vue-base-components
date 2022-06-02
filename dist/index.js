@@ -4104,7 +4104,6 @@ function render$N(_ctx, _cache, $props, $setup, $data, $options) {
               [vue.vModelText, $data.dNumberValue]
             ])
           ]),
-          vue.createTextVNode(" kkk " + vue.toDisplayString($data.phoneErrors) + " ", 1 /* TEXT */),
           ($data.phoneErrors)
             ? (vue.openBlock(true), vue.createElementBlock(vue.Fragment, { key: 0 }, vue.renderList($data.phoneErrors, (error, index) => {
                 return (vue.openBlock(), vue.createElementBlock("div", {
