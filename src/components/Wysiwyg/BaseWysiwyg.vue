@@ -119,7 +119,7 @@ export default {
       required: false
     },
   },
-  emits :['modelValue'],
+  emits :['update:modelValue', 'change'],
   data() {
     return {
       editor: null,
@@ -209,7 +209,9 @@ export default {
       ],
       content: this.modelValue,
       onUpdate: () => {
+        
         this.$emit('update:modelValue', this.editor.getHTML())
+        this.$emit('change', this.editor.getHTML())
       }
     })
   },

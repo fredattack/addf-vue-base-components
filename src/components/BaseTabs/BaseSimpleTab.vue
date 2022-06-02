@@ -1,17 +1,17 @@
 <template>
   <div v-show='cVisibility'>
-
-    <div class="hidden sm:block">
+    <div class="block">
       <div class="border-b border-gray-200">
-        <nav class="-mb-px flex space-x-8 cursor-pointer" aria-label="Tabs">
+        <nav class="-mb-px  grid grid cols-1 sm:grid-cols 2 space-x-3 md:flex md:space-x-8 ursor-pointer" aria-label="Tabs">
           <template v-for="tab in tabs" :key="tab.label" >
-            <a v-if='tab.gate !== false' :href="tab.href" @click="this.$router.push({name: tab.routeName})" :class="[this.$route.name === tab.routeName ? 'border-theme-red-lighter text-theme-red-lighter' :
-             'border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300', 'group inline-flex items-center py-4 px-1 border-b-2 font-medium text-sm']"
+
+            <router-link v-if='tab.gate !== false' :to="{name: tab.routeName}" :class="[this.$route.name === tab.routeName ? `border-theme-${colorWhenSelected} text-theme-${colorWhenSelected}` :
+             'border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300', 'group inline-flex items-center py-4 px-1 border-b-2 font-medium md:text-sm sm:text-xs']"
                :aria-current="tab.current ? 'page' : undefined">
 
               <font-awesome-icon v-if='tab.icon' :icon="['fal', tab.icon]" class='mr-2'/>
               <span class='capitalize-first'>{{ tab.label }}</span>
-            </a>
+            </router-link>
           </template>
         </nav>
       </div>
@@ -23,7 +23,12 @@
 export default {
   name: 'BaseSimpleTab',
   props: {
-    tabs: { type: Array, required: true}
+    tabs: { type: Array, required: true},
+    colorWhenSelected: {
+      type: String,
+      required: false,
+      default: 'red-lighter'
+    }
   },
   computed:{
     cVisibility(){
