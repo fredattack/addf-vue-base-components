@@ -101,11 +101,8 @@ export default {
     cDisplayedValueWhenNotEditionMode(){
       return moment(this.modelValue).format('DD/MM/YYYY')
     },
-    cInternalValue(){
-      return this.internalValue
-    },
     internalValueIsAFullDate(){
-      return this.isFullDate(this.cInternalValue)
+      return this.isFullDate(this.internalValue)
     }
   },
   watch: {

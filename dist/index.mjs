@@ -9104,7 +9104,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
   const _directive_mask = resolveDirective("mask");
 
   return (openBlock(), createElementBlock(Fragment, null, [
-    createTextVNode(toDisplayString($options.internalValueIsAFullDate) + " " + toDisplayString($data.internalValue) + " ", 1 /* TEXT */),
+    createTextVNode(toDisplayString($options.internalValueIsAFullDate) + " " + toDisplayString($options.cInternalValue) + " ", 1 /* TEXT */),
     ($props.editionMode)
       ? (openBlock(), createElementBlock("div", {
           key: 0,
