@@ -9111,8 +9111,8 @@ var script = {
 };
 
 const _hoisted_1 = { class: "flex" };
-const _hoisted_2 = ["name", "id", "placeholder"];
-const _hoisted_3 = /*#__PURE__*/vue.createElementVNode("div", null, " aaaaaah ", -1 /* HOISTED */);
+const _hoisted_2 = /*#__PURE__*/vue.createElementVNode("div", null, " aaaaaah ", -1 /* HOISTED */);
+const _hoisted_3 = ["name", "id", "placeholder"];
 const _hoisted_4 = {
   key: 1,
   class: "mt-3"
@@ -9128,24 +9128,24 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
         key: 0,
         class: vue.normalizeClass([$options.cGroupClass, "mt-3"])
       }, [
-        vue.createVNode(_component_BaseEditLabel, {
-          label: $props.label,
-          required: $props.required
-        }, null, 8 /* PROPS */, ["label", "required"]),
         vue.createElementVNode("div", _hoisted_1, [
-          vue.withDirectives(vue.createElementVNode("input", {
-            name: $props.name,
-            type: "text",
-            "onUpdate:modelValue": _cache[0] || (_cache[0] = $event => (($data.internalValue) = $event)),
-            onInput: _cache[1] || (_cache[1] = (...args) => ($options.updateInput && $options.updateInput(...args))),
-            id: $props.name,
-            class: vue.normalizeClass([ $options.internalValueIsAFullDate ? 'focus:border-green-300 focus:ring-green-300' : 'focus:border-red-300 focus:ring-red-300', 'border-gray-400 focus:ring-1', $options.cInputClass]),
-            placeholder: $props.placeholder
-          }, null, 42 /* CLASS, PROPS, HYDRATE_EVENTS */, _hoisted_2), [
-            [vue.vModelText, $data.internalValue],
-            [_directive_mask, $props.mask]
-          ]),
-          _hoisted_3
+          vue.createVNode(_component_BaseEditLabel, {
+            label: $props.label,
+            required: $props.required
+          }, null, 8 /* PROPS */, ["label", "required"]),
+          _hoisted_2
+        ]),
+        vue.withDirectives(vue.createElementVNode("input", {
+          name: $props.name,
+          type: "text",
+          "onUpdate:modelValue": _cache[0] || (_cache[0] = $event => (($data.internalValue) = $event)),
+          onInput: _cache[1] || (_cache[1] = (...args) => ($options.updateInput && $options.updateInput(...args))),
+          id: $props.name,
+          class: vue.normalizeClass([ $options.internalValueIsAFullDate ? 'focus:border-green-300 focus:ring-green-300' : 'focus:border-red-300 focus:ring-red-300', 'border-gray-400 focus:ring-1', $options.cInputClass]),
+          placeholder: $props.placeholder
+        }, null, 42 /* CLASS, PROPS, HYDRATE_EVENTS */, _hoisted_3), [
+          [vue.vModelText, $data.internalValue],
+          [_directive_mask, $props.mask]
         ]),
         (vue.openBlock(true), vue.createElementBlock(vue.Fragment, null, vue.renderList($props.errors, (error, index) => {
           return (vue.openBlock(), vue.createElementBlock("div", {
