@@ -9122,7 +9122,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
   const _directive_mask = vue.resolveDirective("mask");
 
   return (vue.openBlock(), vue.createElementBlock(vue.Fragment, null, [
-    vue.createTextVNode(vue.toDisplayString($options.internalValueIsAFullDate) + " ", 1 /* TEXT */),
+    vue.createTextVNode(vue.toDisplayString($options.internalValueIsAFullDate) + " " + vue.toDisplayString($data.internalValue) + " ", 1 /* TEXT */),
     ($props.editionMode)
       ? (vue.openBlock(), vue.createElementBlock("div", {
           key: 0,

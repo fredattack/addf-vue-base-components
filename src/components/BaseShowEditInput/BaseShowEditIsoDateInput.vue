@@ -1,5 +1,5 @@
 <template>
-  {{ internalValueIsAFullDate }}
+  {{ internalValueIsAFullDate }} {{ internalValue }}
   <div v-if='editionMode' :class="cGroupClass" class='mt-3'>
     <BaseEditLabel :label="label" :required="required"/>
     <input :name="name"
