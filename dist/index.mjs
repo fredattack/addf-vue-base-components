@@ -297,7 +297,7 @@ function render$1k(_ctx, _cache, $props, $setup, $data, $options) {
     createElementVNode("div", _hoisted_1$14, [
       createElementVNode("dd", _hoisted_2$W, toDisplayString($props.modelValue === null || $props.modelValue === '' ? '-' : $props.modelValue), 1 /* TEXT */),
       ($props.additionalInformation)
-        ? (openBlock(), createElementBlock("dd", _hoisted_3$F, toDisplayString($props.additionalInformation), 1 /* TEXT */))
+        ? (openBlock(), createElementBlock("dd", _hoisted_3$F, "(" + toDisplayString($props.additionalInformation) + ")", 1 /* TEXT */))
         : createCommentVNode("v-if", true)
     ])
   ]))

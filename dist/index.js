@@ -318,7 +318,7 @@ function render$1k(_ctx, _cache, $props, $setup, $data, $options) {
     vue.createElementVNode("div", _hoisted_1$14, [
       vue.createElementVNode("dd", _hoisted_2$W, vue.toDisplayString($props.modelValue === null || $props.modelValue === '' ? '-' : $props.modelValue), 1 /* TEXT */),
       ($props.additionalInformation)
-        ? (vue.openBlock(), vue.createElementBlock("dd", _hoisted_3$F, vue.toDisplayString($props.additionalInformation), 1 /* TEXT */))
+        ? (vue.openBlock(), vue.createElementBlock("dd", _hoisted_3$F, "(" + vue.toDisplayString($props.additionalInformation) + ")", 1 /* TEXT */))
         : vue.createCommentVNode("v-if", true)
     ])
   ]))
