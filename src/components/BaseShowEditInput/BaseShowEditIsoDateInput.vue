@@ -31,6 +31,7 @@ export default {
   name: 'BaseShowEditIsoDateInput',
   data() {
     return {
+      internalValue: null,
     }
   },
   components: { BaseEditLabel, BaseShowLabel },
@@ -100,11 +101,11 @@ export default {
     cDisplayedValueWhenNotEditionMode(){
       return moment(this.modelValue).format('DD/MM/YYYY')
     },
-    internalValue(){
-      return null
+    cInternalValue(){
+      return this.internalValue
     },
     internalValueIsAFullDate(){
-      return this.isFullDate(this.internalValue)
+      return this.isFullDate(this.cInternalValue)
     }
   },
   watch: {

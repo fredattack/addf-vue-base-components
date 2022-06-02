@@ -9013,6 +9013,7 @@ var script = {
   name: 'BaseShowEditIsoDateInput',
   data() {
     return {
+      internalValue: null,
     }
   },
   components: { BaseEditLabel: script$1j, BaseShowLabel: script$1k },
@@ -9082,11 +9083,11 @@ var script = {
     cDisplayedValueWhenNotEditionMode(){
       return moment__default["default"](this.modelValue).format('DD/MM/YYYY')
     },
-    internalValue(){
-      return null
+    cInternalValue(){
+      return this.internalValue
     },
     internalValueIsAFullDate(){
-      return this.isFullDate(this.internalValue)
+      return this.isFullDate(this.cInternalValue)
     }
   },
   watch: {
@@ -9124,7 +9125,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
   const _directive_mask = vue.resolveDirective("mask");
 
   return (vue.openBlock(), vue.createElementBlock(vue.Fragment, null, [
-    vue.createTextVNode(vue.toDisplayString($options.internalValueIsAFullDate) + " " + vue.toDisplayString($options.internalValue) + " ", 1 /* TEXT */),
+    vue.createTextVNode(vue.toDisplayString($options.internalValueIsAFullDate) + " " + vue.toDisplayString($data.internalValue) + " ", 1 /* TEXT */),
     ($props.editionMode)
       ? (vue.openBlock(), vue.createElementBlock("div", {
           key: 0,
@@ -9137,7 +9138,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
           vue.withDirectives(vue.createElementVNode("input", {
             name: $props.name,
             type: "text",
-            value: $options.internalValue,
+            value: $data.internalValue,
             onInput: _cache[0] || (_cache[0] = (...args) => ($options.updateInput && $options.updateInput(...args))),
             id: $props.name,
             class: vue.normalizeClass([ $options.internalValueIsAFullDate ? 'focus:border-green-400 focus:ring-green-400' : 'focus:border-red-500focus:ring-red-500', 'border-gray-400 focus:ring-1', $options.cInputClass]),
