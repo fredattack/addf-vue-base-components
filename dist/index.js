@@ -9084,6 +9084,9 @@ var script = {
     }
   },
   methods: {
+    isFullDate(payload){
+      return /\d{2}\/\d{2}\/\d{4}/.test(payload)
+    },
     isIsoDate(payload) {
       if (/\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}\+\d{2}:\d{2}/.test(payload)){
         let date = new Date(payload);
@@ -9092,8 +9095,10 @@ var script = {
       return false;
     },
     updateInput(event) {
-      if (this.isIsoDate(event.target.value)){
-        this.$emit("update:modelValue", moment__default["default"](event.target.value).format());
+      console.log('test moment', moment__default["default"](event.target.value));
+      console.log('test moment is iso', this.isIsoDate(moment__default["default"](event.target.value)));
+      if (this.isFullDate(event.target.value) && this.isIsoDate(moment__default["default"](event.target.value))){
+        this.$emit("update:modelValue", moment__default["default"](event.target.value));
       }
     }
   },
