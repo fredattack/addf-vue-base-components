@@ -1,10 +1,12 @@
 <template>
-  <div v-if="label" :class="cLabelClass">
-    {{ label }}
-  </div>
-  <dd class="capitalize-first">
-    {{ modelValue === null || modelValue === '' ?  '-' : modelValue}}
-  </dd>
+  <div >
+    <div v-if="label" :class="cLabelClass">
+      {{ label }}
+    </div >
+    <dd class="capitalize-first">
+      {{ modelValue === null || modelValue === '' ? '-' : modelValue }}
+    </dd >
+  </div >
 </template>
 <script>
 

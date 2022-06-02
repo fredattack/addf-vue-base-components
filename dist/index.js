@@ -295,15 +295,15 @@ var script$1k = {
 const _hoisted_1$14 = { class: "capitalize-first" };
 
 function render$1k(_ctx, _cache, $props, $setup, $data, $options) {
-  return (vue.openBlock(), vue.createElementBlock(vue.Fragment, null, [
+  return (vue.openBlock(), vue.createElementBlock("div", null, [
     ($props.label)
       ? (vue.openBlock(), vue.createElementBlock("div", {
           key: 0,
           class: vue.normalizeClass($options.cLabelClass)
         }, vue.toDisplayString($props.label), 3 /* TEXT, CLASS */))
       : vue.createCommentVNode("v-if", true),
-    vue.createElementVNode("dd", _hoisted_1$14, vue.toDisplayString($props.modelValue === null || $props.modelValue === '' ?  '-' : $props.modelValue), 1 /* TEXT */)
-  ], 64 /* STABLE_FRAGMENT */))
+    vue.createElementVNode("dd", _hoisted_1$14, vue.toDisplayString($props.modelValue === null || $props.modelValue === '' ? '-' : $props.modelValue), 1 /* TEXT */)
+  ]))
 }
 
 script$1k.render = render$1k;

@@ -274,15 +274,15 @@ var script$1k = {
 const _hoisted_1$14 = { class: "capitalize-first" };
 
 function render$1k(_ctx, _cache, $props, $setup, $data, $options) {
-  return (openBlock(), createElementBlock(Fragment, null, [
+  return (openBlock(), createElementBlock("div", null, [
     ($props.label)
       ? (openBlock(), createElementBlock("div", {
           key: 0,
           class: normalizeClass($options.cLabelClass)
         }, toDisplayString($props.label), 3 /* TEXT, CLASS */))
       : createCommentVNode("v-if", true),
-    createElementVNode("dd", _hoisted_1$14, toDisplayString($props.modelValue === null || $props.modelValue === '' ?  '-' : $props.modelValue), 1 /* TEXT */)
-  ], 64 /* STABLE_FRAGMENT */))
+    createElementVNode("dd", _hoisted_1$14, toDisplayString($props.modelValue === null || $props.modelValue === '' ? '-' : $props.modelValue), 1 /* TEXT */)
+  ]))
 }
 
 script$1k.render = render$1k;
