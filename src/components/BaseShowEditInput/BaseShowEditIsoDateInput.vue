@@ -121,7 +121,7 @@ export default {
     },
     timeDifference(){
       // return moment(moment().format()).lang('fr').from(moment(this.modelValue))
-      return moment(this.modelValue).from(moment())
+      return moment(this.modelValue).from(moment()).lang('fr')
     }
   },
   watch: {
