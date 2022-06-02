@@ -9011,6 +9011,11 @@ script$1.__file = "src/components/HelloWorld.vue";
 var script = {
   directives: {mask: vueTheMask.mask},
   name: 'BaseShowEditIsoDateInput',
+  data() {
+    return {
+      internalValue: null,
+    }
+  },
   components: { BaseEditLabel: script$1j, BaseShowLabel: script$1k },
   props: {
     editionMode: {
@@ -9075,14 +9080,35 @@ var script = {
     cInputClass() {
       return this.inputClass === '' ? 'form-control' : this.inputClass
     },
-    cInjectedValue(){
-      return new Date(moment__default["default"](this.modelValue, 'DD/MM/YYYY'))
-    },
+  },
+  watch: {
+    modelValue: {
+      handler(newValue){
+        if(newValue){
+          this.internalValue = moment__default["default"](newValue).format('DD/MM/YYYY');
+        }
+      },
+      immediate: true,
+      deep:true,
+    }
   },
   methods: {
+    isFullDate(payload){
+      return /\d{2}\/\d{2}\/\d{4}/.test(payload)
+    },
+    isIsoDate(payload) {
+      if (/\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}\+\d{2}:\d{2}/.test(payload)){
+        let date = new Date(payload);
+        return date.toISOString() === payload;
+      }
+      return false;
+    },
     updateInput(event) {
-      this.$emit("update:modelValue", moment__default["default"](event.target.value).format());
-      // this.$emit("update:modelValue", event.target.value);
+      console.log('test moment', moment__default["default"](event.target.value).format());
+      console.log('test moment is iso', this.isIsoDate(moment__default["default"](event.target.value)));
+      if (this.isFullDate(event.target.value) && this.isIsoDate(moment__default["default"](event.target.value).format())){
+        this.$emit("update:modelValue", moment__default["default"](event.target.value).format());
+      }
     }
   },
 };
@@ -9110,7 +9136,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
         vue.withDirectives(vue.createElementVNode("input", {
           name: $props.name,
           type: "text",
-          value: $options.cInjectedValue,
+          value: $data.internalValue,
           onInput: _cache[0] || (_cache[0] = (...args) => ($options.updateInput && $options.updateInput(...args))),
           id: $props.name,
           class: vue.normalizeClass([$options.cInputClass, "border-gray-400 focus:border-blue-300 focus:ring-blue-300 focus:ring-1"]),

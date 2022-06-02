@@ -3,7 +3,7 @@
     <BaseEditLabel :label="label" :required="required"/>
     <input :name="name"
            type="text"
-           :value="cInjectedValue"
+           :value="internalValue"
            @input="updateInput"
            :id="name"
            :class="cInputClass"
@@ -29,6 +29,11 @@ import moment from 'moment'
 export default {
   directives: {mask},
   name: 'BaseShowEditIsoDateInput',
+  data() {
+    return {
+      internalValue: null,
+    }
+  },
   components: { BaseEditLabel, BaseShowLabel },
   props: {
     editionMode: {
@@ -93,14 +98,35 @@ export default {
     cInputClass() {
       return this.inputClass === '' ? 'form-control' : this.inputClass
     },
-    cInjectedValue(){
-      return new Date(moment(this.modelValue, 'DD/MM/YYYY'))
-    },
+  },
+  watch: {
+    modelValue: {
+      handler(newValue){
+        if(newValue){
+          this.internalValue = moment(newValue).format('DD/MM/YYYY')
+        }
+      },
+      immediate: true,
+      deep:true,
+    }
   },
   methods: {
+    isFullDate(payload){
+      return /\d{2}\/\d{2}\/\d{4}/.test(payload)
+    },
+    isIsoDate(payload) {
+      if (/\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}\+\d{2}:\d{2}/.test(payload)){
+        let date = new Date(payload);
+        return date.toISOString() === payload;
+      }
+      return false;
+    },
     updateInput(event) {
-      this.$emit("update:modelValue", moment(event.target.value).format());
-      // this.$emit("update:modelValue", event.target.value);
+      console.log('test moment', moment(event.target.value).format())
+      console.log('test moment is iso', this.isIsoDate(moment(event.target.value)))
+      if (this.isFullDate(event.target.value) && this.isIsoDate(moment(event.target.value).format())){
+        this.$emit("update:modelValue", moment(event.target.value).format());
+      }
     }
   },
 }
