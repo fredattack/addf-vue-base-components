@@ -9092,7 +9092,7 @@ var script = {
       return this.isFullDate(this.internalValue)
     },
     timeDifference(){
-      return moment__default["default"]().from(this.modelValue)
+      return moment__default["default"]().lang('fr').from(moment__default["default"](this.modelValue))
     }
   },
   watch: {

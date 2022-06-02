@@ -9071,7 +9071,7 @@ var script = {
       return this.isFullDate(this.internalValue)
     },
     timeDifference(){
-      return moment().from(this.modelValue)
+      return moment().lang('fr').from(moment(this.modelValue))
     }
   },
   watch: {
