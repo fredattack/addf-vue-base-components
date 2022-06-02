@@ -2,7 +2,7 @@
   <div v-if='editionMode' :class="cGroupClass" class='mt-3'>
     <div class="flex" >
     <BaseEditLabel :label="label" :required="required"/>
-      <div class=" ml-2 text-sm text-gray-500 capitalize-first">
+      <div v-if="displayTimeDifference" class=" ml-2 text-sm text-gray-500 capitalize-first">
         ( aaaah )
       </div>
     </div >
@@ -21,7 +21,12 @@
     </div>
   </div>
   <div v-else class='mt-3'>
-    <BaseShowLabel :label="label" :model-value="cDisplayedValueWhenNotEditionMode"/>
+    <div class="flex" >
+      <BaseShowLabel :label="label" :model-value="cDisplayedValueWhenNotEditionMode" />
+      <div v-if="displayTimeDifference" class="ml-2 text-sm font-medium text-gray-500 capitalize-first">
+        ( aaaah )
+      </div>
+    </div >
   </div>
 </template>
 
@@ -41,6 +46,11 @@ export default {
   },
   components: { BaseEditLabel, BaseShowLabel },
   props: {
+    displayTimeDifference: {
+      type: Boolean,
+      require: false,
+      default: false,
+    },
     editionMode: {
       type: Boolean,
       required: true
