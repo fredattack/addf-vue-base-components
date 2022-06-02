@@ -6,7 +6,7 @@
            v-model="internalValue"
            @input="updateInput"
            :id="name"
-           :class="[ internalValueIsAFullDate ? 'focus:border-green-400 focus:ring-green-400' : 'focus:border-red-500 focus:ring-red-500', 'border-gray-400 focus:ring-1', cInputClass]"
+           :class="[ internalValueIsAFullDate ? 'focus:border-green-300 focus:ring-green-300' : 'focus:border-red-300 focus:ring-red-300', 'border-gray-400 focus:ring-1', cInputClass]"
            :placeholder="placeholder"
            v-mask="mask" />
 
