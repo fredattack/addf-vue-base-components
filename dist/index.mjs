@@ -9061,6 +9061,9 @@ var script = {
     },
     cDisplayedValueWhenNotEditionMode(){
       return moment(this.modelValue).format('DD/MM/YYYY')
+    },
+    internalValueIsAFullDate(){
+      return this.isFullDate(this.internalValue)
     }
   },
   watch: {
@@ -9079,7 +9082,6 @@ var script = {
       return /\d{2}\/\d{2}\/\d{4}/.test(payload)
     },
     updateInput(event) {
-      console.log('test moment', moment(event.target.value).format());
       if (this.isFullDate(event.target.value)) {
         this.$emit("update:modelValue", moment(event.target.value).format());
       }
@@ -9113,7 +9115,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
           value: $data.internalValue,
           onInput: _cache[0] || (_cache[0] = (...args) => ($options.updateInput && $options.updateInput(...args))),
           id: $props.name,
-          class: normalizeClass([$options.cInputClass, "border-gray-400 focus:border-blue-300 focus:ring-blue-300 focus:ring-1"]),
+          class: normalizeClass([ $options.internalValueIsAFullDate ? 'focus:border-green-400' : 'focus:border-red-500', 'border-gray-400 focus:border-blue-300 focus:ring-blue-300 focus:ring-1', $options.cInputClass]),
           placeholder: $props.placeholder
         }, null, 42 /* CLASS, PROPS, HYDRATE_EVENTS */, _hoisted_1), [
           [_directive_mask, $props.mask]

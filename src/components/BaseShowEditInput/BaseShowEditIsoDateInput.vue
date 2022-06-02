@@ -6,10 +6,9 @@
            :value="internalValue"
            @input="updateInput"
            :id="name"
-           :class="cInputClass"
+           :class="[ internalValueIsAFullDate ? 'focus:border-green-400' : 'focus:border-red-500', 'border-gray-400 focus:border-blue-300 focus:ring-blue-300 focus:ring-1', cInputClass]"
            :placeholder="placeholder"
-           v-mask="mask"
-           class='border-gray-400 focus:border-blue-300 focus:ring-blue-300 focus:ring-1' />
+           v-mask="mask" />
 
     <div v-for='(error,index) in errors' :key='index' class="form-help text-red-600">
       {{ $t(error, {attribute: $t('attributes.' + name)}) }}
@@ -100,6 +99,9 @@ export default {
     },
     cDisplayedValueWhenNotEditionMode(){
       return moment(this.modelValue).format('DD/MM/YYYY')
+    },
+    internalValueIsAFullDate(){
+      return this.isFullDate(this.internalValue)
     }
   },
   watch: {
@@ -118,7 +120,6 @@ export default {
       return /\d{2}\/\d{2}\/\d{4}/.test(payload)
     },
     updateInput(event) {
-      console.log('test moment', moment(event.target.value).format())
       if (this.isFullDate(event.target.value)) {
         this.$emit("update:modelValue", moment(event.target.value).format());
       }
