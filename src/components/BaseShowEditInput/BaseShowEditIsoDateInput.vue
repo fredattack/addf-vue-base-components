@@ -46,6 +46,11 @@ export default {
   },
   components: { BaseEditLabel, BaseShowLabel },
   props: {
+    customReferenceDate: {
+      type: String,
+      required: false,
+      default: null
+    },
     displayTimeDifference: {
       type: Boolean,
       require: false,
@@ -120,10 +125,10 @@ export default {
       return this.isFullDate(this.internalValue)
     },
     timeDifference(){
-      let modelValueMoment = moment(this.modelValue);
-      let now = moment().startOf('day');
-      console.log(modelValueMoment,now );
-      return modelValueMoment.lang('fr').from(now)
+      if(!this.customReferenceDate){
+        return moment(this.modelValue).lang('fr').from(moment().startOf('day'))
+      }
+      return moment(this.modelValue).lang('fr').from(moment(this.customReferenceDate))
     }
   },
   watch: {

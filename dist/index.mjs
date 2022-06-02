@@ -8997,6 +8997,11 @@ var script = {
   },
   components: { BaseEditLabel: script$1j, BaseShowLabel: script$1k },
   props: {
+    customReferenceDate: {
+      type: String,
+      required: false,
+      default: null
+    },
     displayTimeDifference: {
       type: Boolean,
       require: false,
@@ -9071,10 +9076,10 @@ var script = {
       return this.isFullDate(this.internalValue)
     },
     timeDifference(){
-      let modelValueMoment = moment(this.modelValue);
-      let now = moment().startOf('day');
-      console.log(modelValueMoment,now );
-      return modelValueMoment.lang('fr').from(now)
+      if(!this.customReferenceDate){
+        return moment(this.modelValue).lang('fr').from(moment().startOf('day'))
+      }
+      return moment(this.modelValue).lang('fr').from(moment(this.customReferenceDate))
     }
   },
   watch: {
