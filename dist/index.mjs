@@ -9071,10 +9071,8 @@ var script = {
       return this.isFullDate(this.internalValue)
     },
     timeDifference(){
-      // return moment(moment().format()).lang('fr').from(moment(this.modelValue))
-      
       let modelValueMoment = moment(this.modelValue);
-      let now = moment();
+      let now = moment().startOf('day');
       console.log(modelValueMoment,now );
       return modelValueMoment.lang('fr').from(now)
     }
