@@ -8,8 +8,8 @@ var vue$1 = require('@headlessui/vue');
 var apiClient = require('@u/apiClient');
 var Datepicker = require('vue3-datepicker');
 var locale = require('date-fns/locale');
-var CountryFlag = require('vue-country-flag-next');
 var _ = require('core-js/internals/internal-state');
+var CountryFlag = require('vue-country-flag-next');
 var vue3 = require('@tiptap/vue-3');
 var tippy = require('tippy.js');
 var Document = require('@tiptap/extension-document');
@@ -29,8 +29,8 @@ var moment__default = /*#__PURE__*/_interopDefaultLegacy(moment);
 var multiselect__default = /*#__PURE__*/_interopDefaultLegacy(multiselect);
 var apiClient__default = /*#__PURE__*/_interopDefaultLegacy(apiClient);
 var Datepicker__default = /*#__PURE__*/_interopDefaultLegacy(Datepicker);
-var CountryFlag__default = /*#__PURE__*/_interopDefaultLegacy(CountryFlag);
 var ___default = /*#__PURE__*/_interopDefaultLegacy(_);
+var CountryFlag__default = /*#__PURE__*/_interopDefaultLegacy(CountryFlag);
 var tippy__default = /*#__PURE__*/_interopDefaultLegacy(tippy);
 var Document__default = /*#__PURE__*/_interopDefaultLegacy(Document);
 var Paragraph__default = /*#__PURE__*/_interopDefaultLegacy(Paragraph);
@@ -2870,7 +2870,7 @@ const _hoisted_7$5 = {
 };
 const _hoisted_8$4 = ["value", "disabled"];
 const _hoisted_9$2 = ["name", "id", "disabled", "placeholder"];
-const _hoisted_10$1 = {
+const _hoisted_10$2 = {
   key: 0,
   class: "form-help text-red-600"
 };
@@ -2915,7 +2915,7 @@ function render$W(_ctx, _cache, $props, $setup, $data, $options) {
       ])
     ]),
     ($props.errors)
-      ? (vue.openBlock(), vue.createElementBlock("div", _hoisted_10$1, [
+      ? (vue.openBlock(), vue.createElementBlock("div", _hoisted_10$2, [
           (vue.openBlock(true), vue.createElementBlock(vue.Fragment, null, vue.renderList($props.errors, (error, key) => {
             return (vue.openBlock(), vue.createElementBlock("div", { key: key }, vue.toDisplayString(_ctx.$t(error[0], {attribute: _ctx.$t('attributes.' + key)})), 1 /* TEXT */))
           }), 128 /* KEYED_FRAGMENT */))
@@ -3953,8 +3953,6 @@ function render$O(_ctx, _cache, $props, $setup, $data, $options) {
 script$O.render = render$O;
 script$O.__file = "src/components/BaseShowEditInput/BaseShowEditInput.vue";
 
-// import _ from "core-js/internals/internal-state";
-
 var script$N = {
   name: 'BaseShowEditPhoneInput',
   components: {
@@ -4031,9 +4029,9 @@ var script$N = {
     this.dCountryValue = this.countryValue;
   },
   watch: {
-    // errors(newValue){
-    //   this.phoneErrors =  _.pick(newValue,[`${this.name}_country`,`${this.name}_field`])
-    // },
+    errors(newValue){
+      this.phoneErrors =  ___default["default"].pick(newValue,[`${this.name}_country`,`${this.name}_field`]);
+    },
     numberValue(){
       this.dNumberValue = this.numberValue;
     },
@@ -4054,7 +4052,8 @@ const _hoisted_5$7 = ["name"];
 const _hoisted_6$4 = { selected: "" };
 const _hoisted_7$4 = ["value"];
 const _hoisted_8$3 = ["name", "id", "placeholder"];
-const _hoisted_9$1 = { key: 1 };
+const _hoisted_9$1 = /*#__PURE__*/vue.createTextVNode(" kkk ");
+const _hoisted_10$1 = { key: 1 };
 
 function render$N(_ctx, _cache, $props, $setup, $data, $options) {
   const _component_BaseEditLabel = vue.resolveComponent("BaseEditLabel");
@@ -4100,6 +4099,7 @@ function render$N(_ctx, _cache, $props, $setup, $data, $options) {
               [vue.vModelText, $data.dNumberValue]
             ])
           ]),
+          _hoisted_9$1,
           ($data.phoneErrors)
             ? (vue.openBlock(true), vue.createElementBlock(vue.Fragment, { key: 0 }, vue.renderList($data.phoneErrors, (error, index) => {
                 return (vue.openBlock(), vue.createElementBlock("div", {
@@ -4109,7 +4109,7 @@ function render$N(_ctx, _cache, $props, $setup, $data, $options) {
               }), 128 /* KEYED_FRAGMENT */))
             : vue.createCommentVNode("v-if", true)
         ]))
-      : (vue.openBlock(), vue.createElementBlock("div", _hoisted_9$1, [
+      : (vue.openBlock(), vue.createElementBlock("div", _hoisted_10$1, [
           vue.createVNode(_component_BaseShowPhoneLabel, {
             label: $props.label,
             "model-value": $data.dNumberValue,
