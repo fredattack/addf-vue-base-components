@@ -9062,11 +9062,8 @@ var script = {
     cDisplayedValueWhenNotEditionMode(){
       return moment(this.modelValue).format('DD/MM/YYYY')
     },
-    cInternalValue(){
-      return this.internalValue
-    },
     internalValueIsAFullDate(){
-      return this.isFullDate(this.cInternalValue)
+      return this.isFullDate(this.internalValue)
     }
   },
   watch: {
@@ -9104,7 +9101,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
   const _directive_mask = resolveDirective("mask");
 
   return (openBlock(), createElementBlock(Fragment, null, [
-    createTextVNode(toDisplayString($options.internalValueIsAFullDate) + " " + toDisplayString($options.cInternalValue) + " ", 1 /* TEXT */),
+    createTextVNode(toDisplayString($options.internalValueIsAFullDate) + " " + toDisplayString($data.internalValue) + " ", 1 /* TEXT */),
     ($props.editionMode)
       ? (openBlock(), createElementBlock("div", {
           key: 0,
@@ -9114,15 +9111,16 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
             label: $props.label,
             required: $props.required
           }, null, 8 /* PROPS */, ["label", "required"]),
-          withDirectives(createElementVNode("input", {
+          withDirectives((openBlock(), createElementBlock("input", {
             name: $props.name,
+            key: $data.internalValue,
             type: "text",
             value: $data.internalValue,
             onInput: _cache[0] || (_cache[0] = (...args) => ($options.updateInput && $options.updateInput(...args))),
             id: $props.name,
             class: normalizeClass([ $options.internalValueIsAFullDate ? 'focus:border-green-400 focus:ring-green-400' : 'focus:border-red-500focus:ring-red-500', 'border-gray-400 focus:ring-1', $options.cInputClass]),
             placeholder: $props.placeholder
-          }, null, 42 /* CLASS, PROPS, HYDRATE_EVENTS */, _hoisted_1), [
+          }, null, 42 /* CLASS, PROPS, HYDRATE_EVENTS */, _hoisted_1)), [
             [_directive_mask, $props.mask]
           ]),
           (openBlock(true), createElementBlock(Fragment, null, renderList($props.errors, (error, index) => {
