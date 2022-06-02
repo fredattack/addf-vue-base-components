@@ -3372,6 +3372,7 @@ var script$R = {
     groupClass:{ type: String, required: false, default:'' },
     labelClass:{ type: String, required: false, default:'' },
     fullModelResponse:{ type: Boolean, required: false, default:false },
+    errors: { type: Object, required: false },
   },
   computed:{
     cGroupClass(){
@@ -3471,7 +3472,15 @@ function render$R(_ctx, _cache, $props, $setup, $data, $options) {
             ])
           ]),
           _: 1 /* STABLE */
-        }, 8 /* PROPS */, ["modelValue", "id", "label", "track-by", "options", "value", "loading", "onSearchChange"]))
+        }, 8 /* PROPS */, ["modelValue", "id", "label", "track-by", "options", "value", "loading", "onSearchChange"])),
+        ($props.errors)
+          ? (openBlock(true), createElementBlock(Fragment, { key: 1 }, renderList($props.errors, (error, index) => {
+              return (openBlock(), createElementBlock("div", {
+                key: index,
+                class: "form-help text-red-600"
+              }, toDisplayString(_ctx.$t(error, {'attribute': _ctx.$t('attributes.' + $props.name)})), 1 /* TEXT */))
+            }), 128 /* KEYED_FRAGMENT */))
+          : createCommentVNode("v-if", true)
       ], 2 /* CLASS */))
     : createCommentVNode("v-if", true)
 }

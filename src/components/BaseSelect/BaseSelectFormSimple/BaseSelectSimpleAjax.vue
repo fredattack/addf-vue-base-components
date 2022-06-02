@@ -33,7 +33,11 @@
         </span>
       </template>
     </multiselect>
-
+    <template v-if='errors'>
+      <div v-for='(error,index) in errors' :key='index' class='form-help text-red-600'>
+        {{ $t(error, {'attribute': $t('attributes.' + name)}) }}
+      </div>
+    </template>
   </div>
 </template>
 <script>
@@ -71,6 +75,7 @@ export default {
     groupClass:{ type: String, required: false, default:'' },
     labelClass:{ type: String, required: false, default:'' },
     fullModelResponse:{ type: Boolean, required: false, default:false },
+    errors: { type: Object, required: false },
   },
   computed:{
     cGroupClass(){
