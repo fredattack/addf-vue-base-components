@@ -21,12 +21,7 @@
     </div>
   </div>
   <div v-else class='mt-3'>
-    <div class="flex" >
-      <BaseShowLabel :label="label" :model-value="cDisplayedValueWhenNotEditionMode" />
-      <div v-if="displayTimeDifference" class="ml-2 text-sm font-medium text-gray-500 capitalize-first">
-        ( {{ timeDifference }} )
-      </div>
-    </div >
+      <BaseShowLabel :label="label" :model-value="cDisplayedValueWhenNotEditionMode" :additional-information="this.displayTimeDifference ? timeDifference : null"/>
   </div>
 </template>
 
