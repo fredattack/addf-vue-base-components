@@ -8,8 +8,9 @@ var vue$1 = require('@headlessui/vue');
 var apiClient = require('@u/apiClient');
 var Datepicker = require('vue3-datepicker');
 var locale = require('date-fns/locale');
-var _ = require('core-js/internals/internal-state');
+var _ = require('lodash');
 var CountryFlag = require('vue-country-flag-next');
+var _$1 = require('core-js/internals/internal-state');
 var vue3 = require('@tiptap/vue-3');
 var tippy = require('tippy.js');
 var Document = require('@tiptap/extension-document');
@@ -31,6 +32,7 @@ var apiClient__default = /*#__PURE__*/_interopDefaultLegacy(apiClient);
 var Datepicker__default = /*#__PURE__*/_interopDefaultLegacy(Datepicker);
 var ___default = /*#__PURE__*/_interopDefaultLegacy(_);
 var CountryFlag__default = /*#__PURE__*/_interopDefaultLegacy(CountryFlag);
+var ___default$1 = /*#__PURE__*/_interopDefaultLegacy(_$1);
 var tippy__default = /*#__PURE__*/_interopDefaultLegacy(tippy);
 var Document__default = /*#__PURE__*/_interopDefaultLegacy(Document);
 var Paragraph__default = /*#__PURE__*/_interopDefaultLegacy(Paragraph);
@@ -6125,7 +6127,7 @@ var script$t = {
       return null
     },
     thWidth() {
-      if (___default["default"].has(this.column, 'width') && this.column.width != null) {
+      if (___default$1["default"].has(this.column, 'width') && this.column.width != null) {
         return this.column.width
       }
       return this.column.type === 'button' ? '2%' : ''
@@ -8347,7 +8349,7 @@ var script$5 = {
 
     filtrableColumns() {
       return  this.columns.filter(function (column){
-        return ___default["default"].has(column,'searchable')
+        return ___default$1["default"].has(column,'searchable')
       }).map(obj => {
         return obj.field
       })

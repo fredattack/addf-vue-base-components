@@ -6,8 +6,9 @@ import { RadioGroup, RadioGroupLabel, RadioGroupOption, Menu, MenuButton, MenuIt
 import apiClient from '@u/apiClient';
 import Datepicker from 'vue3-datepicker';
 import { fr } from 'date-fns/locale';
-import _ from 'core-js/internals/internal-state';
+import _ from 'lodash';
 import CountryFlag from 'vue-country-flag-next';
+import _$1 from 'core-js/internals/internal-state';
 import { EditorContent, Editor, VueRenderer } from '@tiptap/vue-3';
 import tippy from 'tippy.js';
 import Document from '@tiptap/extension-document';
@@ -6105,7 +6106,7 @@ var script$t = {
       return null
     },
     thWidth() {
-      if (_.has(this.column, 'width') && this.column.width != null) {
+      if (_$1.has(this.column, 'width') && this.column.width != null) {
         return this.column.width
       }
       return this.column.type === 'button' ? '2%' : ''
@@ -8327,7 +8328,7 @@ var script$5 = {
 
     filtrableColumns() {
       return  this.columns.filter(function (column){
-        return _.has(column,'searchable')
+        return _$1.has(column,'searchable')
       }).map(obj => {
         return obj.field
       })

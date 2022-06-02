@@ -44,7 +44,7 @@
 
 <script>
 
-import _ from "core-js/internals/internal-state";
+import _ from "lodash";
 
 export default {
   name: 'BaseShowEditPhoneInput',
