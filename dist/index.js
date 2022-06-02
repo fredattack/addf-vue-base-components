@@ -9110,7 +9110,7 @@ var script = {
   },
 };
 
-const _hoisted_1 = ["name", "value", "id", "placeholder"];
+const _hoisted_1 = ["name", "id", "placeholder"];
 const _hoisted_2 = {
   key: 1,
   class: "mt-3"
@@ -9136,12 +9136,13 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
             name: $props.name,
             key: $data.internalValue,
             type: "text",
-            value: $data.internalValue,
-            onInput: _cache[0] || (_cache[0] = (...args) => ($options.updateInput && $options.updateInput(...args))),
+            "onUpdate:modelValue": _cache[0] || (_cache[0] = $event => (($data.internalValue) = $event)),
+            onInput: _cache[1] || (_cache[1] = (...args) => ($options.updateInput && $options.updateInput(...args))),
             id: $props.name,
             class: vue.normalizeClass([ $options.internalValueIsAFullDate ? 'focus:border-green-400 focus:ring-green-400' : 'focus:border-red-500focus:ring-red-500', 'border-gray-400 focus:ring-1', $options.cInputClass]),
             placeholder: $props.placeholder
           }, null, 42 /* CLASS, PROPS, HYDRATE_EVENTS */, _hoisted_1)), [
+            [vue.vModelText, $data.internalValue],
             [_directive_mask, $props.mask]
           ]),
           (vue.openBlock(true), vue.createElementBlock(vue.Fragment, null, vue.renderList($props.errors, (error, index) => {

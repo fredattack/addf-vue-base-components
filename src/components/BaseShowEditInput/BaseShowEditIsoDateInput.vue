@@ -5,7 +5,7 @@
     <input :name="name"
            :key="internalValue"
            type="text"
-           :value="internalValue"
+           v-model="internalValue"
            @input="updateInput"
            :id="name"
            :class="[ internalValueIsAFullDate ? 'focus:border-green-400 focus:ring-green-400' : 'focus:border-red-500focus:ring-red-500', 'border-gray-400 focus:ring-1', cInputClass]"
