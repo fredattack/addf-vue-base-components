@@ -9071,6 +9071,9 @@ var script = {
     cInputClass() {
       return this.inputClass === '' ? 'form-control' : this.inputClass
     },
+    cDisplayedValueWhenNotEditionMode(){
+      return moment__default["default"](this.modelValue).format('DD/MM/YYYY')
+    }
   },
   watch: {
     modelValue: {
@@ -9087,17 +9090,9 @@ var script = {
     isFullDate(payload){
       return /\d{2}\/\d{2}\/\d{4}/.test(payload)
     },
-    isIsoDate(payload) {
-      if (/\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}\+\d{2}:\d{2}/.test(payload)){
-        let date = new Date(payload);
-        return date.toISOString() === payload;
-      }
-      return false;
-    },
     updateInput(event) {
       console.log('test moment', moment__default["default"](event.target.value).format());
-      console.log('test moment is iso', this.isIsoDate(moment__default["default"](event.target.value)));
-      if (this.isFullDate(event.target.value) && this.isIsoDate(moment__default["default"](event.target.value).format())){
+      if (this.isFullDate(event.target.value)) {
         this.$emit("update:modelValue", moment__default["default"](event.target.value).format());
       }
     }
