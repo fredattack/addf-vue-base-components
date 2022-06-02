@@ -9115,7 +9115,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
           value: $data.internalValue,
           onInput: _cache[0] || (_cache[0] = (...args) => ($options.updateInput && $options.updateInput(...args))),
           id: $props.name,
-          class: normalizeClass([ $options.internalValueIsAFullDate ? 'focus:border-green-400' : 'focus:border-red-500', 'border-gray-400 focus:border-blue-300 focus:ring-blue-300 focus:ring-1', $options.cInputClass]),
+          class: normalizeClass([ $options.internalValueIsAFullDate ? 'focus:border-green-400 focus:ring-green-400' : 'focus:border-red-500focus:ring-red-500', 'border-gray-400 focus:ring-1', $options.cInputClass]),
           placeholder: $props.placeholder
         }, null, 42 /* CLASS, PROPS, HYDRATE_EVENTS */, _hoisted_1), [
           [_directive_mask, $props.mask]
