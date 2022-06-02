@@ -9100,39 +9100,42 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
   const _component_BaseShowLabel = resolveComponent("BaseShowLabel");
   const _directive_mask = resolveDirective("mask");
 
-  return ($props.editionMode)
-    ? (openBlock(), createElementBlock("div", {
-        key: 0,
-        class: normalizeClass([$options.cGroupClass, "mt-3"])
-      }, [
-        createVNode(_component_BaseEditLabel, {
-          label: $props.label,
-          required: $props.required
-        }, null, 8 /* PROPS */, ["label", "required"]),
-        withDirectives(createElementVNode("input", {
-          name: $props.name,
-          type: "text",
-          value: $data.internalValue,
-          onInput: _cache[0] || (_cache[0] = (...args) => ($options.updateInput && $options.updateInput(...args))),
-          id: $props.name,
-          class: normalizeClass([ $options.internalValueIsAFullDate ? 'focus:border-green-400 focus:ring-green-400' : 'focus:border-red-500focus:ring-red-500', 'border-gray-400 focus:ring-1', $options.cInputClass]),
-          placeholder: $props.placeholder
-        }, null, 42 /* CLASS, PROPS, HYDRATE_EVENTS */, _hoisted_1), [
-          [_directive_mask, $props.mask]
-        ]),
-        (openBlock(true), createElementBlock(Fragment, null, renderList($props.errors, (error, index) => {
-          return (openBlock(), createElementBlock("div", {
-            key: index,
-            class: "form-help text-red-600"
-          }, toDisplayString(_ctx.$t(error, {attribute: _ctx.$t('attributes.' + $props.name)})), 1 /* TEXT */))
-        }), 128 /* KEYED_FRAGMENT */))
-      ], 2 /* CLASS */))
-    : (openBlock(), createElementBlock("div", _hoisted_2, [
-        createVNode(_component_BaseShowLabel, {
-          label: $props.label,
-          "model-value": $options.cDisplayedValueWhenNotEditionMode
-        }, null, 8 /* PROPS */, ["label", "model-value"])
-      ]))
+  return (openBlock(), createElementBlock(Fragment, null, [
+    createTextVNode(toDisplayString($options.internalValueIsAFullDate) + " ", 1 /* TEXT */),
+    ($props.editionMode)
+      ? (openBlock(), createElementBlock("div", {
+          key: 0,
+          class: normalizeClass([$options.cGroupClass, "mt-3"])
+        }, [
+          createVNode(_component_BaseEditLabel, {
+            label: $props.label,
+            required: $props.required
+          }, null, 8 /* PROPS */, ["label", "required"]),
+          withDirectives(createElementVNode("input", {
+            name: $props.name,
+            type: "text",
+            value: $data.internalValue,
+            onInput: _cache[0] || (_cache[0] = (...args) => ($options.updateInput && $options.updateInput(...args))),
+            id: $props.name,
+            class: normalizeClass([ $options.internalValueIsAFullDate ? 'focus:border-green-400 focus:ring-green-400' : 'focus:border-red-500focus:ring-red-500', 'border-gray-400 focus:ring-1', $options.cInputClass]),
+            placeholder: $props.placeholder
+          }, null, 42 /* CLASS, PROPS, HYDRATE_EVENTS */, _hoisted_1), [
+            [_directive_mask, $props.mask]
+          ]),
+          (openBlock(true), createElementBlock(Fragment, null, renderList($props.errors, (error, index) => {
+            return (openBlock(), createElementBlock("div", {
+              key: index,
+              class: "form-help text-red-600"
+            }, toDisplayString(_ctx.$t(error, {attribute: _ctx.$t('attributes.' + $props.name)})), 1 /* TEXT */))
+          }), 128 /* KEYED_FRAGMENT */))
+        ], 2 /* CLASS */))
+      : (openBlock(), createElementBlock("div", _hoisted_2, [
+          createVNode(_component_BaseShowLabel, {
+            label: $props.label,
+            "model-value": $options.cDisplayedValueWhenNotEditionMode
+          }, null, 8 /* PROPS */, ["label", "model-value"])
+        ]))
+  ], 64 /* STABLE_FRAGMENT */))
 }
 
 script.render = render;
