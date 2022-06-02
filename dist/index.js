@@ -8,8 +8,8 @@ var vue$1 = require('@headlessui/vue');
 var apiClient = require('@u/apiClient');
 var Datepicker = require('vue3-datepicker');
 var locale = require('date-fns/locale');
-var CountryFlag = require('vue-country-flag-next');
 var _ = require('core-js/internals/internal-state');
+var CountryFlag = require('vue-country-flag-next');
 var vue3 = require('@tiptap/vue-3');
 var tippy = require('tippy.js');
 var Document = require('@tiptap/extension-document');
@@ -29,8 +29,8 @@ var moment__default = /*#__PURE__*/_interopDefaultLegacy(moment);
 var multiselect__default = /*#__PURE__*/_interopDefaultLegacy(multiselect);
 var apiClient__default = /*#__PURE__*/_interopDefaultLegacy(apiClient);
 var Datepicker__default = /*#__PURE__*/_interopDefaultLegacy(Datepicker);
-var CountryFlag__default = /*#__PURE__*/_interopDefaultLegacy(CountryFlag);
 var ___default = /*#__PURE__*/_interopDefaultLegacy(_);
+var CountryFlag__default = /*#__PURE__*/_interopDefaultLegacy(CountryFlag);
 var tippy__default = /*#__PURE__*/_interopDefaultLegacy(tippy);
 var Document__default = /*#__PURE__*/_interopDefaultLegacy(Document);
 var Paragraph__default = /*#__PURE__*/_interopDefaultLegacy(Paragraph);
@@ -3953,8 +3953,6 @@ function render$M(_ctx, _cache, $props, $setup, $data, $options) {
 script$M.render = render$M;
 script$M.__file = "src/components/BaseShowEditInput/BaseShowEditInput.vue";
 
-// import _ from "core-js/internals/internal-state";
-
 var script$L = {
   name: 'BaseShowEditPhoneInput',
   components: {
@@ -4031,9 +4029,9 @@ var script$L = {
     this.dCountryValue = this.countryValue;
   },
   watch: {
-    // errors(newValue){
-    //   this.phoneErrors =  _.pick(newValue,[`${this.name}_country`,`${this.name}_field`])
-    // },
+    errors(newValue){
+      this.phoneErrors =  ___default["default"].pick(newValue,[`${this.name}_country`,`${this.name}_field`]);
+    },
     numberValue(){
       this.dNumberValue = this.numberValue;
     },

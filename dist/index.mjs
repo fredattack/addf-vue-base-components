@@ -6,8 +6,8 @@ import { RadioGroup, RadioGroupLabel, RadioGroupOption, Menu, MenuButton, MenuIt
 import apiClient from '@u/apiClient';
 import Datepicker from 'vue3-datepicker';
 import { fr } from 'date-fns/locale';
-import CountryFlag from 'vue-country-flag-next';
 import _ from 'core-js/internals/internal-state';
+import CountryFlag from 'vue-country-flag-next';
 import { EditorContent, Editor, VueRenderer } from '@tiptap/vue-3';
 import tippy from 'tippy.js';
 import Document from '@tiptap/extension-document';
@@ -3933,8 +3933,6 @@ function render$M(_ctx, _cache, $props, $setup, $data, $options) {
 script$M.render = render$M;
 script$M.__file = "src/components/BaseShowEditInput/BaseShowEditInput.vue";
 
-// import _ from "core-js/internals/internal-state";
-
 var script$L = {
   name: 'BaseShowEditPhoneInput',
   components: {
@@ -4011,9 +4009,9 @@ var script$L = {
     this.dCountryValue = this.countryValue;
   },
   watch: {
-    // errors(newValue){
-    //   this.phoneErrors =  _.pick(newValue,[`${this.name}_country`,`${this.name}_field`])
-    // },
+    errors(newValue){
+      this.phoneErrors =  _.pick(newValue,[`${this.name}_country`,`${this.name}_field`]);
+    },
     numberValue(){
       this.dNumberValue = this.numberValue;
     },

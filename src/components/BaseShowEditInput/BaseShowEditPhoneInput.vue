@@ -42,7 +42,7 @@
 
 <script>
 
-// import _ from "core-js/internals/internal-state";
+import _ from "core-js/internals/internal-state";
 
 export default {
   name: 'BaseShowEditPhoneInput',
@@ -120,9 +120,9 @@ export default {
     this.dCountryValue = this.countryValue
   },
   watch: {
-    // errors(newValue){
-    //   this.phoneErrors =  _.pick(newValue,[`${this.name}_country`,`${this.name}_field`])
-    // },
+    errors(newValue){
+      this.phoneErrors =  _.pick(newValue,[`${this.name}_country`,`${this.name}_field`])
+    },
     numberValue(){
       this.dNumberValue = this.numberValue
     },
