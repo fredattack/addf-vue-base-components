@@ -9100,7 +9100,7 @@ var script = {
       if(!this.customReferenceDate){
         return moment__default["default"](this.modelValue).lang('fr').from(moment__default["default"]().startOf('day'))
       }
-      return moment__default["default"](this.modelValue).lang('fr').from(moment__default["default"](this.customReferenceDate))
+      return moment__default["default"](this.modelValue).lang('fr').from(moment__default["default"](this.customReferenceDate, 'DD/MM/YYYY'))
     }
   },
   watch: {

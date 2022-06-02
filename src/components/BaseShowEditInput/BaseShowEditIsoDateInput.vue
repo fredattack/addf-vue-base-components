@@ -128,7 +128,7 @@ export default {
       if(!this.customReferenceDate){
         return moment(this.modelValue).lang('fr').from(moment().startOf('day'))
       }
-      return moment(this.modelValue).lang('fr').from(moment(this.customReferenceDate))
+      return moment(this.modelValue).lang('fr').from(moment(this.customReferenceDate, 'DD/MM/YYYY'))
     }
   },
   watch: {
