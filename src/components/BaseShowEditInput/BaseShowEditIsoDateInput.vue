@@ -3,7 +3,7 @@
     <div class="flex" >
     <BaseEditLabel :label="label" :required="required"/>
       <div v-if="displayTimeDifference" class=" ml-2 text-sm text-gray-500 capitalize-first">
-        ( aaaah )
+        ( {{ timeDifference }} )
       </div>
     </div >
     <input :name="name"
@@ -24,7 +24,7 @@
     <div class="flex" >
       <BaseShowLabel :label="label" :model-value="cDisplayedValueWhenNotEditionMode" />
       <div v-if="displayTimeDifference" class="ml-2 text-sm font-medium text-gray-500 capitalize-first">
-        ( aaaah )
+        ( {{ timeDifference }} )
       </div>
     </div >
   </div>
@@ -118,6 +118,9 @@ export default {
     },
     internalValueIsAFullDate(){
       return this.isFullDate(this.internalValue)
+    },
+    timeDifference(){
+      return moment().from(this.modelValue)
     }
   },
   watch: {

@@ -9090,6 +9090,9 @@ var script = {
     },
     internalValueIsAFullDate(){
       return this.isFullDate(this.internalValue)
+    },
+    timeDifference(){
+      return moment__default["default"]().from(this.modelValue)
     }
   },
   watch: {
@@ -9147,7 +9150,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
             required: $props.required
           }, null, 8 /* PROPS */, ["label", "required"]),
           ($props.displayTimeDifference)
-            ? (vue.openBlock(), vue.createElementBlock("div", _hoisted_2, " ( aaaah ) "))
+            ? (vue.openBlock(), vue.createElementBlock("div", _hoisted_2, " ( " + vue.toDisplayString($options.timeDifference) + " ) ", 1 /* TEXT */))
             : vue.createCommentVNode("v-if", true)
         ]),
         vue.withDirectives(vue.createElementVNode("input", {
@@ -9176,7 +9179,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
             "model-value": $options.cDisplayedValueWhenNotEditionMode
           }, null, 8 /* PROPS */, ["label", "model-value"]),
           ($props.displayTimeDifference)
-            ? (vue.openBlock(), vue.createElementBlock("div", _hoisted_6, " ( aaaah ) "))
+            ? (vue.openBlock(), vue.createElementBlock("div", _hoisted_6, " ( " + vue.toDisplayString($options.timeDifference) + " ) ", 1 /* TEXT */))
             : vue.createCommentVNode("v-if", true)
         ])
       ]))

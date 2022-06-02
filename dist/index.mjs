@@ -9069,6 +9069,9 @@ var script = {
     },
     internalValueIsAFullDate(){
       return this.isFullDate(this.internalValue)
+    },
+    timeDifference(){
+      return moment().from(this.modelValue)
     }
   },
   watch: {
@@ -9126,7 +9129,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
             required: $props.required
           }, null, 8 /* PROPS */, ["label", "required"]),
           ($props.displayTimeDifference)
-            ? (openBlock(), createElementBlock("div", _hoisted_2, " ( aaaah ) "))
+            ? (openBlock(), createElementBlock("div", _hoisted_2, " ( " + toDisplayString($options.timeDifference) + " ) ", 1 /* TEXT */))
             : createCommentVNode("v-if", true)
         ]),
         withDirectives(createElementVNode("input", {
@@ -9155,7 +9158,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
             "model-value": $options.cDisplayedValueWhenNotEditionMode
           }, null, 8 /* PROPS */, ["label", "model-value"]),
           ($props.displayTimeDifference)
-            ? (openBlock(), createElementBlock("div", _hoisted_6, " ( aaaah ) "))
+            ? (openBlock(), createElementBlock("div", _hoisted_6, " ( " + toDisplayString($options.timeDifference) + " ) ", 1 /* TEXT */))
             : createCommentVNode("v-if", true)
         ])
       ]))
