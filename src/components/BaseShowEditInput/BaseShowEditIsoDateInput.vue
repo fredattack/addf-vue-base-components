@@ -120,7 +120,7 @@ export default {
       return this.isFullDate(this.internalValue)
     },
     timeDifference(){
-      return moment().lang('fr').from(moment(this.modelValue))
+      return moment().format().lang('fr').from(moment(this.modelValue))
     }
   },
   watch: {
