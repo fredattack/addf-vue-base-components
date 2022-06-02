@@ -7,7 +7,7 @@
       <dd class="capitalize-first">
         {{ modelValue === null || modelValue === '' ? '-' : modelValue }}
       </dd >
-      <dd v-if="additionalInformation" class="ml-2">{{ additionalInformation }}</dd>
+      <dd v-if="additionalInformation" class="ml-2">({{ additionalInformation }})</dd>
     </div >
   </div >
 </template>
