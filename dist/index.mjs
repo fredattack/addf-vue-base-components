@@ -9055,7 +9055,7 @@ var script = {
     modelValue: {
       handler(newValue){
         if(newValue){
-          this.internalValue = new Date(moment(newValue, 'DD/MM/YYYY'));
+          this.internalValue = moment(newValue).format('DD/MM/YYYY');
         }
       },
       immediate: true,
