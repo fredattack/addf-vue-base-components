@@ -9149,7 +9149,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     : (vue.openBlock(), vue.createElementBlock("div", _hoisted_2, [
         vue.createVNode(_component_BaseShowLabel, {
           label: $props.label,
-          "model-value": $props.modelValue
+          "model-value": $options.cDisplayedValueWhenNotEditionMode
         }, null, 8 /* PROPS */, ["label", "model-value"])
       ]))
 }

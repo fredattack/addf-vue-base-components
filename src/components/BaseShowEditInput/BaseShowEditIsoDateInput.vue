@@ -16,7 +16,7 @@
     </div>
   </div>
   <div v-else class='mt-3'>
-    <BaseShowLabel :label="label" :model-value="modelValue"/>
+    <BaseShowLabel :label="label" :model-value="cDisplayedValueWhenNotEditionMode"/>
   </div>
 </template>
 
