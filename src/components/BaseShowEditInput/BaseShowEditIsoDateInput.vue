@@ -122,10 +122,10 @@ export default {
       return false;
     },
     updateInput(event) {
-      console.log('test moment', moment(event.target.value))
+      console.log('test moment', moment(event.target.value).format())
       console.log('test moment is iso', this.isIsoDate(moment(event.target.value)))
-      if (this.isFullDate(event.target.value) && this.isIsoDate(moment(event.target.value))){
-        this.$emit("update:modelValue", moment(event.target.value));
+      if (this.isFullDate(event.target.value) && this.isIsoDate(moment(event.target.value).format())){
+        this.$emit("update:modelValue", moment(event.target.value).format());
       }
     }
   },
