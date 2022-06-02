@@ -3393,6 +3393,7 @@ var script$R = {
     groupClass:{ type: String, required: false, default:'' },
     labelClass:{ type: String, required: false, default:'' },
     fullModelResponse:{ type: Boolean, required: false, default:false },
+    errors: { type: Object, required: false },
   },
   computed:{
     cGroupClass(){
@@ -3492,7 +3493,15 @@ function render$R(_ctx, _cache, $props, $setup, $data, $options) {
             ])
           ]),
           _: 1 /* STABLE */
-        }, 8 /* PROPS */, ["modelValue", "id", "label", "track-by", "options", "value", "loading", "onSearchChange"]))
+        }, 8 /* PROPS */, ["modelValue", "id", "label", "track-by", "options", "value", "loading", "onSearchChange"])),
+        ($props.errors)
+          ? (vue.openBlock(true), vue.createElementBlock(vue.Fragment, { key: 1 }, vue.renderList($props.errors, (error, index) => {
+              return (vue.openBlock(), vue.createElementBlock("div", {
+                key: index,
+                class: "form-help text-red-600"
+              }, vue.toDisplayString(_ctx.$t(error, {'attribute': _ctx.$t('attributes.' + $props.name)})), 1 /* TEXT */))
+            }), 128 /* KEYED_FRAGMENT */))
+          : vue.createCommentVNode("v-if", true)
       ], 2 /* CLASS */))
     : vue.createCommentVNode("v-if", true)
 }
