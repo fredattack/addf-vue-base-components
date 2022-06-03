@@ -3,7 +3,12 @@
     <div v-if="label" :class="cLabelClass">
       {{ label }}
     </div >
-    <div class="flex" >
+    <div class="flex" v-if="hideModelValue">
+      <dd class="capitalize-first">
+        {{ modelValue === null || modelValue === '' ? '-' : "**********" }}
+      </dd >
+    </div >
+    <div class="flex" v-else>
       <dd class="capitalize-first">
         {{ modelValue === null || modelValue === '' ? '-' : modelValue }}
       </dd >
@@ -35,7 +40,11 @@ export default {
       type: Boolean,
       required: false,
       default: false
-    }
+    },
+    hideModelValue: {
+      type: Boolean,
+      default: false
+    },
   },
   computed: {
     cLabelClass() {
