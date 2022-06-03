@@ -3930,9 +3930,27 @@ var script$O = {
     }
   },
   methods: {
-    updateInput(event) {
-      this.$emit("update:modelValue", event.target.value);
-    }
+    isNumber(event){
+      if (this.type === 'number') {
+        if (!/\d/.test(event.key) && ![8, 9, 37, 38, 39, 40].includes(event.keyCode)) {
+          return event.preventDefault();
+        }
+      }
+    },
+    updateInput(event){
+      if(this.type === 'number'){
+        switch (this.parseType) {
+          case 'int':
+            return this.$emit("update:modelValue", event.target.value !== '' && !isNaN(event.target.value)  ? parseInt(event.target.value) : '');
+          case 'float':
+            return this.$emit("update:modelValue", event.target.value !== '' && !isNaN(event.target.value) ? parseFloat(event.target.value) : '');
+          default:
+            return this.$emit("update:modelValue", this.max && parseInt(this.max) < event.target.value ?  parseInt(this.max) : event.target.value);
+        }
+      } else {
+        this.$emit("update:modelValue", event.target.value);
+      }
+    },
   },
 };
 
@@ -3960,6 +3978,7 @@ function render$O(_ctx, _cache, $props, $setup, $data, $options) {
               value: $props.modelValue,
               placeholder: $props.placeholder,
               onInput: _cache[0] || (_cache[0] = (...args) => ($options.updateInput && $options.updateInput(...args))),
+              onKeydown: _cache[1] || (_cache[1] = $event => ($props.type === 'number' ? $options.isNumber : {})),
               disabled: $props.disabled,
               class: "form-control border-gray-400 focus:border-blue-300 focus:ring-blue-300 focus:ring-1"
             }, null, 40 /* PROPS, HYDRATE_EVENTS */, _hoisted_1$C)
@@ -3980,6 +3999,7 @@ function render$O(_ctx, _cache, $props, $setup, $data, $options) {
 }
 
 script$O.render = render$O;
+script$O.__scopeId = "data-v-e975da96";
 script$O.__file = "src/components/BaseShowEditInput/BaseShowEditInput.vue";
 
 var script$N = {

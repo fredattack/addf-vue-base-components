@@ -12,6 +12,7 @@
             :value="modelValue"
             :placeholder="placeholder"
             @input="updateInput"
+            @keydown="type === 'number' ? isNumber : {}"
             :disabled="disabled"
             class="form-control border-gray-400 focus:border-blue-300 focus:ring-blue-300 focus:ring-1"
         />
@@ -120,9 +121,40 @@ export default {
     }
   },
   methods: {
-    updateInput(event) {
-      this.$emit("update:modelValue", event.target.value);
-    }
+    isNumber(event){
+      if (this.type === 'number') {
+        if (!/\d/.test(event.key) && ![8, 9, 37, 38, 39, 40].includes(event.keyCode)) {
+          return event.preventDefault();
+        }
+      }
+    },
+    updateInput(event){
+      if(this.type === 'number'){
+        switch (this.parseType) {
+          case 'int':
+            return this.$emit("update:modelValue", event.target.value !== '' && !isNaN(event.target.value)  ? parseInt(event.target.value) : '');
+          case 'float':
+            return this.$emit("update:modelValue", event.target.value !== '' && !isNaN(event.target.value) ? parseFloat(event.target.value) : '');
+          default:
+            return this.$emit("update:modelValue", this.max && parseInt(this.max) < event.target.value ?  parseInt(this.max) : event.target.value);
+        }
+      } else {
+        this.$emit("update:modelValue", event.target.value);
+      }
+    },
   },
 }
 </script>
+
+<style scoped>
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
+</style>
+
