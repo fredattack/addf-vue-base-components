@@ -9177,7 +9177,7 @@ var script = {
   },
   methods: {
     isFullDate(payload){
-      return /\d{2}\/\d{2}\/\d{4}/.test(payload)
+      return /\d{2}\/\d{2}\/\d{4}/.test(payload) && moment(payload).isValid()
     },
     updateInput(event) {
       if (this.isFullDate(event.target.value)) {
@@ -9213,7 +9213,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
             label: $props.label,
             required: $props.required
           }, null, 8 /* PROPS */, ["label", "required"]),
-          ($props.displayTimeDifference)
+          ($props.displayTimeDifference && $options.timeDifference)
             ? (openBlock(), createElementBlock("div", _hoisted_2, " ( " + toDisplayString($options.timeDifference) + " ) ", 1 /* TEXT */))
             : createCommentVNode("v-if", true)
         ]),

@@ -2,7 +2,7 @@
   <div v-if='editionMode' :class="cGroupClass" class='mt-3'>
     <div class="flex" >
     <BaseEditLabel :label="label" :required="required"/>
-      <div v-if="displayTimeDifference" class=" ml-2 text-sm text-gray-500 capitalize-first">
+      <div v-if="displayTimeDifference && timeDifference" class=" ml-2 text-sm text-gray-500 capitalize-first">
         ( {{ timeDifference }} )
       </div>
     </div >
@@ -143,7 +143,7 @@ export default {
   },
   methods: {
     isFullDate(payload){
-      return /\d{2}\/\d{2}\/\d{4}/.test(payload)
+      return /\d{2}\/\d{2}\/\d{4}/.test(payload) && moment(payload).isValid()
     },
     updateInput(event) {
       if (this.isFullDate(event.target.value)) {
