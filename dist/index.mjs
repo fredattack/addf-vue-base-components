@@ -3937,7 +3937,7 @@ var script$O = {
           }
         }
         if(this.parseType === 'int'){
-          if (!/\d/.test(event.key) && ![8, 9, 37, 38, 39, 40, 108, 190].includes(event.keyCode)) {
+          if (!/\d/.test(event.key) && ![8, 9, 37, 38, 39, 40, 108, 190, 109].includes(event.keyCode)) {
             return event.preventDefault();
           }
         }
