@@ -121,9 +121,13 @@ export default {
     },
     timeDifference(){
       if(!this.customReferenceDate){
-        return moment(this.modelValue).lang('fr').from(moment().startOf('day'))
+        return moment(this.modelValue).isValid()
+          ? moment(this.modelValue).lang('fr').from(moment().startOf('day'))
+          : null
       }
-      return moment(this.modelValue).lang('fr').from(moment(this.customReferenceDate, 'DD/MM/YYYY'))
+      return moment(this.modelValue).isValid()
+        ? moment(this.modelValue).lang('fr').from(moment(this.customReferenceDate, 'DD/MM/YYYY'))
+        : null
     }
   },
   watch: {

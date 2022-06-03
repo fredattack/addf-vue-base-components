@@ -9176,9 +9176,13 @@ var script = {
     },
     timeDifference(){
       if(!this.customReferenceDate){
-        return moment__default["default"](this.modelValue).lang('fr').from(moment__default["default"]().startOf('day'))
+        return moment__default["default"](this.modelValue).isValid()
+          ? moment__default["default"](this.modelValue).lang('fr').from(moment__default["default"]().startOf('day'))
+          : null
       }
-      return moment__default["default"](this.modelValue).lang('fr').from(moment__default["default"](this.customReferenceDate, 'DD/MM/YYYY'))
+      return moment__default["default"](this.modelValue).isValid()
+        ? moment__default["default"](this.modelValue).lang('fr').from(moment__default["default"](this.customReferenceDate, 'DD/MM/YYYY'))
+        : null
     }
   },
   watch: {
