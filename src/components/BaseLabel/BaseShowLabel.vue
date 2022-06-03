@@ -1,20 +1,30 @@
 <template>
-  <div v-if="label" :class="cLabelClass">
-    {{ label }}
-  </div>
-  <dd class="capitalize-first" v-if="hideModelValue">
-    {{ modelValue === null || modelValue === '' ?  '-' : '**********'}}
-  </dd>
-  <dd class="capitalize-first" v-else>
-    {{ modelValue === null || modelValue === '' ?  '-' : modelValue}}
-  </dd>
+  <div >
+    <div v-if="label" :class="cLabelClass">
+      {{ label }}
+    </div >
+    <div class="flex" >
+      <dd class="capitalize-first">
+        {{ modelValue === null || modelValue === '' ? '-' : modelValue }}
+      </dd >
+      <dd v-if="additionalInformation" class="ml-2">({{ additionalInformation }})</dd>
+    </div >
+  </div >
 </template>
 <script>
 
 export default {
   name: 'BaseShowLabel',
   props: {
-    label: {},
+    additionalInformation: {
+      type: String,
+      required: false,
+      default: null,
+    },
+    label: {
+      type: String,
+      required: true
+    },
     modelValue: {},
     labelClass: {
       type: String,

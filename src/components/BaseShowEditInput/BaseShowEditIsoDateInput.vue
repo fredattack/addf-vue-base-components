@@ -1,22 +1,27 @@
 <template>
   <div v-if='editionMode' :class="cGroupClass" class='mt-3'>
+    <div class="flex" >
     <BaseEditLabel :label="label" :required="required"/>
+      <div v-if="displayTimeDifference" class=" ml-2 text-sm text-gray-500 capitalize-first">
+        ( {{ timeDifference }} )
+      </div>
+    </div >
     <input :name="name"
-           type="text"
-           :value="internalValue"
-           @input="updateInput"
-           :id="name"
-           :class="cInputClass"
-           :placeholder="placeholder"
-           v-mask="mask"
-           class='border-gray-400 focus:border-blue-300 focus:ring-blue-300 focus:ring-1' />
+    type="text"
+    v-model="internalValue"
+    @input="updateInput"
+    :id="name"
+    :class="[ internalValueIsAFullDate ? 'focus:border-green-300 focus:ring-green-300' : 'focus:border-red-300 focus:ring-red-300', 'border-gray-400 focus:ring-1', cInputClass]"
+    :placeholder="placeholder"
+    v-mask="mask"
+    />
 
     <div v-for='(error,index) in errors' :key='index' class="form-help text-red-600">
       {{ $t(error, {attribute: $t('attributes.' + name)}) }}
     </div>
   </div>
   <div v-else class='mt-3'>
-    <BaseShowLabel :label="label" :model-value="modelValue"/>
+      <BaseShowLabel :label="label" :model-value="cDisplayedValueWhenNotEditionMode" :additional-information="this.displayTimeDifference ? timeDifference : null"/>
   </div>
 </template>
 
@@ -36,6 +41,16 @@ export default {
   },
   components: { BaseEditLabel, BaseShowLabel },
   props: {
+    customReferenceDate: {
+      type: String,
+      required: false,
+      default: null
+    },
+    displayTimeDifference: {
+      type: Boolean,
+      require: false,
+      default: false,
+    },
     editionMode: {
       type: Boolean,
       required: true
@@ -98,6 +113,18 @@ export default {
     cInputClass() {
       return this.inputClass === '' ? 'form-control' : this.inputClass
     },
+    cDisplayedValueWhenNotEditionMode(){
+      return moment(this.modelValue).format('DD/MM/YYYY')
+    },
+    internalValueIsAFullDate(){
+      return this.isFullDate(this.internalValue)
+    },
+    timeDifference(){
+      if(!this.customReferenceDate){
+        return moment(this.modelValue).lang('fr').from(moment().startOf('day'))
+      }
+      return moment(this.modelValue).lang('fr').from(moment(this.customReferenceDate, 'DD/MM/YYYY'))
+    }
   },
   watch: {
     modelValue: {
@@ -114,17 +141,8 @@ export default {
     isFullDate(payload){
       return /\d{2}\/\d{2}\/\d{4}/.test(payload)
     },
-    isIsoDate(payload) {
-      if (/\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}\+\d{2}:\d{2}/.test(payload)){
-        let date = new Date(payload);
-        return date.toISOString() === payload;
-      }
-      return false;
-    },
     updateInput(event) {
-      console.log('test moment', moment(event.target.value).format())
-      console.log('test moment is iso', this.isIsoDate(moment(event.target.value)))
-      if (this.isFullDate(event.target.value) && this.isIsoDate(moment(event.target.value).format())){
+      if (this.isFullDate(event.target.value)) {
         this.$emit("update:modelValue", moment(event.target.value).format());
       }
     }
