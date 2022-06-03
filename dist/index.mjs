@@ -308,7 +308,7 @@ function render$1k(_ctx, _cache, $props, $setup, $data, $options) {
       : createCommentVNode("v-if", true),
     ($props.hideModelValue)
       ? (openBlock(), createElementBlock("div", _hoisted_1$14, [
-          createElementVNode("dd", _hoisted_2$W, " kkkkkk " + toDisplayString($props.modelValue === null || $props.modelValue === '' ? '-' : "**********"), 1 /* TEXT */)
+          createElementVNode("dd", _hoisted_2$W, toDisplayString($props.modelValue === null || $props.modelValue === '' ? '-' : "**********"), 1 /* TEXT */)
         ]))
       : (openBlock(), createElementBlock("div", _hoisted_3$F, [
           createElementVNode("dd", _hoisted_4$q, toDisplayString($props.modelValue === null || $props.modelValue === '' ? '-' : $props.modelValue), 1 /* TEXT */),
@@ -3849,6 +3849,10 @@ var script$O = {
       type: Boolean,
       default: true
     },
+    hideModelValue: {
+      type: Boolean,
+      default: false
+    },
     id: {
       type: String,
       default: "",
@@ -3969,8 +3973,9 @@ function render$O(_ctx, _cache, $props, $setup, $data, $options) {
       : (openBlock(), createBlock(_component_BaseShowLabel, {
           key: 1,
           label: $props.label,
-          "model-value": $props.modelValue
-        }, null, 8 /* PROPS */, ["label", "model-value"]))
+          "model-value": $props.modelValue,
+          hideModelValue: $props.hideModelValue
+        }, null, 8 /* PROPS */, ["label", "model-value", "hideModelValue"]))
   ], 2 /* CLASS */))
 }
 

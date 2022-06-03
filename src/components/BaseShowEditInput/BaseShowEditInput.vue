@@ -22,7 +22,7 @@
     </template>
 
     <template v-else>
-      <BaseShowLabel :label="label" :model-value="modelValue"/>
+      <BaseShowLabel :label="label" :model-value="modelValue" :hideModelValue="hideModelValue"/>
     </template>
   </div>
 
@@ -43,6 +43,10 @@ export default {
     editionMode: {
       type: Boolean,
       default: true
+    },
+    hideModelValue: {
+      type: Boolean,
+      default: false
     },
     id: {
       type: String,
