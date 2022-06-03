@@ -103,11 +103,11 @@ const _hoisted_3$G = {
   class: "border-b-2 dark:border-dark-5 whitespace-nowrap",
   style: {"width":"30%"}
 };
-const _hoisted_4$q = {
+const _hoisted_4$r = {
   class: "border-b-2 dark:border-dark-5 whitespace-nowrap",
   style: {"width":"35%"}
 };
-const _hoisted_5$c = {
+const _hoisted_5$d = {
   class: "border-b-2 dark:border-dark-5 whitespace-nowrap",
   style: {"width":"35%"}
 };
@@ -122,8 +122,8 @@ function render$1n(_ctx, _cache, $props, $setup, $data, $options) {
       vue.createElementVNode("thead", null, [
         vue.createElementVNode("tr", null, [
           vue.createElementVNode("th", _hoisted_3$G, vue.toDisplayString(_ctx.$t('global.value_name')), 1 /* TEXT */),
-          vue.createElementVNode("th", _hoisted_4$q, vue.toDisplayString(_ctx.$t('global.old_value')), 1 /* TEXT */),
-          vue.createElementVNode("th", _hoisted_5$c, vue.toDisplayString(_ctx.$t('global.new_value')), 1 /* TEXT */)
+          vue.createElementVNode("th", _hoisted_4$r, vue.toDisplayString(_ctx.$t('global.old_value')), 1 /* TEXT */),
+          vue.createElementVNode("th", _hoisted_5$d, vue.toDisplayString(_ctx.$t('global.new_value')), 1 /* TEXT */)
         ])
       ]),
       ($props.model.old)
@@ -289,7 +289,11 @@ var script$1k = {
       type: Boolean,
       required: false,
       default: false
-    }
+    },
+    hideModelValue: {
+      type: Boolean,
+      default: false
+    },
   },
   computed: {
     cLabelClass() {
@@ -300,9 +304,17 @@ var script$1k = {
 
 };
 
-const _hoisted_1$14 = { class: "flex" };
+const _hoisted_1$14 = {
+  key: 1,
+  class: "flex"
+};
 const _hoisted_2$W = { class: "capitalize-first" };
 const _hoisted_3$F = {
+  key: 2,
+  class: "flex"
+};
+const _hoisted_4$q = { class: "capitalize-first" };
+const _hoisted_5$c = {
   key: 0,
   class: "ml-2"
 };
@@ -315,12 +327,16 @@ function render$1k(_ctx, _cache, $props, $setup, $data, $options) {
           class: vue.normalizeClass($options.cLabelClass)
         }, vue.toDisplayString($props.label), 3 /* TEXT, CLASS */))
       : vue.createCommentVNode("v-if", true),
-    vue.createElementVNode("div", _hoisted_1$14, [
-      vue.createElementVNode("dd", _hoisted_2$W, vue.toDisplayString($props.modelValue === null || $props.modelValue === '' ? '-' : $props.modelValue), 1 /* TEXT */),
-      ($props.additionalInformation)
-        ? (vue.openBlock(), vue.createElementBlock("dd", _hoisted_3$F, "(" + vue.toDisplayString($props.additionalInformation) + ")", 1 /* TEXT */))
-        : vue.createCommentVNode("v-if", true)
-    ])
+    ($props.hideModelValue)
+      ? (vue.openBlock(), vue.createElementBlock("div", _hoisted_1$14, [
+          vue.createElementVNode("dd", _hoisted_2$W, vue.toDisplayString($props.modelValue === null || $props.modelValue === '' ? '-' : "**********"), 1 /* TEXT */)
+        ]))
+      : (vue.openBlock(), vue.createElementBlock("div", _hoisted_3$F, [
+          vue.createElementVNode("dd", _hoisted_4$q, vue.toDisplayString($props.modelValue === null || $props.modelValue === '' ? '-' : $props.modelValue), 1 /* TEXT */),
+          ($props.additionalInformation)
+            ? (vue.openBlock(), vue.createElementBlock("dd", _hoisted_5$c, "(" + vue.toDisplayString($props.additionalInformation) + ")", 1 /* TEXT */))
+            : vue.createCommentVNode("v-if", true)
+        ]))
   ]))
 }
 
