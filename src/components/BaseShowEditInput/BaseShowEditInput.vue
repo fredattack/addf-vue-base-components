@@ -127,8 +127,15 @@ export default {
   methods: {
     isNumber(event){
       if (this.type === 'number') {
-        if (!/\d/.test(event.key) && ![8, 9, 37, 38, 39, 40].includes(event.keyCode)) {
-          return event.preventDefault();
+        if(this.parseType === 'float'){
+          if (!/\d/.test(event.key) && ![8, 9, 37, 38, 39, 40].includes(event.keyCode)) {
+            return event.preventDefault();
+          }
+        }
+        if(this.parseType === 'int'){
+          if (!/\d/.test(event.key) && ![8, 9, 37, 38, 39, 40, 108, 190].includes(event.keyCode)) {
+            return event.preventDefault();
+          }
         }
       }
     },
