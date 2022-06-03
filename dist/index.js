@@ -98,7 +98,7 @@ var script$1n = {
 };
 
 const _hoisted_1$17 = { class: "overflow-x-auto" };
-const _hoisted_2$X = { class: "table" };
+const _hoisted_2$Y = { class: "table" };
 const _hoisted_3$E = {
   class: "border-b-2 dark:border-dark-5 whitespace-nowrap",
   style: {"width":"30%"}
@@ -118,7 +118,7 @@ function render$1n(_ctx, _cache, $props, $setup, $data, $options) {
   const _component_LogTableRow = vue.resolveComponent("LogTableRow");
 
   return (vue.openBlock(), vue.createElementBlock("div", _hoisted_1$17, [
-    vue.createElementVNode("table", _hoisted_2$X, [
+    vue.createElementVNode("table", _hoisted_2$Y, [
       vue.createElementVNode("thead", null, [
         vue.createElementVNode("tr", null, [
           vue.createElementVNode("th", _hoisted_3$E, vue.toDisplayString(_ctx.$t('global.value_name')), 1 /* TEXT */),
@@ -234,13 +234,13 @@ var script$1l = {
 };
 
 const _hoisted_1$15 = { class: "overflow-x-auto" };
-const _hoisted_2$W = { class: "table" };
+const _hoisted_2$X = { class: "table" };
 
 function render$1l(_ctx, _cache, $props, $setup, $data, $options) {
   const _component_ActivityTableRow = vue.resolveComponent("ActivityTableRow");
 
   return (vue.openBlock(), vue.createElementBlock("div", _hoisted_1$15, [
-    vue.createElementVNode("table", _hoisted_2$W, [
+    vue.createElementVNode("table", _hoisted_2$X, [
       vue.createElementVNode("thead", null, [
         vue.createElementVNode("tr", null, [
           (vue.openBlock(true), vue.createElementBlock(vue.Fragment, null, vue.renderList($data.headers, (header, index) => {
@@ -281,7 +281,11 @@ var script$1k = {
       type: Boolean,
       required: false,
       default: false
-    }
+    },
+    hideModelValue: {
+      type: Boolean,
+      default: false
+    },
   },
   computed: {
     cLabelClass() {
@@ -292,7 +296,14 @@ var script$1k = {
 
 };
 
-const _hoisted_1$14 = { class: "capitalize-first" };
+const _hoisted_1$14 = {
+  key: 1,
+  class: "capitalize-first"
+};
+const _hoisted_2$W = {
+  key: 2,
+  class: "capitalize-first"
+};
 
 function render$1k(_ctx, _cache, $props, $setup, $data, $options) {
   return (vue.openBlock(), vue.createElementBlock(vue.Fragment, null, [
@@ -302,7 +313,9 @@ function render$1k(_ctx, _cache, $props, $setup, $data, $options) {
           class: vue.normalizeClass($options.cLabelClass)
         }, vue.toDisplayString($props.label), 3 /* TEXT, CLASS */))
       : vue.createCommentVNode("v-if", true),
-    vue.createElementVNode("dd", _hoisted_1$14, vue.toDisplayString($props.modelValue === null || $props.modelValue === '' ?  '-' : $props.modelValue), 1 /* TEXT */)
+    ($props.hideModelValue)
+      ? (vue.openBlock(), vue.createElementBlock("dd", _hoisted_1$14, vue.toDisplayString($props.modelValue === null || $props.modelValue === '' ?  '-' : '**********'), 1 /* TEXT */))
+      : (vue.openBlock(), vue.createElementBlock("dd", _hoisted_2$W, vue.toDisplayString($props.modelValue === null || $props.modelValue === '' ?  '-' : $props.modelValue), 1 /* TEXT */))
   ], 64 /* STABLE_FRAGMENT */))
 }
 

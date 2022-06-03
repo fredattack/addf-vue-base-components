@@ -77,7 +77,7 @@ var script$1n = {
 };
 
 const _hoisted_1$17 = { class: "overflow-x-auto" };
-const _hoisted_2$X = { class: "table" };
+const _hoisted_2$Y = { class: "table" };
 const _hoisted_3$E = {
   class: "border-b-2 dark:border-dark-5 whitespace-nowrap",
   style: {"width":"30%"}
@@ -97,7 +97,7 @@ function render$1n(_ctx, _cache, $props, $setup, $data, $options) {
   const _component_LogTableRow = resolveComponent("LogTableRow");
 
   return (openBlock(), createElementBlock("div", _hoisted_1$17, [
-    createElementVNode("table", _hoisted_2$X, [
+    createElementVNode("table", _hoisted_2$Y, [
       createElementVNode("thead", null, [
         createElementVNode("tr", null, [
           createElementVNode("th", _hoisted_3$E, toDisplayString(_ctx.$t('global.value_name')), 1 /* TEXT */),
@@ -213,13 +213,13 @@ var script$1l = {
 };
 
 const _hoisted_1$15 = { class: "overflow-x-auto" };
-const _hoisted_2$W = { class: "table" };
+const _hoisted_2$X = { class: "table" };
 
 function render$1l(_ctx, _cache, $props, $setup, $data, $options) {
   const _component_ActivityTableRow = resolveComponent("ActivityTableRow");
 
   return (openBlock(), createElementBlock("div", _hoisted_1$15, [
-    createElementVNode("table", _hoisted_2$W, [
+    createElementVNode("table", _hoisted_2$X, [
       createElementVNode("thead", null, [
         createElementVNode("tr", null, [
           (openBlock(true), createElementBlock(Fragment, null, renderList($data.headers, (header, index) => {
@@ -260,7 +260,11 @@ var script$1k = {
       type: Boolean,
       required: false,
       default: false
-    }
+    },
+    hideModelValue: {
+      type: Boolean,
+      default: false
+    },
   },
   computed: {
     cLabelClass() {
@@ -271,7 +275,14 @@ var script$1k = {
 
 };
 
-const _hoisted_1$14 = { class: "capitalize-first" };
+const _hoisted_1$14 = {
+  key: 1,
+  class: "capitalize-first"
+};
+const _hoisted_2$W = {
+  key: 2,
+  class: "capitalize-first"
+};
 
 function render$1k(_ctx, _cache, $props, $setup, $data, $options) {
   return (openBlock(), createElementBlock(Fragment, null, [
@@ -281,7 +292,9 @@ function render$1k(_ctx, _cache, $props, $setup, $data, $options) {
           class: normalizeClass($options.cLabelClass)
         }, toDisplayString($props.label), 3 /* TEXT, CLASS */))
       : createCommentVNode("v-if", true),
-    createElementVNode("dd", _hoisted_1$14, toDisplayString($props.modelValue === null || $props.modelValue === '' ?  '-' : $props.modelValue), 1 /* TEXT */)
+    ($props.hideModelValue)
+      ? (openBlock(), createElementBlock("dd", _hoisted_1$14, toDisplayString($props.modelValue === null || $props.modelValue === '' ?  '-' : '**********'), 1 /* TEXT */))
+      : (openBlock(), createElementBlock("dd", _hoisted_2$W, toDisplayString($props.modelValue === null || $props.modelValue === '' ?  '-' : $props.modelValue), 1 /* TEXT */))
   ], 64 /* STABLE_FRAGMENT */))
 }
 
