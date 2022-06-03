@@ -132,13 +132,25 @@ export default {
         }
       }
     },
+    restrictedRangeNumberValue(payload){
+      if (this.min || this.max){
+        if(this.payload < this.min){
+          return this.min
+        }
+        if(this.payload > this.max){
+          return this.max
+        }
+        return payload
+      }
+      return payload
+    },
     updateInput(event){
       if(this.type === 'number'){
         switch (this.parseType) {
           case 'int':
-            return this.$emit("update:modelValue", event.target.value !== '' && !isNaN(event.target.value)  ? parseInt(event.target.value) : '');
+            return this.$emit("update:modelValue", event.target.value !== '' && !isNaN(event.target.value)  ? this.restrictedRangeNumberValue(parseInt(event.target.value)) : '');
           case 'float':
-            return this.$emit("update:modelValue", event.target.value !== '' && !isNaN(event.target.value) ? parseFloat(event.target.value) : '');
+            return this.$emit("update:modelValue", event.target.value !== '' && !isNaN(event.target.value) ? this.restrictedRangeNumberValue(parseFloat(event.target.value)) : '');
           default:
             return this.$emit("update:modelValue", this.max && parseInt(this.max) < event.target.value ?  parseInt(this.max) : event.target.value);
         }
