@@ -21,7 +21,9 @@
     </div>
   </div>
   <div v-else class='mt-3'>
-      <BaseShowLabel :label="label" :model-value="cDisplayedValueWhenNotEditionMode" :additional-information="this.displayTimeDifference ? timeDifference : null"/>
+      <BaseShowLabel :label="label"
+                     :model-value="cDisplayedValueWhenNotEditionMode"
+                     :additional-information="this.displayTimeDifference && timeDifference !== 'Invalid date' ? timeDifference : null"/>
   </div>
 </template>
 
@@ -114,10 +116,10 @@ export default {
       return this.inputClass === '' ? 'form-control' : this.inputClass
     },
     cDisplayedValueWhenNotEditionMode(){
-      return moment(this.modelValue).format('DD/MM/YYYY')
+      return moment(this.modelValue).format('DD/MM/YYYY') === 'Invalid date' ? null : moment(this.modelValue).format('DD/MM/YYYY')
     },
     internalValueIsAFullDate(){
-      return this.isFullDate(this.internalValue)
+      return this.isAValidDate(this.internalValue)
     },
     timeDifference(){
       if(!this.customReferenceDate){
@@ -142,11 +144,11 @@ export default {
     }
   },
   methods: {
-    isFullDate(payload){
+    isAValidDate(payload){
       return /\d{2}\/\d{2}\/\d{4}/.test(payload) && moment(payload).isValid()
     },
     updateInput(event) {
-      if (this.isFullDate(event.target.value)) {
+      if (this.isAValidDate(event.target.value)) {
         this.$emit("update:modelValue", moment(event.target.value).format());
       }
     }

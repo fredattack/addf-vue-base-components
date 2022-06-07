@@ -9169,10 +9169,10 @@ var script = {
       return this.inputClass === '' ? 'form-control' : this.inputClass
     },
     cDisplayedValueWhenNotEditionMode(){
-      return moment__default["default"](this.modelValue).format('DD/MM/YYYY')
+      return moment__default["default"](this.modelValue).format('DD/MM/YYYY') === 'Invalid date' ? null : moment__default["default"](this.modelValue).format('DD/MM/YYYY')
     },
     internalValueIsAFullDate(){
-      return this.isFullDate(this.internalValue)
+      return this.isAValidDate(this.internalValue)
     },
     timeDifference(){
       if(!this.customReferenceDate){
@@ -9197,11 +9197,11 @@ var script = {
     }
   },
   methods: {
-    isFullDate(payload){
+    isAValidDate(payload){
       return /\d{2}\/\d{2}\/\d{4}/.test(payload) && moment__default["default"](payload).isValid()
     },
     updateInput(event) {
-      if (this.isFullDate(event.target.value)) {
+      if (this.isAValidDate(event.target.value)) {
         this.$emit("update:modelValue", moment__default["default"](event.target.value).format());
       }
     }
@@ -9261,7 +9261,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
         vue.createVNode(_component_BaseShowLabel, {
           label: $props.label,
           "model-value": $options.cDisplayedValueWhenNotEditionMode,
-          "additional-information": this.displayTimeDifference ? $options.timeDifference : null
+          "additional-information": this.displayTimeDifference && $options.timeDifference !== 'Invalid date' ? $options.timeDifference : null
         }, null, 8 /* PROPS */, ["label", "model-value", "additional-information"])
       ]))
 }
