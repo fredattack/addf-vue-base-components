@@ -2,8 +2,15 @@
 
   <div :class="cGroupClass" >
     <template v-if='editionMode'>
-      <div>
-        <BaseEditLabel :label="label" :required="required"/>
+      <div class="relative border border-gray-400 rounded-md px-3 py-2 shadow-sm focus-within:ring-1 focus-within:ring-blue-300 focus-within:border-blue-300">
+        <label
+          v-if="label"
+          :for="id"
+          class="absolute -top-2 left-2 -mt-px inline-block px-1 bg-white text-xs font-medium text-gray-900"
+        >
+          {{ label }}
+          <span v-if="required" class="text-red-500 capitalize" v-text="'*'" />
+        </label>
         <input
             :id="id"
             :type="type"
@@ -14,7 +21,7 @@
             @input="updateInput"
             @keydown="type === 'number' ? isNumber : {}"
             :disabled="disabled"
-            class="form-control border-gray-400 focus:border-blue-300 focus:ring-blue-300 focus:ring-1"
+            class="block w-full border-0 p-0 text-gray-900 placeholder-gray-500 focus:ring-0 sm:text-sm"
         />
       </div>
       <div v-for='(error,index) in errors' :key='index' class="form-help text-red-600">

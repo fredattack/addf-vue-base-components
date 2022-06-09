@@ -98,12 +98,12 @@ var script$1n = {
 };
 
 const _hoisted_1$17 = { class: "overflow-x-auto" };
-const _hoisted_2$Y = { class: "table" };
-const _hoisted_3$G = {
+const _hoisted_2$Z = { class: "table" };
+const _hoisted_3$H = {
   class: "border-b-2 dark:border-dark-5 whitespace-nowrap",
   style: {"width":"30%"}
 };
-const _hoisted_4$r = {
+const _hoisted_4$s = {
   class: "border-b-2 dark:border-dark-5 whitespace-nowrap",
   style: {"width":"35%"}
 };
@@ -118,11 +118,11 @@ function render$1n(_ctx, _cache, $props, $setup, $data, $options) {
   const _component_LogTableRow = vue.resolveComponent("LogTableRow");
 
   return (vue.openBlock(), vue.createElementBlock("div", _hoisted_1$17, [
-    vue.createElementVNode("table", _hoisted_2$Y, [
+    vue.createElementVNode("table", _hoisted_2$Z, [
       vue.createElementVNode("thead", null, [
         vue.createElementVNode("tr", null, [
-          vue.createElementVNode("th", _hoisted_3$G, vue.toDisplayString(_ctx.$t('global.value_name')), 1 /* TEXT */),
-          vue.createElementVNode("th", _hoisted_4$r, vue.toDisplayString(_ctx.$t('global.old_value')), 1 /* TEXT */),
+          vue.createElementVNode("th", _hoisted_3$H, vue.toDisplayString(_ctx.$t('global.value_name')), 1 /* TEXT */),
+          vue.createElementVNode("th", _hoisted_4$s, vue.toDisplayString(_ctx.$t('global.old_value')), 1 /* TEXT */),
           vue.createElementVNode("th", _hoisted_5$d, vue.toDisplayString(_ctx.$t('global.new_value')), 1 /* TEXT */)
         ])
       ]),
@@ -234,13 +234,13 @@ var script$1l = {
 };
 
 const _hoisted_1$15 = { class: "overflow-x-auto" };
-const _hoisted_2$X = { class: "table" };
+const _hoisted_2$Y = { class: "table" };
 
 function render$1l(_ctx, _cache, $props, $setup, $data, $options) {
   const _component_ActivityTableRow = vue.resolveComponent("ActivityTableRow");
 
   return (vue.openBlock(), vue.createElementBlock("div", _hoisted_1$15, [
-    vue.createElementVNode("table", _hoisted_2$X, [
+    vue.createElementVNode("table", _hoisted_2$Y, [
       vue.createElementVNode("thead", null, [
         vue.createElementVNode("tr", null, [
           (vue.openBlock(true), vue.createElementBlock(vue.Fragment, null, vue.renderList($data.headers, (header, index) => {
@@ -308,12 +308,12 @@ const _hoisted_1$14 = {
   key: 1,
   class: "flex"
 };
-const _hoisted_2$W = { class: "capitalize-first" };
-const _hoisted_3$F = {
+const _hoisted_2$X = { class: "capitalize-first" };
+const _hoisted_3$G = {
   key: 2,
   class: "flex"
 };
-const _hoisted_4$q = { class: "capitalize-first" };
+const _hoisted_4$r = { class: "capitalize-first" };
 const _hoisted_5$c = {
   key: 0,
   class: "ml-2"
@@ -329,10 +329,10 @@ function render$1k(_ctx, _cache, $props, $setup, $data, $options) {
       : vue.createCommentVNode("v-if", true),
     ($props.hideModelValue)
       ? (vue.openBlock(), vue.createElementBlock("div", _hoisted_1$14, [
-          vue.createElementVNode("dd", _hoisted_2$W, vue.toDisplayString($props.modelValue === null || $props.modelValue === '' ? '-' : "**********"), 1 /* TEXT */)
+          vue.createElementVNode("dd", _hoisted_2$X, vue.toDisplayString($props.modelValue === null || $props.modelValue === '' ? '-' : "**********"), 1 /* TEXT */)
         ]))
-      : (vue.openBlock(), vue.createElementBlock("div", _hoisted_3$F, [
-          vue.createElementVNode("dd", _hoisted_4$q, vue.toDisplayString($props.modelValue === null || $props.modelValue === '' ? '-' : $props.modelValue), 1 /* TEXT */),
+      : (vue.openBlock(), vue.createElementBlock("div", _hoisted_3$G, [
+          vue.createElementVNode("dd", _hoisted_4$r, vue.toDisplayString($props.modelValue === null || $props.modelValue === '' ? '-' : $props.modelValue), 1 /* TEXT */),
           ($props.additionalInformation)
             ? (vue.openBlock(), vue.createElementBlock("dd", _hoisted_5$c, "(" + vue.toDisplayString($props.additionalInformation) + ")", 1 /* TEXT */))
             : vue.createCommentVNode("v-if", true)
@@ -367,7 +367,7 @@ const _hoisted_1$13 = {
   key: 0,
   class: "text-sm text-gray-500 capitalize-first"
 };
-const _hoisted_2$V = {
+const _hoisted_2$W = {
   key: 0,
   class: "text-red-500 capitalize"
 };
@@ -377,7 +377,7 @@ function render$1j(_ctx, _cache, $props, $setup, $data, $options) {
     ? (vue.openBlock(), vue.createElementBlock("div", _hoisted_1$13, [
         vue.createTextVNode(vue.toDisplayString($props.label) + " ", 1 /* TEXT */),
         ($props.required)
-          ? (vue.openBlock(), vue.createElementBlock("span", _hoisted_2$V, "*"))
+          ? (vue.openBlock(), vue.createElementBlock("span", _hoisted_2$W, "*"))
           : vue.createCommentVNode("v-if", true)
       ]))
     : vue.createCommentVNode("v-if", true)
@@ -469,7 +469,7 @@ const _hoisted_1$12 = {
   key: 0,
   class: "mt-3"
 };
-const _hoisted_2$U = {
+const _hoisted_2$V = {
   key: 1,
   class: "mt-3"
 };
@@ -507,7 +507,7 @@ function render$1i(_ctx, _cache, $props, $setup, $data, $options) {
             }), 128 /* KEYED_FRAGMENT */))
           : vue.createCommentVNode("v-if", true)
       ]))
-    : (vue.openBlock(), vue.createElementBlock("div", _hoisted_2$U, [
+    : (vue.openBlock(), vue.createElementBlock("div", _hoisted_2$V, [
         vue.createVNode(_component_BaseShowLabel, {
           label: $props.label ? $props.label : _ctx.$t('attributes.bank_id'),
           "model-value": $options.cDisplayedValueWhenNotEditionMode
@@ -554,12 +554,12 @@ const _hoisted_1$11 = {
   key: 0,
   class: "form-label capitalize-first"
 };
-const _hoisted_2$T = {
+const _hoisted_2$U = {
   key: 0,
   class: "text-red-600"
 };
-const _hoisted_3$E = ["id", "name", "value", "disabled"];
-const _hoisted_4$p = ["for"];
+const _hoisted_3$F = ["id", "name", "value", "disabled"];
+const _hoisted_4$q = ["for"];
 
 function render$1h(_ctx, _cache, $props, $setup, $data, $options) {
   return (vue.openBlock(), vue.createElementBlock(vue.Fragment, null, [
@@ -571,7 +571,7 @@ function render$1h(_ctx, _cache, $props, $setup, $data, $options) {
         ? (vue.openBlock(), vue.createElementBlock("label", _hoisted_1$11, [
             vue.createTextVNode(vue.toDisplayString($props.label) + " ", 1 /* TEXT */),
             ($props.label && $props.required)
-              ? (vue.openBlock(), vue.createElementBlock("span", _hoisted_2$T, "*"))
+              ? (vue.openBlock(), vue.createElementBlock("span", _hoisted_2$U, "*"))
               : vue.createCommentVNode("v-if", true)
           ]))
         : vue.createCommentVNode("v-if", true),
@@ -591,13 +591,13 @@ function render$1h(_ctx, _cache, $props, $setup, $data, $options) {
               value: val,
               "onUpdate:modelValue": _cache[0] || (_cache[0] = $event => (($data.value) = $event)),
               disabled: $props.disabled
-            }, null, 8 /* PROPS */, _hoisted_3$E), [
+            }, null, 8 /* PROPS */, _hoisted_3$F), [
               [vue.vModelRadio, $data.value]
             ]),
             vue.createElementVNode("label", {
               class: "form-check-label capitalize-first",
               for: `${$props.name}-${key}-${$props.extra_id}`
-            }, vue.toDisplayString(_ctx.$t(`enums.yes_no.${key}`)), 9 /* TEXT, PROPS */, _hoisted_4$p)
+            }, vue.toDisplayString(_ctx.$t(`enums.yes_no.${key}`)), 9 /* TEXT, PROPS */, _hoisted_4$q)
           ]))
         }), 128 /* KEYED_FRAGMENT */))
       ], 2 /* CLASS */)
@@ -737,11 +737,11 @@ var script$1g = {
 };
 
 const _hoisted_1$10 = { key: 0 };
-const _hoisted_2$S = {
+const _hoisted_2$T = {
   key: 1,
   class: "inline-block capitalize-first"
 };
-const _hoisted_3$D = { key: 1 };
+const _hoisted_3$E = { key: 1 };
 
 function render$1g(_ctx, _cache, $props, $setup, $data, $options) {
   const _component_font_awesome_icon = vue.resolveComponent("font-awesome-icon");
@@ -761,11 +761,11 @@ function render$1g(_ctx, _cache, $props, $setup, $data, $options) {
               }, null, 8 /* PROPS */, ["icon"]))
             : vue.createCommentVNode("v-if", true),
           (this.title)
-            ? (vue.openBlock(), vue.createElementBlock("span", _hoisted_2$S, vue.toDisplayString(this.title), 1 /* TEXT */))
+            ? (vue.openBlock(), vue.createElementBlock("span", _hoisted_2$T, vue.toDisplayString(this.title), 1 /* TEXT */))
             : vue.createCommentVNode("v-if", true)
         ], 2 /* CLASS */)
       ]))
-    : (vue.openBlock(), vue.createElementBlock("div", _hoisted_3$D, [
+    : (vue.openBlock(), vue.createElementBlock("div", _hoisted_3$E, [
         vue.createVNode(_component_Tippy, {
           tag: "a",
           href: "javascript:;",
@@ -851,12 +851,12 @@ var script$1f = {
 };
 
 const _hoisted_1$$ = { class: "mt-3" };
-const _hoisted_2$R = ["for"];
-const _hoisted_3$C = {
+const _hoisted_2$S = ["for"];
+const _hoisted_3$D = {
   key: 0,
   class: "text-red-600"
 };
-const _hoisted_4$o = { class: "relative" };
+const _hoisted_4$p = { class: "relative" };
 const _hoisted_5$b = ["name", "type", "min", "max", "value", "id", "placeholder", "disabled", "required"];
 
 function render$1f(_ctx, _cache, $props, $setup, $data, $options) {
@@ -871,11 +871,11 @@ function render$1f(_ctx, _cache, $props, $setup, $data, $options) {
         }, [
           vue.createTextVNode(vue.toDisplayString($props.label) + " ", 1 /* TEXT */),
           (_ctx.isRequired)
-            ? (vue.openBlock(), vue.createElementBlock("span", _hoisted_3$C, "*"))
+            ? (vue.openBlock(), vue.createElementBlock("span", _hoisted_3$D, "*"))
             : vue.createCommentVNode("v-if", true)
-        ], 8 /* PROPS */, _hoisted_2$R))
+        ], 8 /* PROPS */, _hoisted_2$S))
       : vue.createCommentVNode("v-if", true),
-    vue.createElementVNode("div", _hoisted_4$o, [
+    vue.createElementVNode("div", _hoisted_4$p, [
       vue.withDirectives(vue.createElementVNode("input", {
         name: $props.name,
         type: $props.type,
@@ -931,12 +931,12 @@ var script$1e = {
 };
 
 const _hoisted_1$_ = { class: "box lg:mt-5" };
-const _hoisted_2$Q = {
+const _hoisted_2$R = {
   key: 0,
   class: "flex items-center p-5 border-b border-gray-200 dark:border-dark-5"
 };
-const _hoisted_3$B = { class: "font-medium text-base mr-auto" };
-const _hoisted_4$n = { class: "p-5" };
+const _hoisted_3$C = { class: "font-medium text-base mr-auto" };
+const _hoisted_4$o = { class: "p-5" };
 const _hoisted_5$a = { class: "flex justify-end mt-5" };
 const _hoisted_6$6 = { class: "text-right" };
 
@@ -946,14 +946,14 @@ function render$1e(_ctx, _cache, $props, $setup, $data, $options) {
     vue.createElementVNode("div", _hoisted_1$_, [
       vue.createCommentVNode(" header attention faut que je vérifie quand je lui passe une icone aussi  "),
       (_ctx.$slots.header || ($props.headerTitle && $props.headerTitle.length))
-        ? (vue.openBlock(), vue.createElementBlock("header", _hoisted_2$Q, [
+        ? (vue.openBlock(), vue.createElementBlock("header", _hoisted_2$R, [
             vue.renderSlot(_ctx.$slots, "header", {}, () => [
-              vue.createElementVNode("h2", _hoisted_3$B, vue.toDisplayString($props.headerTitle), 1 /* TEXT */)
+              vue.createElementVNode("h2", _hoisted_3$C, vue.toDisplayString($props.headerTitle), 1 /* TEXT */)
             ])
           ]))
         : vue.createCommentVNode("v-if", true),
       vue.createCommentVNode(" settings "),
-      vue.createElementVNode("div", _hoisted_4$n, [
+      vue.createElementVNode("div", _hoisted_4$o, [
         vue.renderSlot(_ctx.$slots, "default")
       ]),
       vue.createCommentVNode(" actions "),
@@ -980,14 +980,14 @@ var script$1d = {
 };
 
 const _hoisted_1$Z = { key: 0 };
-const _hoisted_2$P = { class: "text-xl font-bold capitalize-first" };
+const _hoisted_2$Q = { class: "text-xl font-bold capitalize-first" };
 
 function render$1d(_ctx, _cache, $props, $setup, $data, $options) {
   return (vue.openBlock(), vue.createElementBlock("section", null, [
     (_ctx.$slots.sectionTitle || ( $props.sectionTitle && $props.sectionTitle.length))
       ? (vue.openBlock(), vue.createElementBlock("header", _hoisted_1$Z, [
           vue.renderSlot(_ctx.$slots, "sectionTitle", {}, () => [
-            vue.createElementVNode("h2", _hoisted_2$P, vue.toDisplayString($props.sectionTitle), 1 /* TEXT */)
+            vue.createElementVNode("h2", _hoisted_2$Q, vue.toDisplayString($props.sectionTitle), 1 /* TEXT */)
           ])
         ]))
       : vue.createCommentVNode("v-if", true),
@@ -1045,27 +1045,27 @@ var script$1c = {
 };
 
 const _hoisted_1$Y = { class: "mt-3" };
-const _hoisted_2$O = {
+const _hoisted_2$P = {
   key: 0,
   class: "form-label"
 };
-const _hoisted_3$A = {
+const _hoisted_3$B = {
   key: 1,
   class: "text-red-600"
 };
-const _hoisted_4$m = { class: "flex flex-col sm:flex-row mt-2" };
+const _hoisted_4$n = { class: "flex flex-col sm:flex-row mt-2" };
 const _hoisted_5$9 = ["id", "name", "disabled"];
 
 function render$1c(_ctx, _cache, $props, $setup, $data, $options) {
   return (vue.openBlock(), vue.createElementBlock(vue.Fragment, null, [
     vue.createElementVNode("div", _hoisted_1$Y, [
       ($props.label)
-        ? (vue.openBlock(), vue.createElementBlock("label", _hoisted_2$O, vue.toDisplayString($props.label), 1 /* TEXT */))
+        ? (vue.openBlock(), vue.createElementBlock("label", _hoisted_2$P, vue.toDisplayString($props.label), 1 /* TEXT */))
         : vue.createCommentVNode("v-if", true),
       ($props.label && $props.required)
-        ? (vue.openBlock(), vue.createElementBlock("span", _hoisted_3$A, " *"))
+        ? (vue.openBlock(), vue.createElementBlock("span", _hoisted_3$B, " *"))
         : vue.createCommentVNode("v-if", true),
-      vue.createElementVNode("div", _hoisted_4$m, [
+      vue.createElementVNode("div", _hoisted_4$n, [
         vue.withDirectives(vue.createElementVNode("input", {
           id: `checkbox-${$props.name}`,
           class: "form-check-input",
@@ -1196,12 +1196,12 @@ const _hoisted_1$X = {
   key: 0,
   class: "mt-3"
 };
-const _hoisted_2$N = {
+const _hoisted_2$O = {
   key: 1,
   class: "mt-3 flex flex-col"
 };
-const _hoisted_3$z = { key: 0 };
-const _hoisted_4$l = /*#__PURE__*/vue.createTextVNode(/*#__PURE__*/vue.toDisplayString('-'));
+const _hoisted_3$A = { key: 0 };
+const _hoisted_4$m = /*#__PURE__*/vue.createTextVNode(/*#__PURE__*/vue.toDisplayString('-'));
 
 function render$1b(_ctx, _cache, $props, $setup, $data, $options) {
   const _component_BaseEditLabel = vue.resolveComponent("BaseEditLabel");
@@ -1243,13 +1243,13 @@ function render$1b(_ctx, _cache, $props, $setup, $data, $options) {
             }), 128 /* KEYED_FRAGMENT */))
           : vue.createCommentVNode("v-if", true)
       ]))
-    : (vue.openBlock(), vue.createElementBlock("div", _hoisted_2$N, [
+    : (vue.openBlock(), vue.createElementBlock("div", _hoisted_2$O, [
         vue.createVNode(_component_BaseShowLabel, {
           label: $props.label ? $props.label : _ctx.$t('attributes.companies'),
           required: $props.required
         }, null, 8 /* PROPS */, ["label", "required"]),
         ($props.metadata && $props.metadata.companies && $props.modelValue.length >= 1)
-          ? (vue.openBlock(), vue.createElementBlock("div", _hoisted_3$z, [
+          ? (vue.openBlock(), vue.createElementBlock("div", _hoisted_3$A, [
               (vue.openBlock(true), vue.createElementBlock(vue.Fragment, null, vue.renderList($props.modelValue, (item, index) => {
                 return (vue.openBlock(), vue.createElementBlock("span", {
                   class: "inline-block mr-3",
@@ -1264,7 +1264,7 @@ function render$1b(_ctx, _cache, $props, $setup, $data, $options) {
               }), 128 /* KEYED_FRAGMENT */))
             ]))
           : (vue.openBlock(), vue.createElementBlock(vue.Fragment, { key: 1 }, [
-              _hoisted_4$l
+              _hoisted_4$m
             ], 2112 /* STABLE_FRAGMENT, DEV_ROOT_FRAGMENT */))
       ]))
 }
@@ -1356,7 +1356,7 @@ const _hoisted_1$W = {
   key: 0,
   class: "mt-3"
 };
-const _hoisted_2$M = {
+const _hoisted_2$N = {
   key: 1,
   class: "mt-3"
 };
@@ -1394,7 +1394,7 @@ function render$1a(_ctx, _cache, $props, $setup, $data, $options) {
             }), 128 /* KEYED_FRAGMENT */))
           : vue.createCommentVNode("v-if", true)
       ]))
-    : (vue.openBlock(), vue.createElementBlock("div", _hoisted_2$M, [
+    : (vue.openBlock(), vue.createElementBlock("div", _hoisted_2$N, [
         vue.createVNode(_component_BaseShowLabel, {
           label: $props.label ? $props.label : _ctx.$t('attributes.company'),
           "model-value": $options.cDisplayedValueWhenNotEditionMode
@@ -1490,7 +1490,7 @@ const _hoisted_1$V = {
   key: 0,
   class: "mt-3"
 };
-const _hoisted_2$L = {
+const _hoisted_2$M = {
   key: 1,
   class: "mt-3"
 };
@@ -1528,7 +1528,7 @@ function render$19(_ctx, _cache, $props, $setup, $data, $options) {
             }), 128 /* KEYED_FRAGMENT */))
           : vue.createCommentVNode("v-if", true)
       ]))
-    : (vue.openBlock(), vue.createElementBlock("div", _hoisted_2$L, [
+    : (vue.openBlock(), vue.createElementBlock("div", _hoisted_2$M, [
         vue.createVNode(_component_BaseShowLabel, {
           label: $props.label ? $props.label : _ctx.$t('attributes.country'),
           "model-value": $options.cDisplayedValueWhenNotEditionMode
@@ -1623,7 +1623,7 @@ const _hoisted_1$U = {
   key: 0,
   class: "mt-3"
 };
-const _hoisted_2$K = {
+const _hoisted_2$L = {
   key: 1,
   class: "mt-3"
 };
@@ -1661,7 +1661,7 @@ function render$18(_ctx, _cache, $props, $setup, $data, $options) {
             }), 128 /* KEYED_FRAGMENT */))
           : vue.createCommentVNode("v-if", true)
       ]))
-    : (vue.openBlock(), vue.createElementBlock("div", _hoisted_2$K, [
+    : (vue.openBlock(), vue.createElementBlock("div", _hoisted_2$L, [
         vue.createVNode(_component_BaseShowLabel, {
           label: $props.label ? $props.label : _ctx.$t('attributes.customer'),
           "model-value": $options.cDisplayedValueWhenNotEditionMode
@@ -1733,11 +1733,11 @@ var script$17 = {
 };
 
 const _hoisted_1$T = ["for"];
-const _hoisted_2$J = {
+const _hoisted_2$K = {
   key: 0,
   class: "text-red-600"
 };
-const _hoisted_3$y = ["name", "type", "id", "placeholder", "disabled", "required"];
+const _hoisted_3$z = ["name", "type", "id", "placeholder", "disabled", "required"];
 
 function render$17(_ctx, _cache, $props, $setup, $data, $options) {
   const _directive_mask = vue.resolveDirective("mask");
@@ -1751,7 +1751,7 @@ function render$17(_ctx, _cache, $props, $setup, $data, $options) {
     }, [
       vue.createTextVNode(vue.toDisplayString($props.label) + " ", 1 /* TEXT */),
       ($options.isRequired)
-        ? (vue.openBlock(), vue.createElementBlock("span", _hoisted_2$J, "*"))
+        ? (vue.openBlock(), vue.createElementBlock("span", _hoisted_2$K, "*"))
         : vue.createCommentVNode("v-if", true)
     ], 10 /* CLASS, PROPS */, _hoisted_1$T),
     vue.withDirectives(vue.createElementVNode("input", {
@@ -1763,7 +1763,7 @@ function render$17(_ctx, _cache, $props, $setup, $data, $options) {
       placeholder: $props.placeholder,
       disabled: $props.disabled,
       required: $options.isRequired
-    }, null, 10 /* CLASS, PROPS */, _hoisted_3$y), [
+    }, null, 10 /* CLASS, PROPS */, _hoisted_3$z), [
       [vue.vModelDynamic, $data.newValue],
       [_directive_mask, $props.mask]
     ]),
@@ -1931,12 +1931,12 @@ const _hoisted_1$S = {
   key: 0,
   class: "mt-3"
 };
-const _hoisted_2$I = {
+const _hoisted_2$J = {
   key: 1,
   class: "mt-3 flex flex-col"
 };
-const _hoisted_3$x = { key: 0 };
-const _hoisted_4$k = /*#__PURE__*/vue.createTextVNode(/*#__PURE__*/vue.toDisplayString('-'));
+const _hoisted_3$y = { key: 0 };
+const _hoisted_4$l = /*#__PURE__*/vue.createTextVNode(/*#__PURE__*/vue.toDisplayString('-'));
 
 function render$15(_ctx, _cache, $props, $setup, $data, $options) {
   const _component_BaseEditLabel = vue.resolveComponent("BaseEditLabel");
@@ -1978,13 +1978,13 @@ function render$15(_ctx, _cache, $props, $setup, $data, $options) {
             }), 128 /* KEYED_FRAGMENT */))
           : vue.createCommentVNode("v-if", true)
       ]))
-    : (vue.openBlock(), vue.createElementBlock("div", _hoisted_2$I, [
+    : (vue.openBlock(), vue.createElementBlock("div", _hoisted_2$J, [
         vue.createVNode(_component_BaseShowLabel, {
           label: $props.label ? $props.label : _ctx.$t('attributes.available_docs'),
           required: $props.required
         }, null, 8 /* PROPS */, ["label", "required"]),
         ($props.metadata && $props.metadata.doc_types && $props.modelValue.length >= 1)
-          ? (vue.openBlock(), vue.createElementBlock("div", _hoisted_3$x, [
+          ? (vue.openBlock(), vue.createElementBlock("div", _hoisted_3$y, [
               (vue.openBlock(true), vue.createElementBlock(vue.Fragment, null, vue.renderList($props.modelValue, (item, index) => {
                 return (vue.openBlock(), vue.createElementBlock("span", {
                   class: "inline-block mr-3 capitalize-first",
@@ -1999,7 +1999,7 @@ function render$15(_ctx, _cache, $props, $setup, $data, $options) {
               }), 128 /* KEYED_FRAGMENT */))
             ]))
           : (vue.openBlock(), vue.createElementBlock(vue.Fragment, { key: 1 }, [
-              _hoisted_4$k
+              _hoisted_4$l
             ], 2112 /* STABLE_FRAGMENT, DEV_ROOT_FRAGMENT */))
       ]))
 }
@@ -2089,7 +2089,7 @@ const _hoisted_1$R = {
   key: 0,
   class: "mt-3"
 };
-const _hoisted_2$H = {
+const _hoisted_2$I = {
   key: 1,
   class: "mt-3"
 };
@@ -2127,7 +2127,7 @@ function render$14(_ctx, _cache, $props, $setup, $data, $options) {
             }), 128 /* KEYED_FRAGMENT */))
           : vue.createCommentVNode("v-if", true)
       ]))
-    : (vue.openBlock(), vue.createElementBlock("div", _hoisted_2$H, [
+    : (vue.openBlock(), vue.createElementBlock("div", _hoisted_2$I, [
         vue.createVNode(_component_BaseShowLabel, {
           label: $props.label ? $props.label : _ctx.$t('attributes.event_type'),
           "model-value": $options.cDisplayedValueWhenNotEditionMode
@@ -2260,11 +2260,11 @@ var script$13 = {
 };
 
 const _hoisted_1$Q = ["for"];
-const _hoisted_2$G = {
+const _hoisted_2$H = {
   key: 0,
   class: "text-red-600"
 };
-const _hoisted_3$w = ["name", "type", "value", "id", "min", "max", "placeholder", "disabled", "required"];
+const _hoisted_3$x = ["name", "type", "value", "id", "min", "max", "placeholder", "disabled", "required"];
 
 function render$13(_ctx, _cache, $props, $setup, $data, $options) {
   return (vue.openBlock(), vue.createElementBlock("div", {
@@ -2278,7 +2278,7 @@ function render$13(_ctx, _cache, $props, $setup, $data, $options) {
         }, [
           vue.createTextVNode(vue.toDisplayString($props.label) + " ", 1 /* TEXT */),
           ($props.label && $props.required)
-            ? (vue.openBlock(), vue.createElementBlock("span", _hoisted_2$G, "*"))
+            ? (vue.openBlock(), vue.createElementBlock("span", _hoisted_2$H, "*"))
             : vue.createCommentVNode("v-if", true)
         ], 10 /* CLASS, PROPS */, _hoisted_1$Q))
       : vue.createCommentVNode("v-if", true),
@@ -2294,7 +2294,7 @@ function render$13(_ctx, _cache, $props, $setup, $data, $options) {
       disabled: $props.disabled,
       required: $props.required,
       onInput: _cache[0] || (_cache[0] = (...args) => ($options.updateInput && $options.updateInput(...args)))
-    }, null, 42 /* CLASS, PROPS, HYDRATE_EVENTS */, _hoisted_3$w),
+    }, null, 42 /* CLASS, PROPS, HYDRATE_EVENTS */, _hoisted_3$x),
     (vue.openBlock(true), vue.createElementBlock(vue.Fragment, null, vue.renderList($props.errors, (error, index) => {
       return (vue.openBlock(), vue.createElementBlock("div", {
         key: index,
@@ -2326,11 +2326,11 @@ const _hoisted_1$P = {
   key: 0,
   class: "flex-shrink-0"
 };
-const _hoisted_2$F = {
+const _hoisted_2$G = {
   key: 1,
   class: "capitalize-first"
 };
-const _hoisted_3$v = {
+const _hoisted_3$w = {
   key: 1,
   class: "capitalize-first"
 };
@@ -2350,7 +2350,7 @@ function render$12(_ctx, _cache, $props, $setup, $data, $options) {
               }, null, 8 /* PROPS */, ["icon"]))
             : vue.createCommentVNode("v-if", true),
           ($props.content)
-            ? (vue.openBlock(), vue.createElementBlock("span", _hoisted_2$F, vue.toDisplayString($props.content), 1 /* TEXT */))
+            ? (vue.openBlock(), vue.createElementBlock("span", _hoisted_2$G, vue.toDisplayString($props.content), 1 /* TEXT */))
             : vue.createCommentVNode("v-if", true)
         ], 2 /* CLASS */)
       ]))
@@ -2366,7 +2366,7 @@ function render$12(_ctx, _cache, $props, $setup, $data, $options) {
             }, null, 8 /* PROPS */, ["icon"]))
           : vue.createCommentVNode("v-if", true),
         ($props.content)
-          ? (vue.openBlock(), vue.createElementBlock("span", _hoisted_3$v, vue.toDisplayString($props.content), 1 /* TEXT */))
+          ? (vue.openBlock(), vue.createElementBlock("span", _hoisted_3$w, vue.toDisplayString($props.content), 1 /* TEXT */))
           : vue.createCommentVNode("v-if", true)
       ], 2 /* CLASS */))
 }
@@ -2478,12 +2478,12 @@ const _hoisted_1$O = {
   key: 0,
   class: "mt-3"
 };
-const _hoisted_2$E = {
+const _hoisted_2$F = {
   key: 1,
   class: "mt-3 flex flex-col"
 };
-const _hoisted_3$u = { key: 0 };
-const _hoisted_4$j = /*#__PURE__*/vue.createTextVNode(/*#__PURE__*/vue.toDisplayString('-'));
+const _hoisted_3$v = { key: 0 };
+const _hoisted_4$k = /*#__PURE__*/vue.createTextVNode(/*#__PURE__*/vue.toDisplayString('-'));
 
 function render$11(_ctx, _cache, $props, $setup, $data, $options) {
   const _component_BaseEditLabel = vue.resolveComponent("BaseEditLabel");
@@ -2525,13 +2525,13 @@ function render$11(_ctx, _cache, $props, $setup, $data, $options) {
             }), 128 /* KEYED_FRAGMENT */))
           : vue.createCommentVNode("v-if", true)
       ]))
-    : (vue.openBlock(), vue.createElementBlock("div", _hoisted_2$E, [
+    : (vue.openBlock(), vue.createElementBlock("div", _hoisted_2$F, [
         vue.createVNode(_component_BaseShowLabel, {
           label: $props.label ? $props.label : _ctx.$t('attributes.language'),
           required: $props.required
         }, null, 8 /* PROPS */, ["label", "required"]),
         ($props.metadata && $props.metadata.languages && $props.modelValue.length >= 1)
-          ? (vue.openBlock(), vue.createElementBlock("div", _hoisted_3$u, [
+          ? (vue.openBlock(), vue.createElementBlock("div", _hoisted_3$v, [
               (vue.openBlock(true), vue.createElementBlock(vue.Fragment, null, vue.renderList($props.modelValue, (item, index) => {
                 return (vue.openBlock(), vue.createElementBlock("span", {
                   class: "inline-block mr-3",
@@ -2546,7 +2546,7 @@ function render$11(_ctx, _cache, $props, $setup, $data, $options) {
               }), 128 /* KEYED_FRAGMENT */))
             ]))
           : (vue.openBlock(), vue.createElementBlock(vue.Fragment, { key: 1 }, [
-              _hoisted_4$j
+              _hoisted_4$k
             ], 2112 /* STABLE_FRAGMENT, DEV_ROOT_FRAGMENT */))
       ]))
 }
@@ -2636,7 +2636,7 @@ const _hoisted_1$N = {
   key: 0,
   class: "mt-3"
 };
-const _hoisted_2$D = {
+const _hoisted_2$E = {
   key: 1,
   class: "mt-3"
 };
@@ -2674,7 +2674,7 @@ function render$10(_ctx, _cache, $props, $setup, $data, $options) {
             }), 128 /* KEYED_FRAGMENT */))
           : vue.createCommentVNode("v-if", true)
       ]))
-    : (vue.openBlock(), vue.createElementBlock("div", _hoisted_2$D, [
+    : (vue.openBlock(), vue.createElementBlock("div", _hoisted_2$E, [
         vue.createVNode(_component_BaseShowLabel, {
           label: $props.label ? $props.label : _ctx.$t('attributes.language'),
           "model-value": $options.cDisplayedValueWhenNotEditionMode
@@ -2895,9 +2895,9 @@ var script$W = {
 };
 
 const _hoisted_1$J = { class: "mt-3" };
-const _hoisted_2$C = ["for"];
-const _hoisted_3$t = { class: "w-full relative" };
-const _hoisted_4$i = { class: "absolute inset-y-0 left-0 w-22" };
+const _hoisted_2$D = ["for"];
+const _hoisted_3$u = { class: "w-full relative" };
+const _hoisted_4$j = { class: "absolute inset-y-0 left-0 w-22" };
 const _hoisted_5$8 = /*#__PURE__*/vue.createElementVNode("label", { class: "sr-only" }, "Country", -1 /* HOISTED */);
 const _hoisted_6$5 = ["disabled", "name"];
 const _hoisted_7$5 = {
@@ -2916,9 +2916,9 @@ function render$W(_ctx, _cache, $props, $setup, $data, $options) {
     vue.createElementVNode("label", {
       for: $props.name,
       class: "form-label"
-    }, vue.toDisplayString($props.label), 9 /* TEXT, PROPS */, _hoisted_2$C),
-    vue.createElementVNode("div", _hoisted_3$t, [
-      vue.createElementVNode("div", _hoisted_4$i, [
+    }, vue.toDisplayString($props.label), 9 /* TEXT, PROPS */, _hoisted_2$D),
+    vue.createElementVNode("div", _hoisted_3$u, [
+      vue.createElementVNode("div", _hoisted_4$j, [
         _hoisted_5$8,
         vue.withDirectives(vue.createElementVNode("select", {
           disabled: $options.isDisabled,
@@ -3006,9 +3006,9 @@ var script$V = {
 };
 
 const _hoisted_1$I = /*#__PURE__*/vue.createTextVNode(" Server size ");
-const _hoisted_2$B = { class: "space-y-4" };
-const _hoisted_3$s = { class: "flex items-center" };
-const _hoisted_4$h = { class: "text-sm" };
+const _hoisted_2$C = { class: "space-y-4" };
+const _hoisted_3$t = { class: "flex items-center" };
+const _hoisted_4$i = { class: "text-sm" };
 
 function render$V(_ctx, _cache, $props, $setup, $data, $options) {
   const _component_RadioGroupLabel = vue.resolveComponent("RadioGroupLabel");
@@ -3029,7 +3029,7 @@ function render$V(_ctx, _cache, $props, $setup, $data, $options) {
         ]),
         _: 1 /* STABLE */
       }),
-      vue.createElementVNode("div", _hoisted_2$B, [
+      vue.createElementVNode("div", _hoisted_2$C, [
         (vue.openBlock(true), vue.createElementBlock(vue.Fragment, null, vue.renderList($props.options, (option) => {
           return (vue.openBlock(), vue.createBlock(_component_RadioGroupOption, {
             as: "template",
@@ -3040,8 +3040,8 @@ function render$V(_ctx, _cache, $props, $setup, $data, $options) {
               vue.createElementVNode("div", {
                 class: vue.normalizeClass([active ? 'ring-1 ring-offset-2 ring-indigo-500 ' : '', 'relative block rounded-lg border border-gray-300 bg-white shadow-sm px-6 py-4 cursor-pointer hover:border-gray-400 sm:flex sm:justify-between focus:outline-none'])
               }, [
-                vue.createElementVNode("div", _hoisted_3$s, [
-                  vue.createElementVNode("div", _hoisted_4$h, [
+                vue.createElementVNode("div", _hoisted_3$t, [
+                  vue.createElementVNode("div", _hoisted_4$i, [
                     vue.createVNode(_component_RadioGroupLabel, {
                       as: "p",
                       class: "font-medium text-gray-900"
@@ -3106,7 +3106,7 @@ var script$U = {
 };
 
 const _hoisted_1$H = ["placeholder"];
-const _hoisted_2$A = { class: "absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none" };
+const _hoisted_2$B = { class: "absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none" };
 
 function render$U(_ctx, _cache, $props, $setup, $data, $options) {
   const _component_font_awesome_icon = vue.resolveComponent("font-awesome-icon");
@@ -3125,7 +3125,7 @@ function render$U(_ctx, _cache, $props, $setup, $data, $options) {
       }, null, 8 /* PROPS */, _hoisted_1$H), [
         [vue.vModelText, $data.searchTerms]
       ]),
-      vue.createElementVNode("div", _hoisted_2$A, [
+      vue.createElementVNode("div", _hoisted_2$B, [
         vue.createVNode(_component_font_awesome_icon, { icon: ['fal', 'search'] })
       ])
     ], 2 /* CLASS */)
@@ -3212,11 +3212,11 @@ var script$T = {
 };
 
 const _hoisted_1$G = { class: "flex flex-col" };
-const _hoisted_2$z = {
+const _hoisted_2$A = {
   key: 0,
   class: "form-label capitalize-first mt-3"
 };
-const _hoisted_3$r = {
+const _hoisted_3$s = {
   key: 0,
   class: "text-red-600"
 };
@@ -3226,10 +3226,10 @@ function render$T(_ctx, _cache, $props, $setup, $data, $options) {
 
   return (vue.openBlock(), vue.createElementBlock("div", _hoisted_1$G, [
     ($props.label)
-      ? (vue.openBlock(), vue.createElementBlock("label", _hoisted_2$z, [
+      ? (vue.openBlock(), vue.createElementBlock("label", _hoisted_2$A, [
           vue.createTextVNode(vue.toDisplayString($props.label) + " ", 1 /* TEXT */),
           ($props.required)
-            ? (vue.openBlock(), vue.createElementBlock("span", _hoisted_3$r, "*"))
+            ? (vue.openBlock(), vue.createElementBlock("span", _hoisted_3$s, "*"))
             : vue.createCommentVNode("v-if", true)
         ]))
       : vue.createCommentVNode("v-if", true),
@@ -3470,8 +3470,8 @@ const _hoisted_1$E = {
   key: 0,
   class: "text-red-600"
 };
-const _hoisted_2$y = { class: "custom__tag" };
-const _hoisted_3$q = ["onClick"];
+const _hoisted_2$z = { class: "custom__tag" };
+const _hoisted_3$r = ["onClick"];
 
 function render$R(_ctx, _cache, $props, $setup, $data, $options) {
   const _component_multiselect = vue.resolveComponent("multiselect");
@@ -3518,12 +3518,12 @@ function render$R(_ctx, _cache, $props, $setup, $data, $options) {
           onSearchChange: $options.fetchOption
         }, {
           tag: vue.withCtx(({ option, remove }) => [
-            vue.createElementVNode("span", _hoisted_2$y, [
+            vue.createElementVNode("span", _hoisted_2$z, [
               vue.createElementVNode("span", null, vue.toDisplayString(option.name), 1 /* TEXT */),
               vue.createElementVNode("span", {
                 class: "custom__remove",
                 onClick: $event => (remove(option))
-              }, "❌", 8 /* PROPS */, _hoisted_3$q)
+              }, "❌", 8 /* PROPS */, _hoisted_3$r)
             ])
           ]),
           _: 1 /* STABLE */
@@ -3619,7 +3619,7 @@ var script$Q = {
 };
 
 const _hoisted_1$D = ["name", "value", "id", "placeholder"];
-const _hoisted_2$x = {
+const _hoisted_2$y = {
   key: 1,
   class: "mt-3"
 };
@@ -3656,7 +3656,7 @@ function render$Q(_ctx, _cache, $props, $setup, $data, $options) {
           }, vue.toDisplayString(_ctx.$t(error, {attribute: _ctx.$t('attributes.' + $props.name)})), 1 /* TEXT */))
         }), 128 /* KEYED_FRAGMENT */))
       ], 2 /* CLASS */))
-    : (vue.openBlock(), vue.createElementBlock("div", _hoisted_2$x, [
+    : (vue.openBlock(), vue.createElementBlock("div", _hoisted_2$y, [
         vue.createVNode(_component_BaseShowLabel, {
           label: $props.label,
           "model-value": $props.modelValue
@@ -3993,10 +3993,12 @@ var script$O = {
   },
 };
 
-const _hoisted_1$C = ["id", "type", "min", "max", "value", "placeholder", "disabled"];
+const _hoisted_1$C = { class: "relative border border-gray-400 rounded-md px-3 py-2 shadow-sm focus-within:ring-1 focus-within:ring-blue-300 focus-within:border-blue-300" };
+const _hoisted_2$x = ["for"];
+const _hoisted_3$q = ["textContent"];
+const _hoisted_4$h = ["id", "type", "min", "max", "value", "placeholder", "disabled"];
 
 function render$O(_ctx, _cache, $props, $setup, $data, $options) {
-  const _component_BaseEditLabel = vue.resolveComponent("BaseEditLabel");
   const _component_BaseShowLabel = vue.resolveComponent("BaseShowLabel");
 
   return (vue.openBlock(), vue.createElementBlock("div", {
@@ -4004,11 +4006,23 @@ function render$O(_ctx, _cache, $props, $setup, $data, $options) {
   }, [
     ($props.editionMode)
       ? (vue.openBlock(), vue.createElementBlock(vue.Fragment, { key: 0 }, [
-          vue.createElementVNode("div", null, [
-            vue.createVNode(_component_BaseEditLabel, {
-              label: $props.label,
-              required: $props.required
-            }, null, 8 /* PROPS */, ["label", "required"]),
+          vue.createElementVNode("div", _hoisted_1$C, [
+            ($props.label)
+              ? (vue.openBlock(), vue.createElementBlock("label", {
+                  key: 0,
+                  for: $props.id,
+                  class: "absolute -top-2 left-2 -mt-px inline-block px-1 bg-white text-xs font-medium text-gray-900"
+                }, [
+                  vue.createTextVNode(vue.toDisplayString($props.label) + " ", 1 /* TEXT */),
+                  ($props.required)
+                    ? (vue.openBlock(), vue.createElementBlock("span", {
+                        key: 0,
+                        class: "text-red-500 capitalize",
+                        textContent: vue.toDisplayString('*')
+                      }, null, 8 /* PROPS */, _hoisted_3$q))
+                    : vue.createCommentVNode("v-if", true)
+                ], 8 /* PROPS */, _hoisted_2$x))
+              : vue.createCommentVNode("v-if", true),
             vue.createElementVNode("input", {
               id: $props.id,
               type: $props.type,
@@ -4019,8 +4033,8 @@ function render$O(_ctx, _cache, $props, $setup, $data, $options) {
               onInput: _cache[0] || (_cache[0] = (...args) => ($options.updateInput && $options.updateInput(...args))),
               onKeydown: _cache[1] || (_cache[1] = $event => ($props.type === 'number' ? $options.isNumber : {})),
               disabled: $props.disabled,
-              class: "form-control border-gray-400 focus:border-blue-300 focus:ring-blue-300 focus:ring-1"
-            }, null, 40 /* PROPS, HYDRATE_EVENTS */, _hoisted_1$C)
+              class: "block w-full border-0 p-0 text-gray-900 placeholder-gray-500 focus:ring-0 sm:text-sm"
+            }, null, 40 /* PROPS, HYDRATE_EVENTS */, _hoisted_4$h)
           ]),
           (vue.openBlock(true), vue.createElementBlock(vue.Fragment, null, vue.renderList($props.errors, (error, index) => {
             return (vue.openBlock(), vue.createElementBlock("div", {
