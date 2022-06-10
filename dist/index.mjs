@@ -9109,23 +9109,8 @@ var script$2 = {
   },
   methods: {
     updateInput(event) {
-      let tempModelValue = this.modelValue;
-
-      if (Object.values(tempModelValue).indexOf(parseInt(event.target.value)) === -1) {
-        tempModelValue.push(Number(event.target.value));
-      } else {
-        tempModelValue.splice(tempModelValue.indexOf(parseInt(event.target.value)), 1);
-      }
-
-      this.$emit("update:modelValue", tempModelValue);
+      this.$emit("update:modelValue", event.target.value);
     },
-    getElement(item) {
-      if(this.options && this.options.find(t => t.id === item)) return this.options.find(t => t.id === item)
-      else return
-    },
-    elementIsChecked(item){
-      return this.modelValue.includes(item[this.trackBy])
-    }
   },
 };
 
