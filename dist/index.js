@@ -9163,9 +9163,9 @@ function render$2(_ctx, _cache, $props, $setup, $data, $options) {
                 class: "form-check-input",
                 type: "checkbox",
                 name: $props.name,
-                value: Boolean($props.modelValue),
+                value: $props.modelValue,
                 onChange: _cache[0] || (_cache[0] = (...args) => ($options.updateInput && $options.updateInput(...args))),
-                checked: Boolean($props.modelValue)
+                checked: $props.modelValue
               }, null, 40 /* PROPS, HYDRATE_EVENTS */, _hoisted_3$1),
               _hoisted_4$1,
               vue.createElementVNode("label", {

@@ -9,9 +9,9 @@
                    class='form-check-input'
                    type='checkbox'
                    :name='name'
-                   :value="Boolean(modelValue)"
+                   :value="modelValue"
                    @change="updateInput"
-                   :checked="Boolean(modelValue)">
+                   :checked="modelValue">
             <br>
             <label class='form-check-label capitalize-first' :for="`${name}_checkbox_input_${identifier}`">
               {{ label }}
