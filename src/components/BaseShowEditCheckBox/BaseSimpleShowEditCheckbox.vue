@@ -3,19 +3,17 @@
     <template v-if='editionMode'>
 
       <div>
-        <BaseEditLabel :label="label" :required="required" v-if="modelValue"/>
         <div :class="cPlacement">
           <div class='form-check mr-4 sm:mt-0' >
-  
-            <input :id="`${name}_checkbox_input`"
+            <input :id="`${name}_checkbox_input_${identifier}`"
                    class='form-check-input'
                    type='checkbox'
                    :name='name'
-                   :value="modelValue"
+                   :value="Boolean(modelValue)"
                    @change="updateInput"
-                   :checked="modelValue">
+                   :checked="Boolean(modelValue)">
             <br>
-            <label class='form-check-label capitalize-first' :for="`${name}_checkbox_input`">
+            <label class='form-check-label capitalize-first' :for="`${name}_checkbox_input_${identifier}`">
               {{ label }}
             </label>
             
@@ -84,6 +82,10 @@ export default {
       type: Object,
       required: false
     },
+    identifier: {
+      type: String,
+      required: false,
+    }
   },
   data() {
     return {

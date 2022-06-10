@@ -9116,6 +9116,10 @@ var script$2 = {
       type: Object,
       required: false
     },
+    identifier: {
+      type: String,
+      required: false,
+    }
   },
   data() {
     return {
@@ -9150,30 +9154,23 @@ function render$2(_ctx, _cache, $props, $setup, $data, $options) {
   return (vue.openBlock(), vue.createElementBlock("div", null, [
     ($props.editionMode)
       ? (vue.openBlock(), vue.createElementBlock("div", _hoisted_1$2, [
-          ($props.modelValue)
-            ? (vue.openBlock(), vue.createBlock(_component_BaseEditLabel, {
-                key: 0,
-                label: $props.label,
-                required: $props.required
-              }, null, 8 /* PROPS */, ["label", "required"]))
-            : vue.createCommentVNode("v-if", true),
           vue.createElementVNode("div", {
             class: vue.normalizeClass($options.cPlacement)
           }, [
             vue.createElementVNode("div", _hoisted_2$2, [
               vue.createElementVNode("input", {
-                id: `${$props.name}_checkbox_input`,
+                id: `${$props.name}_checkbox_input_${$props.identifier}`,
                 class: "form-check-input",
                 type: "checkbox",
                 name: $props.name,
-                value: $props.modelValue,
+                value: Boolean($props.modelValue),
                 onChange: _cache[0] || (_cache[0] = (...args) => ($options.updateInput && $options.updateInput(...args))),
-                checked: $props.modelValue
+                checked: Boolean($props.modelValue)
               }, null, 40 /* PROPS, HYDRATE_EVENTS */, _hoisted_3$1),
               _hoisted_4$1,
               vue.createElementVNode("label", {
                 class: "form-check-label capitalize-first",
-                for: `${$props.name}_checkbox_input`
+                for: `${$props.name}_checkbox_input_${$props.identifier}`
               }, vue.toDisplayString($props.label), 9 /* TEXT, PROPS */, _hoisted_5)
             ]),
             ($props.errors)

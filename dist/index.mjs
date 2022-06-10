@@ -9095,6 +9095,10 @@ var script$2 = {
       type: Object,
       required: false
     },
+    identifier: {
+      type: String,
+      required: false,
+    }
   },
   data() {
     return {
@@ -9129,30 +9133,23 @@ function render$2(_ctx, _cache, $props, $setup, $data, $options) {
   return (openBlock(), createElementBlock("div", null, [
     ($props.editionMode)
       ? (openBlock(), createElementBlock("div", _hoisted_1$2, [
-          ($props.modelValue)
-            ? (openBlock(), createBlock(_component_BaseEditLabel, {
-                key: 0,
-                label: $props.label,
-                required: $props.required
-              }, null, 8 /* PROPS */, ["label", "required"]))
-            : createCommentVNode("v-if", true),
           createElementVNode("div", {
             class: normalizeClass($options.cPlacement)
           }, [
             createElementVNode("div", _hoisted_2$2, [
               createElementVNode("input", {
-                id: `${$props.name}_checkbox_input`,
+                id: `${$props.name}_checkbox_input_${$props.identifier}`,
                 class: "form-check-input",
                 type: "checkbox",
                 name: $props.name,
-                value: $props.modelValue,
+                value: Boolean($props.modelValue),
                 onChange: _cache[0] || (_cache[0] = (...args) => ($options.updateInput && $options.updateInput(...args))),
-                checked: $props.modelValue
+                checked: Boolean($props.modelValue)
               }, null, 40 /* PROPS, HYDRATE_EVENTS */, _hoisted_3$1),
               _hoisted_4$1,
               createElementVNode("label", {
                 class: "form-check-label capitalize-first",
-                for: `${$props.name}_checkbox_input`
+                for: `${$props.name}_checkbox_input_${$props.identifier}`
               }, toDisplayString($props.label), 9 /* TEXT, PROPS */, _hoisted_5)
             ]),
             ($props.errors)
