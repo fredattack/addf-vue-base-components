@@ -9141,7 +9141,7 @@ var script$2 = {
 
 const _hoisted_1$2 = { key: 0 };
 const _hoisted_2$2 = { class: "form-check mr-4 sm:mt-0" };
-const _hoisted_3$1 = ["id", "name", "value", "checked"];
+const _hoisted_3$1 = ["id", "name", "value"];
 const _hoisted_4$1 = /*#__PURE__*/vue.createElementVNode("br", null, null, -1 /* HOISTED */);
 const _hoisted_5 = ["for"];
 const _hoisted_6 = /*#__PURE__*/vue.createElementVNode("br", null, null, -1 /* HOISTED */);
@@ -9163,9 +9163,8 @@ function render$2(_ctx, _cache, $props, $setup, $data, $options) {
                 class: "form-check-input",
                 type: "checkbox",
                 name: $props.name,
-                value: $props.modelValue,
-                onChange: _cache[0] || (_cache[0] = (...args) => ($options.updateInput && $options.updateInput(...args))),
-                checked: $props.modelValue
+                value: Boolean($props.modelValue),
+                onChange: _cache[0] || (_cache[0] = (...args) => ($options.updateInput && $options.updateInput(...args)))
               }, null, 40 /* PROPS, HYDRATE_EVENTS */, _hoisted_3$1),
               _hoisted_4$1,
               vue.createElementVNode("label", {
