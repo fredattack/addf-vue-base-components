@@ -3,6 +3,7 @@ import ActivityTableRow from "./components/BaseActivityTable/ActivityTableRow.vu
 import BaseBankShowEditSelectSimple from "./components/BaseShowEditSelect/BaseShowEditFormSelectSimple/BaseBankShowEditSelectSimple.vue";
 import BaseBooleanRadioGroup from "./components/BaseRadioGroup/BaseBooleanRadioGroup.vue";
 import BaseButton from "./components/BaseButton/BaseButton.vue";
+import BaseThemeButton from "./components/BaseButton/BaseThemeButton.vue";
 import BaseButtonInput from "./components/BaseInput/BaseButtonInput.vue";
 import BaseCard from "./components/BaseCard/BaseCard.vue";
 import BaseCardSection from "./components/BaseCard/BaseCardSection.vue";
@@ -104,6 +105,7 @@ export default {
     BaseBankShowEditSelectSimple,
     BaseBooleanRadioGroup,
     BaseButton,
+    BaseThemeButton,
     BaseButtonInput,
     BaseCard,
     BaseCardSection,
