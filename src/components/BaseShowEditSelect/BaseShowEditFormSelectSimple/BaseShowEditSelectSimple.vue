@@ -16,7 +16,7 @@
   </div>
 
   <div v-else class='mt-3'>
-    <BaseShowLabel :label="label" :model-value="cDefautlValue.name ? cDefautlValue.name : '-'"/>
+    <BaseShowLabel :label="label" :model-value="cDefautlValue[trackBy] ? cDefautlValue[trackBy] : '-'"/>
   </div>
 
 </template>
