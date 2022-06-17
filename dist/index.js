@@ -5034,7 +5034,7 @@ function render$J(_ctx, _cache, $props, $setup, $data, $options) {
     : (vue.openBlock(), vue.createElementBlock("div", _hoisted_3$m, [
         vue.createVNode(_component_BaseShowLabel, {
           label: $props.label,
-          "model-value": $options.cDefautlValue[$props.trackBy] ? $options.cDefautlValue[$props.trackBy] : '-'
+          "model-value": $options.cDefautlValue ? $options.cDefautlValue[$props.attributeLabel]: null
         }, null, 8 /* PROPS */, ["label", "model-value"])
       ]))
 }
