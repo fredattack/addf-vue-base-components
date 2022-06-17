@@ -5032,13 +5032,10 @@ function render$J(_ctx, _cache, $props, $setup, $data, $options) {
           : vue.createCommentVNode("v-if", true)
       ]))
     : (vue.openBlock(), vue.createElementBlock("div", _hoisted_3$m, [
-        ($options.cDefautlValue)
-          ? (vue.openBlock(), vue.createBlock(_component_BaseShowLabel, {
-              key: 0,
-              label: $props.label,
-              "model-value": $options.cDefautlValue.name
-            }, null, 8 /* PROPS */, ["label", "model-value"]))
-          : vue.createCommentVNode("v-if", true)
+        vue.createVNode(_component_BaseShowLabel, {
+          label: $props.label,
+          "model-value": $options.cDefautlValue.name
+        }, null, 8 /* PROPS */, ["label", "model-value"])
       ]))
 }
 
