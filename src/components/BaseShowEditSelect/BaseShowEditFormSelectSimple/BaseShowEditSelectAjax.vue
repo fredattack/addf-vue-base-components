@@ -66,6 +66,7 @@ export default {
     },
     modelValue: {type: Object, required: false, default: null},
     stringValue: {type: String, required: false, default: null},
+    freeValue: {type: Boolean, required: false, default: false},
     defaultAjax: {type: Object, required: false, default() { return {}}},
     url: {},
     name: {},
@@ -118,7 +119,7 @@ export default {
               this.options = response.data
             })
       }
-      if(this.stringValue && keyword !== null){
+      if(this.freeValue && keyword){
         console.log('updateStringValue', keyword)
         this.$emit('update:stringValue', keyword)
       }
