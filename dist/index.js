@@ -4632,7 +4632,7 @@ var script$L = {
       }
       if(this.taggable && keyword && this.options.length < 1){
         const tag = {};
-        tag[this.trackBy] = `CUS-${keyword.substring(0, 6).toUpperCase()}`;
+        tag[this.trackBy] = null;
         tag[this.attributeLabel] = keyword;
         this.options[0] = tag;
       }
