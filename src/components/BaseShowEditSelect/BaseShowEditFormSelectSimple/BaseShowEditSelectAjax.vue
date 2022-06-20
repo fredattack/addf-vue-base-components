@@ -120,6 +120,7 @@ export default {
         const tag = {}
         tag[this.trackBy] = `CUS-${keyword.substring(0, 6).toUpperCase()}`
         tag[this.attributeLabel] = keyword
+        tag['custom'] = true
         this.options[0] = tag
       }
     },
