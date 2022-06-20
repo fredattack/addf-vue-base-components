@@ -88,13 +88,13 @@ export default {
       if (newValue != null && newValue !== '') {
         if(this.fullModelResponse){
           console.log('nullify stringValue')
-          this.$emit('update:stringValue', null)
+          // this.$emit('update:stringValue', null)
           this.$emit('update:modelValue', newValue);
           this.$emit('workSelect',newValue);
 
         }else{
           console.log('nullify stringValue')
-          this.$emit('update:stringValue', null)
+          // this.$emit('update:stringValue', null)
           this.$emit('update:modelValue', newValue[this.trackBy]);
           this.$emit('selected:value',newValue[this.trackBy]);
         }
