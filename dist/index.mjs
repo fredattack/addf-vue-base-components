@@ -4605,6 +4605,10 @@ var script$L = {
               this.loading=false;
               this.options = response.data;
             });
+        
+        if(this.options.length < 1){
+          console.log('keyword', keyword);
+        }
       }
     },
 
