@@ -4580,7 +4580,6 @@ var script$L = {
     },
     modelValue: {type: Object, required: false, default: null},
     taggable: {type: String, required: false, default: null},
-    freeValue: {type: Boolean, required: false, default: false},
     defaultAjax: {type: Object, required: false, default() { return {}}},
     url: {},
     name: {},
@@ -4602,13 +4601,11 @@ var script$L = {
       if (newValue != null && newValue !== '') {
         if(this.fullModelResponse){
           console.log('nullify stringValue');
-          // this.$emit('update:stringValue', null)
           this.$emit('update:modelValue', newValue);
           this.$emit('workSelect',newValue);
 
         }else {
           console.log('nullify stringValue');
-          // this.$emit('update:stringValue', null)
           this.$emit('update:modelValue', newValue[this.trackBy]);
           this.$emit('selected:value', newValue[this.trackBy]);
         }
@@ -4642,9 +4639,11 @@ var script$L = {
               this.options = response.data;
             });
       }
-      if(keyword){
-        console.log('updateStringValue', keyword);
-        this.$emit('update:stringValue', keyword);
+      if(this.taggable && keyword && this.options.length < 1){
+        const tag = {};
+        tag[this.trackBy] = null;
+        tag[this.attributeLabel] = keyword;
+        this.options[0] = tag;
       }
     },
   },
