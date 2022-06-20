@@ -4621,15 +4621,6 @@ var script$L = {
     },
   },
   methods: {
-    addTag (newTag) {
-      console.log('addTagCalled');
-      const tag = {};
-      tag[this.trackBy] = null;
-      tag[this.attributeLabel] = newTag;
-      
-      this.options.push(tag);
-      this.value.push(tag);
-    },
     async fetchOption(keyword) {
       if (keyword.length > 2) {
         this.loading=true;
@@ -4690,7 +4681,6 @@ function render$L(_ctx, _cache, $props, $setup, $data, $options) {
                 value: $props.defaultAjax,
                 multiple: false,
                 searchable: true,
-                taggable: $props.taggable,
                 loading: $data.loading,
                 "internal-search": true,
                 "clear-on-select": true,
@@ -4701,7 +4691,6 @@ function render$L(_ctx, _cache, $props, $setup, $data, $options) {
                 "max-height": 600,
                 "show-no-results": false,
                 "hide-selected": true,
-                onTag: $options.addTag,
                 onSearchChange: $options.fetchOption
               }, {
                 tag: vue.withCtx(({ option, remove }) => [
@@ -4714,7 +4703,7 @@ function render$L(_ctx, _cache, $props, $setup, $data, $options) {
                   ])
                 ]),
                 _: 1 /* STABLE */
-              }, 8 /* PROPS */, ["modelValue", "id", "label", "track-by", "options", "value", "taggable", "loading", "onTag", "onSearchChange"]))
+              }, 8 /* PROPS */, ["modelValue", "id", "label", "track-by", "options", "value", "loading", "onSearchChange"]))
             ], 2 /* CLASS */))
           : vue.createCommentVNode("v-if", true)
       ]))

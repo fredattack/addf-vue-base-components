@@ -16,7 +16,6 @@
           :value="defaultAjax"
           :multiple="false"
           :searchable="true"
-          :taggable="taggable"
           :loading="loading"
           :internal-search="true"
           :clear-on-select="true"
@@ -27,7 +26,6 @@
           :max-height="600"
           :show-no-results="false"
           :hide-selected="true"
-          @tag="addTag"
           @search-change="fetchOption">
         <template v-slot:tag="{ option, remove }" >
           <span class="custom__tag">
@@ -109,15 +107,6 @@ export default {
     },
   },
   methods: {
-    addTag (newTag) {
-      console.log('addTagCalled')
-      const tag = {}
-      tag[this.trackBy] = null
-      tag[this.attributeLabel] = newTag
-      
-      this.options.push(tag)
-      this.value.push(tag)
-    },
     async fetchOption(keyword) {
       if (keyword.length > 2) {
         this.loading=true
