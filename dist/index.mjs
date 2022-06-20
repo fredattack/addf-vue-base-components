@@ -4558,6 +4558,7 @@ var script$L = {
       default: 'name'
     },
     modelValue: {type: Object, required: false, default: null},
+    stringValue: {type: String, required: false, default: null},
     defaultAjax: {type: Object, required: false, default() { return {}}},
     url: {},
     name: {},
@@ -4566,7 +4567,7 @@ var script$L = {
     labelClass:{ type: String, required: false, default:'' },
     fullModelResponse:{ type: Boolean, required: false, default:false },
   },
-  emits: ['update:modelValue'],
+  emits: ['update:modelValue', 'update:stringValue', 'workSelect', 'selected:value'],
   data() {
     return {
       options: [],
@@ -4578,11 +4579,13 @@ var script$L = {
     defaultValue(newValue) {
       if (newValue != null && newValue !== '') {
         if(this.fullModelResponse){
+          this.$emit('update:stringValue', null);
           this.$emit('update:modelValue', newValue);
           this.$emit('workSelect',newValue);
 
         }else {
-        this.$emit('update:modelValue', newValue[this.trackBy]);
+          this.$emit('update:stringValue', null);
+          this.$emit('update:modelValue', newValue[this.trackBy]);
           this.$emit('selected:value',newValue[this.trackBy]);
         }
       }
@@ -4605,13 +4608,11 @@ var script$L = {
               this.loading=false;
               this.options = response.data;
             });
-        
-        if(this.options.length < 1){
-          console.log('keyword', keyword);
-        }
+      }
+      if(this.stringValue){
+        this.$emit('update:stringValue', keyword);
       }
     },
-
   },
 };
 
