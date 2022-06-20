@@ -16,6 +16,7 @@
           :value="defaultAjax"
           :multiple="false"
           :searchable="true"
+          :taggable="taggable"
           :loading="loading"
           :internal-search="true"
           :clear-on-select="true"
@@ -26,6 +27,7 @@
           :max-height="600"
           :show-no-results="false"
           :hide-selected="true"
+          @tag="addTag"
           @search-change="fetchOption">
         <template v-slot:tag="{ option, remove }" >
           <span class="custom__tag">
@@ -65,7 +67,7 @@ export default {
       default: 'name'
     },
     modelValue: {type: Object, required: false, default: null},
-    stringValue: {type: String, required: false, default: null},
+    taggable: {type: String, required: false, default: null},
     freeValue: {type: Boolean, required: false, default: false},
     defaultAjax: {type: Object, required: false, default() { return {}}},
     url: {},
@@ -96,7 +98,7 @@ export default {
           console.log('nullify stringValue')
           // this.$emit('update:stringValue', null)
           this.$emit('update:modelValue', newValue[this.trackBy]);
-          this.$emit('selected:value',newValue[this.trackBy]);
+          this.$emit('selected:value', newValue[this.trackBy]);
         }
       }
     },
@@ -110,6 +112,15 @@ export default {
     },
   },
   methods: {
+    addTag (newTag) {
+      console.log('addTagCalled')
+      const tag = {}
+      tag[this.trackBy] = null
+      tag[this.attributeLabel] = newTag
+      
+      this.options.push(tag)
+      this.value.push(tag)
+    },
     async fetchOption(keyword) {
       if (keyword.length > 2) {
         this.loading=true
