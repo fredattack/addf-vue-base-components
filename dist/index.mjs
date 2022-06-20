@@ -4611,7 +4611,7 @@ var script$L = {
       }
       if(this.taggable && keyword && this.options.length < 1){
         const tag = {};
-        tag[this.trackBy] = null;
+        tag[this.trackBy] = `CUS-${keyword.substring(0, 8).toUpperCase()}`;
         tag[this.attributeLabel] = keyword;
         this.options[0] = tag;
       }
