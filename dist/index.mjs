@@ -4611,8 +4611,10 @@ var script$L = {
               this.options = response.data;
             });
       }
+      if(this.stringValue && keyword !== null){
         console.log('updateStringValue', keyword);
         this.$emit('update:stringValue', keyword);
+      }
     },
   },
 };
