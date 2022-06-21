@@ -9302,7 +9302,7 @@ var script$2 = {
       required: true
     },
     options: {
-      type: Object,
+      type: Array,
       required: true
     },
     name: {
@@ -9318,11 +9318,6 @@ var script$2 = {
       type: Boolean,
       required: false,
       default: false
-    },
-    defaultValue: {
-      type: Array,
-      required: false,
-      default: () => { return [] }
     },
     attributeLabel:{
       type: String,

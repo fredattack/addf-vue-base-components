@@ -90,7 +90,7 @@ export default {
       required: true
     },
     options: {
-      type: Object,
+      type: Array,
       required: true
     },
     name: {
@@ -106,11 +106,6 @@ export default {
       type: Boolean,
       required: false,
       default: false
-    },
-    defaultValue: {
-      type: Array,
-      required: false,
-      default: () => { return [] }
     },
     attributeLabel:{
       type: String,
