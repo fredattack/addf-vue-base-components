@@ -78,6 +78,7 @@ import BaseShowEditInputButton from "./components/BaseShowEditInput/BaseShowEdit
 import BaseShowEditTreeInput from "./components/BaseShowEditInput/BaseShowEditTreeInput.vue";
 import BaseSimpleSearchInput from "./components/BaseInput/BaseSimpleSearchInput.vue";
 import BaseSimpleShowEditCheckbox from "./components/BaseShowEditCheckBox/BaseSimpleShowEditCheckbox.vue";
+import BaseShowEditCheckBox from './components/BaseShowEditCheckBox/BaseShowEditCheckBox.vue'
 
 import HelloWorld from './components/HelloWorld.vue'
 import BaseShowEditIsoDateInput from "./components/BaseShowEditInput/BaseShowEditIsoDateInput.vue";
@@ -110,6 +111,7 @@ export default {
     BaseCard,
     BaseCardSection,
     BaseCheckBox,
+    BaseShowEditCheckBox,
     BaseCompanyShowEditSelectMultiple,
     BaseCompanyShowEditSelectSimple,
     BaseCountryShowEditSelectSimple,
