@@ -9433,7 +9433,7 @@ function render$2(_ctx, _cache, $props, $setup, $data, $options) {
                 icon: [`fas`,`check-square`],
                 class: "mr-2 text-theme-secondary mt-2"
               }),
-              createElementVNode("span", _hoisted_7, toDisplayString($props.trackBy ? $props.options?.find(option => option[$props.trackBy] === val)[$props.attributeLabel] : val), 1 /* TEXT */)
+              createElementVNode("span", _hoisted_7, toDisplayString($props.trackBy ? $props.options.find(option => option[$props.trackBy] === val)[$props.attributeLabel] : val), 1 /* TEXT */)
             ]))
           }), 128 /* KEYED_FRAGMENT */))
         ]))

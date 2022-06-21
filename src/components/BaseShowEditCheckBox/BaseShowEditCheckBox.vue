@@ -59,7 +59,7 @@
         />
         <span
           class="cursor-default select-none text-sm text-gray-900">
-          {{ trackBy ? options?.find(option => option[trackBy] === val)[attributeLabel] : val }}
+          {{ trackBy ? options.find(option => option[trackBy] === val)[attributeLabel] : val }}
         </span>
       </div>
     </div>
