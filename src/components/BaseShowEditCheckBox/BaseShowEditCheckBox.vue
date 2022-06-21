@@ -18,7 +18,7 @@
             v-model="transitionData"
             type="checkbox"
             :value="trackBy ? option[trackBy] : option"
-            class="focus:ring-theme-primary h-4 w-4 text-green-600 border-gray-300 rounded"
+            class="focus:ring-theme-primary h-4 w-4 text-theme_secondary border-gray-300 rounded"
           >
         </div>
         <div class="ml-3 text-sm">

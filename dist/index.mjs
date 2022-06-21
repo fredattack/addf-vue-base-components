@@ -9392,7 +9392,7 @@ function render$2(_ctx, _cache, $props, $setup, $data, $options) {
                   "onUpdate:modelValue": _cache[0] || (_cache[0] = $event => (($data.transitionData) = $event)),
                   type: "checkbox",
                   value: $props.trackBy ? option[$props.trackBy] : option,
-                  class: "focus:ring-theme-primary h-4 w-4 text-green-600 border-gray-300 rounded"
+                  class: "focus:ring-theme-primary h-4 w-4 text-theme_secondary border-gray-300 rounded"
                 }, null, 8 /* PROPS */, _hoisted_3$1)), [
                   [vModelCheckbox, $data.transitionData]
                 ])
