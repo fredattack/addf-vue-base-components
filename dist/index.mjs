@@ -21,7 +21,6 @@ import 'filepond/dist/filepond.min.css';
 import 'filepond-plugin-image-preview/dist/filepond-plugin-image-preview.min.css';
 import FilePondPluginFileValidateType from 'filepond-plugin-file-validate-type';
 import FilePondPluginImagePreview from 'filepond-plugin-image-preview';
-import BaseEditLabel from '@/components/BaseLabel/BaseEditLabel';
 
 var script$1r = {
   name: 'LogTableRow',
@@ -9284,7 +9283,7 @@ script$3.__file = "src/components/BaseShowEditCheckBox/BaseSimpleShowEditCheckbo
 
 var script$2 = {
   name: "BaseShowEditCheckbox",
-  components: { BaseEditLabel },
+  components: { BaseEditLabel: script$1m },
   props: {
     extraId: {
       type: String,

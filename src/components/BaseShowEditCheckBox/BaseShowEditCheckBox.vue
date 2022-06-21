@@ -67,7 +67,7 @@
 </template>
 
 <script>
-import BaseEditLabel from "@/components/BaseLabel/BaseEditLabel";
+import BaseEditLabel from "../BaseLabel/BaseEditLabel.vue";
 
 export default {
   name: "BaseShowEditCheckbox",

@@ -23,7 +23,6 @@ require('filepond/dist/filepond.min.css');
 require('filepond-plugin-image-preview/dist/filepond-plugin-image-preview.min.css');
 var FilePondPluginFileValidateType = require('filepond-plugin-file-validate-type');
 var FilePondPluginImagePreview = require('filepond-plugin-image-preview');
-var BaseEditLabel = require('@/components/BaseLabel/BaseEditLabel');
 
 function _interopDefaultLegacy (e) { return e && typeof e === 'object' && 'default' in e ? e : { 'default': e }; }
 
@@ -43,7 +42,6 @@ var Mention__default = /*#__PURE__*/_interopDefaultLegacy(Mention);
 var vueFilePond__default = /*#__PURE__*/_interopDefaultLegacy(vueFilePond);
 var FilePondPluginFileValidateType__default = /*#__PURE__*/_interopDefaultLegacy(FilePondPluginFileValidateType);
 var FilePondPluginImagePreview__default = /*#__PURE__*/_interopDefaultLegacy(FilePondPluginImagePreview);
-var BaseEditLabel__default = /*#__PURE__*/_interopDefaultLegacy(BaseEditLabel);
 
 var script$1r = {
   name: 'LogTableRow',
@@ -9306,7 +9304,7 @@ script$3.__file = "src/components/BaseShowEditCheckBox/BaseSimpleShowEditCheckbo
 
 var script$2 = {
   name: "BaseShowEditCheckbox",
-  components: { BaseEditLabel: BaseEditLabel__default["default"] },
+  components: { BaseEditLabel: script$1m },
   props: {
     extraId: {
       type: String,
