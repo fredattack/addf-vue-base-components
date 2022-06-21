@@ -9368,7 +9368,7 @@ const _hoisted_3$1 = ["id", "value"];
 const _hoisted_4$1 = { class: "ml-3 text-sm" };
 const _hoisted_5 = ["for", "innerHTML"];
 const _hoisted_6 = /*#__PURE__*/createElementVNode("br", null, null, -1 /* HOISTED */);
-const _hoisted_7 = ["innerHTML"];
+const _hoisted_7 = { class: "cursor-default select-none text-sm text-gray-900" };
 
 function render$2(_ctx, _cache, $props, $setup, $data, $options) {
   const _component_BaseEditLabel = resolveComponent("BaseEditLabel");
@@ -9433,10 +9433,7 @@ function render$2(_ctx, _cache, $props, $setup, $data, $options) {
                 icon: [`fas`,`check-square`],
                 class: "mr-2 text-theme-secondary mt-2"
               }),
-              createElementVNode("span", {
-                class: "cursor-default select-none text-sm text-gray-900",
-                innerHTML: $props.trackBy ? $props.options?.find(option => option[$props.trackBy] === val)[$props.attributeLabel] : val
-              }, null, 8 /* PROPS */, _hoisted_7)
+              createElementVNode("span", _hoisted_7, toDisplayString($props.trackBy ? $props.options?.find(option => option[$props.trackBy] === val)[$props.attributeLabel] : val), 1 /* TEXT */)
             ]))
           }), 128 /* KEYED_FRAGMENT */))
         ]))

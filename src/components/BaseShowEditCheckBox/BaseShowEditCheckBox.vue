@@ -58,9 +58,9 @@
           class="mr-2 text-theme-secondary mt-2"
         />
         <span
-          class="cursor-default select-none text-sm text-gray-900"
-          v-html="trackBy ? options?.find(option => option[trackBy] === val)[attributeLabel] : val"
-        />
+          class="cursor-default select-none text-sm text-gray-900">
+          {{ trackBy ? options?.find(option => option[trackBy] === val)[attributeLabel] : val }}
+        </span>
       </div>
     </div>
   </template>
