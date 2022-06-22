@@ -9313,7 +9313,7 @@ var script$2 = {
     },
     modelValue: {
       type: Array,
-      required: true,
+      required: false,
       default: () => {
         return []
       }
