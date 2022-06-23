@@ -9489,6 +9489,11 @@ var script = {
       required: false,
       default: null
     },
+    customReferenceDateFormat: {
+      type: String,
+      required: false,
+      default: '##/##/####'
+    },
     displayTimeDifference: {
       type: Boolean,
       require: false,
@@ -9562,17 +9567,13 @@ var script = {
       return this.inputClass === '' ? 'form-control' : this.inputClass
     },
     cDisplayedValueWhenNotEditionMode(){
-      return moment__default["default"](this.modelValue).format('DD/MM/YYYY') === 'Invalid date' ? null : moment__default["default"](this.modelValue).format('DD/MM/YYYY')
+      return this.internalValueIsAValidDate ? moment__default["default"](this.internalValue).format(this.dateFormat) : null
     },
     timeDifference(){
-      if(!this.customReferenceDate){
-        return moment__default["default"](this.modelValue).isValid()
-          ? moment__default["default"](this.modelValue).lang('fr').from(moment__default["default"]().startOf('day'))
-          : null
+      if(!this.customReferenceDate) {
+        return this.internalValueIsAValidDate ? moment__default["default"](this.internalValue, this.dateFormat).lang('fr').from(moment__default["default"]().startOf('day')) : null
       }
-      return moment__default["default"](this.modelValue).isValid()
-        ? moment__default["default"](this.modelValue).lang('fr').from(moment__default["default"](this.customReferenceDate, 'DD/MM/YYYY'))
-        : null
+      return this.internalValueIsAValidDate ? moment__default["default"](this.internalValue, this.dateFormat).lang('fr').from(moment__default["default"](this.customReferenceDate, this.customReferenceDateFormat)) : null
     },
     internalValueIsAValidDate(){
       let subValidation = moment__default["default"](this.internalValue, this.dateFormat).format(this.dateFormat);
