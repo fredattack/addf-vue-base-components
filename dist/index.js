@@ -9534,6 +9534,11 @@ var script = {
         return ['##/##/####']
       }
     },
+    dateFormat: {
+      type: String,
+      required: false,
+      default: 'DD/MM/YYYY'
+    },
     inputClass: {
       type: String,
       required: false,
@@ -9559,9 +9564,6 @@ var script = {
     cDisplayedValueWhenNotEditionMode(){
       return moment__default["default"](this.modelValue).format('DD/MM/YYYY') === 'Invalid date' ? null : moment__default["default"](this.modelValue).format('DD/MM/YYYY')
     },
-    internalValueIsAFullDate(){
-      return this.isAValidDate(this.internalValue)
-    },
     timeDifference(){
       if(!this.customReferenceDate){
         return moment__default["default"](this.modelValue).isValid()
@@ -9571,6 +9573,14 @@ var script = {
       return moment__default["default"](this.modelValue).isValid()
         ? moment__default["default"](this.modelValue).lang('fr').from(moment__default["default"](this.customReferenceDate, 'DD/MM/YYYY'))
         : null
+    },
+    internalValueIsAValidDate(){
+      let subValidation = moment__default["default"](this.internalValue, this.dateFormat).format(this.dateFormat);
+      
+      if (subValidation === this.internalValue){
+        return moment__default["default"](this.internalValue, this.dateFormat).isValid()
+      }
+      return false
     }
   },
   watch: {
@@ -9578,6 +9588,8 @@ var script = {
       handler(newValue){
         if(newValue){
           this.internalValue = moment__default["default"](newValue).format('DD/MM/YYYY');
+        }else {
+          this.internalValue = null;
         }
       },
       immediate: true,
@@ -9585,11 +9597,8 @@ var script = {
     }
   },
   methods: {
-    isAValidDate(payload){
-      return /\d{2}\/\d{2}\/\d{4}/.test(payload) && moment__default["default"](payload).isValid()
-    },
     updateInput(event) {
-      if (this.isAValidDate(event.target.value)) {
+      if (this.internalValueIsAValidDate) {
         this.$emit("update:modelValue", moment__default["default"](event.target.value).format());
       }
     }
@@ -9632,7 +9641,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
           "onUpdate:modelValue": _cache[0] || (_cache[0] = $event => (($data.internalValue) = $event)),
           onInput: _cache[1] || (_cache[1] = (...args) => ($options.updateInput && $options.updateInput(...args))),
           id: $props.name,
-          class: vue.normalizeClass([ $options.internalValueIsAFullDate ? 'focus:border-green-300 focus:ring-green-300' : 'focus:border-red-300 focus:ring-red-300', 'border-gray-400 focus:ring-1', $options.cInputClass]),
+          class: vue.normalizeClass([ $options.internalValueIsAValidDate ? 'focus:border-green-300 focus:ring-green-300' : 'focus:border-red-300 focus:ring-red-300', 'border-gray-400 focus:ring-1', $options.cInputClass]),
           placeholder: $props.placeholder
         }, null, 42 /* CLASS, PROPS, HYDRATE_EVENTS */, _hoisted_3), [
           [vue.vModelText, $data.internalValue],
@@ -9648,7 +9657,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     : (vue.openBlock(), vue.createElementBlock("div", _hoisted_4, [
         vue.createVNode(_component_BaseShowLabel, {
           label: $props.label,
-          "model-value": $options.cDisplayedValueWhenNotEditionMode,
+          "model-value": $data.internalValue,
           "additional-information": this.displayTimeDifference && $options.timeDifference !== 'Invalid date' ? $options.timeDifference : null
         }, null, 8 /* PROPS */, ["label", "model-value", "additional-information"])
       ]))
