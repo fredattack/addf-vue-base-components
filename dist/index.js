@@ -9570,10 +9570,11 @@ var script = {
       return this.internalValueIsAValidDate ? moment__default["default"](this.internalValue).format(this.dateFormat) : null
     },
     timeDifference(){
-      if(!this.customReferenceDate) {
+      if(this.customReferenceDate) {
+        return this.internalValueIsAValidDate ? moment__default["default"](this.internalValue, this.dateFormat).lang('fr').from(moment__default["default"](this.customReferenceDate, this.customReferenceDateFormat)) : null
+      } else {
         return this.internalValueIsAValidDate ? moment__default["default"](this.internalValue, this.dateFormat).lang('fr').from(moment__default["default"]().startOf('day')) : null
       }
-      return this.internalValueIsAValidDate ? moment__default["default"](this.internalValue, this.dateFormat).lang('fr').from(moment__default["default"](this.customReferenceDate, this.customReferenceDateFormat)) : null
     },
     internalValueIsAValidDate(){
       let subValidation = moment__default["default"](this.internalValue, this.dateFormat).format(this.dateFormat);
@@ -9600,7 +9601,7 @@ var script = {
   methods: {
     updateInput(event) {
       if (this.internalValueIsAValidDate) {
-        this.$emit("update:modelValue", moment__default["default"](event.target.value).format());
+        this.$emit("update:modelValue", moment__default["default"](event.target.value, this.dateFormat).format());
       }
     }
   },
