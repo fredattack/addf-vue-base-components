@@ -9571,9 +9571,15 @@ var script = {
     },
     timeDifference(){
       if(this.customReferenceDate) {
-        return this.internalValueIsAValidDate ? moment__default["default"](this.internalValue, this.dateFormat).lang('fr').from(moment__default["default"](this.customReferenceDate, this.customReferenceDateFormat)) : null
+        if (this.internalValueIsAValidDate) {
+         return moment__default["default"](this.internalValue, this.dateFormat).lang('fr').from(moment__default["default"](this.customReferenceDate, this.customReferenceDateFormat))
+        }
+        return null
       } else {
-        return this.internalValueIsAValidDate ? moment__default["default"](this.internalValue, this.dateFormat).lang('fr').from(moment__default["default"]().startOf('day')) : null
+        if (this.internalValueIsAValidDate) {
+          return moment__default["default"](this.internalValue, this.dateFormat).lang('fr').from(moment__default["default"]().startOf('day'))
+        }
+        return null
       }
     },
     internalValueIsAValidDate(){

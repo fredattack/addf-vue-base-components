@@ -9550,9 +9550,15 @@ var script = {
     },
     timeDifference(){
       if(this.customReferenceDate) {
-        return this.internalValueIsAValidDate ? moment(this.internalValue, this.dateFormat).lang('fr').from(moment(this.customReferenceDate, this.customReferenceDateFormat)) : null
+        if (this.internalValueIsAValidDate) {
+         return moment(this.internalValue, this.dateFormat).lang('fr').from(moment(this.customReferenceDate, this.customReferenceDateFormat))
+        }
+        return null
       } else {
-        return this.internalValueIsAValidDate ? moment(this.internalValue, this.dateFormat).lang('fr').from(moment().startOf('day')) : null
+        if (this.internalValueIsAValidDate) {
+          return moment(this.internalValue, this.dateFormat).lang('fr').from(moment().startOf('day'))
+        }
+        return null
       }
     },
     internalValueIsAValidDate(){
