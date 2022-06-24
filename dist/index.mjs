@@ -9549,10 +9549,15 @@ var script = {
       return this.internalValueIsAValidDate ? moment(this.internalValue).format(this.dateFormat) : null
     },
     timeDifference(){
-      if(!this.customReferenceDate) {
+      if(this.customReferenceDate) {
+        console.log('internalValue', this.internalValue);
+        console.log(`customReferenceDate: ${this.customReferenceDate} - customReferenceDateFormat: ${this.customReferenceDateFormat}`);
+        console.log('dateVal', moment(this.internalValue, this.dateFormat));
+        console.log('from', moment(this.customReferenceDate, this.customReferenceDateFormat));
+        return this.internalValueIsAValidDate ? moment(this.internalValue, this.dateFormat).lang('fr').from(moment(this.customReferenceDate, this.customReferenceDateFormat)) : null
+      } else {
         return this.internalValueIsAValidDate ? moment(this.internalValue, this.dateFormat).lang('fr').from(moment().startOf('day')) : null
       }
-      return this.internalValueIsAValidDate ? moment(this.internalValue, this.dateFormat).lang('fr').from(moment(this.customReferenceDate, this.customReferenceDateFormat)) : null
     },
     internalValueIsAValidDate(){
       let subValidation = moment(this.internalValue, this.dateFormat).format(this.dateFormat);
@@ -9567,7 +9572,7 @@ var script = {
     modelValue: {
       handler(newValue){
         if(newValue){
-          this.internalValue = moment(newValue).format('DD/MM/YYYY');
+          this.internalValue = moment(newValue).format(this.dateFormat);
         }else {
           this.internalValue = null;
         }
@@ -9579,7 +9584,7 @@ var script = {
   methods: {
     updateInput(event) {
       if (this.internalValueIsAValidDate) {
-        this.$emit("update:modelValue", moment(event.target.value).format());
+        this.$emit("update:modelValue", moment(event.target.value, this.dateFormat).format());
       }
     }
   },
