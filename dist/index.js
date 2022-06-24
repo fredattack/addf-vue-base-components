@@ -9766,7 +9766,7 @@ var script$2 = {
       return this.isVertical ? '' : 'flex flex-col sm:flex-row mt-2'
     },
     displaydValueWhenNotInEditMode(){
-      return Boolean(this.internalValue)
+      return this.$t(`enums.yes_no.${Boolean(this.internalValue)}`)
     },
   },
   watch: {
