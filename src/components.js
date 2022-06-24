@@ -80,6 +80,7 @@ import BaseSimpleSearchInput from "./components/BaseInput/BaseSimpleSearchInput.
 import BaseSimpleShowEditCheckbox from "./components/BaseShowEditCheckBox/BaseSimpleShowEditCheckbox.vue";
 import BaseShowEditCheckBox from './components/BaseShowEditCheckBox/BaseShowEditCheckBox.vue'
 import BaseShowEditIsoDateTimeInput from "./components/BaseShowEditInput/BaseShowEditIsoDateTimeInput.vue";
+import BaseShowEditBooleanRadioGroup from "./components/BaseRadioGroup/BaseShowEditBooleanRadioGroup.vue";
 
 import HelloWorld from './components/HelloWorld.vue'
 import BaseShowEditIsoDateInput from "./components/BaseShowEditInput/BaseShowEditIsoDateInput.vue";
@@ -169,6 +170,7 @@ export default {
     BaseShowEditIsoDateInput,
     BaseSimpleShowEditCheckbox,
     BaseShowEditIsoDateTimeInput,
+    BaseShowEditBooleanRadioGroup,
 
     HelloWorld,
 }
