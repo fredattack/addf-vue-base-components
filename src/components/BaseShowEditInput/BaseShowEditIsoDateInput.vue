@@ -51,7 +51,7 @@ export default {
     customReferenceDateFormat: {
       type: String,
       required: false,
-      default: '##/##/####'
+      default: 'DD/MM/YYY'
     },
     displayTimeDifference: {
       type: Boolean,
