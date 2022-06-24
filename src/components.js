@@ -79,6 +79,7 @@ import BaseShowEditTreeInput from "./components/BaseShowEditInput/BaseShowEditTr
 import BaseSimpleSearchInput from "./components/BaseInput/BaseSimpleSearchInput.vue";
 import BaseSimpleShowEditCheckbox from "./components/BaseShowEditCheckBox/BaseSimpleShowEditCheckbox.vue";
 import BaseShowEditCheckBox from './components/BaseShowEditCheckBox/BaseShowEditCheckBox.vue'
+import BaseShowEditIsoDateTimeInput from "./components/BaseShowEditInput/BaseShowEditIsoDateTimeInput.vue";
 
 import HelloWorld from './components/HelloWorld.vue'
 import BaseShowEditIsoDateInput from "./components/BaseShowEditInput/BaseShowEditIsoDateInput.vue";
@@ -167,6 +168,7 @@ export default {
     BaseSimpleSearchInput,
     BaseShowEditIsoDateInput,
     BaseSimpleShowEditCheckbox,
+    BaseShowEditIsoDateTimeInput,
 
     HelloWorld,
 }
