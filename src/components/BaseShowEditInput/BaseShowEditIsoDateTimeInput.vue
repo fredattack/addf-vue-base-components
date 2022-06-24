@@ -14,7 +14,7 @@
             v-model="internalDate" v-mask="dateMask" type="text"
             name="card-expiration-date"
             class="focus:ring-blue-300  focus:border-blue-300  relative block w-full rounded-none rounded-bl-md rounded-tl-md bg-transparent focus:z-10 sm:text-sm border-gray-300"
-            :placeholder="datePlaceholder ?? $t('global.date')"
+            :placeholder="datePlaceholder || $t('global.date')"
             @input="updateInput"
           />
         </div >
@@ -24,7 +24,7 @@
             v-model="internalTime" v-mask="timeMask" type="text"
             name="card-cvc"
             class="focus:ring-blue-300  focus:border-blue-300  relative block w-full rounded-none rounded-br-md rounded-tr-md bg-transparent focus:z-10 sm:text-sm border-gray-300"
-            :placeholder="timePlaceholder ?? $t('global.time')"
+            :placeholder="timePlaceholder || $t('global.time')"
             @input="updateInput"
           />
         </div >
