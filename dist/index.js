@@ -9571,8 +9571,6 @@ var script = {
     },
     timeDifference(){
       if(this.customReferenceDate) {
-        console.log(`internalValue: ${this.internalValue} - dateFormat: ${this.dateFormat}`);
-        console.log(`customReferenceDate: ${this.customReferenceDate} - customReferenceDateFormat: ${this.customReferenceDateFormat}`);
         return this.internalValueIsAValidDate ? moment__default["default"](this.internalValue, this.dateFormat).lang('fr').from(moment__default["default"](this.customReferenceDate, this.customReferenceDateFormat)) : null
       } else {
         return this.internalValueIsAValidDate ? moment__default["default"](this.internalValue, this.dateFormat).lang('fr').from(moment__default["default"]().startOf('day')) : null
