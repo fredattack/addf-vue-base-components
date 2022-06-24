@@ -9572,8 +9572,6 @@ var script = {
     timeDifference(){
       if(this.customReferenceDate) {
         console.log('internalValue', this.internalValue);
-        console.log(`customReferenceDate: ${this.customReferenceDate} - customReferenceDateFormat: ${this.customReferenceDateFormat}`);
-        console.log('dateVal', moment__default["default"](this.internalValue, this.dateFormat));
         console.log('from', moment__default["default"](this.customReferenceDate, this.customReferenceDateFormat));
         return this.internalValueIsAValidDate ? moment__default["default"](this.internalValue, this.dateFormat).lang('fr').from(moment__default["default"](this.customReferenceDate, this.customReferenceDateFormat)) : null
       } else {
