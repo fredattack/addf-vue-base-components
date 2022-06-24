@@ -130,7 +130,7 @@ export default {
     },
     timeDifference(){
       if(this.customReferenceDate) {
-        console.log('internalValue', this.internalValue)
+        console.log(`internalValue: ${this.internalValue} - dateFormat: ${this.dateFormat}`)
         console.log('from', moment(this.customReferenceDate, this.customReferenceDateFormat))
         return this.internalValueIsAValidDate ? moment(this.internalValue, this.dateFormat).lang('fr').from(moment(this.customReferenceDate, this.customReferenceDateFormat)) : null
       } else {
