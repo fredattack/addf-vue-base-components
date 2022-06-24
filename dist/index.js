@@ -5099,6 +5099,10 @@ var script$L = {
       required: false,
       default: false
     },
+    name: {
+      type: String,
+      required: true
+    }
   },
   computed: {
     cGroupClass() {
@@ -5140,7 +5144,7 @@ function render$L(_ctx, _cache, $props, $setup, $data, $options) {
                 return (vue.openBlock(), vue.createElementBlock("div", {
                   key: index,
                   class: "form-help text-red-600"
-                }, vue.toDisplayString(_ctx.$t(error, {attribute: _ctx.$t('attributes.' + _ctx.name)})), 1 /* TEXT */))
+                }, vue.toDisplayString(_ctx.$t(error, {attribute: _ctx.$t('attributes.' + $props.name)})), 1 /* TEXT */))
               }), 128 /* KEYED_FRAGMENT */))
             : vue.createCommentVNode("v-if", true)
         ], 64 /* STABLE_FRAGMENT */))

@@ -76,6 +76,10 @@ export default {
       required: false,
       default: false
     },
+    name: {
+      type: String,
+      required: true
+    }
   },
   computed: {
     cGroupClass() {

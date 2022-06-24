@@ -5078,6 +5078,10 @@ var script$L = {
       required: false,
       default: false
     },
+    name: {
+      type: String,
+      required: true
+    }
   },
   computed: {
     cGroupClass() {
@@ -5119,7 +5123,7 @@ function render$L(_ctx, _cache, $props, $setup, $data, $options) {
                 return (openBlock(), createElementBlock("div", {
                   key: index,
                   class: "form-help text-red-600"
-                }, toDisplayString(_ctx.$t(error, {attribute: _ctx.$t('attributes.' + _ctx.name)})), 1 /* TEXT */))
+                }, toDisplayString(_ctx.$t(error, {attribute: _ctx.$t('attributes.' + $props.name)})), 1 /* TEXT */))
               }), 128 /* KEYED_FRAGMENT */))
             : createCommentVNode("v-if", true)
         ], 64 /* STABLE_FRAGMENT */))
