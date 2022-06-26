@@ -9793,57 +9793,59 @@ function render$2(_ctx, _cache, $props, $setup, $data, $options) {
   const _component_BaseEditLabel = vue.resolveComponent("BaseEditLabel");
   const _component_BaseShowLabel = vue.resolveComponent("BaseShowLabel");
 
-  return ($props.editionMode)
-    ? (vue.openBlock(), vue.createElementBlock(vue.Fragment, { key: 0 }, [
-        (vue.openBlock(), vue.createElementBlock("div", {
-          class: "mt-3",
-          key: $data.internalValue
-        }, [
-          vue.createVNode(_component_BaseEditLabel, {
-            label: $props.label,
-            required: $props.required
-          }, null, 8 /* PROPS */, ["label", "required"]),
-          vue.createElementVNode("div", {
-            class: vue.normalizeClass($options.cPlacement)
+  return (vue.openBlock(), vue.createElementBlock("div", null, [
+    ($props.editionMode)
+      ? (vue.openBlock(), vue.createElementBlock(vue.Fragment, { key: 0 }, [
+          (vue.openBlock(), vue.createElementBlock("div", {
+            class: "mt-3",
+            key: $data.internalValue
           }, [
-            (vue.openBlock(true), vue.createElementBlock(vue.Fragment, null, vue.renderList($data.options, (val, key) => {
-              return (vue.openBlock(), vue.createElementBlock("div", {
-                class: "form-check mr-2",
-                key: key
-              }, [
-                vue.withDirectives(vue.createElementVNode("input", {
-                  id: `${$props.name}-${key}-${$props.extra_id}`,
-                  class: "form-check-input",
-                  type: "radio",
-                  name: $options.temp_name,
-                  value: val,
-                  "onUpdate:modelValue": _cache[0] || (_cache[0] = $event => (($data.internalValue) = $event)),
-                  disabled: $props.disabled
-                }, null, 8 /* PROPS */, _hoisted_1$2), [
-                  [vue.vModelRadio, $data.internalValue]
-                ]),
-                vue.createElementVNode("label", {
-                  class: "form-check-label capitalize-first",
-                  for: `${$props.name}-${key}-${$props.extra_id}`
-                }, vue.toDisplayString(_ctx.$t(`enums.yes_no.${ key }`)), 9 /* TEXT, PROPS */, _hoisted_2$2)
-              ]))
-            }), 128 /* KEYED_FRAGMENT */))
-          ], 2 /* CLASS */)
-        ])),
-        ($props.errors)
-          ? (vue.openBlock(true), vue.createElementBlock(vue.Fragment, { key: 0 }, vue.renderList($props.errors, (error, index) => {
-              return (vue.openBlock(), vue.createElementBlock("div", {
-                key: index,
-                class: "form-help text-red-600"
-              }, vue.toDisplayString(_ctx.$t(error, { 'attribute': _ctx.$t('attributes.' + $props.name) })), 1 /* TEXT */))
-            }), 128 /* KEYED_FRAGMENT */))
-          : vue.createCommentVNode("v-if", true)
-      ], 64 /* STABLE_FRAGMENT */))
-    : (vue.openBlock(), vue.createBlock(_component_BaseShowLabel, {
-        key: 1,
-        label: $props.label,
-        "model-value": $options.displaydValueWhenNotInEditMode
-      }, null, 8 /* PROPS */, ["label", "model-value"]))
+            vue.createVNode(_component_BaseEditLabel, {
+              label: $props.label,
+              required: $props.required
+            }, null, 8 /* PROPS */, ["label", "required"]),
+            vue.createElementVNode("div", {
+              class: vue.normalizeClass($options.cPlacement)
+            }, [
+              (vue.openBlock(true), vue.createElementBlock(vue.Fragment, null, vue.renderList($data.options, (val, key) => {
+                return (vue.openBlock(), vue.createElementBlock("div", {
+                  class: "form-check mr-2",
+                  key: key
+                }, [
+                  vue.withDirectives(vue.createElementVNode("input", {
+                    id: `${$props.name}-${key}-${$props.extra_id}`,
+                    class: "form-check-input",
+                    type: "radio",
+                    name: $options.temp_name,
+                    value: val,
+                    "onUpdate:modelValue": _cache[0] || (_cache[0] = $event => (($data.internalValue) = $event)),
+                    disabled: $props.disabled
+                  }, null, 8 /* PROPS */, _hoisted_1$2), [
+                    [vue.vModelRadio, $data.internalValue]
+                  ]),
+                  vue.createElementVNode("label", {
+                    class: "form-check-label capitalize-first",
+                    for: `${$props.name}-${key}-${$props.extra_id}`
+                  }, vue.toDisplayString(_ctx.$t(`enums.yes_no.${ key }`)), 9 /* TEXT, PROPS */, _hoisted_2$2)
+                ]))
+              }), 128 /* KEYED_FRAGMENT */))
+            ], 2 /* CLASS */)
+          ])),
+          ($props.errors)
+            ? (vue.openBlock(true), vue.createElementBlock(vue.Fragment, { key: 0 }, vue.renderList($props.errors, (error, index) => {
+                return (vue.openBlock(), vue.createElementBlock("div", {
+                  key: index,
+                  class: "form-help text-red-600"
+                }, vue.toDisplayString(_ctx.$t(error, { 'attribute': _ctx.$t('attributes.' + $props.name) })), 1 /* TEXT */))
+              }), 128 /* KEYED_FRAGMENT */))
+            : vue.createCommentVNode("v-if", true)
+        ], 64 /* STABLE_FRAGMENT */))
+      : (vue.openBlock(), vue.createBlock(_component_BaseShowLabel, {
+          key: 1,
+          label: $props.label,
+          "model-value": $options.displaydValueWhenNotInEditMode
+        }, null, 8 /* PROPS */, ["label", "model-value"]))
+  ]))
 }
 
 script$2.render = render$2;

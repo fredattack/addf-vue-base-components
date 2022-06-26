@@ -9772,57 +9772,59 @@ function render$2(_ctx, _cache, $props, $setup, $data, $options) {
   const _component_BaseEditLabel = resolveComponent("BaseEditLabel");
   const _component_BaseShowLabel = resolveComponent("BaseShowLabel");
 
-  return ($props.editionMode)
-    ? (openBlock(), createElementBlock(Fragment, { key: 0 }, [
-        (openBlock(), createElementBlock("div", {
-          class: "mt-3",
-          key: $data.internalValue
-        }, [
-          createVNode(_component_BaseEditLabel, {
-            label: $props.label,
-            required: $props.required
-          }, null, 8 /* PROPS */, ["label", "required"]),
-          createElementVNode("div", {
-            class: normalizeClass($options.cPlacement)
+  return (openBlock(), createElementBlock("div", null, [
+    ($props.editionMode)
+      ? (openBlock(), createElementBlock(Fragment, { key: 0 }, [
+          (openBlock(), createElementBlock("div", {
+            class: "mt-3",
+            key: $data.internalValue
           }, [
-            (openBlock(true), createElementBlock(Fragment, null, renderList($data.options, (val, key) => {
-              return (openBlock(), createElementBlock("div", {
-                class: "form-check mr-2",
-                key: key
-              }, [
-                withDirectives(createElementVNode("input", {
-                  id: `${$props.name}-${key}-${$props.extra_id}`,
-                  class: "form-check-input",
-                  type: "radio",
-                  name: $options.temp_name,
-                  value: val,
-                  "onUpdate:modelValue": _cache[0] || (_cache[0] = $event => (($data.internalValue) = $event)),
-                  disabled: $props.disabled
-                }, null, 8 /* PROPS */, _hoisted_1$2), [
-                  [vModelRadio, $data.internalValue]
-                ]),
-                createElementVNode("label", {
-                  class: "form-check-label capitalize-first",
-                  for: `${$props.name}-${key}-${$props.extra_id}`
-                }, toDisplayString(_ctx.$t(`enums.yes_no.${ key }`)), 9 /* TEXT, PROPS */, _hoisted_2$2)
-              ]))
-            }), 128 /* KEYED_FRAGMENT */))
-          ], 2 /* CLASS */)
-        ])),
-        ($props.errors)
-          ? (openBlock(true), createElementBlock(Fragment, { key: 0 }, renderList($props.errors, (error, index) => {
-              return (openBlock(), createElementBlock("div", {
-                key: index,
-                class: "form-help text-red-600"
-              }, toDisplayString(_ctx.$t(error, { 'attribute': _ctx.$t('attributes.' + $props.name) })), 1 /* TEXT */))
-            }), 128 /* KEYED_FRAGMENT */))
-          : createCommentVNode("v-if", true)
-      ], 64 /* STABLE_FRAGMENT */))
-    : (openBlock(), createBlock(_component_BaseShowLabel, {
-        key: 1,
-        label: $props.label,
-        "model-value": $options.displaydValueWhenNotInEditMode
-      }, null, 8 /* PROPS */, ["label", "model-value"]))
+            createVNode(_component_BaseEditLabel, {
+              label: $props.label,
+              required: $props.required
+            }, null, 8 /* PROPS */, ["label", "required"]),
+            createElementVNode("div", {
+              class: normalizeClass($options.cPlacement)
+            }, [
+              (openBlock(true), createElementBlock(Fragment, null, renderList($data.options, (val, key) => {
+                return (openBlock(), createElementBlock("div", {
+                  class: "form-check mr-2",
+                  key: key
+                }, [
+                  withDirectives(createElementVNode("input", {
+                    id: `${$props.name}-${key}-${$props.extra_id}`,
+                    class: "form-check-input",
+                    type: "radio",
+                    name: $options.temp_name,
+                    value: val,
+                    "onUpdate:modelValue": _cache[0] || (_cache[0] = $event => (($data.internalValue) = $event)),
+                    disabled: $props.disabled
+                  }, null, 8 /* PROPS */, _hoisted_1$2), [
+                    [vModelRadio, $data.internalValue]
+                  ]),
+                  createElementVNode("label", {
+                    class: "form-check-label capitalize-first",
+                    for: `${$props.name}-${key}-${$props.extra_id}`
+                  }, toDisplayString(_ctx.$t(`enums.yes_no.${ key }`)), 9 /* TEXT, PROPS */, _hoisted_2$2)
+                ]))
+              }), 128 /* KEYED_FRAGMENT */))
+            ], 2 /* CLASS */)
+          ])),
+          ($props.errors)
+            ? (openBlock(true), createElementBlock(Fragment, { key: 0 }, renderList($props.errors, (error, index) => {
+                return (openBlock(), createElementBlock("div", {
+                  key: index,
+                  class: "form-help text-red-600"
+                }, toDisplayString(_ctx.$t(error, { 'attribute': _ctx.$t('attributes.' + $props.name) })), 1 /* TEXT */))
+              }), 128 /* KEYED_FRAGMENT */))
+            : createCommentVNode("v-if", true)
+        ], 64 /* STABLE_FRAGMENT */))
+      : (openBlock(), createBlock(_component_BaseShowLabel, {
+          key: 1,
+          label: $props.label,
+          "model-value": $options.displaydValueWhenNotInEditMode
+        }, null, 8 /* PROPS */, ["label", "model-value"]))
+  ]))
 }
 
 script$2.render = render$2;

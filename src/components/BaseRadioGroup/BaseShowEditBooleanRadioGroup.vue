@@ -1,29 +1,31 @@
 <template>
-  <template v-if="editionMode" >
-    <div class='mt-3' :key='internalValue'>
-      <BaseEditLabel :label="label" :required="required" />
-      <div :class="cPlacement">
-        <div class='form-check mr-2' v-for='(val, key) in options' :key='key'>
-          <input :id='`${name}-${key}-${extra_id}`' class='form-check-input' type='radio' :name='temp_name'
-                 :value='val' v-model='internalValue' :disabled="disabled"
-          >
+  <div >
+    <template v-if="editionMode">
+      <div class='mt-3' :key='internalValue'>
+        <BaseEditLabel :label="label" :required="required" />
+        <div :class="cPlacement">
+          <div class='form-check mr-2' v-for='(val, key) in options' :key='key'>
+            <input :id='`${name}-${key}-${extra_id}`' class='form-check-input' type='radio' :name='temp_name'
+                   :value='val' v-model='internalValue' :disabled="disabled"
+            >
+            
+            <label class='form-check-label capitalize-first' :for='`${name}-${key}-${extra_id}`'>
+              {{ $t(`enums.yes_no.${ key }`) }}
+            </label >
           
-          <label class='form-check-label capitalize-first' :for='`${name}-${key}-${extra_id}`'>
-            {{ $t(`enums.yes_no.${ key }`) }}
-          </label >
-        
+          </div >
         </div >
       </div >
-    </div >
-    <template v-if='errors'>
-      <div v-for='(error,index) in errors' :key='index' class='form-help text-red-600'>
-        {{ $t(error, { 'attribute': $t('attributes.' + name) }) }}
-      </div >
+      <template v-if='errors'>
+        <div v-for='(error,index) in errors' :key='index' class='form-help text-red-600'>
+          {{ $t(error, { 'attribute': $t('attributes.' + name) }) }}
+        </div >
+      </template >
     </template >
-  </template >
-  <template v-else >
-    <BaseShowLabel :label="label" :model-value="displaydValueWhenNotInEditMode" />
-  </template>
+    <template v-else>
+      <BaseShowLabel :label="label" :model-value="displaydValueWhenNotInEditMode" />
+    </template >
+  </div >
 </template>
 
 <script>
