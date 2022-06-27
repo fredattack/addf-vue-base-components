@@ -28,13 +28,11 @@
 </template>
 
 <script>
-import {mask} from 'vue-the-mask'
 import BaseEditLabel from '../BaseLabel/BaseEditLabel.vue'
 import BaseShowLabel from '../BaseLabel/BaseShowLabel.vue'
 import moment from 'moment'
 
 export default {
-  directives: {mask},
   name: 'BaseShowEditIsoDateInput',
   data() {
     return {
