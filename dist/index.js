@@ -9870,7 +9870,7 @@ var script = {
     customReferenceDateFormat: {
       type: String,
       required: false,
-      default: 'DD/MM/YYY'
+      default: 'DD/MM/YYYY'
     },
     displayTimeDifference: {
       type: Boolean,
