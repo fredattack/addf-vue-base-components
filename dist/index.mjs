@@ -9833,7 +9833,6 @@ script$1.render = render$1;
 script$1.__file = "src/components/HelloWorld.vue";
 
 var script = {
-  directives: {mask},
   name: 'BaseShowEditIsoDateInput',
   data() {
     return {
