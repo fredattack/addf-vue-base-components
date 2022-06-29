@@ -8548,7 +8548,7 @@ script$5.render = render$5;
 script$5.__file = "src/components/BaseTable/BaseContentTable.vue";
 
 var script$4 = {
-  name: "BaseShowEditInput",
+  name: "BaseShowEditInputButton",
   props: {
     name: {
       type: String,
@@ -9148,10 +9148,10 @@ var script = {
       return this.inputClass === '' ? 'form-control' : this.inputClass
     },
     cDisplayedValueWhenNotEditionMode(){
-      return moment(this.modelValue).format('DD/MM/YYYY')
+      return moment(this.modelValue).format('DD/MM/YYYY') === 'Invalid date' ? null : moment(this.modelValue).format('DD/MM/YYYY')
     },
     internalValueIsAFullDate(){
-      return this.isFullDate(this.internalValue)
+      return this.isAValidDate(this.internalValue)
     },
     timeDifference(){
       if(!this.customReferenceDate){
@@ -9176,11 +9176,11 @@ var script = {
     }
   },
   methods: {
-    isFullDate(payload){
+    isAValidDate(payload){
       return /\d{2}\/\d{2}\/\d{4}/.test(payload) && moment(payload).isValid()
     },
     updateInput(event) {
-      if (this.isFullDate(event.target.value)) {
+      if (this.isAValidDate(event.target.value)) {
         this.$emit("update:modelValue", moment(event.target.value).format());
       }
     }
@@ -9240,7 +9240,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
         createVNode(_component_BaseShowLabel, {
           label: $props.label,
           "model-value": $options.cDisplayedValueWhenNotEditionMode,
-          "additional-information": this.displayTimeDifference ? $options.timeDifference : null
+          "additional-information": this.displayTimeDifference && $options.timeDifference !== 'Invalid date' ? $options.timeDifference : null
         }, null, 8 /* PROPS */, ["label", "model-value", "additional-information"])
       ]))
 }

@@ -8569,7 +8569,7 @@ script$5.render = render$5;
 script$5.__file = "src/components/BaseTable/BaseContentTable.vue";
 
 var script$4 = {
-  name: "BaseShowEditInput",
+  name: "BaseShowEditInputButton",
   props: {
     name: {
       type: String,
