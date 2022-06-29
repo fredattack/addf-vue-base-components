@@ -65,6 +65,7 @@ export default {
       default: 'name'
     },
     modelValue: {type: Object, required: false, default: null},
+    taggable: {type: String, required: false, default: null},
     defaultAjax: {type: Object, required: false, default() { return {}}},
     url: {},
     name: {},
@@ -73,7 +74,7 @@ export default {
     labelClass:{ type: String, required: false, default:'' },
     fullModelResponse:{ type: Boolean, required: false, default:false },
   },
-  emits: ['update:modelValue'],
+  emits: ['update:modelValue', 'update:stringValue', 'workSelect', 'selected:value'],
   data() {
     return {
       options: [],
@@ -85,12 +86,14 @@ export default {
     defaultValue(newValue) {
       if (newValue != null && newValue !== '') {
         if(this.fullModelResponse){
+          console.log('nullify stringValue')
           this.$emit('update:modelValue', newValue);
           this.$emit('workSelect',newValue);
 
         }else{
-        this.$emit('update:modelValue', newValue[this.trackBy]);
-          this.$emit('selected:value',newValue[this.trackBy]);
+          console.log('nullify stringValue')
+          this.$emit('update:modelValue', newValue[this.trackBy]);
+          this.$emit('selected:value', newValue[this.trackBy]);
         }
       }
     },
@@ -113,8 +116,14 @@ export default {
               this.options = response.data
             })
       }
+      if(this.taggable && keyword && this.options.length < 1){
+        const tag = {}
+        tag[this.trackBy] = `CUS-${keyword.substring(0, 6).toUpperCase()}`
+        tag[this.attributeLabel] = keyword
+        tag['custom'] = true
+        this.options[0] = tag
+      }
     },
-
   },
 }
 </script>

@@ -11,7 +11,7 @@
     v-model="internalValue"
     @input="updateInput"
     :id="name"
-    :class="[ internalValueIsAFullDate ? 'focus:border-green-300 focus:ring-green-300' : 'focus:border-red-300 focus:ring-red-300', 'border-gray-400 focus:ring-1', cInputClass]"
+    :class="[ internalValueIsAValidDate ? 'focus:border-green-300 focus:ring-green-300' : 'focus:border-red-300 focus:ring-red-300', 'border-gray-400 focus:ring-1', cInputClass]"
     :placeholder="placeholder"
     v-mask="mask"
     />
@@ -22,19 +22,17 @@
   </div>
   <div v-else class='mt-3'>
       <BaseShowLabel :label="label"
-                     :model-value="cDisplayedValueWhenNotEditionMode"
+                     :model-value="internalValue"
                      :additional-information="this.displayTimeDifference && timeDifference !== 'Invalid date' ? timeDifference : null"/>
   </div>
 </template>
 
 <script>
-import {mask} from 'vue-the-mask'
 import BaseEditLabel from '../BaseLabel/BaseEditLabel.vue'
 import BaseShowLabel from '../BaseLabel/BaseShowLabel.vue'
 import moment from 'moment'
 
 export default {
-  directives: {mask},
   name: 'BaseShowEditIsoDateInput',
   data() {
     return {
@@ -47,6 +45,11 @@ export default {
       type: String,
       required: false,
       default: null
+    },
+    customReferenceDateFormat: {
+      type: String,
+      required: false,
+      default: 'DD/MM/YYYY'
     },
     displayTimeDifference: {
       type: Boolean,
@@ -93,6 +96,11 @@ export default {
         return ['##/##/####']
       }
     },
+    dateFormat: {
+      type: String,
+      required: false,
+      default: 'DD/MM/YYYY'
+    },
     inputClass: {
       type: String,
       required: false,
@@ -116,27 +124,37 @@ export default {
       return this.inputClass === '' ? 'form-control' : this.inputClass
     },
     cDisplayedValueWhenNotEditionMode(){
-      return moment(this.modelValue).format('DD/MM/YYYY') === 'Invalid date' ? null : moment(this.modelValue).format('DD/MM/YYYY')
-    },
-    internalValueIsAFullDate(){
-      return this.isAValidDate(this.internalValue)
+      return this.internalValueIsAValidDate ? moment(this.internalValue).format(this.dateFormat) : null
     },
     timeDifference(){
-      if(!this.customReferenceDate){
-        return moment(this.modelValue).isValid()
-          ? moment(this.modelValue).lang('fr').from(moment().startOf('day'))
-          : null
+      if(this.customReferenceDate) {
+        if (this.internalValueIsAValidDate) {
+         return moment(this.internalValue, this.dateFormat).lang('fr').from(moment(this.customReferenceDate, this.customReferenceDateFormat))
+        }
+        return null
+      } else {
+        if (this.internalValueIsAValidDate) {
+          return moment(this.internalValue, this.dateFormat).lang('fr').from(moment().startOf('day'))
+        }
+        return null
       }
-      return moment(this.modelValue).isValid()
-        ? moment(this.modelValue).lang('fr').from(moment(this.customReferenceDate, 'DD/MM/YYYY'))
-        : null
+    },
+    internalValueIsAValidDate(){
+      let subValidation = moment(this.internalValue, this.dateFormat).format(this.dateFormat)
+      
+      if (subValidation === this.internalValue){
+        return moment(this.internalValue, this.dateFormat).isValid()
+      }
+      return false
     }
   },
   watch: {
     modelValue: {
       handler(newValue){
         if(newValue){
-          this.internalValue = moment(newValue).format('DD/MM/YYYY')
+          this.internalValue = moment(newValue).format(this.dateFormat)
+        }else{
+          this.internalValue = null
         }
       },
       immediate: true,
@@ -144,12 +162,9 @@ export default {
     }
   },
   methods: {
-    isAValidDate(payload){
-      return /\d{2}\/\d{2}\/\d{4}/.test(payload) && moment(payload).isValid()
-    },
     updateInput(event) {
-      if (this.isAValidDate(event.target.value)) {
-        this.$emit("update:modelValue", moment(event.target.value).format());
+      if (this.internalValueIsAValidDate) {
+        this.$emit("update:modelValue", moment(event.target.value, this.dateFormat).format());
       }
     }
   },

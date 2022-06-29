@@ -3,6 +3,7 @@ import ActivityTableRow from "./components/BaseActivityTable/ActivityTableRow.vu
 import BaseBankShowEditSelectSimple from "./components/BaseShowEditSelect/BaseShowEditFormSelectSimple/BaseBankShowEditSelectSimple.vue";
 import BaseBooleanRadioGroup from "./components/BaseRadioGroup/BaseBooleanRadioGroup.vue";
 import BaseButton from "./components/BaseButton/BaseButton.vue";
+import BaseThemeButton from "./components/BaseButton/BaseThemeButton.vue";
 import BaseButtonInput from "./components/BaseInput/BaseButtonInput.vue";
 import BaseCard from "./components/BaseCard/BaseCard.vue";
 import BaseCardSection from "./components/BaseCard/BaseCardSection.vue";
@@ -76,6 +77,10 @@ import BaseContentTable from "./components/BaseTable/BaseContentTable.vue";
 import BaseShowEditInputButton from "./components/BaseShowEditInput/BaseShowEditInputButton.vue";
 import BaseShowEditTreeInput from "./components/BaseShowEditInput/BaseShowEditTreeInput.vue";
 import BaseSimpleSearchInput from "./components/BaseInput/BaseSimpleSearchInput.vue";
+import BaseSimpleShowEditCheckbox from "./components/BaseShowEditCheckBox/BaseSimpleShowEditCheckbox.vue";
+import BaseShowEditCheckBox from './components/BaseShowEditCheckBox/BaseShowEditCheckBox.vue'
+import BaseShowEditIsoDateTimeInput from "./components/BaseShowEditInput/BaseShowEditIsoDateTimeInput.vue";
+import BaseShowEditBooleanRadioGroup from "./components/BaseRadioGroup/BaseShowEditBooleanRadioGroup.vue";
 
 import HelloWorld from './components/HelloWorld.vue'
 import BaseShowEditIsoDateInput from "./components/BaseShowEditInput/BaseShowEditIsoDateInput.vue";
@@ -103,10 +108,12 @@ export default {
     BaseBankShowEditSelectSimple,
     BaseBooleanRadioGroup,
     BaseButton,
+    BaseThemeButton,
     BaseButtonInput,
     BaseCard,
     BaseCardSection,
     BaseCheckBox,
+    BaseShowEditCheckBox,
     BaseCompanyShowEditSelectMultiple,
     BaseCompanyShowEditSelectSimple,
     BaseCountryShowEditSelectSimple,
@@ -161,6 +168,9 @@ export default {
     ToastUndoComponent,
     BaseSimpleSearchInput,
     BaseShowEditIsoDateInput,
+    BaseSimpleShowEditCheckbox,
+    BaseShowEditIsoDateTimeInput,
+    BaseShowEditBooleanRadioGroup,
 
     HelloWorld,
 }
