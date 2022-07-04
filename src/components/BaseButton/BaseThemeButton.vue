@@ -5,7 +5,7 @@
   >
     <font-awesome-icon
       v-if="icon"
-      :icon="['fal', icon]"
+      :icon="[iconPrefix, icon]"
     />
     <template v-if="title">
       <span class="capitalize-first">{{ title }}</span>
@@ -52,6 +52,11 @@ export default {
       required: false,
       default: 'pointer',
       validator: (val) =>  ['pointer', 'default', 'move', 'text', 'help', 'not-allowed', 'none', 'context-menu', 'grabbing'].indexOf(val) !== -1
+    },
+    iconPrefix: {
+      type: String,
+      required:false,
+      default: 'fal'
     },
     textColor: {type: String, required: false, default: 'white'}
   },

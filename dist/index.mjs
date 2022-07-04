@@ -809,6 +809,11 @@ var script$1k = {
       default: 'pointer',
       validator: (val) =>  ['pointer', 'default', 'move', 'text', 'help', 'not-allowed', 'none', 'context-menu', 'grabbing'].indexOf(val) !== -1
     },
+    iconPrefix: {
+      type: String,
+      required:false,
+      default: 'fal'
+    },
     textColor: {type: String, required: false, default: 'white'}
   },
   computed: {
@@ -841,7 +846,7 @@ function render$1k(_ctx, _cache, $props, $setup, $data, $options) {
     ($props.icon)
       ? (openBlock(), createBlock(_component_font_awesome_icon, {
           key: 0,
-          icon: ['fal', $props.icon]
+          icon: [$props.iconPrefix, $props.icon]
         }, null, 8 /* PROPS */, ["icon"]))
       : createCommentVNode("v-if", true),
     ($props.title)
@@ -8642,7 +8647,7 @@ script$9.render = render$9;
 script$9.__file = "src/components/BaseTable/BaseContentTable.vue";
 
 var script$8 = {
-  name: "BaseShowEditInput",
+  name: "BaseShowEditInputButton",
   props: {
     name: {
       type: String,
