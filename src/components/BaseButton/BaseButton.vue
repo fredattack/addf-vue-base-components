@@ -116,7 +116,7 @@ export default {
       if (this.isSoft) {
         return `btn-${this.color}-soft`
       }
-      return `btn-${this.color}`
+      return `btn-theme-${this.color}`
     },
     buttonSizeClass() {
       switch (this.size) {

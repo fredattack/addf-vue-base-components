@@ -5,7 +5,9 @@
         <BaseButton v-if='buttonBackLeft' icon='chevron-left' color='danger' :tooltip="$t('button.back')" class='mr-3'
                     @click="buttonBackLeftRoute !== undefined && buttonBackLeftRoute !== false ? $router.push( buttonBackLeftRoute ) : $router.go(-1)"/>
         <div class='flex-1'>
-          <h2 class="text-2xl font-bold capitalize-first">{{ title }}</h2>
+          <h2 class="text-2xl font-bold capitalize-first">{{ title }}
+            <font-awesome-icon v-if="icon" :icon="['fal', icon]" size="x"  :color="colorIcon" :class="classIcon"/>
+          </h2>
           <slot name="header"></slot>
         </div>
         <div>
@@ -34,6 +36,18 @@ export default {
       required: true
     },
     name: { // ne sais pas a quoi ca sert
+      type: String,
+      required: false
+    },
+    icon: {
+      type: String,
+      required: false
+    },
+    colorIcon: {
+      type: String,
+      required: false
+    },
+    classIcon: {
       type: String,
       required: false
     },
