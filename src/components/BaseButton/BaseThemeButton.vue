@@ -5,7 +5,7 @@
   >
     <font-awesome-icon
       v-if="icon"
-      :icon="['fas', icon]"
+      :icon="['fal', icon]"
     />
     <template v-if="title">
       <span class="capitalize-first">{{ title }}</span>
