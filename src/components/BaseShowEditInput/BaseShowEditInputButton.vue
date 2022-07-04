@@ -1,5 +1,4 @@
 <template>
-
   <div :class="cGroupClass">
     <template v-if='editionMode'>
       <div>
@@ -45,7 +44,7 @@
 
 <script>
 export default {
-  name: "BaseShowEditInput",
+  name: "BaseShowEditInputButton",
   props: {
     name: {
       type: String,
