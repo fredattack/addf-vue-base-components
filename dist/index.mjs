@@ -692,7 +692,7 @@ var script$1l = {
       if (this.isSoft) {
         return `btn-${this.color}-soft`
       }
-      return `btn-${this.color}`
+      return `btn-theme-${this.color}`
     },
     buttonSizeClass() {
       switch (this.size) {
@@ -809,6 +809,11 @@ var script$1k = {
       default: 'pointer',
       validator: (val) =>  ['pointer', 'default', 'move', 'text', 'help', 'not-allowed', 'none', 'context-menu', 'grabbing'].indexOf(val) !== -1
     },
+    iconPrefix: {
+      type: String,
+      required:false,
+      default: 'fal'
+    },
     textColor: {type: String, required: false, default: 'white'}
   },
   computed: {
@@ -838,10 +843,11 @@ function render$1k(_ctx, _cache, $props, $setup, $data, $options) {
   return (openBlock(), createElementBlock("button", {
     class: normalizeClass(["w-full flex justify-center py-2 px-2 border border-transparent rounded-md shadow-sm text-sm font-medium focus:outline-none justify-center items-center gap-x-3", $options.buttonClasses])
   }, [
+    createTextVNode(toDisplayString($props.iconPrefix) + " ", 1 /* TEXT */),
     ($props.icon)
       ? (openBlock(), createBlock(_component_font_awesome_icon, {
           key: 0,
-          icon: ['fas', $props.icon]
+          icon: [$props.iconPrefix, $props.icon]
         }, null, 8 /* PROPS */, ["icon"]))
       : createCommentVNode("v-if", true),
     ($props.title)

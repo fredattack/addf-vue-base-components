@@ -3,6 +3,7 @@
     class="w-full flex justify-center py-2 px-2 border border-transparent rounded-md shadow-sm text-sm font-medium focus:outline-none justify-center items-center gap-x-3"
     :class="buttonClasses"
   >
+    {{ iconPrefix }}
     <font-awesome-icon
       v-if="icon"
       :icon="[iconPrefix, icon]"
