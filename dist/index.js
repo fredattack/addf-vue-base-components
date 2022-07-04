@@ -862,7 +862,7 @@ function render$1k(_ctx, _cache, $props, $setup, $data, $options) {
     ($props.icon)
       ? (vue.openBlock(), vue.createBlock(_component_font_awesome_icon, {
           key: 0,
-          icon: ['fas', $props.icon]
+          icon: ['fal', $props.icon]
         }, null, 8 /* PROPS */, ["icon"]))
       : vue.createCommentVNode("v-if", true),
     ($props.title)
