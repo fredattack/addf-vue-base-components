@@ -5,7 +5,7 @@
   >
     <font-awesome-icon
       v-if="icon"
-      :icon="['fal', icon]"
+      :icon="[iconPrefix, icon]"
     />
     <template v-if="title">
       <span class="capitalize-first">{{ title }}</span>
@@ -53,6 +53,11 @@ export default {
       default: 'pointer',
       validator: (val) =>  ['pointer', 'default', 'move', 'text', 'help', 'not-allowed', 'none', 'context-menu', 'grabbing'].indexOf(val) !== -1
     },
+    iconPrefix: {
+      type: String,
+      required:false,
+      default: 'fal'
+    },
     textColor: {type: String, required: false, default: 'white'}
   },
   computed: {
@@ -68,9 +73,6 @@ export default {
     buttonClasses() {
       return [this.scopedClasses, this.buttonCursorClass, this.buttonTextColorClass, this.buttonBgColorClass].join(' ')
     }
-  },
-  mounted(){
-    console.log('pipo')
   }
 }
 </script>
