@@ -5,7 +5,7 @@
   >
     <font-awesome-icon
       v-if="icon"
-      :icon="['fas', icon]"
+      :icon="['fal', icon]"
     />
     <template v-if="title">
       <span class="capitalize-first">{{ title }}</span>
@@ -68,6 +68,9 @@ export default {
     buttonClasses() {
       return [this.scopedClasses, this.buttonCursorClass, this.buttonTextColorClass, this.buttonBgColorClass].join(' ')
     }
+  },
+  mounted(){
+    console.log('pipo')
   }
 }
 </script>

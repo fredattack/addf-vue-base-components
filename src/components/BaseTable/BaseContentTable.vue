@@ -51,7 +51,11 @@
                        :content="model[column.metadata.value]"
                        :color="model[column.metadata.color]"
             />
-
+            <BaseLabel v-if="column.type === 'icon' && model['condition']"
+                       :icon='column.metadata.icon'
+                       :content="''"
+                       :color="column.metadata.color"
+            />
             <ContentTableCell v-else :model="model" :column="column"/>
 
           </td>

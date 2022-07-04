@@ -43,12 +43,12 @@ var vueFilePond__default = /*#__PURE__*/_interopDefaultLegacy(vueFilePond);
 var FilePondPluginFileValidateType__default = /*#__PURE__*/_interopDefaultLegacy(FilePondPluginFileValidateType);
 var FilePondPluginImagePreview__default = /*#__PURE__*/_interopDefaultLegacy(FilePondPluginImagePreview);
 
-var script$1o = {
+var script$1t = {
   name: 'LogTableRow',
   props:{ values: {}},
 };
 
-function render$1o(_ctx, _cache, $props, $setup, $data, $options) {
+function render$1t(_ctx, _cache, $props, $setup, $data, $options) {
   return (vue.openBlock(), vue.createElementBlock("tr", null, [
     (vue.openBlock(true), vue.createElementBlock(vue.Fragment, null, vue.renderList($props.values, (value, key) => {
       return (vue.openBlock(), vue.createElementBlock("td", {
@@ -59,12 +59,12 @@ function render$1o(_ctx, _cache, $props, $setup, $data, $options) {
   ]))
 }
 
-script$1o.render = render$1o;
-script$1o.__file = "src/components/BaseActivityTable/LogTableRow.vue";
+script$1t.render = render$1t;
+script$1t.__file = "src/components/BaseActivityTable/LogTableRow.vue";
 
-var script$1n = {
+var script$1s = {
   name: 'LogTable',
-  components: {LogTableRow: script$1o},
+  components: {LogTableRow: script$1t},
   props:{ model: {}},
   computed:{
     listOfKeysThatAreDates(){
@@ -97,37 +97,37 @@ var script$1n = {
   }
 };
 
-const _hoisted_1$17 = { class: "overflow-x-auto" };
-const _hoisted_2$Y = { class: "table" };
-const _hoisted_3$G = {
+const _hoisted_1$1c = { class: "overflow-x-auto" };
+const _hoisted_2$10 = { class: "table" };
+const _hoisted_3$J = {
   class: "border-b-2 dark:border-dark-5 whitespace-nowrap",
   style: {"width":"30%"}
 };
-const _hoisted_4$r = {
+const _hoisted_4$u = {
   class: "border-b-2 dark:border-dark-5 whitespace-nowrap",
   style: {"width":"35%"}
 };
-const _hoisted_5$d = {
+const _hoisted_5$g = {
   class: "border-b-2 dark:border-dark-5 whitespace-nowrap",
   style: {"width":"35%"}
 };
-const _hoisted_6$7 = { key: 0 };
-const _hoisted_7$6 = { key: 1 };
+const _hoisted_6$a = { key: 0 };
+const _hoisted_7$9 = { key: 1 };
 
-function render$1n(_ctx, _cache, $props, $setup, $data, $options) {
+function render$1s(_ctx, _cache, $props, $setup, $data, $options) {
   const _component_LogTableRow = vue.resolveComponent("LogTableRow");
 
-  return (vue.openBlock(), vue.createElementBlock("div", _hoisted_1$17, [
-    vue.createElementVNode("table", _hoisted_2$Y, [
+  return (vue.openBlock(), vue.createElementBlock("div", _hoisted_1$1c, [
+    vue.createElementVNode("table", _hoisted_2$10, [
       vue.createElementVNode("thead", null, [
         vue.createElementVNode("tr", null, [
-          vue.createElementVNode("th", _hoisted_3$G, vue.toDisplayString(_ctx.$t('global.value_name')), 1 /* TEXT */),
-          vue.createElementVNode("th", _hoisted_4$r, vue.toDisplayString(_ctx.$t('global.old_value')), 1 /* TEXT */),
-          vue.createElementVNode("th", _hoisted_5$d, vue.toDisplayString(_ctx.$t('global.new_value')), 1 /* TEXT */)
+          vue.createElementVNode("th", _hoisted_3$J, vue.toDisplayString(_ctx.$t('global.value_name')), 1 /* TEXT */),
+          vue.createElementVNode("th", _hoisted_4$u, vue.toDisplayString(_ctx.$t('global.old_value')), 1 /* TEXT */),
+          vue.createElementVNode("th", _hoisted_5$g, vue.toDisplayString(_ctx.$t('global.new_value')), 1 /* TEXT */)
         ])
       ]),
       ($props.model.old)
-        ? (vue.openBlock(), vue.createElementBlock("tbody", _hoisted_6$7, [
+        ? (vue.openBlock(), vue.createElementBlock("tbody", _hoisted_6$a, [
             (vue.openBlock(true), vue.createElementBlock(vue.Fragment, null, vue.renderList($options.computedRowsWhenOld, (row, index) => {
               return (vue.openBlock(), vue.createBlock(_component_LogTableRow, {
                 key: index,
@@ -135,7 +135,7 @@ function render$1n(_ctx, _cache, $props, $setup, $data, $options) {
               }, null, 8 /* PROPS */, ["values"]))
             }), 128 /* KEYED_FRAGMENT */))
           ]))
-        : (vue.openBlock(), vue.createElementBlock("tbody", _hoisted_7$6, [
+        : (vue.openBlock(), vue.createElementBlock("tbody", _hoisted_7$9, [
             (vue.openBlock(true), vue.createElementBlock(vue.Fragment, null, vue.renderList($options.computedRowsWhenNoOld, (row, index) => {
               return (vue.openBlock(), vue.createBlock(_component_LogTableRow, {
                 key: index,
@@ -147,12 +147,12 @@ function render$1n(_ctx, _cache, $props, $setup, $data, $options) {
   ]))
 }
 
-script$1n.render = render$1n;
-script$1n.__file = "src/components/BaseActivityTable/LogTable.vue";
+script$1s.render = render$1s;
+script$1s.__file = "src/components/BaseActivityTable/LogTable.vue";
 
-var script$1m = {
+var script$1r = {
   name: 'ActivityTableRow',
-  components: {LogTable: script$1n},
+  components: {LogTable: script$1s},
   props:{
     activity: {type: Object, required: true },
     indexValue: {}},
@@ -180,12 +180,12 @@ var script$1m = {
   },
 };
 
-const _hoisted_1$16 = {
+const _hoisted_1$1b = {
   colspan: "4",
   style: {"padding":"0"}
 };
 
-function render$1m(_ctx, _cache, $props, $setup, $data, $options) {
+function render$1r(_ctx, _cache, $props, $setup, $data, $options) {
   const _component_BaseButton = vue.resolveComponent("BaseButton");
   const _component_LogTable = vue.resolveComponent("LogTable");
 
@@ -209,7 +209,7 @@ function render$1m(_ctx, _cache, $props, $setup, $data, $options) {
           key: 0,
           class: vue.normalizeClass($options.trClass)
         }, [
-          vue.createElementVNode("td", _hoisted_1$16, [
+          vue.createElementVNode("td", _hoisted_1$1b, [
             vue.createVNode(_component_LogTable, {
               model: $props.activity.properties
             }, null, 8 /* PROPS */, ["model"])
@@ -219,12 +219,12 @@ function render$1m(_ctx, _cache, $props, $setup, $data, $options) {
   ], 64 /* STABLE_FRAGMENT */))
 }
 
-script$1m.render = render$1m;
-script$1m.__file = "src/components/BaseActivityTable/ActivityTableRow.vue";
+script$1r.render = render$1r;
+script$1r.__file = "src/components/BaseActivityTable/ActivityTableRow.vue";
 
-var script$1l = {
+var script$1q = {
   name: 'ActivityTable',
-  components: {ActivityTableRow: script$1m},
+  components: {ActivityTableRow: script$1r},
   props:{ activities: {type: Object, required: true} },
   data() {
     return {
@@ -233,14 +233,14 @@ var script$1l = {
   }
 };
 
-const _hoisted_1$15 = { class: "overflow-x-auto" };
-const _hoisted_2$X = { class: "table" };
+const _hoisted_1$1a = { class: "overflow-x-auto" };
+const _hoisted_2$$ = { class: "table" };
 
-function render$1l(_ctx, _cache, $props, $setup, $data, $options) {
+function render$1q(_ctx, _cache, $props, $setup, $data, $options) {
   const _component_ActivityTableRow = vue.resolveComponent("ActivityTableRow");
 
-  return (vue.openBlock(), vue.createElementBlock("div", _hoisted_1$15, [
-    vue.createElementVNode("table", _hoisted_2$X, [
+  return (vue.openBlock(), vue.createElementBlock("div", _hoisted_1$1a, [
+    vue.createElementVNode("table", _hoisted_2$$, [
       vue.createElementVNode("thead", null, [
         vue.createElementVNode("tr", null, [
           (vue.openBlock(true), vue.createElementBlock(vue.Fragment, null, vue.renderList($data.headers, (header, index) => {
@@ -264,10 +264,10 @@ function render$1l(_ctx, _cache, $props, $setup, $data, $options) {
   ]))
 }
 
-script$1l.render = render$1l;
-script$1l.__file = "src/components/BaseActivityTable/ActivityTable.vue";
+script$1q.render = render$1q;
+script$1q.__file = "src/components/BaseActivityTable/ActivityTable.vue";
 
-var script$1k = {
+var script$1p = {
   name: 'BaseShowLabel',
   props: {
     additionalInformation: {
@@ -304,22 +304,22 @@ var script$1k = {
 
 };
 
-const _hoisted_1$14 = {
+const _hoisted_1$19 = {
   key: 1,
   class: "flex"
 };
-const _hoisted_2$W = { class: "capitalize-first" };
-const _hoisted_3$F = {
+const _hoisted_2$_ = { class: "capitalize-first" };
+const _hoisted_3$I = {
   key: 2,
   class: "flex"
 };
-const _hoisted_4$q = { class: "capitalize-first" };
-const _hoisted_5$c = {
+const _hoisted_4$t = { class: "capitalize-first" };
+const _hoisted_5$f = {
   key: 0,
   class: "ml-2"
 };
 
-function render$1k(_ctx, _cache, $props, $setup, $data, $options) {
+function render$1p(_ctx, _cache, $props, $setup, $data, $options) {
   return (vue.openBlock(), vue.createElementBlock("div", null, [
     ($props.label)
       ? (vue.openBlock(), vue.createElementBlock("div", {
@@ -328,22 +328,22 @@ function render$1k(_ctx, _cache, $props, $setup, $data, $options) {
         }, vue.toDisplayString($props.label), 3 /* TEXT, CLASS */))
       : vue.createCommentVNode("v-if", true),
     ($props.hideModelValue)
-      ? (vue.openBlock(), vue.createElementBlock("div", _hoisted_1$14, [
-          vue.createElementVNode("dd", _hoisted_2$W, vue.toDisplayString($props.modelValue === null || $props.modelValue === '' ? '-' : "**********"), 1 /* TEXT */)
+      ? (vue.openBlock(), vue.createElementBlock("div", _hoisted_1$19, [
+          vue.createElementVNode("dd", _hoisted_2$_, vue.toDisplayString($props.modelValue === null || $props.modelValue === '' ? '-' : "**********"), 1 /* TEXT */)
         ]))
-      : (vue.openBlock(), vue.createElementBlock("div", _hoisted_3$F, [
-          vue.createElementVNode("dd", _hoisted_4$q, vue.toDisplayString($props.modelValue === null || $props.modelValue === '' ? '-' : $props.modelValue), 1 /* TEXT */),
+      : (vue.openBlock(), vue.createElementBlock("div", _hoisted_3$I, [
+          vue.createElementVNode("dd", _hoisted_4$t, vue.toDisplayString($props.modelValue === null || $props.modelValue === '' ? '-' : $props.modelValue), 1 /* TEXT */),
           ($props.additionalInformation)
-            ? (vue.openBlock(), vue.createElementBlock("dd", _hoisted_5$c, "(" + vue.toDisplayString($props.additionalInformation) + ")", 1 /* TEXT */))
+            ? (vue.openBlock(), vue.createElementBlock("dd", _hoisted_5$f, "(" + vue.toDisplayString($props.additionalInformation) + ")", 1 /* TEXT */))
             : vue.createCommentVNode("v-if", true)
         ]))
   ]))
 }
 
-script$1k.render = render$1k;
-script$1k.__file = "src/components/BaseLabel/BaseShowLabel.vue";
+script$1p.render = render$1p;
+script$1p.__file = "src/components/BaseLabel/BaseShowLabel.vue";
 
-var script$1j = {
+var script$1o = {
   name: 'BaseEditLabel',
   props: {
     label: {
@@ -363,32 +363,32 @@ var script$1j = {
   },
 };
 
-const _hoisted_1$13 = {
+const _hoisted_1$18 = {
   key: 0,
   class: "text-sm text-gray-500 capitalize-first"
 };
-const _hoisted_2$V = {
+const _hoisted_2$Z = {
   key: 0,
   class: "text-red-500 capitalize"
 };
 
-function render$1j(_ctx, _cache, $props, $setup, $data, $options) {
+function render$1o(_ctx, _cache, $props, $setup, $data, $options) {
   return ($props.label)
-    ? (vue.openBlock(), vue.createElementBlock("div", _hoisted_1$13, [
+    ? (vue.openBlock(), vue.createElementBlock("div", _hoisted_1$18, [
         vue.createTextVNode(vue.toDisplayString($props.label) + " ", 1 /* TEXT */),
         ($props.required)
-          ? (vue.openBlock(), vue.createElementBlock("span", _hoisted_2$V, "*"))
+          ? (vue.openBlock(), vue.createElementBlock("span", _hoisted_2$Z, "*"))
           : vue.createCommentVNode("v-if", true)
       ]))
     : vue.createCommentVNode("v-if", true)
 }
 
-script$1j.render = render$1j;
-script$1j.__file = "src/components/BaseLabel/BaseEditLabel.vue";
+script$1o.render = render$1o;
+script$1o.__file = "src/components/BaseLabel/BaseEditLabel.vue";
 
-var script$1i = {
+var script$1n = {
   name: 'BaseBankShowEditSelectSimple',
-  components: { multiselect: multiselect__default["default"], BaseShowLabel: script$1k, BaseEditLabel: script$1j},
+  components: { multiselect: multiselect__default["default"], BaseShowLabel: script$1p, BaseEditLabel: script$1o},
   props: {
     editionMode: {
       type: Boolean,
@@ -465,22 +465,22 @@ var script$1i = {
   }
 };
 
-const _hoisted_1$12 = {
+const _hoisted_1$17 = {
   key: 0,
   class: "mt-3"
 };
-const _hoisted_2$U = {
+const _hoisted_2$Y = {
   key: 1,
   class: "mt-3"
 };
 
-function render$1i(_ctx, _cache, $props, $setup, $data, $options) {
+function render$1n(_ctx, _cache, $props, $setup, $data, $options) {
   const _component_BaseEditLabel = vue.resolveComponent("BaseEditLabel");
   const _component_multiselect = vue.resolveComponent("multiselect");
   const _component_BaseShowLabel = vue.resolveComponent("BaseShowLabel");
 
   return ($props.editionMode)
-    ? (vue.openBlock(), vue.createElementBlock("div", _hoisted_1$12, [
+    ? (vue.openBlock(), vue.createElementBlock("div", _hoisted_1$17, [
         vue.createVNode(_component_BaseEditLabel, {
           label: $props.label ? $props.label : _ctx.$t('attributes.bank_id'),
           required: $props.required
@@ -507,7 +507,7 @@ function render$1i(_ctx, _cache, $props, $setup, $data, $options) {
             }), 128 /* KEYED_FRAGMENT */))
           : vue.createCommentVNode("v-if", true)
       ]))
-    : (vue.openBlock(), vue.createElementBlock("div", _hoisted_2$U, [
+    : (vue.openBlock(), vue.createElementBlock("div", _hoisted_2$Y, [
         vue.createVNode(_component_BaseShowLabel, {
           label: $props.label ? $props.label : _ctx.$t('attributes.bank_id'),
           "model-value": $options.cDisplayedValueWhenNotEditionMode
@@ -515,10 +515,10 @@ function render$1i(_ctx, _cache, $props, $setup, $data, $options) {
       ]))
 }
 
-script$1i.render = render$1i;
-script$1i.__file = "src/components/BaseShowEditSelect/BaseShowEditFormSelectSimple/BaseBankShowEditSelectSimple.vue";
+script$1n.render = render$1n;
+script$1n.__file = "src/components/BaseShowEditSelect/BaseShowEditFormSelectSimple/BaseBankShowEditSelectSimple.vue";
 
-var script$1h = {
+var script$1m = {
   name: 'BaseBooleanRadioGroup',
   emits: ['change'],
   data() {
@@ -550,28 +550,28 @@ var script$1h = {
   },
 };
 
-const _hoisted_1$11 = {
+const _hoisted_1$16 = {
   key: 0,
   class: "form-label capitalize-first"
 };
-const _hoisted_2$T = {
+const _hoisted_2$X = {
   key: 0,
   class: "text-red-600"
 };
-const _hoisted_3$E = ["id", "name", "value", "disabled"];
-const _hoisted_4$p = ["for"];
+const _hoisted_3$H = ["id", "name", "value", "disabled"];
+const _hoisted_4$s = ["for"];
 
-function render$1h(_ctx, _cache, $props, $setup, $data, $options) {
+function render$1m(_ctx, _cache, $props, $setup, $data, $options) {
   return (vue.openBlock(), vue.createElementBlock(vue.Fragment, null, [
     (vue.openBlock(), vue.createElementBlock("div", {
       class: "mt-3",
       key: $data.value
     }, [
       ($props.label)
-        ? (vue.openBlock(), vue.createElementBlock("label", _hoisted_1$11, [
+        ? (vue.openBlock(), vue.createElementBlock("label", _hoisted_1$16, [
             vue.createTextVNode(vue.toDisplayString($props.label) + " ", 1 /* TEXT */),
             ($props.label && $props.required)
-              ? (vue.openBlock(), vue.createElementBlock("span", _hoisted_2$T, "*"))
+              ? (vue.openBlock(), vue.createElementBlock("span", _hoisted_2$X, "*"))
               : vue.createCommentVNode("v-if", true)
           ]))
         : vue.createCommentVNode("v-if", true),
@@ -591,13 +591,13 @@ function render$1h(_ctx, _cache, $props, $setup, $data, $options) {
               value: val,
               "onUpdate:modelValue": _cache[0] || (_cache[0] = $event => (($data.value) = $event)),
               disabled: $props.disabled
-            }, null, 8 /* PROPS */, _hoisted_3$E), [
+            }, null, 8 /* PROPS */, _hoisted_3$H), [
               [vue.vModelRadio, $data.value]
             ]),
             vue.createElementVNode("label", {
               class: "form-check-label capitalize-first",
               for: `${$props.name}-${key}-${$props.extra_id}`
-            }, vue.toDisplayString(_ctx.$t(`enums.yes_no.${key}`)), 9 /* TEXT, PROPS */, _hoisted_4$p)
+            }, vue.toDisplayString(_ctx.$t(`enums.yes_no.${key}`)), 9 /* TEXT, PROPS */, _hoisted_4$s)
           ]))
         }), 128 /* KEYED_FRAGMENT */))
       ], 2 /* CLASS */)
@@ -613,10 +613,10 @@ function render$1h(_ctx, _cache, $props, $setup, $data, $options) {
   ], 64 /* STABLE_FRAGMENT */))
 }
 
-script$1h.render = render$1h;
-script$1h.__file = "src/components/BaseRadioGroup/BaseBooleanRadioGroup.vue";
+script$1m.render = render$1m;
+script$1m.__file = "src/components/BaseRadioGroup/BaseBooleanRadioGroup.vue";
 
-var script$1g = {
+var script$1l = {
   name: 'BaseButton',
   props: {
     tooltip: {
@@ -736,19 +736,19 @@ var script$1g = {
 
 };
 
-const _hoisted_1$10 = { key: 0 };
-const _hoisted_2$S = {
+const _hoisted_1$15 = { key: 0 };
+const _hoisted_2$W = {
   key: 1,
   class: "inline-block capitalize-first"
 };
-const _hoisted_3$D = { key: 1 };
+const _hoisted_3$G = { key: 1 };
 
-function render$1g(_ctx, _cache, $props, $setup, $data, $options) {
+function render$1l(_ctx, _cache, $props, $setup, $data, $options) {
   const _component_font_awesome_icon = vue.resolveComponent("font-awesome-icon");
   const _component_Tippy = vue.resolveComponent("Tippy");
 
   return (!$props.tooltip)
-    ? (vue.openBlock(), vue.createElementBlock("div", _hoisted_1$10, [
+    ? (vue.openBlock(), vue.createElementBlock("div", _hoisted_1$15, [
         vue.createElementVNode("button", {
           type: "button",
           class: vue.normalizeClass(["btn flex space-x-2", $options.buttonClasses]),
@@ -761,11 +761,11 @@ function render$1g(_ctx, _cache, $props, $setup, $data, $options) {
               }, null, 8 /* PROPS */, ["icon"]))
             : vue.createCommentVNode("v-if", true),
           (this.title)
-            ? (vue.openBlock(), vue.createElementBlock("span", _hoisted_2$S, vue.toDisplayString(this.title), 1 /* TEXT */))
+            ? (vue.openBlock(), vue.createElementBlock("span", _hoisted_2$W, vue.toDisplayString(this.title), 1 /* TEXT */))
             : vue.createCommentVNode("v-if", true)
         ], 2 /* CLASS */)
       ]))
-    : (vue.openBlock(), vue.createElementBlock("div", _hoisted_3$D, [
+    : (vue.openBlock(), vue.createElementBlock("div", _hoisted_3$G, [
         vue.createVNode(_component_Tippy, {
           tag: "a",
           href: "javascript:;",
@@ -786,11 +786,95 @@ function render$1g(_ctx, _cache, $props, $setup, $data, $options) {
       ]))
 }
 
-script$1g.render = render$1g;
-script$1g.__scopeId = "data-v-d498a3a2";
-script$1g.__file = "src/components/BaseButton/BaseButton.vue";
+script$1l.render = render$1l;
+script$1l.__scopeId = "data-v-d498a3a2";
+script$1l.__file = "src/components/BaseButton/BaseButton.vue";
 
-var script$1f = {
+var script$1k = {
+  name: "BaseThemeButton",
+  props: {
+    title: {
+      type: String,
+      required: false,
+      default: null,
+    },
+    icon: {
+      type: String,
+      required: false,
+      default: null,
+    },
+    color: {
+      type: String,
+      required: false,
+      default: 'primary',
+      validator: function(value) {
+        const possibleTypes = ['', 'primary', 'secondary', 'success', 'warning', 'danger', 'dark', 'info'];
+        return possibleTypes.indexOf(value) !== -1
+      }
+    },
+    scopedClasses: {
+      type: String,
+      default:''
+    },
+    type: {
+      type: String,
+      default: 'button',
+      required: false,
+      validator: function(value) {
+        return ['button','submit'].indexOf(value) !== -1
+      }
+    },
+    cursor: {
+      type: String,
+      required: false,
+      default: 'pointer',
+      validator: (val) =>  ['pointer', 'default', 'move', 'text', 'help', 'not-allowed', 'none', 'context-menu', 'grabbing'].indexOf(val) !== -1
+    },
+    textColor: {type: String, required: false, default: 'white'}
+  },
+  computed: {
+    buttonTextColorClass(){
+      return this.textColor ? `text-${this.textColor}` : ''
+    },
+    buttonBgColorClass(){
+      return this.color ? `bg-theme-${this.color}` : ''
+    },
+    buttonCursorClass(){
+      return `cursor-${this.cursor}`
+    },
+    buttonClasses() {
+      return [this.scopedClasses, this.buttonCursorClass, this.buttonTextColorClass, this.buttonBgColorClass].join(' ')
+    }
+  }
+};
+
+const _hoisted_1$14 = {
+  key: 1,
+  class: "capitalize-first"
+};
+
+function render$1k(_ctx, _cache, $props, $setup, $data, $options) {
+  const _component_font_awesome_icon = vue.resolveComponent("font-awesome-icon");
+
+  return (vue.openBlock(), vue.createElementBlock("button", {
+    class: vue.normalizeClass(["w-full flex justify-center py-2 px-2 border border-transparent rounded-md shadow-sm text-sm font-medium focus:outline-none justify-center items-center gap-x-3", $options.buttonClasses])
+  }, [
+    ($props.icon)
+      ? (vue.openBlock(), vue.createBlock(_component_font_awesome_icon, {
+          key: 0,
+          icon: ['fas', $props.icon]
+        }, null, 8 /* PROPS */, ["icon"]))
+      : vue.createCommentVNode("v-if", true),
+    ($props.title)
+      ? (vue.openBlock(), vue.createElementBlock("span", _hoisted_1$14, vue.toDisplayString($props.title), 1 /* TEXT */))
+      : vue.createCommentVNode("v-if", true)
+  ], 2 /* CLASS */))
+}
+
+script$1k.render = render$1k;
+script$1k.__file = "src/components/BaseButton/BaseThemeButton.vue";
+
+var script$1j = {
   name: 'BaseButtonInput',
   props: {
     isClickable: { type: Boolean, required: false, default: false},
@@ -850,19 +934,19 @@ var script$1f = {
   },
 };
 
-const _hoisted_1$$ = { class: "mt-3" };
-const _hoisted_2$R = ["for"];
-const _hoisted_3$C = {
+const _hoisted_1$13 = { class: "mt-3" };
+const _hoisted_2$V = ["for"];
+const _hoisted_3$F = {
   key: 0,
   class: "text-red-600"
 };
-const _hoisted_4$o = { class: "relative" };
-const _hoisted_5$b = ["name", "type", "min", "max", "value", "id", "placeholder", "disabled", "required"];
+const _hoisted_4$r = { class: "relative" };
+const _hoisted_5$e = ["name", "type", "min", "max", "value", "id", "placeholder", "disabled", "required"];
 
-function render$1f(_ctx, _cache, $props, $setup, $data, $options) {
+function render$1j(_ctx, _cache, $props, $setup, $data, $options) {
   const _component_font_awesome_icon = vue.resolveComponent("font-awesome-icon");
 
-  return (vue.openBlock(), vue.createElementBlock("div", _hoisted_1$$, [
+  return (vue.openBlock(), vue.createElementBlock("div", _hoisted_1$13, [
     ($props.label)
       ? (vue.openBlock(), vue.createElementBlock("label", {
           key: 0,
@@ -871,11 +955,11 @@ function render$1f(_ctx, _cache, $props, $setup, $data, $options) {
         }, [
           vue.createTextVNode(vue.toDisplayString($props.label) + " ", 1 /* TEXT */),
           (_ctx.isRequired)
-            ? (vue.openBlock(), vue.createElementBlock("span", _hoisted_3$C, "*"))
+            ? (vue.openBlock(), vue.createElementBlock("span", _hoisted_3$F, "*"))
             : vue.createCommentVNode("v-if", true)
-        ], 8 /* PROPS */, _hoisted_2$R))
+        ], 8 /* PROPS */, _hoisted_2$V))
       : vue.createCommentVNode("v-if", true),
-    vue.createElementVNode("div", _hoisted_4$o, [
+    vue.createElementVNode("div", _hoisted_4$r, [
       vue.withDirectives(vue.createElementVNode("input", {
         name: $props.name,
         type: $props.type,
@@ -888,7 +972,7 @@ function render$1f(_ctx, _cache, $props, $setup, $data, $options) {
         placeholder: $props.placeholder,
         disabled: $props.disabled,
         required: $props.required
-      }, null, 10 /* CLASS, PROPS */, _hoisted_5$b), [
+      }, null, 10 /* CLASS, PROPS */, _hoisted_5$e), [
         [vue.vModelDynamic, $data.newValue]
       ]),
       ($props.isClickable)
@@ -917,10 +1001,10 @@ function render$1f(_ctx, _cache, $props, $setup, $data, $options) {
   ]))
 }
 
-script$1f.render = render$1f;
-script$1f.__file = "src/components/BaseInput/BaseButtonInput.vue";
+script$1j.render = render$1j;
+script$1j.__file = "src/components/BaseInput/BaseButtonInput.vue";
 
-var script$1e = {
+var script$1i = {
   name: 'BaseCard',
   props: {
     headerTitle: {
@@ -930,35 +1014,35 @@ var script$1e = {
   }
 };
 
-const _hoisted_1$_ = { class: "box lg:mt-5" };
-const _hoisted_2$Q = {
+const _hoisted_1$12 = { class: "box lg:mt-5" };
+const _hoisted_2$U = {
   key: 0,
   class: "flex items-center p-5 border-b border-gray-200 dark:border-dark-5"
 };
-const _hoisted_3$B = { class: "font-medium text-base mr-auto" };
-const _hoisted_4$n = { class: "p-5" };
-const _hoisted_5$a = { class: "flex justify-end mt-5" };
-const _hoisted_6$6 = { class: "text-right" };
+const _hoisted_3$E = { class: "font-medium text-base mr-auto" };
+const _hoisted_4$q = { class: "p-5" };
+const _hoisted_5$d = { class: "flex justify-end mt-5" };
+const _hoisted_6$9 = { class: "text-right" };
 
-function render$1e(_ctx, _cache, $props, $setup, $data, $options) {
+function render$1i(_ctx, _cache, $props, $setup, $data, $options) {
   return (vue.openBlock(), vue.createElementBlock("div", null, [
     vue.createCommentVNode(" les classes de taille doivent être dynamiques "),
-    vue.createElementVNode("div", _hoisted_1$_, [
+    vue.createElementVNode("div", _hoisted_1$12, [
       vue.createCommentVNode(" header attention faut que je vérifie quand je lui passe une icone aussi  "),
       (_ctx.$slots.header || ($props.headerTitle && $props.headerTitle.length))
-        ? (vue.openBlock(), vue.createElementBlock("header", _hoisted_2$Q, [
+        ? (vue.openBlock(), vue.createElementBlock("header", _hoisted_2$U, [
             vue.renderSlot(_ctx.$slots, "header", {}, () => [
-              vue.createElementVNode("h2", _hoisted_3$B, vue.toDisplayString($props.headerTitle), 1 /* TEXT */)
+              vue.createElementVNode("h2", _hoisted_3$E, vue.toDisplayString($props.headerTitle), 1 /* TEXT */)
             ])
           ]))
         : vue.createCommentVNode("v-if", true),
       vue.createCommentVNode(" settings "),
-      vue.createElementVNode("div", _hoisted_4$n, [
+      vue.createElementVNode("div", _hoisted_4$q, [
         vue.renderSlot(_ctx.$slots, "default")
       ]),
       vue.createCommentVNode(" actions "),
-      vue.createElementVNode("footer", _hoisted_5$a, [
-        vue.createElementVNode("menu", _hoisted_6$6, [
+      vue.createElementVNode("footer", _hoisted_5$d, [
+        vue.createElementVNode("menu", _hoisted_6$9, [
           vue.renderSlot(_ctx.$slots, "actions")
         ])
       ])
@@ -966,10 +1050,10 @@ function render$1e(_ctx, _cache, $props, $setup, $data, $options) {
   ]))
 }
 
-script$1e.render = render$1e;
-script$1e.__file = "src/components/BaseCard/BaseCard.vue";
+script$1i.render = render$1i;
+script$1i.__file = "src/components/BaseCard/BaseCard.vue";
 
-var script$1d = {
+var script$1h = {
   name: 'BaseCardSection',
   props: {
     sectionTitle: {
@@ -979,15 +1063,15 @@ var script$1d = {
   }
 };
 
-const _hoisted_1$Z = { key: 0 };
-const _hoisted_2$P = { class: "text-xl font-bold capitalize-first" };
+const _hoisted_1$11 = { key: 0 };
+const _hoisted_2$T = { class: "text-xl font-bold capitalize-first" };
 
-function render$1d(_ctx, _cache, $props, $setup, $data, $options) {
+function render$1h(_ctx, _cache, $props, $setup, $data, $options) {
   return (vue.openBlock(), vue.createElementBlock("section", null, [
     (_ctx.$slots.sectionTitle || ( $props.sectionTitle && $props.sectionTitle.length))
-      ? (vue.openBlock(), vue.createElementBlock("header", _hoisted_1$Z, [
+      ? (vue.openBlock(), vue.createElementBlock("header", _hoisted_1$11, [
           vue.renderSlot(_ctx.$slots, "sectionTitle", {}, () => [
-            vue.createElementVNode("h2", _hoisted_2$P, vue.toDisplayString($props.sectionTitle), 1 /* TEXT */)
+            vue.createElementVNode("h2", _hoisted_2$T, vue.toDisplayString($props.sectionTitle), 1 /* TEXT */)
           ])
         ]))
       : vue.createCommentVNode("v-if", true),
@@ -995,10 +1079,10 @@ function render$1d(_ctx, _cache, $props, $setup, $data, $options) {
   ]))
 }
 
-script$1d.render = render$1d;
-script$1d.__file = "src/components/BaseCard/BaseCardSection.vue";
+script$1h.render = render$1h;
+script$1h.__file = "src/components/BaseCard/BaseCardSection.vue";
 
-var script$1c = {
+var script$1g = {
   name: 'BaseCheckBox',
   props: {
     label: {
@@ -1044,28 +1128,28 @@ var script$1c = {
   }
 };
 
-const _hoisted_1$Y = { class: "mt-3" };
-const _hoisted_2$O = {
+const _hoisted_1$10 = { class: "mt-3" };
+const _hoisted_2$S = {
   key: 0,
   class: "form-label"
 };
-const _hoisted_3$A = {
+const _hoisted_3$D = {
   key: 1,
   class: "text-red-600"
 };
-const _hoisted_4$m = { class: "flex flex-col sm:flex-row mt-2" };
-const _hoisted_5$9 = ["id", "name", "disabled"];
+const _hoisted_4$p = { class: "flex flex-col sm:flex-row mt-2" };
+const _hoisted_5$c = ["id", "name", "disabled"];
 
-function render$1c(_ctx, _cache, $props, $setup, $data, $options) {
+function render$1g(_ctx, _cache, $props, $setup, $data, $options) {
   return (vue.openBlock(), vue.createElementBlock(vue.Fragment, null, [
-    vue.createElementVNode("div", _hoisted_1$Y, [
+    vue.createElementVNode("div", _hoisted_1$10, [
       ($props.label)
-        ? (vue.openBlock(), vue.createElementBlock("label", _hoisted_2$O, vue.toDisplayString($props.label), 1 /* TEXT */))
+        ? (vue.openBlock(), vue.createElementBlock("label", _hoisted_2$S, vue.toDisplayString($props.label), 1 /* TEXT */))
         : vue.createCommentVNode("v-if", true),
       ($props.label && $props.required)
-        ? (vue.openBlock(), vue.createElementBlock("span", _hoisted_3$A, " *"))
+        ? (vue.openBlock(), vue.createElementBlock("span", _hoisted_3$D, " *"))
         : vue.createCommentVNode("v-if", true),
-      vue.createElementVNode("div", _hoisted_4$m, [
+      vue.createElementVNode("div", _hoisted_4$p, [
         vue.withDirectives(vue.createElementVNode("input", {
           id: `checkbox-${$props.name}`,
           class: "form-check-input",
@@ -1073,7 +1157,7 @@ function render$1c(_ctx, _cache, $props, $setup, $data, $options) {
           name: $props.name,
           disabled: $props.disabled,
           "onUpdate:modelValue": _cache[0] || (_cache[0] = $event => (($data.newValue) = $event))
-        }, null, 8 /* PROPS */, _hoisted_5$9), [
+        }, null, 8 /* PROPS */, _hoisted_5$c), [
           [vue.vModelCheckbox, $data.newValue]
         ])
       ])
@@ -1089,10 +1173,10 @@ function render$1c(_ctx, _cache, $props, $setup, $data, $options) {
   ], 64 /* STABLE_FRAGMENT */))
 }
 
-script$1c.render = render$1c;
-script$1c.__file = "src/components/BaseCheckBox/BaseCheckBox.vue";
+script$1g.render = render$1g;
+script$1g.__file = "src/components/BaseCheckBox/BaseCheckBox.vue";
 
-var script$1b = {
+var script$1f = {
   name: 'BaseCompanyShowEditSelectMultiple',
   components: { multiselect: multiselect__default["default"] },
   props: {
@@ -1192,25 +1276,25 @@ var script$1b = {
   }
 };
 
-const _hoisted_1$X = {
+const _hoisted_1$$ = {
   key: 0,
   class: "mt-3"
 };
-const _hoisted_2$N = {
+const _hoisted_2$R = {
   key: 1,
   class: "mt-3 flex flex-col"
 };
-const _hoisted_3$z = { key: 0 };
-const _hoisted_4$l = /*#__PURE__*/vue.createTextVNode(/*#__PURE__*/vue.toDisplayString('-'));
+const _hoisted_3$C = { key: 0 };
+const _hoisted_4$o = /*#__PURE__*/vue.createTextVNode(/*#__PURE__*/vue.toDisplayString('-'));
 
-function render$1b(_ctx, _cache, $props, $setup, $data, $options) {
+function render$1f(_ctx, _cache, $props, $setup, $data, $options) {
   const _component_BaseEditLabel = vue.resolveComponent("BaseEditLabel");
   const _component_multiselect = vue.resolveComponent("multiselect");
   const _component_BaseShowLabel = vue.resolveComponent("BaseShowLabel");
   const _component_font_awesome_icon = vue.resolveComponent("font-awesome-icon");
 
   return ($props.editionMode)
-    ? (vue.openBlock(), vue.createElementBlock("div", _hoisted_1$X, [
+    ? (vue.openBlock(), vue.createElementBlock("div", _hoisted_1$$, [
         vue.createElementVNode("div", null, [
           vue.createVNode(_component_BaseEditLabel, {
             label: $props.label ? $props.label : _ctx.$t('attributes.companies'),
@@ -1243,13 +1327,13 @@ function render$1b(_ctx, _cache, $props, $setup, $data, $options) {
             }), 128 /* KEYED_FRAGMENT */))
           : vue.createCommentVNode("v-if", true)
       ]))
-    : (vue.openBlock(), vue.createElementBlock("div", _hoisted_2$N, [
+    : (vue.openBlock(), vue.createElementBlock("div", _hoisted_2$R, [
         vue.createVNode(_component_BaseShowLabel, {
           label: $props.label ? $props.label : _ctx.$t('attributes.companies'),
           required: $props.required
         }, null, 8 /* PROPS */, ["label", "required"]),
         ($props.metadata && $props.metadata.companies && $props.modelValue.length >= 1)
-          ? (vue.openBlock(), vue.createElementBlock("div", _hoisted_3$z, [
+          ? (vue.openBlock(), vue.createElementBlock("div", _hoisted_3$C, [
               (vue.openBlock(true), vue.createElementBlock(vue.Fragment, null, vue.renderList($props.modelValue, (item, index) => {
                 return (vue.openBlock(), vue.createElementBlock("span", {
                   class: "inline-block mr-3",
@@ -1264,15 +1348,15 @@ function render$1b(_ctx, _cache, $props, $setup, $data, $options) {
               }), 128 /* KEYED_FRAGMENT */))
             ]))
           : (vue.openBlock(), vue.createElementBlock(vue.Fragment, { key: 1 }, [
-              _hoisted_4$l
+              _hoisted_4$o
             ], 2112 /* STABLE_FRAGMENT, DEV_ROOT_FRAGMENT */))
       ]))
 }
 
-script$1b.render = render$1b;
-script$1b.__file = "src/components/BaseShowEditSelect/BaseShowEditFormSelectMultiple/BaseCompanyShowEditSelectMultiple.vue";
+script$1f.render = render$1f;
+script$1f.__file = "src/components/BaseShowEditSelect/BaseShowEditFormSelectMultiple/BaseCompanyShowEditSelectMultiple.vue";
 
-var script$1a = {
+var script$1e = {
   name: 'BaseCompanyShowEditSelectSimple',
   components: { multiselect: multiselect__default["default"] },
   props: {
@@ -1352,22 +1436,22 @@ var script$1a = {
   }
 };
 
-const _hoisted_1$W = {
+const _hoisted_1$_ = {
   key: 0,
   class: "mt-3"
 };
-const _hoisted_2$M = {
+const _hoisted_2$Q = {
   key: 1,
   class: "mt-3"
 };
 
-function render$1a(_ctx, _cache, $props, $setup, $data, $options) {
+function render$1e(_ctx, _cache, $props, $setup, $data, $options) {
   const _component_BaseEditLabel = vue.resolveComponent("BaseEditLabel");
   const _component_multiselect = vue.resolveComponent("multiselect");
   const _component_BaseShowLabel = vue.resolveComponent("BaseShowLabel");
 
   return ($props.editionMode)
-    ? (vue.openBlock(), vue.createElementBlock("div", _hoisted_1$W, [
+    ? (vue.openBlock(), vue.createElementBlock("div", _hoisted_1$_, [
         vue.createVNode(_component_BaseEditLabel, {
           label: $props.label ? $props.label : _ctx.$t('attributes.company'),
           required: $props.required
@@ -1394,7 +1478,7 @@ function render$1a(_ctx, _cache, $props, $setup, $data, $options) {
             }), 128 /* KEYED_FRAGMENT */))
           : vue.createCommentVNode("v-if", true)
       ]))
-    : (vue.openBlock(), vue.createElementBlock("div", _hoisted_2$M, [
+    : (vue.openBlock(), vue.createElementBlock("div", _hoisted_2$Q, [
         vue.createVNode(_component_BaseShowLabel, {
           label: $props.label ? $props.label : _ctx.$t('attributes.company'),
           "model-value": $options.cDisplayedValueWhenNotEditionMode
@@ -1402,10 +1486,10 @@ function render$1a(_ctx, _cache, $props, $setup, $data, $options) {
       ]))
 }
 
-script$1a.render = render$1a;
-script$1a.__file = "src/components/BaseShowEditSelect/BaseShowEditFormSelectSimple/BaseCompanyShowEditSelectSimple.vue";
+script$1e.render = render$1e;
+script$1e.__file = "src/components/BaseShowEditSelect/BaseShowEditFormSelectSimple/BaseCompanyShowEditSelectSimple.vue";
 
-var script$19 = {
+var script$1d = {
   name: 'BaseCountryShowEditSelectSimple',
   components: { multiselect: multiselect__default["default"] },
   props: {
@@ -1486,22 +1570,22 @@ var script$19 = {
   }
 };
 
-const _hoisted_1$V = {
+const _hoisted_1$Z = {
   key: 0,
   class: "mt-3"
 };
-const _hoisted_2$L = {
+const _hoisted_2$P = {
   key: 1,
   class: "mt-3"
 };
 
-function render$19(_ctx, _cache, $props, $setup, $data, $options) {
+function render$1d(_ctx, _cache, $props, $setup, $data, $options) {
   const _component_BaseEditLabel = vue.resolveComponent("BaseEditLabel");
   const _component_multiselect = vue.resolveComponent("multiselect");
   const _component_BaseShowLabel = vue.resolveComponent("BaseShowLabel");
 
   return ($props.editionMode)
-    ? (vue.openBlock(), vue.createElementBlock("div", _hoisted_1$V, [
+    ? (vue.openBlock(), vue.createElementBlock("div", _hoisted_1$Z, [
         vue.createVNode(_component_BaseEditLabel, {
           label: $props.label ? $props.label : _ctx.$t('attributes.country'),
           required: $props.required
@@ -1528,7 +1612,7 @@ function render$19(_ctx, _cache, $props, $setup, $data, $options) {
             }), 128 /* KEYED_FRAGMENT */))
           : vue.createCommentVNode("v-if", true)
       ]))
-    : (vue.openBlock(), vue.createElementBlock("div", _hoisted_2$L, [
+    : (vue.openBlock(), vue.createElementBlock("div", _hoisted_2$P, [
         vue.createVNode(_component_BaseShowLabel, {
           label: $props.label ? $props.label : _ctx.$t('attributes.country'),
           "model-value": $options.cDisplayedValueWhenNotEditionMode
@@ -1536,10 +1620,10 @@ function render$19(_ctx, _cache, $props, $setup, $data, $options) {
       ]))
 }
 
-script$19.render = render$19;
-script$19.__file = "src/components/BaseShowEditSelect/BaseShowEditFormSelectSimple/BaseCountryShowEditSelectSimple.vue";
+script$1d.render = render$1d;
+script$1d.__file = "src/components/BaseShowEditSelect/BaseShowEditFormSelectSimple/BaseCountryShowEditSelectSimple.vue";
 
-var script$18 = {
+var script$1c = {
   name: 'BaseCustomerShowEditSelectSimple',
   components: { multiselect: multiselect__default["default"] },
   props: {
@@ -1619,22 +1703,22 @@ var script$18 = {
   }
 };
 
-const _hoisted_1$U = {
+const _hoisted_1$Y = {
   key: 0,
   class: "mt-3"
 };
-const _hoisted_2$K = {
+const _hoisted_2$O = {
   key: 1,
   class: "mt-3"
 };
 
-function render$18(_ctx, _cache, $props, $setup, $data, $options) {
+function render$1c(_ctx, _cache, $props, $setup, $data, $options) {
   const _component_BaseEditLabel = vue.resolveComponent("BaseEditLabel");
   const _component_multiselect = vue.resolveComponent("multiselect");
   const _component_BaseShowLabel = vue.resolveComponent("BaseShowLabel");
 
   return ($props.editionMode)
-    ? (vue.openBlock(), vue.createElementBlock("div", _hoisted_1$U, [
+    ? (vue.openBlock(), vue.createElementBlock("div", _hoisted_1$Y, [
         vue.createVNode(_component_BaseEditLabel, {
           label: $props.label ? $props.label : _ctx.$t('attributes.customer'),
           required: $props.required
@@ -1661,7 +1745,7 @@ function render$18(_ctx, _cache, $props, $setup, $data, $options) {
             }), 128 /* KEYED_FRAGMENT */))
           : vue.createCommentVNode("v-if", true)
       ]))
-    : (vue.openBlock(), vue.createElementBlock("div", _hoisted_2$K, [
+    : (vue.openBlock(), vue.createElementBlock("div", _hoisted_2$O, [
         vue.createVNode(_component_BaseShowLabel, {
           label: $props.label ? $props.label : _ctx.$t('attributes.customer'),
           "model-value": $options.cDisplayedValueWhenNotEditionMode
@@ -1669,10 +1753,10 @@ function render$18(_ctx, _cache, $props, $setup, $data, $options) {
       ]))
 }
 
-script$18.render = render$18;
-script$18.__file = "src/components/BaseShowEditSelect/BaseShowEditFormSelectSimple/BaseCustomerShowEditSelectSimple.vue";
+script$1c.render = render$1c;
+script$1c.__file = "src/components/BaseShowEditSelect/BaseShowEditFormSelectSimple/BaseCustomerShowEditSelectSimple.vue";
 
-var script$17 = {
+var script$1b = {
   directives: {mask: vueTheMask.mask},
   name: 'BaseMaskedInput',
   props: {
@@ -1732,14 +1816,14 @@ var script$17 = {
   }
 };
 
-const _hoisted_1$T = ["for"];
-const _hoisted_2$J = {
+const _hoisted_1$X = ["for"];
+const _hoisted_2$N = {
   key: 0,
   class: "text-red-600"
 };
-const _hoisted_3$y = ["name", "type", "id", "placeholder", "disabled", "required"];
+const _hoisted_3$B = ["name", "type", "id", "placeholder", "disabled", "required"];
 
-function render$17(_ctx, _cache, $props, $setup, $data, $options) {
+function render$1b(_ctx, _cache, $props, $setup, $data, $options) {
   const _directive_mask = vue.resolveDirective("mask");
 
   return (vue.openBlock(), vue.createElementBlock("div", {
@@ -1751,9 +1835,9 @@ function render$17(_ctx, _cache, $props, $setup, $data, $options) {
     }, [
       vue.createTextVNode(vue.toDisplayString($props.label) + " ", 1 /* TEXT */),
       ($options.isRequired)
-        ? (vue.openBlock(), vue.createElementBlock("span", _hoisted_2$J, "*"))
+        ? (vue.openBlock(), vue.createElementBlock("span", _hoisted_2$N, "*"))
         : vue.createCommentVNode("v-if", true)
-    ], 10 /* CLASS, PROPS */, _hoisted_1$T),
+    ], 10 /* CLASS, PROPS */, _hoisted_1$X),
     vue.withDirectives(vue.createElementVNode("input", {
       name: $props.name,
       type: $props.type,
@@ -1763,7 +1847,7 @@ function render$17(_ctx, _cache, $props, $setup, $data, $options) {
       placeholder: $props.placeholder,
       disabled: $props.disabled,
       required: $options.isRequired
-    }, null, 10 /* CLASS, PROPS */, _hoisted_3$y), [
+    }, null, 10 /* CLASS, PROPS */, _hoisted_3$B), [
       [vue.vModelDynamic, $data.newValue],
       [_directive_mask, $props.mask]
     ]),
@@ -1776,12 +1860,12 @@ function render$17(_ctx, _cache, $props, $setup, $data, $options) {
   ], 2 /* CLASS */))
 }
 
-script$17.render = render$17;
-script$17.__file = "src/components/BaseInput/BaseMaskedInput.vue";
+script$1b.render = render$1b;
+script$1b.__file = "src/components/BaseInput/BaseMaskedInput.vue";
 
-var script$16 = {
+var script$1a = {
   name: 'BaseDateInput',
-  components: {BaseInputMasked: script$17},
+  components: {BaseInputMasked: script$1b},
   props: {
     errors: {},
     event: {},
@@ -1808,7 +1892,7 @@ var script$16 = {
   },
 };
 
-function render$16(_ctx, _cache, $props, $setup, $data, $options) {
+function render$1a(_ctx, _cache, $props, $setup, $data, $options) {
   const _component_BaseInputMasked = vue.resolveComponent("BaseInputMasked");
 
   return (vue.openBlock(), vue.createBlock(_component_BaseInputMasked, {
@@ -1824,10 +1908,10 @@ function render$16(_ctx, _cache, $props, $setup, $data, $options) {
   }, null, 8 /* PROPS */, ["label", "placeholder", "name", "value", "disabled", "errors", "required", "mask", "onChange"]))
 }
 
-script$16.render = render$16;
-script$16.__file = "src/components/BaseInput/BaseDateInput.vue";
+script$1a.render = render$1a;
+script$1a.__file = "src/components/BaseInput/BaseDateInput.vue";
 
-var script$15 = {
+var script$19 = {
   name: 'BaseDocShowEditSelectMultiple',
   components: { multiselect: multiselect__default["default"] },
   props: {
@@ -1927,25 +2011,25 @@ var script$15 = {
   }
 };
 
-const _hoisted_1$S = {
+const _hoisted_1$W = {
   key: 0,
   class: "mt-3"
 };
-const _hoisted_2$I = {
+const _hoisted_2$M = {
   key: 1,
   class: "mt-3 flex flex-col"
 };
-const _hoisted_3$x = { key: 0 };
-const _hoisted_4$k = /*#__PURE__*/vue.createTextVNode(/*#__PURE__*/vue.toDisplayString('-'));
+const _hoisted_3$A = { key: 0 };
+const _hoisted_4$n = /*#__PURE__*/vue.createTextVNode(/*#__PURE__*/vue.toDisplayString('-'));
 
-function render$15(_ctx, _cache, $props, $setup, $data, $options) {
+function render$19(_ctx, _cache, $props, $setup, $data, $options) {
   const _component_BaseEditLabel = vue.resolveComponent("BaseEditLabel");
   const _component_multiselect = vue.resolveComponent("multiselect");
   const _component_BaseShowLabel = vue.resolveComponent("BaseShowLabel");
   const _component_font_awesome_icon = vue.resolveComponent("font-awesome-icon");
 
   return ($props.editionMode)
-    ? (vue.openBlock(), vue.createElementBlock("div", _hoisted_1$S, [
+    ? (vue.openBlock(), vue.createElementBlock("div", _hoisted_1$W, [
         vue.createElementVNode("div", null, [
           vue.createVNode(_component_BaseEditLabel, {
             label: $props.label ? $props.label : _ctx.$t('attributes.available_docs'),
@@ -1978,13 +2062,13 @@ function render$15(_ctx, _cache, $props, $setup, $data, $options) {
             }), 128 /* KEYED_FRAGMENT */))
           : vue.createCommentVNode("v-if", true)
       ]))
-    : (vue.openBlock(), vue.createElementBlock("div", _hoisted_2$I, [
+    : (vue.openBlock(), vue.createElementBlock("div", _hoisted_2$M, [
         vue.createVNode(_component_BaseShowLabel, {
           label: $props.label ? $props.label : _ctx.$t('attributes.available_docs'),
           required: $props.required
         }, null, 8 /* PROPS */, ["label", "required"]),
         ($props.metadata && $props.metadata.doc_types && $props.modelValue.length >= 1)
-          ? (vue.openBlock(), vue.createElementBlock("div", _hoisted_3$x, [
+          ? (vue.openBlock(), vue.createElementBlock("div", _hoisted_3$A, [
               (vue.openBlock(true), vue.createElementBlock(vue.Fragment, null, vue.renderList($props.modelValue, (item, index) => {
                 return (vue.openBlock(), vue.createElementBlock("span", {
                   class: "inline-block mr-3 capitalize-first",
@@ -1999,15 +2083,15 @@ function render$15(_ctx, _cache, $props, $setup, $data, $options) {
               }), 128 /* KEYED_FRAGMENT */))
             ]))
           : (vue.openBlock(), vue.createElementBlock(vue.Fragment, { key: 1 }, [
-              _hoisted_4$k
+              _hoisted_4$n
             ], 2112 /* STABLE_FRAGMENT, DEV_ROOT_FRAGMENT */))
       ]))
 }
 
-script$15.render = render$15;
-script$15.__file = "src/components/BaseShowEditSelect/BaseShowEditFormSelectMultiple/BaseDocShowEditSelectMultiple.vue";
+script$19.render = render$19;
+script$19.__file = "src/components/BaseShowEditSelect/BaseShowEditFormSelectMultiple/BaseDocShowEditSelectMultiple.vue";
 
-var script$14 = {
+var script$18 = {
   name: 'BaseEventTypeShowEditSelectSimple',
   components: { multiselect: multiselect__default["default"] },
   props: {
@@ -2085,22 +2169,22 @@ var script$14 = {
   }
 };
 
-const _hoisted_1$R = {
+const _hoisted_1$V = {
   key: 0,
   class: "mt-3"
 };
-const _hoisted_2$H = {
+const _hoisted_2$L = {
   key: 1,
   class: "mt-3"
 };
 
-function render$14(_ctx, _cache, $props, $setup, $data, $options) {
+function render$18(_ctx, _cache, $props, $setup, $data, $options) {
   const _component_BaseEditLabel = vue.resolveComponent("BaseEditLabel");
   const _component_multiselect = vue.resolveComponent("multiselect");
   const _component_BaseShowLabel = vue.resolveComponent("BaseShowLabel");
 
   return ($props.editionMode)
-    ? (vue.openBlock(), vue.createElementBlock("div", _hoisted_1$R, [
+    ? (vue.openBlock(), vue.createElementBlock("div", _hoisted_1$V, [
         vue.createVNode(_component_BaseEditLabel, {
           label: $props.label ? $props.label : _ctx.$t('attributes.event_type'),
           required: $props.required
@@ -2127,7 +2211,7 @@ function render$14(_ctx, _cache, $props, $setup, $data, $options) {
             }), 128 /* KEYED_FRAGMENT */))
           : vue.createCommentVNode("v-if", true)
       ]))
-    : (vue.openBlock(), vue.createElementBlock("div", _hoisted_2$H, [
+    : (vue.openBlock(), vue.createElementBlock("div", _hoisted_2$L, [
         vue.createVNode(_component_BaseShowLabel, {
           label: $props.label ? $props.label : _ctx.$t('attributes.event_type'),
           "model-value": $options.cDisplayedValueWhenNotEditionMode
@@ -2135,10 +2219,10 @@ function render$14(_ctx, _cache, $props, $setup, $data, $options) {
       ]))
 }
 
-script$14.render = render$14;
-script$14.__file = "src/components/BaseShowEditSelect/BaseShowEditFormSelectSimple/BaseEventTypeShowEditSelectSimple.vue";
+script$18.render = render$18;
+script$18.__file = "src/components/BaseShowEditSelect/BaseShowEditFormSelectSimple/BaseEventTypeShowEditSelectSimple.vue";
 
-var script$13 = {
+var script$17 = {
 
   name: 'BaseInput',
   props: {
@@ -2259,14 +2343,14 @@ var script$13 = {
   }
 };
 
-const _hoisted_1$Q = ["for"];
-const _hoisted_2$G = {
+const _hoisted_1$U = ["for"];
+const _hoisted_2$K = {
   key: 0,
   class: "text-red-600"
 };
-const _hoisted_3$w = ["name", "type", "value", "id", "min", "max", "placeholder", "disabled", "required"];
+const _hoisted_3$z = ["name", "type", "value", "id", "min", "max", "placeholder", "disabled", "required"];
 
-function render$13(_ctx, _cache, $props, $setup, $data, $options) {
+function render$17(_ctx, _cache, $props, $setup, $data, $options) {
   return (vue.openBlock(), vue.createElementBlock("div", {
     class: vue.normalizeClass($options.cGroupClass)
   }, [
@@ -2278,9 +2362,9 @@ function render$13(_ctx, _cache, $props, $setup, $data, $options) {
         }, [
           vue.createTextVNode(vue.toDisplayString($props.label) + " ", 1 /* TEXT */),
           ($props.label && $props.required)
-            ? (vue.openBlock(), vue.createElementBlock("span", _hoisted_2$G, "*"))
+            ? (vue.openBlock(), vue.createElementBlock("span", _hoisted_2$K, "*"))
             : vue.createCommentVNode("v-if", true)
-        ], 10 /* CLASS, PROPS */, _hoisted_1$Q))
+        ], 10 /* CLASS, PROPS */, _hoisted_1$U))
       : vue.createCommentVNode("v-if", true),
     vue.createElementVNode("input", {
       name: $props.name,
@@ -2294,7 +2378,7 @@ function render$13(_ctx, _cache, $props, $setup, $data, $options) {
       disabled: $props.disabled,
       required: $props.required,
       onInput: _cache[0] || (_cache[0] = (...args) => ($options.updateInput && $options.updateInput(...args)))
-    }, null, 42 /* CLASS, PROPS, HYDRATE_EVENTS */, _hoisted_3$w),
+    }, null, 42 /* CLASS, PROPS, HYDRATE_EVENTS */, _hoisted_3$z),
     (vue.openBlock(true), vue.createElementBlock(vue.Fragment, null, vue.renderList($props.errors, (error, index) => {
       return (vue.openBlock(), vue.createElementBlock("div", {
         key: index,
@@ -2304,10 +2388,10 @@ function render$13(_ctx, _cache, $props, $setup, $data, $options) {
   ], 2 /* CLASS */))
 }
 
-script$13.render = render$13;
-script$13.__file = "src/components/BaseInput/BaseInput.vue";
+script$17.render = render$17;
+script$17.__file = "src/components/BaseInput/BaseInput.vue";
 
-var script$12 = {
+var script$16 = {
   name: 'BaseLabel',
   props: {
     content: {type: String, required: true},
@@ -2322,24 +2406,24 @@ var script$12 = {
   }
 };
 
-const _hoisted_1$P = {
+const _hoisted_1$T = {
   key: 0,
   class: "flex-shrink-0"
 };
-const _hoisted_2$F = {
+const _hoisted_2$J = {
   key: 1,
   class: "capitalize-first"
 };
-const _hoisted_3$v = {
+const _hoisted_3$y = {
   key: 1,
   class: "capitalize-first"
 };
 
-function render$12(_ctx, _cache, $props, $setup, $data, $options) {
+function render$16(_ctx, _cache, $props, $setup, $data, $options) {
   const _component_font_awesome_icon = vue.resolveComponent("font-awesome-icon");
 
   return (!$props.big)
-    ? (vue.openBlock(), vue.createElementBlock("span", _hoisted_1$P, [
+    ? (vue.openBlock(), vue.createElementBlock("span", _hoisted_1$T, [
         vue.createElementVNode("span", {
           class: vue.normalizeClass(["text-white rounded-md px-2 py-1", $options.colorClass])
         }, [
@@ -2350,7 +2434,7 @@ function render$12(_ctx, _cache, $props, $setup, $data, $options) {
               }, null, 8 /* PROPS */, ["icon"]))
             : vue.createCommentVNode("v-if", true),
           ($props.content)
-            ? (vue.openBlock(), vue.createElementBlock("span", _hoisted_2$F, vue.toDisplayString($props.content), 1 /* TEXT */))
+            ? (vue.openBlock(), vue.createElementBlock("span", _hoisted_2$J, vue.toDisplayString($props.content), 1 /* TEXT */))
             : vue.createCommentVNode("v-if", true)
         ], 2 /* CLASS */)
       ]))
@@ -2366,15 +2450,15 @@ function render$12(_ctx, _cache, $props, $setup, $data, $options) {
             }, null, 8 /* PROPS */, ["icon"]))
           : vue.createCommentVNode("v-if", true),
         ($props.content)
-          ? (vue.openBlock(), vue.createElementBlock("span", _hoisted_3$v, vue.toDisplayString($props.content), 1 /* TEXT */))
+          ? (vue.openBlock(), vue.createElementBlock("span", _hoisted_3$y, vue.toDisplayString($props.content), 1 /* TEXT */))
           : vue.createCommentVNode("v-if", true)
       ], 2 /* CLASS */))
 }
 
-script$12.render = render$12;
-script$12.__file = "src/components/BaseLabel/BaseLabel.vue";
+script$16.render = render$16;
+script$16.__file = "src/components/BaseLabel/BaseLabel.vue";
 
-var script$11 = {
+var script$15 = {
   name: 'BaseLanguageShowEditSelectMultiple',
   components: { multiselect: multiselect__default["default"] },
   props: {
@@ -2474,25 +2558,25 @@ var script$11 = {
   }
 };
 
-const _hoisted_1$O = {
+const _hoisted_1$S = {
   key: 0,
   class: "mt-3"
 };
-const _hoisted_2$E = {
+const _hoisted_2$I = {
   key: 1,
   class: "mt-3 flex flex-col"
 };
-const _hoisted_3$u = { key: 0 };
-const _hoisted_4$j = /*#__PURE__*/vue.createTextVNode(/*#__PURE__*/vue.toDisplayString('-'));
+const _hoisted_3$x = { key: 0 };
+const _hoisted_4$m = /*#__PURE__*/vue.createTextVNode(/*#__PURE__*/vue.toDisplayString('-'));
 
-function render$11(_ctx, _cache, $props, $setup, $data, $options) {
+function render$15(_ctx, _cache, $props, $setup, $data, $options) {
   const _component_BaseEditLabel = vue.resolveComponent("BaseEditLabel");
   const _component_multiselect = vue.resolveComponent("multiselect");
   const _component_BaseShowLabel = vue.resolveComponent("BaseShowLabel");
   const _component_font_awesome_icon = vue.resolveComponent("font-awesome-icon");
 
   return ($props.editionMode)
-    ? (vue.openBlock(), vue.createElementBlock("div", _hoisted_1$O, [
+    ? (vue.openBlock(), vue.createElementBlock("div", _hoisted_1$S, [
         vue.createElementVNode("div", null, [
           vue.createVNode(_component_BaseEditLabel, {
             label: $props.label ? $props.label : _ctx.$t('attributes.language'),
@@ -2525,13 +2609,13 @@ function render$11(_ctx, _cache, $props, $setup, $data, $options) {
             }), 128 /* KEYED_FRAGMENT */))
           : vue.createCommentVNode("v-if", true)
       ]))
-    : (vue.openBlock(), vue.createElementBlock("div", _hoisted_2$E, [
+    : (vue.openBlock(), vue.createElementBlock("div", _hoisted_2$I, [
         vue.createVNode(_component_BaseShowLabel, {
           label: $props.label ? $props.label : _ctx.$t('attributes.language'),
           required: $props.required
         }, null, 8 /* PROPS */, ["label", "required"]),
         ($props.metadata && $props.metadata.languages && $props.modelValue.length >= 1)
-          ? (vue.openBlock(), vue.createElementBlock("div", _hoisted_3$u, [
+          ? (vue.openBlock(), vue.createElementBlock("div", _hoisted_3$x, [
               (vue.openBlock(true), vue.createElementBlock(vue.Fragment, null, vue.renderList($props.modelValue, (item, index) => {
                 return (vue.openBlock(), vue.createElementBlock("span", {
                   class: "inline-block mr-3",
@@ -2546,15 +2630,15 @@ function render$11(_ctx, _cache, $props, $setup, $data, $options) {
               }), 128 /* KEYED_FRAGMENT */))
             ]))
           : (vue.openBlock(), vue.createElementBlock(vue.Fragment, { key: 1 }, [
-              _hoisted_4$j
+              _hoisted_4$m
             ], 2112 /* STABLE_FRAGMENT, DEV_ROOT_FRAGMENT */))
       ]))
 }
 
-script$11.render = render$11;
-script$11.__file = "src/components/BaseShowEditSelect/BaseShowEditFormSelectMultiple/BaseLanguageShowEditSelectMultiple.vue";
+script$15.render = render$15;
+script$15.__file = "src/components/BaseShowEditSelect/BaseShowEditFormSelectMultiple/BaseLanguageShowEditSelectMultiple.vue";
 
-var script$10 = {
+var script$14 = {
   name: 'BaseLanguageShowEditSelectSimple',
   components: { multiselect: multiselect__default["default"] },
   props: {
@@ -2632,22 +2716,22 @@ var script$10 = {
   }
 };
 
-const _hoisted_1$N = {
+const _hoisted_1$R = {
   key: 0,
   class: "mt-3"
 };
-const _hoisted_2$D = {
+const _hoisted_2$H = {
   key: 1,
   class: "mt-3"
 };
 
-function render$10(_ctx, _cache, $props, $setup, $data, $options) {
+function render$14(_ctx, _cache, $props, $setup, $data, $options) {
   const _component_BaseEditLabel = vue.resolveComponent("BaseEditLabel");
   const _component_multiselect = vue.resolveComponent("multiselect");
   const _component_BaseShowLabel = vue.resolveComponent("BaseShowLabel");
 
   return ($props.editionMode)
-    ? (vue.openBlock(), vue.createElementBlock("div", _hoisted_1$N, [
+    ? (vue.openBlock(), vue.createElementBlock("div", _hoisted_1$R, [
         vue.createVNode(_component_BaseEditLabel, {
           label: $props.label ? $props.label : _ctx.$t('attributes.language'),
           required: $props.required
@@ -2674,7 +2758,7 @@ function render$10(_ctx, _cache, $props, $setup, $data, $options) {
             }), 128 /* KEYED_FRAGMENT */))
           : vue.createCommentVNode("v-if", true)
       ]))
-    : (vue.openBlock(), vue.createElementBlock("div", _hoisted_2$D, [
+    : (vue.openBlock(), vue.createElementBlock("div", _hoisted_2$H, [
         vue.createVNode(_component_BaseShowLabel, {
           label: $props.label ? $props.label : _ctx.$t('attributes.language'),
           "model-value": $options.cDisplayedValueWhenNotEditionMode
@@ -2682,10 +2766,10 @@ function render$10(_ctx, _cache, $props, $setup, $data, $options) {
       ]))
 }
 
-script$10.render = render$10;
-script$10.__file = "src/components/BaseShowEditSelect/BaseShowEditFormSelectSimple/BaseLanguageShowEditSelectSimple.vue";
+script$14.render = render$14;
+script$14.__file = "src/components/BaseShowEditSelect/BaseShowEditFormSelectSimple/BaseLanguageShowEditSelectSimple.vue";
 
-var script$$ = {
+var script$13 = {
   name: 'BasePageBody',
   props: {
     cols: {
@@ -2709,7 +2793,7 @@ var script$$ = {
   }
 };
 
-function render$$(_ctx, _cache, $props, $setup, $data, $options) {
+function render$13(_ctx, _cache, $props, $setup, $data, $options) {
   return (vue.openBlock(), vue.createElementBlock("main", {
     class: vue.normalizeClass(["pos grid mt-5", $options.bodyClass])
   }, [
@@ -2717,67 +2801,67 @@ function render$$(_ctx, _cache, $props, $setup, $data, $options) {
   ], 2 /* CLASS */))
 }
 
-script$$.render = render$$;
-script$$.__file = "src/components/BasePage/components/body/BasePageBody.vue";
+script$13.render = render$13;
+script$13.__file = "src/components/BasePage/components/body/BasePageBody.vue";
 
-var script$_ = {
+var script$12 = {
   name: 'BasePageHeader'
 };
 
-const _hoisted_1$M = { class: "flex flex-col sm:flex-row items-center mt-8" };
+const _hoisted_1$Q = { class: "flex flex-col sm:flex-row items-center mt-8" };
 
-function render$_(_ctx, _cache, $props, $setup, $data, $options) {
-  return (vue.openBlock(), vue.createElementBlock("div", _hoisted_1$M, [
+function render$12(_ctx, _cache, $props, $setup, $data, $options) {
+  return (vue.openBlock(), vue.createElementBlock("div", _hoisted_1$Q, [
     vue.renderSlot(_ctx.$slots, "default")
   ]))
 }
 
-script$_.render = render$_;
-script$_.__file = "src/components/BasePage/components/header/BasePageHeader.vue";
+script$12.render = render$12;
+script$12.__file = "src/components/BasePage/components/header/BasePageHeader.vue";
 
-var script$Z = {
+var script$11 = {
   name: 'BasePageHeaderActions'
 };
 
-const _hoisted_1$L = { class: "flex flex-row md:flex-row flex-1 justify-end mt-4 sm:mt-0" };
+const _hoisted_1$P = { class: "flex flex-row md:flex-row flex-1 justify-end mt-4 sm:mt-0" };
 
-function render$Z(_ctx, _cache, $props, $setup, $data, $options) {
-  return (vue.openBlock(), vue.createElementBlock("div", _hoisted_1$L, [
+function render$11(_ctx, _cache, $props, $setup, $data, $options) {
+  return (vue.openBlock(), vue.createElementBlock("div", _hoisted_1$P, [
     vue.renderSlot(_ctx.$slots, "default")
   ]))
 }
 
-script$Z.render = render$Z;
-script$Z.__file = "src/components/BasePage/components/header/BasePageHeaderActions.vue";
+script$11.render = render$11;
+script$11.__file = "src/components/BasePage/components/header/BasePageHeaderActions.vue";
 
-var script$Y = {
+var script$10 = {
   name: 'BasePageTitle'
 
 };
 
-const _hoisted_1$K = { class: "w-full md:w-auto text-lg font-medium mr-auto flex-1 text-center sm:text-left" };
+const _hoisted_1$O = { class: "w-full md:w-auto text-lg font-medium mr-auto flex-1 text-center sm:text-left" };
 
-function render$Y(_ctx, _cache, $props, $setup, $data, $options) {
-  return (vue.openBlock(), vue.createElementBlock("h2", _hoisted_1$K, [
+function render$10(_ctx, _cache, $props, $setup, $data, $options) {
+  return (vue.openBlock(), vue.createElementBlock("h2", _hoisted_1$O, [
     vue.renderSlot(_ctx.$slots, "default")
   ]))
 }
 
-script$Y.render = render$Y;
-script$Y.__file = "src/components/BasePage/components/header/BasePageTitle.vue";
+script$10.render = render$10;
+script$10.__file = "src/components/BasePage/components/header/BasePageTitle.vue";
 
-var script$X = {
+var script$$ = {
   name: 'BasePageFull',
   components: {
-    BasePageBody: script$$,
-    BasePageHeader: script$_,
-    BasePageHeaderActions: script$Z,
-    BasePageTitle: script$Y
+    BasePageBody: script$13,
+    BasePageHeader: script$12,
+    BasePageHeaderActions: script$11,
+    BasePageTitle: script$10
   }
 
 };
 
-function render$X(_ctx, _cache, $props, $setup, $data, $options) {
+function render$$(_ctx, _cache, $props, $setup, $data, $options) {
   const _component_BasePageTitle = vue.resolveComponent("BasePageTitle");
   const _component_BasePageHeaderActions = vue.resolveComponent("BasePageHeaderActions");
   const _component_BasePageHeader = vue.resolveComponent("BasePageHeader");
@@ -2812,12 +2896,12 @@ function render$X(_ctx, _cache, $props, $setup, $data, $options) {
   ], 64 /* STABLE_FRAGMENT */))
 }
 
-script$X.render = render$X;
-script$X.__file = "src/components/BasePage/BasePageFull.vue";
+script$$.render = render$$;
+script$$.__file = "src/components/BasePage/BasePageFull.vue";
 
 // import _ from "core-js/internals/internal-state";
 
-var script$W = {
+var script$_ = {
   name: 'PhoneInput',
   props: {
     name: {
@@ -2894,13 +2978,13 @@ var script$W = {
   }
 };
 
-const _hoisted_1$J = { class: "mt-3" };
-const _hoisted_2$C = ["for"];
-const _hoisted_3$t = { class: "w-full relative" };
-const _hoisted_4$i = { class: "absolute inset-y-0 left-0 w-22" };
-const _hoisted_5$8 = /*#__PURE__*/vue.createElementVNode("label", { class: "sr-only" }, "Country", -1 /* HOISTED */);
-const _hoisted_6$5 = ["disabled", "name"];
-const _hoisted_7$5 = {
+const _hoisted_1$N = { class: "mt-3" };
+const _hoisted_2$G = ["for"];
+const _hoisted_3$w = { class: "w-full relative" };
+const _hoisted_4$l = { class: "absolute inset-y-0 left-0 w-22" };
+const _hoisted_5$b = /*#__PURE__*/vue.createElementVNode("label", { class: "sr-only" }, "Country", -1 /* HOISTED */);
+const _hoisted_6$8 = ["disabled", "name"];
+const _hoisted_7$8 = {
   disabled: "",
   selected: ""
 };
@@ -2911,22 +2995,22 @@ const _hoisted_10$1 = {
   class: "form-help text-red-600"
 };
 
-function render$W(_ctx, _cache, $props, $setup, $data, $options) {
-  return (vue.openBlock(), vue.createElementBlock("div", _hoisted_1$J, [
+function render$_(_ctx, _cache, $props, $setup, $data, $options) {
+  return (vue.openBlock(), vue.createElementBlock("div", _hoisted_1$N, [
     vue.createElementVNode("label", {
       for: $props.name,
       class: "form-label"
-    }, vue.toDisplayString($props.label), 9 /* TEXT, PROPS */, _hoisted_2$C),
-    vue.createElementVNode("div", _hoisted_3$t, [
-      vue.createElementVNode("div", _hoisted_4$i, [
-        _hoisted_5$8,
+    }, vue.toDisplayString($props.label), 9 /* TEXT, PROPS */, _hoisted_2$G),
+    vue.createElementVNode("div", _hoisted_3$w, [
+      vue.createElementVNode("div", _hoisted_4$l, [
+        _hoisted_5$b,
         vue.withDirectives(vue.createElementVNode("select", {
           disabled: $options.isDisabled,
           "onUpdate:modelValue": _cache[0] || (_cache[0] = $event => (($data.countryValue) = $event)),
           name: this.name+'_country',
           class: "block w-full border rounded-md appearance-none placeholder-gray-500 dark:bg-dark-2 dark:border-transparent focus:outline-none disabled:bg-gray-100 disabled:cursor-not-allowed disabled:dark:bg-dark-2 disabled:dark:border-transparent border-gray-400 focus:border-blue-300 focus:ring-blue-300 focus:ring-1"
         }, [
-          vue.createElementVNode("option", _hoisted_7$5, vue.toDisplayString($props.countryPlaceholder), 1 /* TEXT */),
+          vue.createElementVNode("option", _hoisted_7$8, vue.toDisplayString($props.countryPlaceholder), 1 /* TEXT */),
           (vue.openBlock(true), vue.createElementBlock(vue.Fragment, null, vue.renderList($props.countries, (model, key) => {
             return (vue.openBlock(), vue.createElementBlock("option", {
               key: key,
@@ -2934,7 +3018,7 @@ function render$W(_ctx, _cache, $props, $setup, $data, $options) {
               disabled: !_ctx.$can('manage_content')
             }, vue.toDisplayString(model.id), 9 /* TEXT, PROPS */, _hoisted_8$4))
           }), 128 /* KEYED_FRAGMENT */))
-        ], 8 /* PROPS */, _hoisted_6$5), [
+        ], 8 /* PROPS */, _hoisted_6$8), [
           [vue.vModelSelect, $data.countryValue]
         ])
       ]),
@@ -2960,10 +3044,10 @@ function render$W(_ctx, _cache, $props, $setup, $data, $options) {
   ]))
 }
 
-script$W.render = render$W;
-script$W.__file = "src/components/BaseInput/BasePhoneInput.vue";
+script$_.render = render$_;
+script$_.__file = "src/components/BaseInput/BasePhoneInput.vue";
 
-var script$V = {
+var script$Z = {
   name: 'BaseRadioGroup',
   props: {
     options: {
@@ -3005,12 +3089,12 @@ var script$V = {
 
 };
 
-const _hoisted_1$I = /*#__PURE__*/vue.createTextVNode(" Server size ");
-const _hoisted_2$B = { class: "space-y-4" };
-const _hoisted_3$s = { class: "flex items-center" };
-const _hoisted_4$h = { class: "text-sm" };
+const _hoisted_1$M = /*#__PURE__*/vue.createTextVNode(" Server size ");
+const _hoisted_2$F = { class: "space-y-4" };
+const _hoisted_3$v = { class: "flex items-center" };
+const _hoisted_4$k = { class: "text-sm" };
 
-function render$V(_ctx, _cache, $props, $setup, $data, $options) {
+function render$Z(_ctx, _cache, $props, $setup, $data, $options) {
   const _component_RadioGroupLabel = vue.resolveComponent("RadioGroupLabel");
   const _component_font_awesome_icon = vue.resolveComponent("font-awesome-icon");
   const _component_RadioGroupOption = vue.resolveComponent("RadioGroupOption");
@@ -3025,11 +3109,11 @@ function render$V(_ctx, _cache, $props, $setup, $data, $options) {
     default: vue.withCtx(() => [
       vue.createVNode(_component_RadioGroupLabel, { class: "sr-only" }, {
         default: vue.withCtx(() => [
-          _hoisted_1$I
+          _hoisted_1$M
         ]),
         _: 1 /* STABLE */
       }),
-      vue.createElementVNode("div", _hoisted_2$B, [
+      vue.createElementVNode("div", _hoisted_2$F, [
         (vue.openBlock(true), vue.createElementBlock(vue.Fragment, null, vue.renderList($props.options, (option) => {
           return (vue.openBlock(), vue.createBlock(_component_RadioGroupOption, {
             as: "template",
@@ -3040,8 +3124,8 @@ function render$V(_ctx, _cache, $props, $setup, $data, $options) {
               vue.createElementVNode("div", {
                 class: vue.normalizeClass([active ? 'ring-1 ring-offset-2 ring-indigo-500 ' : '', 'relative block rounded-lg border border-gray-300 bg-white shadow-sm px-6 py-4 cursor-pointer hover:border-gray-400 sm:flex sm:justify-between focus:outline-none'])
               }, [
-                vue.createElementVNode("div", _hoisted_3$s, [
-                  vue.createElementVNode("div", _hoisted_4$h, [
+                vue.createElementVNode("div", _hoisted_3$v, [
+                  vue.createElementVNode("div", _hoisted_4$k, [
                     vue.createVNode(_component_RadioGroupLabel, {
                       as: "p",
                       class: "font-medium text-gray-900"
@@ -3076,10 +3160,10 @@ function render$V(_ctx, _cache, $props, $setup, $data, $options) {
   }, 8 /* PROPS */, ["modelValue", "class", "disabled"]))
 }
 
-script$V.render = render$V;
-script$V.__file = "src/components/BaseRadioGroup/BaseRadioGroup.vue";
+script$Z.render = render$Z;
+script$Z.__file = "src/components/BaseRadioGroup/BaseRadioGroup.vue";
 
-var script$U = {
+var script$Y = {
   name: "BaseSearchInput",
   props:{
     groupClass: {
@@ -3105,10 +3189,10 @@ var script$U = {
   },
 };
 
-const _hoisted_1$H = ["placeholder"];
-const _hoisted_2$A = { class: "absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none" };
+const _hoisted_1$L = ["placeholder"];
+const _hoisted_2$E = { class: "absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none" };
 
-function render$U(_ctx, _cache, $props, $setup, $data, $options) {
+function render$Y(_ctx, _cache, $props, $setup, $data, $options) {
   const _component_font_awesome_icon = vue.resolveComponent("font-awesome-icon");
 
   return (vue.openBlock(), vue.createElementBlock("div", null, [
@@ -3122,20 +3206,20 @@ function render$U(_ctx, _cache, $props, $setup, $data, $options) {
         class: "focus:ring-indigo-500 focus:border-indigo-500 block w-full pr-10 sm:text-sm border-gray-300 rounded-md",
         "onUpdate:modelValue": _cache[0] || (_cache[0] = $event => (($data.searchTerms) = $event)),
         placeholder: _ctx.$t('global.placeholder.search')
-      }, null, 8 /* PROPS */, _hoisted_1$H), [
+      }, null, 8 /* PROPS */, _hoisted_1$L), [
         [vue.vModelText, $data.searchTerms]
       ]),
-      vue.createElementVNode("div", _hoisted_2$A, [
+      vue.createElementVNode("div", _hoisted_2$E, [
         vue.createVNode(_component_font_awesome_icon, { icon: ['fal', 'search'] })
       ])
     ], 2 /* CLASS */)
   ]))
 }
 
-script$U.render = render$U;
-script$U.__file = "src/components/BaseInput/BaseSearchInput.vue";
+script$Y.render = render$Y;
+script$Y.__file = "src/components/BaseInput/BaseSearchInput.vue";
 
-var script$T = {
+var script$X = {
   name: 'BaseSelectMultiple',
   components: {
     multiselect: multiselect__default["default"]
@@ -3211,25 +3295,25 @@ var script$T = {
 
 };
 
-const _hoisted_1$G = { class: "flex flex-col" };
-const _hoisted_2$z = {
+const _hoisted_1$K = { class: "flex flex-col" };
+const _hoisted_2$D = {
   key: 0,
   class: "form-label capitalize-first mt-3"
 };
-const _hoisted_3$r = {
+const _hoisted_3$u = {
   key: 0,
   class: "text-red-600"
 };
 
-function render$T(_ctx, _cache, $props, $setup, $data, $options) {
+function render$X(_ctx, _cache, $props, $setup, $data, $options) {
   const _component_multiselect = vue.resolveComponent("multiselect");
 
-  return (vue.openBlock(), vue.createElementBlock("div", _hoisted_1$G, [
+  return (vue.openBlock(), vue.createElementBlock("div", _hoisted_1$K, [
     ($props.label)
-      ? (vue.openBlock(), vue.createElementBlock("label", _hoisted_2$z, [
+      ? (vue.openBlock(), vue.createElementBlock("label", _hoisted_2$D, [
           vue.createTextVNode(vue.toDisplayString($props.label) + " ", 1 /* TEXT */),
           ($props.required)
-            ? (vue.openBlock(), vue.createElementBlock("span", _hoisted_3$r, "*"))
+            ? (vue.openBlock(), vue.createElementBlock("span", _hoisted_3$u, "*"))
             : vue.createCommentVNode("v-if", true)
         ]))
       : vue.createCommentVNode("v-if", true),
@@ -3256,10 +3340,10 @@ function render$T(_ctx, _cache, $props, $setup, $data, $options) {
   ]))
 }
 
-script$T.render = render$T;
-script$T.__file = "src/components/BaseSelect/BaseSelectFormMultiple/BaseSelectMultiple.vue";
+script$X.render = render$X;
+script$X.__file = "src/components/BaseSelect/BaseSelectFormMultiple/BaseSelectMultiple.vue";
 
-var script$S = {
+var script$W = {
   name: 'BaseSelectSimple',
   components: {
     multiselect: multiselect__default["default"]
@@ -3352,12 +3436,12 @@ var script$S = {
   },
 };
 
-const _hoisted_1$F = {
+const _hoisted_1$J = {
   key: 0,
   class: "text-red-600"
 };
 
-function render$S(_ctx, _cache, $props, $setup, $data, $options) {
+function render$W(_ctx, _cache, $props, $setup, $data, $options) {
   const _component_multiselect = vue.resolveComponent("multiselect");
 
   return (vue.openBlock(), vue.createElementBlock("div", {
@@ -3368,7 +3452,7 @@ function render$S(_ctx, _cache, $props, $setup, $data, $options) {
     }, [
       vue.createTextVNode(vue.toDisplayString($props.label) + " ", 1 /* TEXT */),
       ($options.isRequired)
-        ? (vue.openBlock(), vue.createElementBlock("span", _hoisted_1$F, "*"))
+        ? (vue.openBlock(), vue.createElementBlock("span", _hoisted_1$J, "*"))
         : vue.createCommentVNode("v-if", true)
     ], 2 /* CLASS */),
     vue.createVNode(_component_multiselect, {
@@ -3393,10 +3477,10 @@ function render$S(_ctx, _cache, $props, $setup, $data, $options) {
   ], 2 /* CLASS */))
 }
 
-script$S.render = render$S;
-script$S.__file = "src/components/BaseSelect/BaseSelectFormSimple/BaseSelectSimple.vue";
+script$W.render = render$W;
+script$W.__file = "src/components/BaseSelect/BaseSelectFormSimple/BaseSelectSimple.vue";
 
-var script$R = {
+var script$V = {
   name: 'BaseSelectSimpleAjax',
   components: {multiselect: multiselect__default["default"]},
   emits: ['update:modelValue'],
@@ -3466,14 +3550,14 @@ var script$R = {
   },
 };
 
-const _hoisted_1$E = {
+const _hoisted_1$I = {
   key: 0,
   class: "text-red-600"
 };
-const _hoisted_2$y = { class: "custom__tag" };
-const _hoisted_3$q = ["onClick"];
+const _hoisted_2$C = { class: "custom__tag" };
+const _hoisted_3$t = ["onClick"];
 
-function render$R(_ctx, _cache, $props, $setup, $data, $options) {
+function render$V(_ctx, _cache, $props, $setup, $data, $options) {
   const _component_multiselect = vue.resolveComponent("multiselect");
 
   return ($props.defaultAjax)
@@ -3488,7 +3572,7 @@ function render$R(_ctx, _cache, $props, $setup, $data, $options) {
             }, [
               vue.createTextVNode(vue.toDisplayString($props.label) + "  ", 1 /* TEXT */),
               ($props.isRequired)
-                ? (vue.openBlock(), vue.createElementBlock("span", _hoisted_1$E, "*"))
+                ? (vue.openBlock(), vue.createElementBlock("span", _hoisted_1$I, "*"))
                 : vue.createCommentVNode("v-if", true)
             ], 2 /* CLASS */))
           : vue.createCommentVNode("v-if", true),
@@ -3518,12 +3602,12 @@ function render$R(_ctx, _cache, $props, $setup, $data, $options) {
           onSearchChange: $options.fetchOption
         }, {
           tag: vue.withCtx(({ option, remove }) => [
-            vue.createElementVNode("span", _hoisted_2$y, [
+            vue.createElementVNode("span", _hoisted_2$C, [
               vue.createElementVNode("span", null, vue.toDisplayString(option.name), 1 /* TEXT */),
               vue.createElementVNode("span", {
                 class: "custom__remove",
                 onClick: $event => (remove(option))
-              }, "❌", 8 /* PROPS */, _hoisted_3$q)
+              }, "❌", 8 /* PROPS */, _hoisted_3$t)
             ])
           ]),
           _: 1 /* STABLE */
@@ -3540,13 +3624,13 @@ function render$R(_ctx, _cache, $props, $setup, $data, $options) {
     : vue.createCommentVNode("v-if", true)
 }
 
-script$R.render = render$R;
-script$R.__file = "src/components/BaseSelect/BaseSelectFormSimple/BaseSelectSimpleAjax.vue";
+script$V.render = render$V;
+script$V.__file = "src/components/BaseSelect/BaseSelectFormSimple/BaseSelectSimpleAjax.vue";
 
-var script$Q = {
+var script$U = {
   directives: {mask: vueTheMask.mask},
   name: 'BaseShowEditDateInput',
-  components: { BaseEditLabel: script$1j, BaseShowLabel: script$1k },
+  components: { BaseEditLabel: script$1o, BaseShowLabel: script$1p },
   props: {
     editionMode: {
       type: Boolean,
@@ -3618,13 +3702,13 @@ var script$Q = {
   },
 };
 
-const _hoisted_1$D = ["name", "value", "id", "placeholder"];
-const _hoisted_2$x = {
+const _hoisted_1$H = ["name", "value", "id", "placeholder"];
+const _hoisted_2$B = {
   key: 1,
   class: "mt-3"
 };
 
-function render$Q(_ctx, _cache, $props, $setup, $data, $options) {
+function render$U(_ctx, _cache, $props, $setup, $data, $options) {
   const _component_BaseEditLabel = vue.resolveComponent("BaseEditLabel");
   const _component_BaseShowLabel = vue.resolveComponent("BaseShowLabel");
   const _directive_mask = vue.resolveDirective("mask");
@@ -3646,7 +3730,7 @@ function render$Q(_ctx, _cache, $props, $setup, $data, $options) {
           id: $props.name,
           class: vue.normalizeClass([$options.cInputClass, "border-gray-400 focus:border-blue-300 focus:ring-blue-300 focus:ring-1"]),
           placeholder: $props.placeholder
-        }, null, 42 /* CLASS, PROPS, HYDRATE_EVENTS */, _hoisted_1$D), [
+        }, null, 42 /* CLASS, PROPS, HYDRATE_EVENTS */, _hoisted_1$H), [
           [_directive_mask, $props.mask]
         ]),
         (vue.openBlock(true), vue.createElementBlock(vue.Fragment, null, vue.renderList($props.errors, (error, index) => {
@@ -3656,7 +3740,7 @@ function render$Q(_ctx, _cache, $props, $setup, $data, $options) {
           }, vue.toDisplayString(_ctx.$t(error, {attribute: _ctx.$t('attributes.' + $props.name)})), 1 /* TEXT */))
         }), 128 /* KEYED_FRAGMENT */))
       ], 2 /* CLASS */))
-    : (vue.openBlock(), vue.createElementBlock("div", _hoisted_2$x, [
+    : (vue.openBlock(), vue.createElementBlock("div", _hoisted_2$B, [
         vue.createVNode(_component_BaseShowLabel, {
           label: $props.label,
           "model-value": $props.modelValue
@@ -3664,15 +3748,15 @@ function render$Q(_ctx, _cache, $props, $setup, $data, $options) {
       ]))
 }
 
-script$Q.render = render$Q;
-script$Q.__file = "src/components/BaseShowEditInput/BaseShowEditDateInput.vue";
+script$U.render = render$U;
+script$U.__file = "src/components/BaseShowEditInput/BaseShowEditDateInput.vue";
 
-var script$P = {
+var script$T = {
   name: 'BaseShowEditDatePicker',
   components:{
     Datepicker: Datepicker__default["default"],
-    BaseEditLabel: script$1j,
-    BaseShowLabel: script$1k,
+    BaseEditLabel: script$1o,
+    BaseShowLabel: script$1p,
   },
   props:{
     editionMode: {
@@ -3803,7 +3887,7 @@ var script$P = {
   },
 };
 
-function render$P(_ctx, _cache, $props, $setup, $data, $options) {
+function render$T(_ctx, _cache, $props, $setup, $data, $options) {
   const _component_BaseEditLabel = vue.resolveComponent("BaseEditLabel");
   const _component_datepicker = vue.resolveComponent("datepicker");
   const _component_BaseShowLabel = vue.resolveComponent("BaseShowLabel");
@@ -3855,12 +3939,12 @@ function render$P(_ctx, _cache, $props, $setup, $data, $options) {
       ], 2 /* CLASS */))
 }
 
-script$P.render = render$P;
-script$P.__file = "src/components/BaseShowEditDatePicker/BaseShowEditDatePicker.vue";
+script$T.render = render$T;
+script$T.__file = "src/components/BaseShowEditDatePicker/BaseShowEditDatePicker.vue";
 
-var script$O = {
+var script$S = {
   name: "BaseShowEditInput",
-  components: {BaseEditLabel: script$1j, BaseShowLabel: script$1k},
+  components: {BaseEditLabel: script$1o, BaseShowLabel: script$1p},
   props: {
     name: {
       type: String,
@@ -3993,9 +4077,9 @@ var script$O = {
   },
 };
 
-const _hoisted_1$C = ["id", "type", "min", "max", "value", "placeholder", "disabled"];
+const _hoisted_1$G = ["id", "type", "min", "max", "value", "placeholder", "disabled"];
 
-function render$O(_ctx, _cache, $props, $setup, $data, $options) {
+function render$S(_ctx, _cache, $props, $setup, $data, $options) {
   const _component_BaseEditLabel = vue.resolveComponent("BaseEditLabel");
   const _component_BaseShowLabel = vue.resolveComponent("BaseShowLabel");
 
@@ -4020,7 +4104,7 @@ function render$O(_ctx, _cache, $props, $setup, $data, $options) {
               onKeydown: _cache[1] || (_cache[1] = $event => ($props.type === 'number' ? $options.isNumber : {})),
               disabled: $props.disabled,
               class: "form-control border-gray-400 focus:border-blue-300 focus:ring-blue-300 focus:ring-1"
-            }, null, 40 /* PROPS, HYDRATE_EVENTS */, _hoisted_1$C)
+            }, null, 40 /* PROPS, HYDRATE_EVENTS */, _hoisted_1$G)
           ]),
           (vue.openBlock(true), vue.createElementBlock(vue.Fragment, null, vue.renderList($props.errors, (error, index) => {
             return (vue.openBlock(), vue.createElementBlock("div", {
@@ -4038,11 +4122,11 @@ function render$O(_ctx, _cache, $props, $setup, $data, $options) {
   ], 2 /* CLASS */))
 }
 
-script$O.render = render$O;
-script$O.__scopeId = "data-v-e975da96";
-script$O.__file = "src/components/BaseShowEditInput/BaseShowEditInput.vue";
+script$S.render = render$S;
+script$S.__scopeId = "data-v-e975da96";
+script$S.__file = "src/components/BaseShowEditInput/BaseShowEditInput.vue";
 
-var script$N = {
+var script$R = {
   name: 'BaseShowEditPhoneInput',
   components: {
     // BaseEditLabel,
@@ -4134,47 +4218,47 @@ var script$N = {
   }
 };
 
-const _hoisted_1$B = { class: "mt-3" };
-const _hoisted_2$w = { key: 0 };
-const _hoisted_3$p = { class: "w-full relative" };
-const _hoisted_4$g = {
+const _hoisted_1$F = { class: "mt-3" };
+const _hoisted_2$A = { key: 0 };
+const _hoisted_3$s = { class: "w-full relative" };
+const _hoisted_4$j = {
   key: 0,
   class: "absolute inset-y-0 left-0 w-22"
 };
-const _hoisted_5$7 = ["name"];
-const _hoisted_6$4 = { selected: "" };
-const _hoisted_7$4 = ["value"];
+const _hoisted_5$a = ["name"];
+const _hoisted_6$7 = { selected: "" };
+const _hoisted_7$7 = ["value"];
 const _hoisted_8$3 = ["name", "id", "placeholder"];
 const _hoisted_9$1 = { key: 1 };
 
-function render$N(_ctx, _cache, $props, $setup, $data, $options) {
+function render$R(_ctx, _cache, $props, $setup, $data, $options) {
   const _component_BaseEditLabel = vue.resolveComponent("BaseEditLabel");
   const _component_BaseShowPhoneLabel = vue.resolveComponent("BaseShowPhoneLabel");
 
-  return (vue.openBlock(), vue.createElementBlock("div", _hoisted_1$B, [
+  return (vue.openBlock(), vue.createElementBlock("div", _hoisted_1$F, [
     ($props.editionMode)
-      ? (vue.openBlock(), vue.createElementBlock("div", _hoisted_2$w, [
+      ? (vue.openBlock(), vue.createElementBlock("div", _hoisted_2$A, [
           vue.createVNode(_component_BaseEditLabel, {
             label: $props.label,
             required: $props.required
           }, null, 8 /* PROPS */, ["label", "required"]),
-          vue.createElementVNode("div", _hoisted_3$p, [
+          vue.createElementVNode("div", _hoisted_3$s, [
             ($props.metadata && $props.metadata.countries)
-              ? (vue.openBlock(), vue.createElementBlock("div", _hoisted_4$g, [
+              ? (vue.openBlock(), vue.createElementBlock("div", _hoisted_4$j, [
                   vue.withDirectives(vue.createElementVNode("select", {
                     "onUpdate:modelValue": _cache[0] || (_cache[0] = $event => (($data.dCountryValue) = $event)),
                     name: this.name+'_country',
                     onInput: _cache[1] || (_cache[1] = (...args) => ($options.updateSelectValue && $options.updateSelectValue(...args))),
                     class: "block w-full border rounded-md appearance-none placeholder-gray-500 dark:bg-dark-2 dark:border-transparent focus:outline-none disabled:bg-gray-100 disabled:cursor-not-allowed disabled:dark:bg-dark-2 disabled:dark:border-transparent border-gray-400 focus:border-blue-300 focus:ring-blue-300 focus:ring-1"
                   }, [
-                    vue.createElementVNode("option", _hoisted_6$4, vue.toDisplayString($props.countryPlaceholder), 1 /* TEXT */),
+                    vue.createElementVNode("option", _hoisted_6$7, vue.toDisplayString($props.countryPlaceholder), 1 /* TEXT */),
                     (vue.openBlock(true), vue.createElementBlock(vue.Fragment, null, vue.renderList($props.metadata.countries, (model, index) => {
                       return (vue.openBlock(), vue.createElementBlock("option", {
                         key: index,
                         value: model.id
-                      }, vue.toDisplayString(`${model.id}`), 9 /* TEXT, PROPS */, _hoisted_7$4))
+                      }, vue.toDisplayString(`${model.id}`), 9 /* TEXT, PROPS */, _hoisted_7$7))
                     }), 128 /* KEYED_FRAGMENT */))
-                  ], 40 /* PROPS, HYDRATE_EVENTS */, _hoisted_5$7), [
+                  ], 40 /* PROPS, HYDRATE_EVENTS */, _hoisted_5$a), [
                     [vue.vModelSelect, $data.dCountryValue]
                   ])
                 ]))
@@ -4210,10 +4294,10 @@ function render$N(_ctx, _cache, $props, $setup, $data, $options) {
   ]))
 }
 
-script$N.render = render$N;
-script$N.__file = "src/components/BaseShowEditInput/BaseShowEditPhoneInput.vue";
+script$R.render = render$R;
+script$R.__file = "src/components/BaseShowEditInput/BaseShowEditPhoneInput.vue";
 
-var script$M = {
+var script$Q = {
   name: "LabelButtonRadioWithInput",
   props: {
     extra_id: {},
@@ -4256,12 +4340,12 @@ var script$M = {
   },
 };
 
-const _hoisted_1$A = ["id", "name", "value", "checked"];
-const _hoisted_2$v = ["id", "name", "value", "checked"];
-const _hoisted_3$o = /*#__PURE__*/vue.createElementVNode("br", null, null, -1 /* HOISTED */);
-const _hoisted_4$f = ["for"];
+const _hoisted_1$E = ["id", "name", "value", "checked"];
+const _hoisted_2$z = ["id", "name", "value", "checked"];
+const _hoisted_3$r = /*#__PURE__*/vue.createElementVNode("br", null, null, -1 /* HOISTED */);
+const _hoisted_4$i = ["for"];
 
-function render$M(_ctx, _cache, $props, $setup, $data, $options) {
+function render$Q(_ctx, _cache, $props, $setup, $data, $options) {
   return (vue.openBlock(), vue.createElementBlock(vue.Fragment, null, [
     ($props.isReturningKey)
       ? (vue.openBlock(), vue.createElementBlock("input", {
@@ -4273,7 +4357,7 @@ function render$M(_ctx, _cache, $props, $setup, $data, $options) {
           value: $props.trackBy === null ? $props.index : $props.element[$props.trackBy],
           onChange: _cache[0] || (_cache[0] = (...args) => ($props.updateInput && $props.updateInput(...args))),
           checked: $props.modelValue === ($props.trackBy === null ? $props.index : $props.index[$props.trackBy])
-        }, null, 40 /* PROPS, HYDRATE_EVENTS */, _hoisted_1$A))
+        }, null, 40 /* PROPS, HYDRATE_EVENTS */, _hoisted_1$E))
       : vue.withDirectives((vue.openBlock(), vue.createElementBlock("input", {
           key: 1,
           id: `${$props.name}-${$props.index}-${$props.extra_id}`,
@@ -4284,23 +4368,23 @@ function render$M(_ctx, _cache, $props, $setup, $data, $options) {
           onChange: _cache[1] || (_cache[1] = (...args) => ($props.updateInput && $props.updateInput(...args))),
           "onUpdate:modelValue": _cache[2] || (_cache[2] = $event => (($data.value) = $event)),
           checked: $props.modelValue === ($props.trackBy === null ? $props.element : $props.element[$props.trackBy])
-        }, null, 40 /* PROPS, HYDRATE_EVENTS */, _hoisted_2$v)), [
+        }, null, 40 /* PROPS, HYDRATE_EVENTS */, _hoisted_2$z)), [
           [vue.vModelRadio, $data.value]
         ]),
-    _hoisted_3$o,
+    _hoisted_3$r,
     vue.createElementVNode("label", {
       class: "form-check-label capitalize-first",
       for: `${$props.name}-${$props.index}-${$props.extra_id}`
-    }, vue.toDisplayString($options.translatedLabel), 9 /* TEXT, PROPS */, _hoisted_4$f)
+    }, vue.toDisplayString($options.translatedLabel), 9 /* TEXT, PROPS */, _hoisted_4$i)
   ], 64 /* STABLE_FRAGMENT */))
 }
 
-script$M.render = render$M;
-script$M.__file = "src/components/BaseShowEditRadioGroup/components/LabelButtonRadioWithInput.vue";
+script$Q.render = render$Q;
+script$Q.__file = "src/components/BaseShowEditRadioGroup/components/LabelButtonRadioWithInput.vue";
 
-var script$L = {
+var script$P = {
   name: "BaseShowEditRadioGroup",
-  components: {LabelButtonRadioWithInput: script$M},
+  components: {LabelButtonRadioWithInput: script$Q},
   props:  {
     options: { type: [Array, Object], required: true },
     name: { type: String, required: true },
@@ -4382,13 +4466,13 @@ var script$L = {
   },
 };
 
-const _hoisted_1$z = {
+const _hoisted_1$D = {
   key: 0,
   class: "capitalize-first"
 };
-const _hoisted_2$u = { key: 1 };
+const _hoisted_2$y = { key: 1 };
 
-function render$L(_ctx, _cache, $props, $setup, $data, $options) {
+function render$P(_ctx, _cache, $props, $setup, $data, $options) {
   const _component_BaseEditLabel = vue.resolveComponent("BaseEditLabel");
   const _component_LabelButtonRadioWithInput = vue.resolveComponent("LabelButtonRadioWithInput");
   const _component_BaseShowLabel = vue.resolveComponent("BaseShowLabel");
@@ -4449,23 +4533,23 @@ function render$L(_ctx, _cache, $props, $setup, $data, $options) {
             class: vue.normalizeClass(_ctx.cLabelClass)
           }, null, 8 /* PROPS */, ["label", "required", "class"]),
           ($props.modelValue)
-            ? (vue.openBlock(), vue.createElementBlock("div", _hoisted_1$z, [
+            ? (vue.openBlock(), vue.createElementBlock("div", _hoisted_1$D, [
                 vue.createVNode(_component_font_awesome_icon, {
                   icon: ["fal","check-square"],
                   class: "mr-2 text-blue-900"
                 }),
                 vue.createTextVNode(" " + vue.toDisplayString($options.cGetLabel), 1 /* TEXT */)
               ]))
-            : (vue.openBlock(), vue.createElementBlock("div", _hoisted_2$u, "- "))
+            : (vue.openBlock(), vue.createElementBlock("div", _hoisted_2$y, "- "))
         ], 64 /* STABLE_FRAGMENT */)),
     vue.createCommentVNode("endregion")
   ], 2 /* CLASS */))
 }
 
-script$L.render = render$L;
-script$L.__file = "src/components/BaseShowEditRadioGroup/BaseShowEditRadioGroup.vue";
+script$P.render = render$P;
+script$P.__file = "src/components/BaseShowEditRadioGroup/BaseShowEditRadioGroup.vue";
 
-var script$K = {
+var script$O = {
   name: 'BaseShowEditSelectAjax',
   components: {multiselect: multiselect__default["default"]},
   props: {
@@ -4481,6 +4565,7 @@ var script$K = {
       default: 'name'
     },
     modelValue: {type: Object, required: false, default: null},
+    taggable: {type: String, required: false, default: null},
     defaultAjax: {type: Object, required: false, default() { return {}}},
     url: {},
     name: {},
@@ -4489,7 +4574,7 @@ var script$K = {
     labelClass:{ type: String, required: false, default:'' },
     fullModelResponse:{ type: Boolean, required: false, default:false },
   },
-  emits: ['update:modelValue'],
+  emits: ['update:modelValue', 'update:stringValue', 'workSelect', 'selected:value'],
   data() {
     return {
       options: [],
@@ -4501,12 +4586,14 @@ var script$K = {
     defaultValue(newValue) {
       if (newValue != null && newValue !== '') {
         if(this.fullModelResponse){
+          console.log('nullify stringValue');
           this.$emit('update:modelValue', newValue);
           this.$emit('workSelect',newValue);
 
         }else {
-        this.$emit('update:modelValue', newValue[this.trackBy]);
-          this.$emit('selected:value',newValue[this.trackBy]);
+          console.log('nullify stringValue');
+          this.$emit('update:modelValue', newValue[this.trackBy]);
+          this.$emit('selected:value', newValue[this.trackBy]);
         }
       }
     },
@@ -4529,37 +4616,43 @@ var script$K = {
               this.options = response.data;
             });
       }
+      if(this.taggable && keyword && this.options.length < 1){
+        const tag = {};
+        tag[this.trackBy] = `CUS-${keyword.substring(0, 6).toUpperCase()}`;
+        tag[this.attributeLabel] = keyword;
+        tag['custom'] = true;
+        this.options[0] = tag;
+      }
     },
-
   },
 };
 
-const _hoisted_1$y = { key: 0 };
-const _hoisted_2$t = { class: "text-sm font-medium text-gray-500 capitalize-first mt-3" };
-const _hoisted_3$n = {
+const _hoisted_1$C = { key: 0 };
+const _hoisted_2$x = { class: "text-sm font-medium text-gray-500 capitalize-first mt-3" };
+const _hoisted_3$q = {
   key: 0,
   class: "text-red-600"
 };
-const _hoisted_4$e = { class: "custom__tag" };
-const _hoisted_5$6 = ["onClick"];
-const _hoisted_6$3 = { key: 1 };
-const _hoisted_7$3 = { class: "text-sm font-medium text-gray-500 capitalize-first pt-1" };
+const _hoisted_4$h = { class: "custom__tag" };
+const _hoisted_5$9 = ["onClick"];
+const _hoisted_6$6 = { key: 1 };
+const _hoisted_7$6 = { class: "text-sm font-medium text-gray-500 capitalize-first pt-1" };
 const _hoisted_8$2 = { class: "mt-1 text-sm text-gray-900" };
 
-function render$K(_ctx, _cache, $props, $setup, $data, $options) {
+function render$O(_ctx, _cache, $props, $setup, $data, $options) {
   const _component_multiselect = vue.resolveComponent("multiselect");
 
   return ($props.editionMode)
-    ? (vue.openBlock(), vue.createElementBlock("div", _hoisted_1$y, [
+    ? (vue.openBlock(), vue.createElementBlock("div", _hoisted_1$C, [
         ($props.defaultAjax)
           ? (vue.openBlock(), vue.createElementBlock("div", {
               key: 0,
               class: vue.normalizeClass($options.cGroupClass)
             }, [
-              vue.createElementVNode("label", _hoisted_2$t, [
+              vue.createElementVNode("label", _hoisted_2$x, [
                 vue.createTextVNode(vue.toDisplayString($props.label) + " ", 1 /* TEXT */),
                 (_ctx.required)
-                  ? (vue.openBlock(), vue.createElementBlock("span", _hoisted_3$n, "*"))
+                  ? (vue.openBlock(), vue.createElementBlock("span", _hoisted_3$q, "*"))
                   : vue.createCommentVNode("v-if", true)
               ]),
               (vue.openBlock(), vue.createBlock(_component_multiselect, {
@@ -4588,12 +4681,12 @@ function render$K(_ctx, _cache, $props, $setup, $data, $options) {
                 onSearchChange: $options.fetchOption
               }, {
                 tag: vue.withCtx(({ option, remove }) => [
-                  vue.createElementVNode("span", _hoisted_4$e, [
+                  vue.createElementVNode("span", _hoisted_4$h, [
                     vue.createElementVNode("span", null, vue.toDisplayString(option.name), 1 /* TEXT */),
                     vue.createElementVNode("span", {
                       class: "custom__remove",
                       onClick: $event => (remove(option))
-                    }, "❌", 8 /* PROPS */, _hoisted_5$6)
+                    }, "❌", 8 /* PROPS */, _hoisted_5$9)
                   ])
                 ]),
                 _: 1 /* STABLE */
@@ -4601,18 +4694,18 @@ function render$K(_ctx, _cache, $props, $setup, $data, $options) {
             ], 2 /* CLASS */))
           : vue.createCommentVNode("v-if", true)
       ]))
-    : (vue.openBlock(), vue.createElementBlock("div", _hoisted_6$3, [
-        vue.createElementVNode("dt", _hoisted_7$3, vue.toDisplayString($props.label), 1 /* TEXT */),
+    : (vue.openBlock(), vue.createElementBlock("div", _hoisted_6$6, [
+        vue.createElementVNode("dt", _hoisted_7$6, vue.toDisplayString($props.label), 1 /* TEXT */),
         vue.createElementVNode("dd", _hoisted_8$2, vue.toDisplayString($options.cDisplayedValueWhenNotEditionMode), 1 /* TEXT */)
       ]))
 }
 
-script$K.render = render$K;
-script$K.__file = "src/components/BaseShowEditSelect/BaseShowEditFormSelectSimple/BaseShowEditSelectAjax.vue";
+script$O.render = render$O;
+script$O.__file = "src/components/BaseShowEditSelect/BaseShowEditFormSelectSimple/BaseShowEditSelectAjax.vue";
 
-var script$J = {
+var script$N = {
   name: 'BaseShowEditSelectMultiple',
-  components: { multiselect: multiselect__default["default"], BaseEditLabel: script$1j},
+  components: { multiselect: multiselect__default["default"], BaseEditLabel: script$1o},
   props: {
     name: {
       type: String,
@@ -4717,25 +4810,25 @@ var script$J = {
   }
 };
 
-const _hoisted_1$x = {
+const _hoisted_1$B = {
   key: 0,
   class: "mt-3"
 };
-const _hoisted_2$s = {
+const _hoisted_2$w = {
   key: 1,
   class: "mt-3 flex flex-col"
 };
-const _hoisted_3$m = { key: 0 };
-const _hoisted_4$d = /*#__PURE__*/vue.createTextVNode(/*#__PURE__*/vue.toDisplayString('-'));
+const _hoisted_3$p = { key: 0 };
+const _hoisted_4$g = /*#__PURE__*/vue.createTextVNode(/*#__PURE__*/vue.toDisplayString('-'));
 
-function render$J(_ctx, _cache, $props, $setup, $data, $options) {
+function render$N(_ctx, _cache, $props, $setup, $data, $options) {
   const _component_BaseEditLabel = vue.resolveComponent("BaseEditLabel");
   const _component_multiselect = vue.resolveComponent("multiselect");
   const _component_BaseShowLabel = vue.resolveComponent("BaseShowLabel");
   const _component_font_awesome_icon = vue.resolveComponent("font-awesome-icon");
 
   return ($props.editionMode)
-    ? (vue.openBlock(), vue.createElementBlock("div", _hoisted_1$x, [
+    ? (vue.openBlock(), vue.createElementBlock("div", _hoisted_1$B, [
         vue.createElementVNode("div", null, [
           vue.createVNode(_component_BaseEditLabel, {
             label: $props.label,
@@ -4763,13 +4856,13 @@ function render$J(_ctx, _cache, $props, $setup, $data, $options) {
           }, vue.toDisplayString(_ctx.$t(error, {attribute: _ctx.$t('attributes.' + $props.name)})), 1 /* TEXT */))
         }), 128 /* KEYED_FRAGMENT */))
       ]))
-    : (vue.openBlock(), vue.createElementBlock("div", _hoisted_2$s, [
+    : (vue.openBlock(), vue.createElementBlock("div", _hoisted_2$w, [
         vue.createVNode(_component_BaseShowLabel, {
           label: $props.label,
           required: $props.required
         }, null, 8 /* PROPS */, ["label", "required"]),
         ($props.modelValue.length >= 1)
-          ? (vue.openBlock(), vue.createElementBlock("div", _hoisted_3$m, [
+          ? (vue.openBlock(), vue.createElementBlock("div", _hoisted_3$p, [
               (vue.openBlock(true), vue.createElementBlock(vue.Fragment, null, vue.renderList($props.modelValue, (item, index) => {
                 return (vue.openBlock(), vue.createElementBlock("span", {
                   class: "inline-block mr-3",
@@ -4784,20 +4877,20 @@ function render$J(_ctx, _cache, $props, $setup, $data, $options) {
               }), 128 /* KEYED_FRAGMENT */))
             ]))
           : (vue.openBlock(), vue.createElementBlock(vue.Fragment, { key: 1 }, [
-              _hoisted_4$d
+              _hoisted_4$g
             ], 2112 /* STABLE_FRAGMENT, DEV_ROOT_FRAGMENT */))
       ]))
 }
 
-script$J.render = render$J;
-script$J.__file = "src/components/BaseShowEditSelect/BaseShowEditFormSelectMultiple/BaseShowEditSelectMultiple.vue";
+script$N.render = render$N;
+script$N.__file = "src/components/BaseShowEditSelect/BaseShowEditFormSelectMultiple/BaseShowEditSelectMultiple.vue";
 
-var script$I = {
+var script$M = {
   name: 'BaseShowEditSelectSimple',
   components: {
     multiselect: multiselect__default["default"],
-    BaseEditLabel: script$1j,
-    BaseShowLabel: script$1k,
+    BaseEditLabel: script$1o,
+    BaseShowLabel: script$1p,
   },
   props: {
     editionMode: {
@@ -4890,26 +4983,26 @@ var script$I = {
   },
 };
 
-const _hoisted_1$w = {
+const _hoisted_1$A = {
   key: 0,
   class: "mt-3"
 };
-const _hoisted_2$r = {
+const _hoisted_2$v = {
   key: 0,
   class: "form-help text-red-600"
 };
-const _hoisted_3$l = {
+const _hoisted_3$o = {
   key: 1,
   class: "mt-3"
 };
 
-function render$I(_ctx, _cache, $props, $setup, $data, $options) {
+function render$M(_ctx, _cache, $props, $setup, $data, $options) {
   const _component_BaseEditLabel = vue.resolveComponent("BaseEditLabel");
   const _component_multiselect = vue.resolveComponent("multiselect");
   const _component_BaseShowLabel = vue.resolveComponent("BaseShowLabel");
 
   return ($props.editionMode)
-    ? (vue.openBlock(), vue.createElementBlock("div", _hoisted_1$w, [
+    ? (vue.openBlock(), vue.createElementBlock("div", _hoisted_1$A, [
         vue.createVNode(_component_BaseEditLabel, {
           label: $props.label,
           required: $props.required
@@ -4926,30 +5019,27 @@ function render$I(_ctx, _cache, $props, $setup, $data, $options) {
           required: $props.required
         }, null, 8 /* PROPS */, ["options", "placeholder", "modelValue", "onUpdate:modelValue", "searchable", "label", "track-by", "disabled", "required"]),
         ($props.errors)
-          ? (vue.openBlock(), vue.createElementBlock("div", _hoisted_2$r, [
+          ? (vue.openBlock(), vue.createElementBlock("div", _hoisted_2$v, [
               (vue.openBlock(true), vue.createElementBlock(vue.Fragment, null, vue.renderList($props.errors, (error, index) => {
                 return (vue.openBlock(), vue.createElementBlock("div", { key: index }, vue.toDisplayString(_ctx.$t(error, {'attribute': _ctx.$t('attributes.' + $props.name)})), 1 /* TEXT */))
               }), 128 /* KEYED_FRAGMENT */))
             ]))
           : vue.createCommentVNode("v-if", true)
       ]))
-    : (vue.openBlock(), vue.createElementBlock("div", _hoisted_3$l, [
-        ($options.cDefautlValue)
-          ? (vue.openBlock(), vue.createBlock(_component_BaseShowLabel, {
-              key: 0,
-              label: $props.label,
-              "model-value": $options.cDefautlValue.name
-            }, null, 8 /* PROPS */, ["label", "model-value"]))
-          : vue.createCommentVNode("v-if", true)
+    : (vue.openBlock(), vue.createElementBlock("div", _hoisted_3$o, [
+        vue.createVNode(_component_BaseShowLabel, {
+          label: $props.label,
+          "model-value": $options.cDefautlValue ? $options.cDefautlValue[$props.attributeLabel]: null
+        }, null, 8 /* PROPS */, ["label", "model-value"])
       ]))
 }
 
-script$I.render = render$I;
-script$I.__file = "src/components/BaseShowEditSelect/BaseShowEditFormSelectSimple/BaseShowEditSelectSimple.vue";
+script$M.render = render$M;
+script$M.__file = "src/components/BaseShowEditSelect/BaseShowEditFormSelectSimple/BaseShowEditSelectSimple.vue";
 
-var script$H = {
+var script$L = {
   name: "BaseShowEditTextArea",
-  components: {BaseShowLabel: script$1k, BaseEditLabel: script$1j},
+  components: {BaseShowLabel: script$1p, BaseEditLabel: script$1o},
   props: {
     editionMode: {
       type: Boolean,
@@ -4995,6 +5085,10 @@ var script$H = {
       required: false,
       default: false
     },
+    name: {
+      type: String,
+      required: true
+    }
   },
   computed: {
     cGroupClass() {
@@ -5008,9 +5102,9 @@ var script$H = {
   }
 };
 
-const _hoisted_1$v = ["id", "value", "placeholder", "disabled"];
+const _hoisted_1$z = ["id", "value", "placeholder", "disabled"];
 
-function render$H(_ctx, _cache, $props, $setup, $data, $options) {
+function render$L(_ctx, _cache, $props, $setup, $data, $options) {
   const _component_BaseEditLabel = vue.resolveComponent("BaseEditLabel");
   const _component_BaseShowLabel = vue.resolveComponent("BaseShowLabel");
 
@@ -5030,13 +5124,13 @@ function render$H(_ctx, _cache, $props, $setup, $data, $options) {
             disabled: $props.disabled,
             onInput: _cache[0] || (_cache[0] = (...args) => ($options.updateInput && $options.updateInput(...args))),
             class: "form-control border-gray-400 focus:border-blue-300 focus:ring-blue-300 focus:ring-1"
-          }, null, 40 /* PROPS, HYDRATE_EVENTS */, _hoisted_1$v),
+          }, null, 40 /* PROPS, HYDRATE_EVENTS */, _hoisted_1$z),
           ($props.errors)
             ? (vue.openBlock(true), vue.createElementBlock(vue.Fragment, { key: 0 }, vue.renderList($props.errors, (error, index) => {
                 return (vue.openBlock(), vue.createElementBlock("div", {
                   key: index,
                   class: "form-help text-red-600"
-                }, vue.toDisplayString(_ctx.$t(error, {attribute: _ctx.$t('attributes.' + _ctx.name)})), 1 /* TEXT */))
+                }, vue.toDisplayString(_ctx.$t(error, {attribute: _ctx.$t('attributes.' + $props.name)})), 1 /* TEXT */))
               }), 128 /* KEYED_FRAGMENT */))
             : vue.createCommentVNode("v-if", true)
         ], 64 /* STABLE_FRAGMENT */))
@@ -5048,14 +5142,14 @@ function render$H(_ctx, _cache, $props, $setup, $data, $options) {
   ], 2 /* CLASS */))
 }
 
-script$H.render = render$H;
-script$H.__file = "src/components/BaseShowEditInput/BaseShowEditTextArea.vue";
+script$L.render = render$L;
+script$L.__file = "src/components/BaseShowEditInput/BaseShowEditTextArea.vue";
 
-var script$G = {
+var script$K = {
 
   directives: {mask: vueTheMask.mask},
   name: 'BaseShowEditTimeInput',
-  components: { BaseEditLabel: script$1j, BaseShowLabel: script$1k },
+  components: { BaseEditLabel: script$1o, BaseShowLabel: script$1p },
   props: {
     editionMode: {type: Boolean, required: true},
     name: { type: String, required: true },
@@ -5083,10 +5177,10 @@ var script$G = {
   },
 };
 
-const _hoisted_1$u = ["name", "value", "id", "placeholder"];
-const _hoisted_2$q = { key: 1 };
+const _hoisted_1$y = ["name", "value", "id", "placeholder"];
+const _hoisted_2$u = { key: 1 };
 
-function render$G(_ctx, _cache, $props, $setup, $data, $options) {
+function render$K(_ctx, _cache, $props, $setup, $data, $options) {
   const _component_BaseEditLabel = vue.resolveComponent("BaseEditLabel");
   const _component_BaseShowLabel = vue.resolveComponent("BaseShowLabel");
   const _directive_mask = vue.resolveDirective("mask");
@@ -5108,7 +5202,7 @@ function render$G(_ctx, _cache, $props, $setup, $data, $options) {
           id: $props.name,
           class: vue.normalizeClass([$options.cInputClass, "border-gray-400 focus:border-blue-300 focus:ring-blue-300 focus:ring-1"]),
           placeholder: $props.placeholder
-        }, null, 42 /* CLASS, PROPS, HYDRATE_EVENTS */, _hoisted_1$u), [
+        }, null, 42 /* CLASS, PROPS, HYDRATE_EVENTS */, _hoisted_1$y), [
           [_directive_mask, $props.mask]
         ]),
         (vue.openBlock(true), vue.createElementBlock(vue.Fragment, null, vue.renderList($props.errors, (error, index) => {
@@ -5118,7 +5212,7 @@ function render$G(_ctx, _cache, $props, $setup, $data, $options) {
           }, vue.toDisplayString(_ctx.$t(error, {attribute: _ctx.$t('attributes.' + $props.name)})), 1 /* TEXT */))
         }), 128 /* KEYED_FRAGMENT */))
       ], 2 /* CLASS */))
-    : (vue.openBlock(), vue.createElementBlock("div", _hoisted_2$q, [
+    : (vue.openBlock(), vue.createElementBlock("div", _hoisted_2$u, [
         vue.createVNode(_component_BaseShowLabel, {
           label: $props.label,
           "model-value": $props.modelValue
@@ -5126,10 +5220,10 @@ function render$G(_ctx, _cache, $props, $setup, $data, $options) {
       ]))
 }
 
-script$G.render = render$G;
-script$G.__file = "src/components/BaseShowEditInput/BaseShowEditTimeInput.vue";
+script$K.render = render$K;
+script$K.__file = "src/components/BaseShowEditInput/BaseShowEditTimeInput.vue";
 
-var script$F = {
+var script$J = {
   name: 'BaseShowPhoneLabel',
   components: {CountryFlag: CountryFlag__default["default"]},
   props: {
@@ -5158,11 +5252,11 @@ var script$F = {
 
 };
 
-const _hoisted_1$t = { class: "mt-1.5 flex place-items-center" };
-const _hoisted_2$p = { class: "flex place-items-center" };
-const _hoisted_3$k = { class: "ml-1" };
+const _hoisted_1$x = { class: "mt-1.5 flex place-items-center" };
+const _hoisted_2$t = { class: "flex place-items-center" };
+const _hoisted_3$n = { class: "ml-1" };
 
-function render$F(_ctx, _cache, $props, $setup, $data, $options) {
+function render$J(_ctx, _cache, $props, $setup, $data, $options) {
   const _component_country_flag = vue.resolveComponent("country-flag");
 
   return (vue.openBlock(), vue.createElementBlock(vue.Fragment, null, [
@@ -5172,8 +5266,8 @@ function render$F(_ctx, _cache, $props, $setup, $data, $options) {
           class: vue.normalizeClass($options.cLabelClass)
         }, vue.toDisplayString($props.label), 3 /* TEXT, CLASS */))
       : vue.createCommentVNode("v-if", true),
-    vue.createElementVNode("div", _hoisted_1$t, [
-      vue.createElementVNode("span", _hoisted_2$p, [
+    vue.createElementVNode("div", _hoisted_1$x, [
+      vue.createElementVNode("span", _hoisted_2$t, [
         ($props.countryValue)
           ? (vue.openBlock(), vue.createBlock(_component_country_flag, {
               key: 0,
@@ -5182,18 +5276,18 @@ function render$F(_ctx, _cache, $props, $setup, $data, $options) {
             }, null, 8 /* PROPS */, ["country"]))
           : vue.createCommentVNode("v-if", true)
       ]),
-      vue.createElementVNode("span", _hoisted_3$k, vue.toDisplayString($props.modelValue === null || $props.modelValue === '' ?  '-' : $props.modelValue), 1 /* TEXT */)
+      vue.createElementVNode("span", _hoisted_3$n, vue.toDisplayString($props.modelValue === null || $props.modelValue === '' ?  '-' : $props.modelValue), 1 /* TEXT */)
     ])
   ], 64 /* STABLE_FRAGMENT */))
 }
 
-script$F.render = render$F;
-script$F.__file = "src/components/BaseLabel/BaseShowPhoneLabel.vue";
+script$J.render = render$J;
+script$J.__file = "src/components/BaseLabel/BaseShowPhoneLabel.vue";
 
-var script$E = {
+var script$I = {
   name: 'BaseSimpleCard',
   components:{
-    BaseButton: script$1g
+    BaseButton: script$1l
   },
   props: {
     title: {
@@ -5201,6 +5295,18 @@ var script$E = {
       required: true
     },
     name: { // ne sais pas a quoi ca sert
+      type: String,
+      required: false
+    },
+    icon: {
+      type: String,
+      required: false
+    },
+    colorIcon: {
+      type: String,
+      required: false
+    },
+    classIcon: {
       type: String,
       required: false
     },
@@ -5242,17 +5348,18 @@ var script$E = {
   },
 };
 
-const _hoisted_1$s = { class: "box px-6 py-5" };
-const _hoisted_2$o = { class: "flex-1" };
-const _hoisted_3$j = { class: "text-2xl font-bold capitalize-first" };
+const _hoisted_1$w = { class: "box px-6 py-5" };
+const _hoisted_2$s = { class: "flex-1" };
+const _hoisted_3$m = { class: "text-2xl font-bold capitalize-first" };
 
-function render$E(_ctx, _cache, $props, $setup, $data, $options) {
+function render$I(_ctx, _cache, $props, $setup, $data, $options) {
   const _component_BaseButton = vue.resolveComponent("BaseButton");
+  const _component_font_awesome_icon = vue.resolveComponent("font-awesome-icon");
 
   return (vue.openBlock(), vue.createElementBlock("div", {
     class: vue.normalizeClass($props.classes)
   }, [
-    vue.createElementVNode("div", _hoisted_1$s, [
+    vue.createElementVNode("div", _hoisted_1$w, [
       ($options.with_header)
         ? (vue.openBlock(), vue.createElementBlock("header", {
             key: 0,
@@ -5268,8 +5375,19 @@ function render$E(_ctx, _cache, $props, $setup, $data, $options) {
                   onClick: _cache[0] || (_cache[0] = $event => ($props.buttonBackLeftRoute !== undefined && $props.buttonBackLeftRoute !== false ? _ctx.$router.push( $props.buttonBackLeftRoute ) : _ctx.$router.go(-1)))
                 }, null, 8 /* PROPS */, ["tooltip"]))
               : vue.createCommentVNode("v-if", true),
-            vue.createElementVNode("div", _hoisted_2$o, [
-              vue.createElementVNode("h2", _hoisted_3$j, vue.toDisplayString($props.title), 1 /* TEXT */),
+            vue.createElementVNode("div", _hoisted_2$s, [
+              vue.createElementVNode("h2", _hoisted_3$m, [
+                vue.createTextVNode(vue.toDisplayString($props.title) + " ", 1 /* TEXT */),
+                ($props.icon)
+                  ? (vue.openBlock(), vue.createBlock(_component_font_awesome_icon, {
+                      key: 0,
+                      icon: ['fal', $props.icon],
+                      size: "x",
+                      color: $props.colorIcon,
+                      class: vue.normalizeClass($props.classIcon)
+                    }, null, 8 /* PROPS */, ["icon", "color", "class"]))
+                  : vue.createCommentVNode("v-if", true)
+              ]),
               vue.renderSlot(_ctx.$slots, "header")
             ]),
             vue.createElementVNode("div", null, [
@@ -5284,10 +5402,10 @@ function render$E(_ctx, _cache, $props, $setup, $data, $options) {
   ], 2 /* CLASS */))
 }
 
-script$E.render = render$E;
-script$E.__file = "src/components/BaseCard/BaseSimpleCard.vue";
+script$I.render = render$I;
+script$I.__file = "src/components/BaseCard/BaseSimpleCard.vue";
 
-var script$D = {
+var script$H = {
   name: 'BaseSimpleCheckboxGroup',
   props: {
     options: {type: Object, required: true},
@@ -5316,22 +5434,22 @@ var script$D = {
   }
 };
 
-const _hoisted_1$r = { class: "mt-3" };
-const _hoisted_2$n = {
+const _hoisted_1$v = { class: "mt-3" };
+const _hoisted_2$r = {
   key: 0,
   class: "form-label capitalize-first"
 };
-const _hoisted_3$i = { class: "flex flex-col sm:flex-row mt-3" };
-const _hoisted_4$c = ["id", "value"];
-const _hoisted_5$5 = ["for"];
+const _hoisted_3$l = { class: "flex flex-col sm:flex-row mt-3" };
+const _hoisted_4$f = ["id", "value"];
+const _hoisted_5$8 = ["for"];
 
-function render$D(_ctx, _cache, $props, $setup, $data, $options) {
+function render$H(_ctx, _cache, $props, $setup, $data, $options) {
   return (vue.openBlock(), vue.createElementBlock(vue.Fragment, null, [
-    vue.createElementVNode("div", _hoisted_1$r, [
+    vue.createElementVNode("div", _hoisted_1$v, [
       ($props.label)
-        ? (vue.openBlock(), vue.createElementBlock("label", _hoisted_2$n, vue.toDisplayString($props.label), 1 /* TEXT */))
+        ? (vue.openBlock(), vue.createElementBlock("label", _hoisted_2$r, vue.toDisplayString($props.label), 1 /* TEXT */))
         : vue.createCommentVNode("v-if", true),
-      vue.createElementVNode("div", _hoisted_3$i, [
+      vue.createElementVNode("div", _hoisted_3$l, [
         (vue.openBlock(true), vue.createElementBlock(vue.Fragment, null, vue.renderList($props.options, (val, key) => {
           return (vue.openBlock(), vue.createElementBlock("div", {
             class: "form-check mr-4 sm:mt-0",
@@ -5343,13 +5461,13 @@ function render$D(_ctx, _cache, $props, $setup, $data, $options) {
               type: "checkbox",
               value: $props.trackBy ===null ? key : val[$props.trackBy],
               "onUpdate:modelValue": _cache[0] || (_cache[0] = $event => (($data.value) = $event))
-            }, null, 8 /* PROPS */, _hoisted_4$c), [
+            }, null, 8 /* PROPS */, _hoisted_4$f), [
               [vue.vModelCheckbox, $data.value]
             ]),
             vue.createElementVNode("label", {
               class: "form-check-label capitalize-first",
               for: `${$props.name}-${key}`
-            }, vue.toDisplayString(this.translatable ?   _ctx.$t(`${$props.translationExtention}.${key}`) : val[$props.attributeLabel]), 9 /* TEXT, PROPS */, _hoisted_5$5)
+            }, vue.toDisplayString(this.translatable ?   _ctx.$t(`${$props.translationExtention}.${key}`) : val[$props.attributeLabel]), 9 /* TEXT, PROPS */, _hoisted_5$8)
           ]))
         }), 128 /* KEYED_FRAGMENT */))
       ])
@@ -5365,10 +5483,10 @@ function render$D(_ctx, _cache, $props, $setup, $data, $options) {
   ], 64 /* STABLE_FRAGMENT */))
 }
 
-script$D.render = render$D;
-script$D.__file = "src/components/BaseCheckBox/BaseSimpleCheckboxGroup.vue";
+script$H.render = render$H;
+script$H.__file = "src/components/BaseCheckBox/BaseSimpleCheckboxGroup.vue";
 
-var script$C = {
+var script$G = {
   name: 'BaseSimpleDatePicker',
   components:{ Datepicker: Datepicker__default["default"] },
   props:{
@@ -5438,13 +5556,13 @@ var script$C = {
   }
 };
 
-const _hoisted_1$q = ["for"];
-const _hoisted_2$m = {
+const _hoisted_1$u = ["for"];
+const _hoisted_2$q = {
   key: 0,
   class: "text-red-600"
 };
 
-function render$C(_ctx, _cache, $props, $setup, $data, $options) {
+function render$G(_ctx, _cache, $props, $setup, $data, $options) {
   const _component_datepicker = vue.resolveComponent("datepicker");
 
   return (vue.openBlock(), vue.createElementBlock("div", {
@@ -5458,9 +5576,9 @@ function render$C(_ctx, _cache, $props, $setup, $data, $options) {
         }, [
           vue.createTextVNode(vue.toDisplayString($props.label) + " ", 1 /* TEXT */),
           ($props.label && $props.required)
-            ? (vue.openBlock(), vue.createElementBlock("span", _hoisted_2$m, "*"))
+            ? (vue.openBlock(), vue.createElementBlock("span", _hoisted_2$q, "*"))
             : vue.createCommentVNode("v-if", true)
-        ], 10 /* CLASS, PROPS */, _hoisted_1$q))
+        ], 10 /* CLASS, PROPS */, _hoisted_1$u))
       : vue.createCommentVNode("v-if", true),
     vue.createVNode(_component_datepicker, {
       modelValue: $data.value,
@@ -5488,10 +5606,10 @@ function render$C(_ctx, _cache, $props, $setup, $data, $options) {
   ], 2 /* CLASS */))
 }
 
-script$C.render = render$C;
-script$C.__file = "src/components/BaseDatepicker/BaseSimpleDatePicker.vue";
+script$G.render = render$G;
+script$G.__file = "src/components/BaseDatepicker/BaseSimpleDatePicker.vue";
 
-var script$B = {
+var script$F = {
   name: 'BaseSimpleRadioGroup',
   emits: ['change'],
   data() {
@@ -5534,28 +5652,28 @@ var script$B = {
 
 };
 
-const _hoisted_1$p = { class: "mt-3" };
-const _hoisted_2$l = {
+const _hoisted_1$t = { class: "mt-3" };
+const _hoisted_2$p = {
   key: 0,
   class: "form-label capitalize-first"
 };
-const _hoisted_3$h = {
+const _hoisted_3$k = {
   key: 0,
   class: "text-red-600"
 };
-const _hoisted_4$b = ["id", "name", "value", "disabled"];
-const _hoisted_5$4 = ["id", "value", "disabled", "name"];
-const _hoisted_6$2 = ["for"];
-const _hoisted_7$2 = ["for"];
+const _hoisted_4$e = ["id", "name", "value", "disabled"];
+const _hoisted_5$7 = ["id", "value", "disabled", "name"];
+const _hoisted_6$5 = ["for"];
+const _hoisted_7$5 = ["for"];
 
-function render$B(_ctx, _cache, $props, $setup, $data, $options) {
+function render$F(_ctx, _cache, $props, $setup, $data, $options) {
   return (vue.openBlock(), vue.createElementBlock(vue.Fragment, null, [
-    vue.createElementVNode("div", _hoisted_1$p, [
+    vue.createElementVNode("div", _hoisted_1$t, [
       ($props.label)
-        ? (vue.openBlock(), vue.createElementBlock("label", _hoisted_2$l, [
+        ? (vue.openBlock(), vue.createElementBlock("label", _hoisted_2$p, [
             vue.createTextVNode(vue.toDisplayString($props.label) + " ", 1 /* TEXT */),
             ($props.label && $props.required)
-              ? (vue.openBlock(), vue.createElementBlock("span", _hoisted_3$h, "*"))
+              ? (vue.openBlock(), vue.createElementBlock("span", _hoisted_3$k, "*"))
               : vue.createCommentVNode("v-if", true)
           ]))
         : vue.createCommentVNode("v-if", true),
@@ -5577,7 +5695,7 @@ function render$B(_ctx, _cache, $props, $setup, $data, $options) {
                   value: $props.trackBy ===null ? key : val[$props.trackBy],
                   "onUpdate:modelValue": _cache[0] || (_cache[0] = $event => (($data.valueChecked) = $event)),
                   disabled: $props.disabled
-                }, null, 8 /* PROPS */, _hoisted_4$b)), [
+                }, null, 8 /* PROPS */, _hoisted_4$e)), [
                   [vue.vModelRadio, $data.valueChecked]
                 ])
               : vue.withDirectives((vue.openBlock(), vue.createElementBlock("input", {
@@ -5589,7 +5707,7 @@ function render$B(_ctx, _cache, $props, $setup, $data, $options) {
                   "onUpdate:modelValue": _cache[1] || (_cache[1] = $event => (($data.valueChecked) = $event)),
                   disabled: $props.disabled,
                   name: $data.temp_name
-                }, null, 8 /* PROPS */, _hoisted_5$4)), [
+                }, null, 8 /* PROPS */, _hoisted_5$7)), [
                   [vue.vModelRadio, $data.valueChecked]
                 ]),
             ($props.isShowingKey === true )
@@ -5597,12 +5715,12 @@ function render$B(_ctx, _cache, $props, $setup, $data, $options) {
                   key: 2,
                   class: "form-check-label capitalize-first",
                   for: `${$props.name}-${key}-${$props.extra_id || ""}`
-                }, vue.toDisplayString(this.translatable ? _ctx.$t(`${$props.translationExtention}.${key}`) : val[$props.attributeLabel]), 9 /* TEXT, PROPS */, _hoisted_6$2))
+                }, vue.toDisplayString(this.translatable ? _ctx.$t(`${$props.translationExtention}.${key}`) : val[$props.attributeLabel]), 9 /* TEXT, PROPS */, _hoisted_6$5))
               : (vue.openBlock(), vue.createElementBlock("label", {
                   key: 3,
                   class: "form-check-label capitalize-first",
                   for: `${$props.name}-${key}-${$props.extra_id || ""}`
-                }, vue.toDisplayString(this.translatable ? _ctx.$t(`${$props.translationExtention}.${$props.trackBy ===null ? key : val[$props.attributeLabel]}`) : val[$props.attributeLabel]), 9 /* TEXT, PROPS */, _hoisted_7$2))
+                }, vue.toDisplayString(this.translatable ? _ctx.$t(`${$props.translationExtention}.${$props.trackBy ===null ? key : val[$props.attributeLabel]}`) : val[$props.attributeLabel]), 9 /* TEXT, PROPS */, _hoisted_7$5))
           ]))
         }), 128 /* KEYED_FRAGMENT */))
       ], 2 /* CLASS */)
@@ -5618,10 +5736,10 @@ function render$B(_ctx, _cache, $props, $setup, $data, $options) {
   ], 64 /* STABLE_FRAGMENT */))
 }
 
-script$B.render = render$B;
-script$B.__file = "src/components/BaseRadioGroup/BaseSimpleRadioGroup.vue";
+script$F.render = render$F;
+script$F.__file = "src/components/BaseRadioGroup/BaseSimpleRadioGroup.vue";
 
-var script$A = {
+var script$E = {
   name: 'labelWitchCheckBoxChecked',
   props: {
     element: {},
@@ -5640,7 +5758,7 @@ var script$A = {
   }
 };
 
-function render$A(_ctx, _cache, $props, $setup, $data, $options) {
+function render$E(_ctx, _cache, $props, $setup, $data, $options) {
   const _component_font_awesome_icon = vue.resolveComponent("font-awesome-icon");
 
   return (vue.openBlock(), vue.createElementBlock(vue.Fragment, null, [
@@ -5652,10 +5770,10 @@ function render$A(_ctx, _cache, $props, $setup, $data, $options) {
   ], 64 /* STABLE_FRAGMENT */))
 }
 
-script$A.render = render$A;
-script$A.__file = "src/components/BaseShowEditCheckBox/components/LabelWitchCheckBoxChecked.vue";
+script$E.render = render$E;
+script$E.__file = "src/components/BaseShowEditCheckBox/components/LabelWitchCheckBoxChecked.vue";
 
-var script$z = {
+var script$D = {
   name: 'checkboxWithInput',
   props: {
     attributeLabel: {},
@@ -5679,11 +5797,11 @@ var script$z = {
   },
 };
 
-const _hoisted_1$o = ["id", "name", "value", "checked"];
-const _hoisted_2$k = /*#__PURE__*/vue.createElementVNode("br", null, null, -1 /* HOISTED */);
-const _hoisted_3$g = ["for"];
+const _hoisted_1$s = ["id", "name", "value", "checked"];
+const _hoisted_2$o = /*#__PURE__*/vue.createElementVNode("br", null, null, -1 /* HOISTED */);
+const _hoisted_3$j = ["for"];
 
-function render$z(_ctx, _cache, $props, $setup, $data, $options) {
+function render$D(_ctx, _cache, $props, $setup, $data, $options) {
   return (vue.openBlock(), vue.createElementBlock(vue.Fragment, null, [
     vue.createElementVNode("input", {
       id: `${$props.name}-${$props.key}`,
@@ -5693,21 +5811,21 @@ function render$z(_ctx, _cache, $props, $setup, $data, $options) {
       value: $props.trackBy ===null ? $props.key : $props.element[$props.trackBy],
       onChange: _cache[0] || (_cache[0] = (...args) => ($props.updateInput && $props.updateInput(...args))),
       checked: $props.modelValue
-    }, null, 40 /* PROPS, HYDRATE_EVENTS */, _hoisted_1$o),
-    _hoisted_2$k,
+    }, null, 40 /* PROPS, HYDRATE_EVENTS */, _hoisted_1$s),
+    _hoisted_2$o,
     vue.createElementVNode("label", {
       class: "form-check-label capitalize-first",
       for: `${$props.name}-${$props.key}`
-    }, vue.toDisplayString($options.translatedLabel), 9 /* TEXT, PROPS */, _hoisted_3$g)
+    }, vue.toDisplayString($options.translatedLabel), 9 /* TEXT, PROPS */, _hoisted_3$j)
   ], 64 /* STABLE_FRAGMENT */))
 }
 
-script$z.render = render$z;
-script$z.__file = "src/components/BaseShowEditCheckBox/components/CheckboxWithInput.vue";
+script$D.render = render$D;
+script$D.__file = "src/components/BaseShowEditCheckBox/components/CheckboxWithInput.vue";
 
-var script$y = {
+var script$C = {
   name: "BaseSimpleShowEditCheckboxGroup",
-  components: {CheckboxWithInput: script$z, LabelWitchCheckBoxChecked: script$A},
+  components: {CheckboxWithInput: script$D, LabelWitchCheckBoxChecked: script$E},
   props: {
     options: {type: Object, required: true},
     name: {
@@ -5774,18 +5892,18 @@ var script$y = {
   },
 };
 
-const _hoisted_1$n = { key: 0 };
-const _hoisted_2$j = /*#__PURE__*/vue.createElementVNode("br", null, null, -1 /* HOISTED */);
-const _hoisted_3$f = { key: 1 };
+const _hoisted_1$r = { key: 0 };
+const _hoisted_2$n = /*#__PURE__*/vue.createElementVNode("br", null, null, -1 /* HOISTED */);
+const _hoisted_3$i = { key: 1 };
 
-function render$y(_ctx, _cache, $props, $setup, $data, $options) {
+function render$C(_ctx, _cache, $props, $setup, $data, $options) {
   const _component_BaseEditLabel = vue.resolveComponent("BaseEditLabel");
   const _component_checkboxWithInput = vue.resolveComponent("checkboxWithInput");
   const _component_labelWitchCheckBoxChecked = vue.resolveComponent("labelWitchCheckBoxChecked");
 
   return (vue.openBlock(), vue.createElementBlock("div", null, [
     ($props.editionMode)
-      ? (vue.openBlock(), vue.createElementBlock("div", _hoisted_1$n, [
+      ? (vue.openBlock(), vue.createElementBlock("div", _hoisted_1$r, [
           ($props.options.length > 0)
             ? (vue.openBlock(), vue.createBlock(_component_BaseEditLabel, {
                 key: 0,
@@ -5834,7 +5952,7 @@ function render$y(_ctx, _cache, $props, $setup, $data, $options) {
                       required: $props.required
                     }, null, 8 /* PROPS */, ["label", "required"]))
                   : vue.createCommentVNode("v-if", true),
-                _hoisted_2$j,
+                _hoisted_2$n,
                 (vue.openBlock(true), vue.createElementBlock(vue.Fragment, null, vue.renderList($props.modelValue, (item, index) => {
                   return (vue.openBlock(), vue.createElementBlock("span", {
                     class: "inline-block mr-3",
@@ -5851,15 +5969,15 @@ function render$y(_ctx, _cache, $props, $setup, $data, $options) {
                   ]))
                 }), 128 /* KEYED_FRAGMENT */))
               ], 64 /* STABLE_FRAGMENT */))
-            : (vue.openBlock(), vue.createElementBlock("span", _hoisted_3$f))
+            : (vue.openBlock(), vue.createElementBlock("span", _hoisted_3$i))
         ], 2112 /* STABLE_FRAGMENT, DEV_ROOT_FRAGMENT */))
   ]))
 }
 
-script$y.render = render$y;
-script$y.__file = "src/components/BaseShowEditCheckBox/BaseSimpleShowEditCheckboxGroup.vue";
+script$C.render = render$C;
+script$C.__file = "src/components/BaseShowEditCheckBox/BaseSimpleShowEditCheckboxGroup.vue";
 
-var script$x = {
+var script$B = {
   name: 'BaseSimpleTab',
   props: {
     tabs: { type: Array, required: true},
@@ -5876,22 +5994,22 @@ var script$x = {
   }
 };
 
-const _hoisted_1$m = { class: "block" };
-const _hoisted_2$i = { class: "border-b border-gray-200" };
-const _hoisted_3$e = {
+const _hoisted_1$q = { class: "block" };
+const _hoisted_2$m = { class: "border-b border-gray-200" };
+const _hoisted_3$h = {
   class: "-mb-px grid grid cols-1 sm:grid-cols 2 space-x-3 md:flex md:space-x-8 ursor-pointer",
   "aria-label": "Tabs"
 };
-const _hoisted_4$a = { class: "capitalize-first" };
+const _hoisted_4$d = { class: "capitalize-first" };
 
-function render$x(_ctx, _cache, $props, $setup, $data, $options) {
+function render$B(_ctx, _cache, $props, $setup, $data, $options) {
   const _component_font_awesome_icon = vue.resolveComponent("font-awesome-icon");
   const _component_router_link = vue.resolveComponent("router-link");
 
   return vue.withDirectives((vue.openBlock(), vue.createElementBlock("div", null, [
-    vue.createElementVNode("div", _hoisted_1$m, [
-      vue.createElementVNode("div", _hoisted_2$i, [
-        vue.createElementVNode("nav", _hoisted_3$e, [
+    vue.createElementVNode("div", _hoisted_1$q, [
+      vue.createElementVNode("div", _hoisted_2$m, [
+        vue.createElementVNode("nav", _hoisted_3$h, [
           (vue.openBlock(true), vue.createElementBlock(vue.Fragment, null, vue.renderList($props.tabs, (tab) => {
             return (vue.openBlock(), vue.createElementBlock(vue.Fragment, {
               key: tab.label
@@ -5912,7 +6030,7 @@ function render$x(_ctx, _cache, $props, $setup, $data, $options) {
                             class: "mr-2"
                           }, null, 8 /* PROPS */, ["icon"]))
                         : vue.createCommentVNode("v-if", true),
-                      vue.createElementVNode("span", _hoisted_4$a, vue.toDisplayString(tab.label), 1 /* TEXT */)
+                      vue.createElementVNode("span", _hoisted_4$d, vue.toDisplayString(tab.label), 1 /* TEXT */)
                     ]),
                     _: 2 /* DYNAMIC */
                   }, 1032 /* PROPS, DYNAMIC_SLOTS */, ["to", "class", "aria-current"]))
@@ -5927,10 +6045,10 @@ function render$x(_ctx, _cache, $props, $setup, $data, $options) {
   ])
 }
 
-script$x.render = render$x;
-script$x.__file = "src/components/BaseTabs/BaseSimpleTab.vue";
+script$B.render = render$B;
+script$B.__file = "src/components/BaseTabs/BaseSimpleTab.vue";
 
-var script$w = {
+var script$A = {
   name: 'BaseSwitch',
   props: {
     modelValue: {
@@ -5975,17 +6093,17 @@ var script$w = {
   }
 };
 
-const _hoisted_1$l = { class: "flex" };
-const _hoisted_2$h = {
+const _hoisted_1$p = { class: "flex" };
+const _hoisted_2$l = {
   key: 0,
   class: "mb-3 text-xl mr-6"
 };
-const _hoisted_3$d = /*#__PURE__*/vue.createElementVNode("span", { class: "sr-only" }, "Use setting", -1 /* HOISTED */);
+const _hoisted_3$g = /*#__PURE__*/vue.createElementVNode("span", { class: "sr-only" }, "Use setting", -1 /* HOISTED */);
 
-function render$w(_ctx, _cache, $props, $setup, $data, $options) {
-  return (vue.openBlock(), vue.createElementBlock("div", _hoisted_1$l, [
+function render$A(_ctx, _cache, $props, $setup, $data, $options) {
+  return (vue.openBlock(), vue.createElementBlock("div", _hoisted_1$p, [
     ($props.label)
-      ? (vue.openBlock(), vue.createElementBlock("label", _hoisted_2$h, vue.toDisplayString($props.label), 1 /* TEXT */))
+      ? (vue.openBlock(), vue.createElementBlock("label", _hoisted_2$l, vue.toDisplayString($props.label), 1 /* TEXT */))
       : vue.createCommentVNode("v-if", true),
     vue.createElementVNode("button", {
       onClick: _cache[0] || (_cache[0] = (...args) => ($options.toggleSwicth && $options.toggleSwicth(...args))),
@@ -5994,7 +6112,7 @@ function render$w(_ctx, _cache, $props, $setup, $data, $options) {
       role: "switch",
       "aria-checked": "false"
     }, [
-      _hoisted_3$d,
+      _hoisted_3$g,
       vue.createElementVNode("span", {
         "aria-hidden": "true",
         class: vue.normalizeClass(["pointer-events-none inline-block h-5 w-5 rounded-full bg-white shadow transform ring-0 transition ease-in-out duration-200", $options.spanClasses])
@@ -6003,10 +6121,10 @@ function render$w(_ctx, _cache, $props, $setup, $data, $options) {
   ]))
 }
 
-script$w.render = render$w;
-script$w.__file = "src/components/BaseSwitch/BaseSwitch.vue";
+script$A.render = render$A;
+script$A.__file = "src/components/BaseSwitch/BaseSwitch.vue";
 
-var script$v = {
+var script$z = {
   name: 'BaseTable',
   props: {
     titles: {
@@ -6072,7 +6190,7 @@ var script$v = {
   }
 };
 
-function render$v(_ctx, _cache, $props, $setup, $data, $options) {
+function render$z(_ctx, _cache, $props, $setup, $data, $options) {
   return (vue.openBlock(), vue.createElementBlock("div", {
     class: vue.normalizeClass($options.divClasses)
   }, [
@@ -6110,10 +6228,10 @@ function render$v(_ctx, _cache, $props, $setup, $data, $options) {
   ], 2 /* CLASS */))
 }
 
-script$v.render = render$v;
-script$v.__file = "src/components/BaseTable/BaseTable.vue";
+script$z.render = render$z;
+script$z.__file = "src/components/BaseTable/BaseTable.vue";
 
-var script$u = {
+var script$y = {
   name: 'BaseTextArea',
   props: {
     name: { type: String, required: true },
@@ -6144,25 +6262,25 @@ var script$u = {
   },
 };
 
-const _hoisted_1$k = { class: "flex flex-col mt-2" };
-const _hoisted_2$g = ["for"];
-const _hoisted_3$c = {
+const _hoisted_1$o = { class: "flex flex-col mt-2" };
+const _hoisted_2$k = ["for"];
+const _hoisted_3$f = {
   key: 0,
   class: "text-red-600"
 };
-const _hoisted_4$9 = ["placeholder", "name", "id", "disabled"];
+const _hoisted_4$c = ["placeholder", "name", "id", "disabled"];
 
-function render$u(_ctx, _cache, $props, $setup, $data, $options) {
-  return (vue.openBlock(), vue.createElementBlock("div", _hoisted_1$k, [
+function render$y(_ctx, _cache, $props, $setup, $data, $options) {
+  return (vue.openBlock(), vue.createElementBlock("div", _hoisted_1$o, [
     vue.createElementVNode("label", {
       for: $props.name,
       class: "form-label capitalize-first"
     }, [
       vue.createTextVNode(vue.toDisplayString($props.label) + " ", 1 /* TEXT */),
       ($props.required)
-        ? (vue.openBlock(), vue.createElementBlock("span", _hoisted_3$c, "*"))
+        ? (vue.openBlock(), vue.createElementBlock("span", _hoisted_3$f, "*"))
         : vue.createCommentVNode("v-if", true)
-    ], 8 /* PROPS */, _hoisted_2$g),
+    ], 8 /* PROPS */, _hoisted_2$k),
     vue.withDirectives(vue.createElementVNode("textarea", {
       ref: "ta",
       class: "block w-full border rounded-md appearance-none placeholder-gray-500 dark:bg-dark-2 dark:border-transparent focus:outline-none disabled:bg-gray-100 disabled:cursor-not-allowed disabled:dark:bg-dark-2 disabled:dark:border-transparent border-gray-400 focus:border-blue-300 focus:ring-blue-300 focus:ring-1",
@@ -6172,7 +6290,7 @@ function render$u(_ctx, _cache, $props, $setup, $data, $options) {
       id: $props.name,
       rows: "4",
       disabled: $props.disabled
-    }, null, 8 /* PROPS */, _hoisted_4$9), [
+    }, null, 8 /* PROPS */, _hoisted_4$c), [
       [
         vue.vModelText,
         $data.newValue,
@@ -6189,10 +6307,10 @@ function render$u(_ctx, _cache, $props, $setup, $data, $options) {
   ]))
 }
 
-script$u.render = render$u;
-script$u.__file = "src/components/BaseInput/BaseTextArea.vue";
+script$y.render = render$y;
+script$y.__file = "src/components/BaseInput/BaseTextArea.vue";
 
-var script$t = {
+var script$x = {
   name: 'BaseThComponent',
   props: {
     column: {},
@@ -6255,9 +6373,9 @@ var script$t = {
   }
 };
 
-const _hoisted_1$j = ["width"];
+const _hoisted_1$n = ["width"];
 
-function render$t(_ctx, _cache, $props, $setup, $data, $options) {
+function render$x(_ctx, _cache, $props, $setup, $data, $options) {
   const _component_font_awesome_icon = vue.resolveComponent("font-awesome-icon");
 
   return (vue.openBlock(), vue.createElementBlock("th", {
@@ -6273,15 +6391,15 @@ function render$t(_ctx, _cache, $props, $setup, $data, $options) {
           class: "ml-2"
         }, null, 8 /* PROPS */, ["icon"]))
       : vue.createCommentVNode("v-if", true)
-  ], 10 /* CLASS, PROPS */, _hoisted_1$j))
+  ], 10 /* CLASS, PROPS */, _hoisted_1$n))
 }
 
-script$t.render = render$t;
-script$t.__file = "src/components/BaseTable/BaseThComponent.vue";
+script$x.render = render$x;
+script$x.__file = "src/components/BaseTable/BaseThComponent.vue";
 
-var script$s = {
+var script$w = {
   name: 'BaseTimeInput',
-  components: {BaseMaskedInput: script$17},
+  components: {BaseMaskedInput: script$1b},
   props: {
     errors: {},
     event: {},
@@ -6295,7 +6413,7 @@ var script$s = {
 
 };
 
-function render$s(_ctx, _cache, $props, $setup, $data, $options) {
+function render$w(_ctx, _cache, $props, $setup, $data, $options) {
   const _component_BaseMaskedInput = vue.resolveComponent("BaseMaskedInput");
 
   return (vue.openBlock(), vue.createBlock(_component_BaseMaskedInput, {
@@ -6310,12 +6428,12 @@ function render$s(_ctx, _cache, $props, $setup, $data, $options) {
   }, null, 8 /* PROPS */, ["label", "placeholder", "name", "value", "disabled", "errors", "onChange"]))
 }
 
-script$s.render = render$s;
-script$s.__file = "src/components/BaseInput/BaseTimeInput.vue";
+script$w.render = render$w;
+script$w.__file = "src/components/BaseInput/BaseTimeInput.vue";
 
-var script$r = {
+var script$v = {
   name: "BaseTrueFalseShowEditRadioGroup",
-  components: {BaseShowLabel: script$1k, BaseEditLabel: script$1j},
+  components: {BaseShowLabel: script$1p, BaseEditLabel: script$1o},
   emits: ['update:modelValue', 'change'],
   props: {
     name: {
@@ -6384,12 +6502,12 @@ var script$r = {
   }
 };
 
-const _hoisted_1$i = { key: 0 };
-const _hoisted_2$f = ["name", "value", "checked"];
-const _hoisted_3$b = /*#__PURE__*/vue.createElementVNode("br", null, null, -1 /* HOISTED */);
-const _hoisted_4$8 = { class: "form-check-label capitalize-first" };
+const _hoisted_1$m = { key: 0 };
+const _hoisted_2$j = ["name", "value", "checked"];
+const _hoisted_3$e = /*#__PURE__*/vue.createElementVNode("br", null, null, -1 /* HOISTED */);
+const _hoisted_4$b = { class: "form-check-label capitalize-first" };
 
-function render$r(_ctx, _cache, $props, $setup, $data, $options) {
+function render$v(_ctx, _cache, $props, $setup, $data, $options) {
   const _component_BaseEditLabel = vue.resolveComponent("BaseEditLabel");
   const _component_BaseShowLabel = vue.resolveComponent("BaseShowLabel");
   const _component_font_awesome_icon = vue.resolveComponent("font-awesome-icon");
@@ -6398,7 +6516,7 @@ function render$r(_ctx, _cache, $props, $setup, $data, $options) {
     class: vue.normalizeClass($props.groupClass)
   }, [
     ($props.editionMode)
-      ? (vue.openBlock(), vue.createElementBlock("div", _hoisted_1$i, [
+      ? (vue.openBlock(), vue.createElementBlock("div", _hoisted_1$m, [
           vue.createVNode(_component_BaseEditLabel, {
             label: $props.label,
             required: $props.required
@@ -6418,9 +6536,9 @@ function render$r(_ctx, _cache, $props, $setup, $data, $options) {
                   value: val,
                   onChange: _cache[0] || (_cache[0] = (...args) => ($options.updateInput && $options.updateInput(...args))),
                   checked: $props.modelValue == val
-                }, null, 40 /* PROPS, HYDRATE_EVENTS */, _hoisted_2$f),
-                _hoisted_3$b,
-                vue.createElementVNode("label", _hoisted_4$8, vue.toDisplayString(_ctx.$t(`enums.yes_no.${key}`)), 1 /* TEXT */)
+                }, null, 40 /* PROPS, HYDRATE_EVENTS */, _hoisted_2$j),
+                _hoisted_3$e,
+                vue.createElementVNode("label", _hoisted_4$b, vue.toDisplayString(_ctx.$t(`enums.yes_no.${key}`)), 1 /* TEXT */)
               ]))
             }), 128 /* KEYED_FRAGMENT */))
           ], 2 /* CLASS */)
@@ -6439,10 +6557,10 @@ function render$r(_ctx, _cache, $props, $setup, $data, $options) {
   ], 2 /* CLASS */))
 }
 
-script$r.render = render$r;
-script$r.__file = "src/components/BaseShowEditRadioGroup/BaseTrueFalseShowEditRadioGroup.vue";
+script$v.render = render$v;
+script$v.__file = "src/components/BaseShowEditRadioGroup/BaseTrueFalseShowEditRadioGroup.vue";
 
-var script$q = {
+var script$u = {
   name: 'BaseUserShowEditSelectSimple',
   components: { multiselect: multiselect__default["default"] },
   props: {
@@ -6522,22 +6640,22 @@ var script$q = {
   }
 };
 
-const _hoisted_1$h = {
+const _hoisted_1$l = {
   key: 0,
   class: "mt-3"
 };
-const _hoisted_2$e = {
+const _hoisted_2$i = {
   key: 1,
   class: "mt-3"
 };
 
-function render$q(_ctx, _cache, $props, $setup, $data, $options) {
+function render$u(_ctx, _cache, $props, $setup, $data, $options) {
   const _component_BaseEditLabel = vue.resolveComponent("BaseEditLabel");
   const _component_multiselect = vue.resolveComponent("multiselect");
   const _component_BaseShowLabel = vue.resolveComponent("BaseShowLabel");
 
   return ($props.editionMode)
-    ? (vue.openBlock(), vue.createElementBlock("div", _hoisted_1$h, [
+    ? (vue.openBlock(), vue.createElementBlock("div", _hoisted_1$l, [
         vue.createVNode(_component_BaseEditLabel, {
           label: $props.label ? $props.label : _ctx.$t('attributes.user'),
           required: $props.required
@@ -6564,7 +6682,7 @@ function render$q(_ctx, _cache, $props, $setup, $data, $options) {
             }), 128 /* KEYED_FRAGMENT */))
           : vue.createCommentVNode("v-if", true)
       ]))
-    : (vue.openBlock(), vue.createElementBlock("div", _hoisted_2$e, [
+    : (vue.openBlock(), vue.createElementBlock("div", _hoisted_2$i, [
         vue.createVNode(_component_BaseShowLabel, {
           label: $props.label ? $props.label : _ctx.$t('attributes.user'),
           "model-value": $options.cDisplayedValueWhenNotEditionMode
@@ -6572,10 +6690,10 @@ function render$q(_ctx, _cache, $props, $setup, $data, $options) {
       ]))
 }
 
-script$q.render = render$q;
-script$q.__file = "src/components/BaseShowEditSelect/BaseShowEditFormSelectSimple/BaseUserShowEditSelectSimple.vue";
+script$u.render = render$u;
+script$u.__file = "src/components/BaseShowEditSelect/BaseShowEditFormSelectSimple/BaseUserShowEditSelectSimple.vue";
 
-var script$p = {
+var script$t = {
   name: 'ColumnVisibilityDropDownComponent',
   props: ['modelValue'],
   emits: ['update:modelValue'],
@@ -6599,19 +6717,19 @@ var script$p = {
   }
 };
 
-const _hoisted_1$g = {
+const _hoisted_1$k = {
   class: "dropdown inline-block",
   "data-placement": "bottom-end"
 };
-const _hoisted_2$d = {
+const _hoisted_2$h = {
   class: "dropdown-toggle btn btn-primary space-x-3",
   "aria-expanded": "false"
 };
-const _hoisted_3$a = /*#__PURE__*/vue.createElementVNode("span", { class: "capitalize-first" }, "colonne", -1 /* HOISTED */);
-const _hoisted_4$7 = { class: "dropdown-menu" };
-const _hoisted_5$3 = { class: "dropdown-menu__content box p-2" };
-const _hoisted_6$1 = ["onClick"];
-const _hoisted_7$1 = { class: "flex-1 mr-5 whitespace-nowrap capitalize-first" };
+const _hoisted_3$d = /*#__PURE__*/vue.createElementVNode("span", { class: "capitalize-first" }, "colonne", -1 /* HOISTED */);
+const _hoisted_4$a = { class: "dropdown-menu" };
+const _hoisted_5$6 = { class: "dropdown-menu__content box p-2" };
+const _hoisted_6$4 = ["onClick"];
+const _hoisted_7$4 = { class: "flex-1 mr-5 whitespace-nowrap capitalize-first" };
 const _hoisted_8$1 = /*#__PURE__*/vue.createElementVNode("div", { class: "flex items-center mt-3 space-x-3 hidden" }, [
   /*#__PURE__*/vue.createElementVNode("button", {
     "data-dismiss": "dropdown",
@@ -6620,16 +6738,16 @@ const _hoisted_8$1 = /*#__PURE__*/vue.createElementVNode("div", { class: "flex i
   /*#__PURE__*/vue.createElementVNode("button", { class: "btn btn-primary" }, " cancel ")
 ], -1 /* HOISTED */);
 
-function render$p(_ctx, _cache, $props, $setup, $data, $options) {
+function render$t(_ctx, _cache, $props, $setup, $data, $options) {
   const _component_font_awesome_icon = vue.resolveComponent("font-awesome-icon");
 
-  return (vue.openBlock(), vue.createElementBlock("div", _hoisted_1$g, [
-    vue.createElementVNode("button", _hoisted_2$d, [
-      _hoisted_3$a,
+  return (vue.openBlock(), vue.createElementBlock("div", _hoisted_1$k, [
+    vue.createElementVNode("button", _hoisted_2$h, [
+      _hoisted_3$d,
       vue.createVNode(_component_font_awesome_icon, { icon: ["fal","chevron-down"] })
     ]),
-    vue.createElementVNode("div", _hoisted_4$7, [
-      vue.createElementVNode("div", _hoisted_5$3, [
+    vue.createElementVNode("div", _hoisted_4$a, [
+      vue.createElementVNode("div", _hoisted_5$6, [
         vue.createElementVNode("div", null, [
           (vue.openBlock(true), vue.createElementBlock(vue.Fragment, null, vue.renderList($data.columns.filter( item => item.toggleable ), (column) => {
             return (vue.openBlock(), vue.createElementBlock("a", {
@@ -6637,7 +6755,7 @@ function render$p(_ctx, _cache, $props, $setup, $data, $options) {
               onClick: $event => ($options.clickColumnVisibility(column.field)),
               class: "flex items-center block p-2 transition duration-300 ease-in-out bg-white dark:bg-dark-1 hover:bg-gray-200 dark:hover:bg-dark-2 rounded-md"
             }, [
-              vue.createElementVNode("span", _hoisted_7$1, vue.toDisplayString(_ctx.$t(`attributes.${column.title}`)), 1 /* TEXT */),
+              vue.createElementVNode("span", _hoisted_7$4, vue.toDisplayString(_ctx.$t(`attributes.${column.title}`)), 1 /* TEXT */),
               (!column.hidden)
                 ? (vue.openBlock(), vue.createBlock(_component_font_awesome_icon, {
                     key: 0,
@@ -6645,7 +6763,7 @@ function render$p(_ctx, _cache, $props, $setup, $data, $options) {
                     icon: ["fal","check"]
                   }))
                 : vue.createCommentVNode("v-if", true)
-            ], 8 /* PROPS */, _hoisted_6$1))
+            ], 8 /* PROPS */, _hoisted_6$4))
           }), 256 /* UNKEYED_FRAGMENT */))
         ]),
         _hoisted_8$1
@@ -6654,10 +6772,10 @@ function render$p(_ctx, _cache, $props, $setup, $data, $options) {
   ]))
 }
 
-script$p.render = render$p;
-script$p.__file = "src/components/BaseTable/ColumnVisibilityDropDownComponent.vue";
+script$t.render = render$t;
+script$t.__file = "src/components/BaseTable/ColumnVisibilityDropDownComponent.vue";
 
-var script$o = {
+var script$s = {
   name: 'ContentTableCell',
   props: {
     column: {},
@@ -6675,16 +6793,16 @@ var script$o = {
 
 };
 
-const _hoisted_1$f = ["innerHTML"];
+const _hoisted_1$j = ["innerHTML"];
 
-function render$o(_ctx, _cache, $props, $setup, $data, $options) {
-  return (vue.openBlock(), vue.createElementBlock("span", { innerHTML: $options.cellValue }, null, 8 /* PROPS */, _hoisted_1$f))
+function render$s(_ctx, _cache, $props, $setup, $data, $options) {
+  return (vue.openBlock(), vue.createElementBlock("span", { innerHTML: $options.cellValue }, null, 8 /* PROPS */, _hoisted_1$j))
 }
 
-script$o.render = render$o;
-script$o.__file = "src/components/BaseTable/ContentTableCell.vue";
+script$s.render = render$s;
+script$s.__file = "src/components/BaseTable/ContentTableCell.vue";
 
-var script$n = {
+var script$r = {
   name: 'IFramePdf',
   props: {
     src: {
@@ -6708,39 +6826,39 @@ var script$n = {
   },
 };
 
-const _hoisted_1$e = ["src"];
+const _hoisted_1$i = ["src"];
 
-function render$n(_ctx, _cache, $props, $setup, $data, $options) {
+function render$r(_ctx, _cache, $props, $setup, $data, $options) {
   return (vue.openBlock(), vue.createElementBlock("iframe", {
     class: "w-full bg-gray-200",
     src: $props.src,
     width: "100%",
     onLoad: _cache[0] || (_cache[0] = (...args) => ($options.mResizeIframe && $options.mResizeIframe(...args))),
     ref: "pdfIframe"
-  }, null, 40 /* PROPS, HYDRATE_EVENTS */, _hoisted_1$e))
+  }, null, 40 /* PROPS, HYDRATE_EVENTS */, _hoisted_1$i))
 }
 
-script$n.render = render$n;
-script$n.__file = "src/components/BaseIFramePDF/IFramePdf.vue";
+script$r.render = render$r;
+script$r.__file = "src/components/BaseIFramePDF/IFramePdf.vue";
 
-var script$m = {
+var script$q = {
   name: 'SettingsPageFull',
 
 };
 
-const _hoisted_1$d = {
+const _hoisted_1$h = {
   key: 0,
   class: "md:w-full sm:w-2/6 md:flex sm:flex md:flex-row sm:flex-col p-5 md:justify-between sm:justify-center mx-auto text-center gap-3"
 };
-const _hoisted_2$c = { class: "flex justify-center gap-x-3" };
-const _hoisted_3$9 = {
+const _hoisted_2$g = { class: "flex justify-center gap-x-3" };
+const _hoisted_3$c = {
   key: 0,
   class: "flex justify-center"
 };
-const _hoisted_4$6 = { class: "flex p-5" };
-const _hoisted_5$2 = { class: "flex-1" };
+const _hoisted_4$9 = { class: "flex p-5" };
+const _hoisted_5$5 = { class: "flex-1" };
 
-function render$m(_ctx, _cache, $props, $setup, $data, $options) {
+function render$q(_ctx, _cache, $props, $setup, $data, $options) {
   return (vue.openBlock(), vue.createElementBlock(vue.Fragment, null, [
     vue.createCommentVNode("  <div class='flex p-5' v-if='this.$slots.title || this.$slots.cta'>"),
     vue.createCommentVNode("    <div class='flex-1 pt-2'  v-if='this.$slots.title'>"),
@@ -6751,29 +6869,29 @@ function render$m(_ctx, _cache, $props, $setup, $data, $options) {
     vue.createCommentVNode("    </div>"),
     vue.createCommentVNode("  </div>"),
     (this.$slots.title || this.$slots.cta)
-      ? (vue.openBlock(), vue.createElementBlock("div", _hoisted_1$d, [
-          vue.createElementVNode("div", _hoisted_2$c, [
+      ? (vue.openBlock(), vue.createElementBlock("div", _hoisted_1$h, [
+          vue.createElementVNode("div", _hoisted_2$g, [
             vue.renderSlot(_ctx.$slots, "title")
           ]),
           (this.$slots.cta)
-            ? (vue.openBlock(), vue.createElementBlock("div", _hoisted_3$9, [
+            ? (vue.openBlock(), vue.createElementBlock("div", _hoisted_3$c, [
                 vue.renderSlot(_ctx.$slots, "cta")
               ]))
             : vue.createCommentVNode("v-if", true)
         ]))
       : vue.createCommentVNode("v-if", true),
-    vue.createElementVNode("div", _hoisted_4$6, [
-      vue.createElementVNode("div", _hoisted_5$2, [
+    vue.createElementVNode("div", _hoisted_4$9, [
+      vue.createElementVNode("div", _hoisted_5$5, [
         vue.renderSlot(_ctx.$slots, "body")
       ])
     ])
   ], 64 /* STABLE_FRAGMENT */))
 }
 
-script$m.render = render$m;
-script$m.__file = "src/components/BasePage/SettingsPageFull.vue";
+script$q.render = render$q;
+script$q.__file = "src/components/BasePage/SettingsPageFull.vue";
 
-var script$l = {
+var script$p = {
   name: 'ToastUndoComponent',
   props: {
     text: {
@@ -6783,23 +6901,23 @@ var script$l = {
   },
 };
 
-const _hoisted_1$c = {
+const _hoisted_1$g = {
   id: "notification-with-actions-content",
   class: "toastify-content hidden flex"
 };
-const _hoisted_2$b = /*#__PURE__*/vue.createElementVNode("i", { "data-feather": "hard-drive" }, null, -1 /* HOISTED */);
-const _hoisted_3$8 = { class: "ml-4 mr-4" };
-const _hoisted_4$5 = { class: "font-medium capitalize-first" };
-const _hoisted_5$1 = { class: "font-medium flex mt-1.5 justify-center" };
+const _hoisted_2$f = /*#__PURE__*/vue.createElementVNode("i", { "data-feather": "hard-drive" }, null, -1 /* HOISTED */);
+const _hoisted_3$b = { class: "ml-4 mr-4" };
+const _hoisted_4$8 = { class: "font-medium capitalize-first" };
+const _hoisted_5$4 = { class: "font-medium flex mt-1.5 justify-center" };
 
-function render$l(_ctx, _cache, $props, $setup, $data, $options) {
+function render$p(_ctx, _cache, $props, $setup, $data, $options) {
   const _component_BaseButton = vue.resolveComponent("BaseButton");
 
-  return (vue.openBlock(), vue.createElementBlock("div", _hoisted_1$c, [
-    _hoisted_2$b,
-    vue.createElementVNode("div", _hoisted_3$8, [
-      vue.createElementVNode("div", _hoisted_4$5, vue.toDisplayString($props.text), 1 /* TEXT */),
-      vue.createElementVNode("div", _hoisted_5$1, [
+  return (vue.openBlock(), vue.createElementBlock("div", _hoisted_1$g, [
+    _hoisted_2$f,
+    vue.createElementVNode("div", _hoisted_3$b, [
+      vue.createElementVNode("div", _hoisted_4$8, vue.toDisplayString($props.text), 1 /* TEXT */),
+      vue.createElementVNode("div", _hoisted_5$4, [
         vue.createVNode(_component_BaseButton, {
           id: "undo_btn",
           color: "success",
@@ -6813,10 +6931,10 @@ function render$l(_ctx, _cache, $props, $setup, $data, $options) {
   ]))
 }
 
-script$l.render = render$l;
-script$l.__file = "src/components/BaseToast/ToastUndoComponent.vue";
+script$p.render = render$p;
+script$p.__file = "src/components/BaseToast/ToastUndoComponent.vue";
 
-var script$k = {
+var script$o = {
   name: 'SelectCompaniesMultiple',
   props: {
     errors: {},
@@ -6842,7 +6960,7 @@ var script$k = {
   },
 };
 
-function render$k(_ctx, _cache, $props, $setup, $data, $options) {
+function render$o(_ctx, _cache, $props, $setup, $data, $options) {
   const _component_BaseSelectMultiple = vue.resolveComponent("BaseSelectMultiple");
 
   return ($props.metadata.companies)
@@ -6861,12 +6979,12 @@ function render$k(_ctx, _cache, $props, $setup, $data, $options) {
     : vue.createCommentVNode("v-if", true)
 }
 
-script$k.render = render$k;
-script$k.__file = "src/components/BaseSelect/BaseSelectFormMultiple/SelectCompaniesMultiple.vue";
+script$o.render = render$o;
+script$o.__file = "src/components/BaseSelect/BaseSelectFormMultiple/SelectCompaniesMultiple.vue";
 
-var script$j = {
+var script$n = {
   name: 'SelectCompanySimple',
-  components: {BaseSelectSimple: script$S},
+  components: {BaseSelectSimple: script$W},
   props: {
     errors: {},
     getInputValue: {},
@@ -6876,7 +6994,7 @@ var script$j = {
   },
 };
 
-function render$j(_ctx, _cache, $props, $setup, $data, $options) {
+function render$n(_ctx, _cache, $props, $setup, $data, $options) {
   const _component_BaseSelectSimple = vue.resolveComponent("BaseSelectSimple");
 
   return ($props.metadata && $props.metadata.companies)
@@ -6894,10 +7012,10 @@ function render$j(_ctx, _cache, $props, $setup, $data, $options) {
     : vue.createCommentVNode("v-if", true)
 }
 
-script$j.render = render$j;
-script$j.__file = "src/components/BaseSelect/BaseSelectFormSimple/SelectCompanySimple.vue";
+script$n.render = render$n;
+script$n.__file = "src/components/BaseSelect/BaseSelectFormSimple/SelectCompanySimple.vue";
 
-var script$i = {
+var script$m = {
   name: 'SelectCustomer',
   props: {
     errors: {},
@@ -6910,7 +7028,7 @@ var script$i = {
 
 };
 
-function render$i(_ctx, _cache, $props, $setup, $data, $options) {
+function render$m(_ctx, _cache, $props, $setup, $data, $options) {
   const _component_BaseSelectSimple = vue.resolveComponent("BaseSelectSimple");
 
   return ($props.metadata && $props.metadata.customers)
@@ -6928,10 +7046,10 @@ function render$i(_ctx, _cache, $props, $setup, $data, $options) {
     : vue.createCommentVNode("v-if", true)
 }
 
-script$i.render = render$i;
-script$i.__file = "src/components/BaseSelect/BaseSelectFormSimple/SelectCustomer.vue";
+script$m.render = render$m;
+script$m.__file = "src/components/BaseSelect/BaseSelectFormSimple/SelectCustomer.vue";
 
-var script$h = {
+var script$l = {
   name: 'SelectLanguage',
   props: {
     errors: {},
@@ -6942,7 +7060,7 @@ var script$h = {
   },
 };
 
-function render$h(_ctx, _cache, $props, $setup, $data, $options) {
+function render$l(_ctx, _cache, $props, $setup, $data, $options) {
   const _component_BaseSelectSimple = vue.resolveComponent("BaseSelectSimple");
 
   return ($props.metadata && $props.metadata.languages)
@@ -6960,10 +7078,10 @@ function render$h(_ctx, _cache, $props, $setup, $data, $options) {
     : vue.createCommentVNode("v-if", true)
 }
 
-script$h.render = render$h;
-script$h.__file = "src/components/BaseSelect/BaseSelectFormSimple/SelectLanguage.vue";
+script$l.render = render$l;
+script$l.__file = "src/components/BaseSelect/BaseSelectFormSimple/SelectLanguage.vue";
 
-var script$g = {
+var script$k = {
   name: 'SelectUserSimple',
   props: {
     errors: {},
@@ -6984,7 +7102,7 @@ var script$g = {
   }
 };
 
-function render$g(_ctx, _cache, $props, $setup, $data, $options) {
+function render$k(_ctx, _cache, $props, $setup, $data, $options) {
   const _component_BaseSelectSimple = vue.resolveComponent("BaseSelectSimple");
 
   return ($props.metadata && $props.metadata.users)
@@ -7002,10 +7120,10 @@ function render$g(_ctx, _cache, $props, $setup, $data, $options) {
     : vue.createCommentVNode("v-if", true)
 }
 
-script$g.render = render$g;
-script$g.__file = "src/components/BaseSelect/BaseSelectFormSimple/SelectUserSimple.vue";
+script$k.render = render$k;
+script$k.__file = "src/components/BaseSelect/BaseSelectFormSimple/SelectUserSimple.vue";
 
-var script$f = {
+var script$j = {
   props: {
     items: {
       type: Array,
@@ -7072,31 +7190,31 @@ var script$f = {
   }
 };
 
-const _hoisted_1$b = { class: "items" };
-const _hoisted_2$a = ["onClick"];
-const _hoisted_3$7 = {
+const _hoisted_1$f = { class: "items" };
+const _hoisted_2$e = ["onClick"];
+const _hoisted_3$a = {
   key: 1,
   class: "item"
 };
 
-function render$f(_ctx, _cache, $props, $setup, $data, $options) {
-  return (vue.openBlock(), vue.createElementBlock("div", _hoisted_1$b, [
+function render$j(_ctx, _cache, $props, $setup, $data, $options) {
+  return (vue.openBlock(), vue.createElementBlock("div", _hoisted_1$f, [
     ($props.items.length)
       ? (vue.openBlock(true), vue.createElementBlock(vue.Fragment, { key: 0 }, vue.renderList($props.items, (item, index) => {
           return (vue.openBlock(), vue.createElementBlock("button", {
             class: vue.normalizeClass(["item", { 'is-selected': index === $data.selectedIndex }]),
             key: index,
             onClick: $event => ($options.selectItem(index))
-          }, vue.toDisplayString(item), 11 /* TEXT, CLASS, PROPS */, _hoisted_2$a))
+          }, vue.toDisplayString(item), 11 /* TEXT, CLASS, PROPS */, _hoisted_2$e))
         }), 128 /* KEYED_FRAGMENT */))
-      : (vue.openBlock(), vue.createElementBlock("div", _hoisted_3$7, " No result "))
+      : (vue.openBlock(), vue.createElementBlock("div", _hoisted_3$a, " No result "))
   ]))
 }
 
-script$f.render = render$f;
-script$f.__file = "src/components/Wysiwyg/components/MentionList.vue";
+script$j.render = render$j;
+script$j.__file = "src/components/Wysiwyg/components/MentionList.vue";
 
-var script$e = {
+var script$i = {
 
   name: "BaseWysiwyg",
   components: {
@@ -7187,7 +7305,7 @@ var script$e = {
               let popup;
               return {
                 onStart: (props) => {
-                  component = new vue3.VueRenderer(script$f, {
+                  component = new vue3.VueRenderer(script$j, {
                     props,
                     editor: props.editor,
                   });
@@ -7233,34 +7351,34 @@ var script$e = {
 
 };
 
-const _hoisted_1$a = {
+const _hoisted_1$e = {
   key: 0,
   class: "capitalize-first"
 };
-const _hoisted_2$9 = {
+const _hoisted_2$d = {
   key: 0,
   class: "text-red-600"
 };
-const _hoisted_3$6 = { key: 1 };
-const _hoisted_4$4 = { key: 0 };
+const _hoisted_3$9 = { key: 1 };
+const _hoisted_4$7 = { key: 0 };
 
-function render$e(_ctx, _cache, $props, $setup, $data, $options) {
+function render$i(_ctx, _cache, $props, $setup, $data, $options) {
   const _component_font_awesome_icon = vue.resolveComponent("font-awesome-icon");
   const _component_editor_content = vue.resolveComponent("editor-content");
 
   return (vue.openBlock(), vue.createElementBlock(vue.Fragment, null, [
     ($props.label)
-      ? (vue.openBlock(), vue.createElementBlock("div", _hoisted_1$a, [
+      ? (vue.openBlock(), vue.createElementBlock("div", _hoisted_1$e, [
           vue.createTextVNode(vue.toDisplayString($props.label) + " ", 1 /* TEXT */),
           ($props.required)
-            ? (vue.openBlock(), vue.createElementBlock("span", _hoisted_2$9, "*"))
+            ? (vue.openBlock(), vue.createElementBlock("span", _hoisted_2$d, "*"))
             : vue.createCommentVNode("v-if", true)
         ]))
       : vue.createCommentVNode("v-if", true),
     ($data.editor)
-      ? (vue.openBlock(), vue.createElementBlock("div", _hoisted_3$6, [
+      ? (vue.openBlock(), vue.createElementBlock("div", _hoisted_3$9, [
           ($props.displayFormatButton)
-            ? (vue.openBlock(), vue.createElementBlock("div", _hoisted_4$4, [
+            ? (vue.openBlock(), vue.createElementBlock("div", _hoisted_4$7, [
                 vue.createElementVNode("button", {
                   class: vue.normalizeClass(["px-4 py-2 border border-gray-300 bg-gray-200 rounded", { 'is-active': $data.editor.isActive('bold') }]),
                   onClick: _cache[0] || (_cache[0] = $event => ($data.editor.chain().focus().toggleBold().run()))
@@ -7343,10 +7461,10 @@ function render$e(_ctx, _cache, $props, $setup, $data, $options) {
   ], 64 /* STABLE_FRAGMENT */))
 }
 
-script$e.render = render$e;
-script$e.__file = "src/components/Wysiwyg/BaseWysiwyg.vue";
+script$i.render = render$i;
+script$i.__file = "src/components/Wysiwyg/BaseWysiwyg.vue";
 
-var script$d = {
+var script$h = {
   name: 'SelectSettingDefaultMessage',
   props: {
     errors: {},
@@ -7364,7 +7482,7 @@ var script$d = {
   }
 };
 
-function render$d(_ctx, _cache, $props, $setup, $data, $options) {
+function render$h(_ctx, _cache, $props, $setup, $data, $options) {
   const _component_BaseSelectSimple = vue.resolveComponent("BaseSelectSimple");
 
   return ($props.options)
@@ -7383,13 +7501,13 @@ function render$d(_ctx, _cache, $props, $setup, $data, $options) {
     : vue.createCommentVNode("v-if", true)
 }
 
-script$d.render = render$d;
-script$d.__file = "src/components/DynamicForm/components/SelectSettingDefaultMessage.vue";
+script$h.render = render$h;
+script$h.__file = "src/components/DynamicForm/components/SelectSettingDefaultMessage.vue";
 
-var script$c = {
+var script$g = {
   name: 'DynamicFormInput',
   components: {
-    SelectSettingDefaultMessage: script$d,
+    SelectSettingDefaultMessage: script$h,
   },
   props: {
     ajaxTrackBy: {type: String, required: false, default: 'id'},
@@ -7448,7 +7566,7 @@ var script$c = {
   }
 };
 
-function render$c(_ctx, _cache, $props, $setup, $data, $options) {
+function render$g(_ctx, _cache, $props, $setup, $data, $options) {
   const _component_BaseInputDynamicForm = vue.resolveComponent("BaseInputDynamicForm");
   const _component_BaseTextArea = vue.resolveComponent("BaseTextArea");
   const _component_BaseSelectSimple = vue.resolveComponent("BaseSelectSimple");
@@ -7616,10 +7734,10 @@ function render$c(_ctx, _cache, $props, $setup, $data, $options) {
   ], 64 /* STABLE_FRAGMENT */))
 }
 
-script$c.render = render$c;
-script$c.__file = "src/components/DynamicForm/DynamicFormInput.vue";
+script$g.render = render$g;
+script$g.__file = "src/components/DynamicForm/DynamicFormInput.vue";
 
-var script$b = {
+var script$f = {
   name: 'DropdownStatus',
   emits: ['select'],
   components: {
@@ -7690,15 +7808,15 @@ var script$b = {
   }
 };
 
-const _hoisted_1$9 = {
+const _hoisted_1$d = {
   key: 1,
   class: "capitalize-first"
 };
-const _hoisted_2$8 = { class: "px-1 py-1" };
-const _hoisted_3$5 = ["onClick"];
-const _hoisted_4$3 = { class: "flex-1 capitalize-first text-left" };
+const _hoisted_2$c = { class: "px-1 py-1" };
+const _hoisted_3$8 = ["onClick"];
+const _hoisted_4$6 = { class: "flex-1 capitalize-first text-left" };
 
-function render$b(_ctx, _cache, $props, $setup, $data, $options) {
+function render$f(_ctx, _cache, $props, $setup, $data, $options) {
   const _component_font_awesome_icon = vue.resolveComponent("font-awesome-icon");
   const _component_MenuButton = vue.resolveComponent("MenuButton");
   const _component_MenuItem = vue.resolveComponent("MenuItem");
@@ -7723,7 +7841,7 @@ function render$b(_ctx, _cache, $props, $setup, $data, $options) {
                 }, null, 8 /* PROPS */, ["icon"]))
               : vue.createCommentVNode("v-if", true),
             ($props.with_label)
-              ? (vue.openBlock(), vue.createElementBlock("span", _hoisted_1$9, vue.toDisplayString($options.cCurentStatut && $options.cCurentStatut[$props.label]), 1 /* TEXT */))
+              ? (vue.openBlock(), vue.createElementBlock("span", _hoisted_1$d, vue.toDisplayString($options.cCurentStatut && $options.cCurentStatut[$props.label]), 1 /* TEXT */))
               : vue.createCommentVNode("v-if", true),
             ($props.displayChevron)
               ? (vue.openBlock(), vue.createBlock(_component_font_awesome_icon, {
@@ -7746,7 +7864,7 @@ function render$b(_ctx, _cache, $props, $setup, $data, $options) {
         default: vue.withCtx(() => [
           vue.createVNode(_component_MenuItems, { class: "absolute right-0 w-56 mt-2 origin-top-right bg-white rounded-md shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none" }, {
             default: vue.withCtx(() => [
-              vue.createElementVNode("div", _hoisted_2$8, [
+              vue.createElementVNode("div", _hoisted_2$c, [
                 (vue.openBlock(true), vue.createElementBlock(vue.Fragment, null, vue.renderList($props.options, (item) => {
                   return (vue.openBlock(), vue.createBlock(_component_MenuItem, { key: item }, {
                     default: vue.withCtx(({ active }) => [
@@ -7761,7 +7879,7 @@ function render$b(_ctx, _cache, $props, $setup, $data, $options) {
                         vue.createElementVNode("span", {
                           class: vue.normalizeClass(["flex-shrink-0 w-3 h-3 rounded-full", "bg-theme-" + item[$props.color]])
                         }, null, 2 /* CLASS */),
-                        vue.createElementVNode("span", _hoisted_4$3, vue.toDisplayString(item[$props.label]), 1 /* TEXT */),
+                        vue.createElementVNode("span", _hoisted_4$6, vue.toDisplayString(item[$props.label]), 1 /* TEXT */),
                         ($options.cCurentStatut[$props.trackBy] === item[$props.trackBy])
                           ? (vue.openBlock(), vue.createBlock(_component_font_awesome_icon, {
                               key: 0,
@@ -7769,7 +7887,7 @@ function render$b(_ctx, _cache, $props, $setup, $data, $options) {
                               icon: ["fal","check"]
                             }))
                           : vue.createCommentVNode("v-if", true)
-                      ], 10 /* CLASS, PROPS */, _hoisted_3$5)
+                      ], 10 /* CLASS, PROPS */, _hoisted_3$8)
                     ]),
                     _: 2 /* DYNAMIC */
                   }, 1024 /* DYNAMIC_SLOTS */))
@@ -7786,13 +7904,13 @@ function render$b(_ctx, _cache, $props, $setup, $data, $options) {
   }))
 }
 
-script$b.render = render$b;
-script$b.__file = "src/components/DropdownFiles/DropdownStatus.vue";
+script$f.render = render$f;
+script$f.__file = "src/components/DropdownFiles/DropdownStatus.vue";
 
-var script$a = {
+var script$e = {
   name:'DropDownColoredStatus',
   components: {
-    DropdownStatus: script$b
+    DropdownStatus: script$f
   },
   emits: ['select'],
   props: {
@@ -7832,7 +7950,7 @@ var script$a = {
   }
 };
 
-function render$a(_ctx, _cache, $props, $setup, $data, $options) {
+function render$e(_ctx, _cache, $props, $setup, $data, $options) {
   const _component_dropdown_status = vue.resolveComponent("dropdown-status");
 
   return (vue.openBlock(), vue.createBlock(_component_dropdown_status, {
@@ -7847,10 +7965,10 @@ function render$a(_ctx, _cache, $props, $setup, $data, $options) {
   }, null, 8 /* PROPS */, ["options", "current", "with_label", "color", "icon", "btnStyle", "onSelect"]))
 }
 
-script$a.render = render$a;
-script$a.__file = "src/components/DropdownFiles/DropdownColoredStatus.vue";
+script$e.render = render$e;
+script$e.__file = "src/components/DropdownFiles/DropdownColoredStatus.vue";
 
-var script$9 = {
+var script$d = {
   name: 'DropdownTaskStatusSquare',
   emits: ['select'],
   components: {
@@ -7909,11 +8027,11 @@ var script$9 = {
   }
 };
 
-const _hoisted_1$8 = { class: "px-1 py-1" };
-const _hoisted_2$7 = ["onClick"];
-const _hoisted_3$4 = { class: "flex-1 capitalize-first text-left" };
+const _hoisted_1$c = { class: "px-1 py-1" };
+const _hoisted_2$b = ["onClick"];
+const _hoisted_3$7 = { class: "flex-1 capitalize-first text-left" };
 
-function render$9(_ctx, _cache, $props, $setup, $data, $options) {
+function render$d(_ctx, _cache, $props, $setup, $data, $options) {
   const _component_font_awesome_icon = vue.resolveComponent("font-awesome-icon");
   const _component_MenuButton = vue.resolveComponent("MenuButton");
   const _component_MenuItem = vue.resolveComponent("MenuItem");
@@ -7952,7 +8070,7 @@ function render$9(_ctx, _cache, $props, $setup, $data, $options) {
         default: vue.withCtx(() => [
           vue.createVNode(_component_MenuItems, { class: "absolute left-0 w-56 mt-2 origin-top-right bg-white rounded-md shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none z-100" }, {
             default: vue.withCtx(() => [
-              vue.createElementVNode("div", _hoisted_1$8, [
+              vue.createElementVNode("div", _hoisted_1$c, [
                 (vue.openBlock(true), vue.createElementBlock(vue.Fragment, null, vue.renderList($props.options, (item) => {
                   return (vue.openBlock(), vue.createBlock(_component_MenuItem, { key: item }, {
                     default: vue.withCtx(({ active }) => [
@@ -7967,7 +8085,7 @@ function render$9(_ctx, _cache, $props, $setup, $data, $options) {
                         vue.createElementVNode("span", {
                           class: vue.normalizeClass(["flex-shrink-0 w-3 h-3 rounded-full", "bg-theme-" + item[$props.color]])
                         }, null, 2 /* CLASS */),
-                        vue.createElementVNode("span", _hoisted_3$4, vue.toDisplayString(item[$props.label]), 1 /* TEXT */),
+                        vue.createElementVNode("span", _hoisted_3$7, vue.toDisplayString(item[$props.label]), 1 /* TEXT */),
                         ($options.cCurentStatut[$props.trackBy] === item[$props.trackBy])
                           ? (vue.openBlock(), vue.createBlock(_component_font_awesome_icon, {
                               key: 0,
@@ -7975,7 +8093,7 @@ function render$9(_ctx, _cache, $props, $setup, $data, $options) {
                               icon: ["fal","check"]
                             }))
                           : vue.createCommentVNode("v-if", true)
-                      ], 10 /* CLASS, PROPS */, _hoisted_2$7)
+                      ], 10 /* CLASS, PROPS */, _hoisted_2$b)
                     ]),
                     _: 2 /* DYNAMIC */
                   }, 1024 /* DYNAMIC_SLOTS */))
@@ -7992,13 +8110,13 @@ function render$9(_ctx, _cache, $props, $setup, $data, $options) {
   }))
 }
 
-script$9.render = render$9;
-script$9.__file = "src/components/DropdownFiles/DropdownTaskStatusSquare.vue";
+script$d.render = render$d;
+script$d.__file = "src/components/DropdownFiles/DropdownTaskStatusSquare.vue";
 
-var script$8 = {
+var script$c = {
   name: 'DropdownWorkStatus',
   components: {
-    DropdownStatus: script$b
+    DropdownStatus: script$f
   },
   emits: ['select'],
   props: {
@@ -8018,7 +8136,7 @@ var script$8 = {
   }
 };
 
-function render$8(_ctx, _cache, $props, $setup, $data, $options) {
+function render$c(_ctx, _cache, $props, $setup, $data, $options) {
   const _component_dropdown_status = vue.resolveComponent("dropdown-status");
 
   return (vue.openBlock(), vue.createBlock(_component_dropdown_status, {
@@ -8030,8 +8148,8 @@ function render$8(_ctx, _cache, $props, $setup, $data, $options) {
   }, null, 8 /* PROPS */, ["options", "current", "onSelect"]))
 }
 
-script$8.render = render$8;
-script$8.__file = "src/components/DropdownFiles/DropdownWorkStatus.vue";
+script$c.render = render$c;
+script$c.__file = "src/components/DropdownFiles/DropdownWorkStatus.vue";
 
 // Create component
 const FilePond = vueFilePond__default["default"](
@@ -8039,7 +8157,7 @@ const FilePond = vueFilePond__default["default"](
     FilePondPluginImagePreview__default["default"]
 );
 
-var script$7 = {
+var script$b = {
   name: 'BaseFileDropComponent',
   props: ['url'],
   emits: ['confirm-submit'],
@@ -8087,9 +8205,9 @@ var script$7 = {
   }
 };
 
-const _hoisted_1$7 = { class: "flex justify-end" };
+const _hoisted_1$b = { class: "flex justify-end" };
 
-function render$7(_ctx, _cache, $props, $setup, $data, $options) {
+function render$b(_ctx, _cache, $props, $setup, $data, $options) {
   const _component_file_pond = vue.resolveComponent("file-pond");
   const _component_BaseButton = vue.resolveComponent("BaseButton");
 
@@ -8106,7 +8224,7 @@ function render$7(_ctx, _cache, $props, $setup, $data, $options) {
       onProcessfiles: _cache[0] || (_cache[0] = $event => ($options.afterSubmit())),
       files: _ctx.myFiles
     }, null, 8 /* PROPS */, ["server", "onAddfile", "files"]),
-    vue.createElementVNode("div", _hoisted_1$7, [
+    vue.createElementVNode("div", _hoisted_1$b, [
       vue.createVNode(_component_BaseButton, {
         icon: "paper-plane",
         title: _ctx.$t('button.send'),
@@ -8116,11 +8234,11 @@ function render$7(_ctx, _cache, $props, $setup, $data, $options) {
   ], 64 /* STABLE_FRAGMENT */))
 }
 
-script$7.render = render$7;
-script$7.__scopeId = "data-v-5a4f8226";
-script$7.__file = "src/components/FileDrop/BaseFileDropComponent.vue";
+script$b.render = render$b;
+script$b.__scopeId = "data-v-5a4f8226";
+script$b.__file = "src/components/FileDrop/BaseFileDropComponent.vue";
 
-var script$6 = {
+var script$a = {
   name: 'BaseInputDynamicForm',
   props: {
     name: {
@@ -8254,14 +8372,14 @@ var script$6 = {
 
 };
 
-const _hoisted_1$6 = ["for"];
-const _hoisted_2$6 = {
+const _hoisted_1$a = ["for"];
+const _hoisted_2$a = {
   key: 0,
   class: "text-red-600"
 };
-const _hoisted_3$3 = ["name", "type", "value", "id", "min", "max", "placeholder", "disabled", "required"];
+const _hoisted_3$6 = ["name", "type", "value", "id", "min", "max", "placeholder", "disabled", "required"];
 
-function render$6(_ctx, _cache, $props, $setup, $data, $options) {
+function render$a(_ctx, _cache, $props, $setup, $data, $options) {
   return (vue.openBlock(), vue.createElementBlock("div", {
     class: vue.normalizeClass($options.cGroupClass)
   }, [
@@ -8273,9 +8391,9 @@ function render$6(_ctx, _cache, $props, $setup, $data, $options) {
         }, [
           vue.createTextVNode(vue.toDisplayString($props.label) + " ", 1 /* TEXT */),
           ($props.label && $options.isRequired)
-            ? (vue.openBlock(), vue.createElementBlock("span", _hoisted_2$6, "*"))
+            ? (vue.openBlock(), vue.createElementBlock("span", _hoisted_2$a, "*"))
             : vue.createCommentVNode("v-if", true)
-        ], 10 /* CLASS, PROPS */, _hoisted_1$6))
+        ], 10 /* CLASS, PROPS */, _hoisted_1$a))
       : vue.createCommentVNode("v-if", true),
     vue.withDirectives(vue.createElementVNode("input", {
       name: $props.name,
@@ -8289,7 +8407,7 @@ function render$6(_ctx, _cache, $props, $setup, $data, $options) {
       placeholder: $props.placeholder,
       disabled: $options.isDisabled,
       required: $options.isRequired
-    }, null, 10 /* CLASS, PROPS */, _hoisted_3$3), [
+    }, null, 10 /* CLASS, PROPS */, _hoisted_3$6), [
       [vue.vModelDynamic, $data.modelValue]
     ]),
     (vue.openBlock(true), vue.createElementBlock(vue.Fragment, null, vue.renderList($props.errors, (error, index) => {
@@ -8301,10 +8419,10 @@ function render$6(_ctx, _cache, $props, $setup, $data, $options) {
   ], 2 /* CLASS */))
 }
 
-script$6.render = render$6;
-script$6.__file = "src/components/DynamicForm/components/BaseInputDynamicForm.vue";
+script$a.render = render$a;
+script$a.__file = "src/components/DynamicForm/components/BaseInputDynamicForm.vue";
 
-var script$5 = {
+var script$9 = {
   name: 'BaseContentTable',
   props: {
     columns: {
@@ -8465,10 +8583,10 @@ var script$5 = {
   }
 };
 
-const _hoisted_1$5 = { class: "flex justify-end items-center" };
-const _hoisted_2$5 = ["onClick"];
+const _hoisted_1$9 = { class: "flex justify-end items-center" };
+const _hoisted_2$9 = ["onClick"];
 
-function render$5(_ctx, _cache, $props, $setup, $data, $options) {
+function render$9(_ctx, _cache, $props, $setup, $data, $options) {
   const _component_BaseSearchInput = vue.resolveComponent("BaseSearchInput");
   const _component_BaseButton = vue.resolveComponent("BaseButton");
   const _component_BaseThComponent = vue.resolveComponent("BaseThComponent");
@@ -8479,7 +8597,7 @@ function render$5(_ctx, _cache, $props, $setup, $data, $options) {
     class: vue.normalizeClass($options.divClasses)
   }, [
     vue.createCommentVNode("#region top header "),
-    vue.createElementVNode("div", _hoisted_1$5, [
+    vue.createElementVNode("div", _hoisted_1$9, [
       vue.createCommentVNode("#region searchbar "),
       (this.search)
         ? (vue.openBlock(), vue.createBlock(_component_BaseSearchInput, {
@@ -8551,24 +8669,32 @@ function render$5(_ctx, _cache, $props, $setup, $data, $options) {
                       content: model[column.metadata.value],
                       color: model[column.metadata.color]
                     }, null, 8 /* PROPS */, ["icon", "content", "color"]))
-                  : (vue.openBlock(), vue.createBlock(_component_ContentTableCell, {
+                  : vue.createCommentVNode("v-if", true),
+                (column.type === 'icon' && model['condition'])
+                  ? (vue.openBlock(), vue.createBlock(_component_BaseLabel, {
                       key: 2,
+                      icon: column.metadata.icon,
+                      content: '',
+                      color: column.metadata.color
+                    }, null, 8 /* PROPS */, ["icon", "color"]))
+                  : (vue.openBlock(), vue.createBlock(_component_ContentTableCell, {
+                      key: 3,
                       model: model,
                       column: column
                     }, null, 8 /* PROPS */, ["model", "column"]))
               ], 2 /* CLASS */))
             }), 128 /* KEYED_FRAGMENT */))
-          ], 10 /* CLASS, PROPS */, _hoisted_2$5))
+          ], 10 /* CLASS, PROPS */, _hoisted_2$9))
         }), 128 /* KEYED_FRAGMENT */))
       ])
     ], 2 /* CLASS */)
   ], 2 /* CLASS */))
 }
 
-script$5.render = render$5;
-script$5.__file = "src/components/BaseTable/BaseContentTable.vue";
+script$9.render = render$9;
+script$9.__file = "src/components/BaseTable/BaseContentTable.vue";
 
-var script$4 = {
+var script$8 = {
   name: "BaseShowEditInputButton",
   props: {
     name: {
@@ -8737,12 +8863,12 @@ var script$4 = {
   },
 };
 
-const _hoisted_1$4 = { class: "mt-1 flex rounded-md shadow-sm" };
-const _hoisted_2$4 = { class: "relative flex items-stretch flex-grow focus-within:z-10" };
-const _hoisted_3$2 = ["id", "type", "min", "max", "value", "placeholder"];
-const _hoisted_4$2 = { key: 1 };
+const _hoisted_1$8 = { class: "mt-1 flex rounded-md shadow-sm" };
+const _hoisted_2$8 = { class: "relative flex items-stretch flex-grow focus-within:z-10" };
+const _hoisted_3$5 = ["id", "type", "min", "max", "value", "placeholder"];
+const _hoisted_4$5 = { key: 1 };
 
-function render$4(_ctx, _cache, $props, $setup, $data, $options) {
+function render$8(_ctx, _cache, $props, $setup, $data, $options) {
   const _component_BaseEditLabel = vue.resolveComponent("BaseEditLabel");
   const _component_font_awesome_icon = vue.resolveComponent("font-awesome-icon");
   const _component_BaseShowLabel = vue.resolveComponent("BaseShowLabel");
@@ -8757,8 +8883,8 @@ function render$4(_ctx, _cache, $props, $setup, $data, $options) {
               label: $props.label,
               required: $props.required
             }, null, 8 /* PROPS */, ["label", "required"]),
-            vue.createElementVNode("div", _hoisted_1$4, [
-              vue.createElementVNode("div", _hoisted_2$4, [
+            vue.createElementVNode("div", _hoisted_1$8, [
+              vue.createElementVNode("div", _hoisted_2$8, [
                 vue.createElementVNode("input", {
                   id: $props.id,
                   type: $props.type,
@@ -8768,7 +8894,7 @@ function render$4(_ctx, _cache, $props, $setup, $data, $options) {
                   placeholder: $props.placeholder,
                   onInput: _cache[0] || (_cache[0] = (...args) => ($options.updateInput && $options.updateInput(...args))),
                   class: "form-control border-gray-400 focus:border-blue-300 focus:ring-blue-300 focus:ring-1"
-                }, null, 40 /* PROPS, HYDRATE_EVENTS */, _hoisted_3$2)
+                }, null, 40 /* PROPS, HYDRATE_EVENTS */, _hoisted_3$5)
               ]),
               vue.createElementVNode("button", {
                 type: "button",
@@ -8784,7 +8910,7 @@ function render$4(_ctx, _cache, $props, $setup, $data, $options) {
                     }, null, 8 /* PROPS */, ["icon"]))
                   : vue.createCommentVNode("v-if", true),
                 ($props.buttonLabel)
-                  ? (vue.openBlock(), vue.createElementBlock("span", _hoisted_4$2, vue.toDisplayString($props.buttonLabel), 1 /* TEXT */))
+                  ? (vue.openBlock(), vue.createElementBlock("span", _hoisted_4$5, vue.toDisplayString($props.buttonLabel), 1 /* TEXT */))
                   : vue.createCommentVNode("v-if", true)
               ], 2 /* CLASS */)
             ])
@@ -8804,10 +8930,10 @@ function render$4(_ctx, _cache, $props, $setup, $data, $options) {
   ], 2 /* CLASS */))
 }
 
-script$4.render = render$4;
-script$4.__file = "src/components/BaseShowEditInput/BaseShowEditInputButton.vue";
+script$8.render = render$8;
+script$8.__file = "src/components/BaseShowEditInput/BaseShowEditInputButton.vue";
 
-var script$3 = {
+var script$7 = {
   name: 'BaseShowEditTreeInput',
   props: {
     firstName: {
@@ -8889,19 +9015,19 @@ var script$3 = {
   }
 };
 
-const _hoisted_1$3 = {
+const _hoisted_1$7 = {
   key: 0,
   class: "block text-sm font-medium text-gray-500 capitalize"
 };
-const _hoisted_2$3 = {
+const _hoisted_2$7 = {
   key: 1,
   class: "mt-1 bg-white rounded-md shadow-sm -space-y-px"
 };
-const _hoisted_3$1 = { class: "flex" };
-const _hoisted_4$1 = { class: "" };
-const _hoisted_5 = { class: "relative rounded-md shadow-sm" };
-const _hoisted_6 = { class: "absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none" };
-const _hoisted_7 = { class: "text-gray-500 sm:text-sm capitalize-first" };
+const _hoisted_3$4 = { class: "flex" };
+const _hoisted_4$4 = { class: "" };
+const _hoisted_5$3 = { class: "relative rounded-md shadow-sm" };
+const _hoisted_6$3 = { class: "absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none" };
+const _hoisted_7$3 = { class: "text-gray-500 sm:text-sm capitalize-first" };
 const _hoisted_8 = ["name", "id"];
 const _hoisted_9 = { class: "" };
 const _hoisted_10 = { class: "relative rounded-md shadow-sm" };
@@ -8918,21 +9044,21 @@ const _hoisted_20 = { class: "grid grid-cols-2 mt-4" };
 const _hoisted_21 = { class: "col-span-1" };
 const _hoisted_22 = { class: "col-span-1 mb-2" };
 
-function render$3(_ctx, _cache, $props, $setup, $data, $options) {
+function render$7(_ctx, _cache, $props, $setup, $data, $options) {
   const _component_BaseShowLabel = vue.resolveComponent("BaseShowLabel");
 
   return (vue.openBlock(), vue.createElementBlock("fieldset", null, [
     ($props.editionMode)
-      ? (vue.openBlock(), vue.createElementBlock("legend", _hoisted_1$3, vue.toDisplayString($props.legend), 1 /* TEXT */))
+      ? (vue.openBlock(), vue.createElementBlock("legend", _hoisted_1$7, vue.toDisplayString($props.legend), 1 /* TEXT */))
       : vue.createCommentVNode("v-if", true),
     vue.createCommentVNode("region editionMode"),
     ($props.editionMode)
-      ? (vue.openBlock(), vue.createElementBlock("div", _hoisted_2$3, [
-          vue.createElementVNode("div", _hoisted_3$1, [
-            vue.createElementVNode("div", _hoisted_4$1, [
-              vue.createElementVNode("div", _hoisted_5, [
-                vue.createElementVNode("div", _hoisted_6, [
-                  vue.createElementVNode("span", _hoisted_7, vue.toDisplayString($props.firstLabel), 1 /* TEXT */)
+      ? (vue.openBlock(), vue.createElementBlock("div", _hoisted_2$7, [
+          vue.createElementVNode("div", _hoisted_3$4, [
+            vue.createElementVNode("div", _hoisted_4$4, [
+              vue.createElementVNode("div", _hoisted_5$3, [
+                vue.createElementVNode("div", _hoisted_6$3, [
+                  vue.createElementVNode("span", _hoisted_7$3, vue.toDisplayString($props.firstLabel), 1 /* TEXT */)
                 ]),
                 vue.withDirectives(vue.createElementVNode("input", {
                   type: "text",
@@ -9016,10 +9142,10 @@ function render$3(_ctx, _cache, $props, $setup, $data, $options) {
   ]))
 }
 
-script$3.render = render$3;
-script$3.__file = "src/components/BaseShowEditInput/BaseShowEditTreeInput.vue";
+script$7.render = render$7;
+script$7.__file = "src/components/BaseShowEditInput/BaseShowEditTreeInput.vue";
 
-var script$2 = {
+var script$6 = {
   name: "BaseSimpleSearchInput",
   emits: ['update:modelValue'],
   props:{
@@ -9045,10 +9171,10 @@ var script$2 = {
   }
 };
 
-const _hoisted_1$2 = ["placeholder"];
-const _hoisted_2$2 = { class: "absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none" };
+const _hoisted_1$6 = ["placeholder"];
+const _hoisted_2$6 = { class: "absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none" };
 
-function render$2(_ctx, _cache, $props, $setup, $data, $options) {
+function render$6(_ctx, _cache, $props, $setup, $data, $options) {
   const _component_font_awesome_icon = vue.resolveComponent("font-awesome-icon");
 
   return (vue.openBlock(), vue.createElementBlock("div", {
@@ -9060,15 +9186,688 @@ function render$2(_ctx, _cache, $props, $setup, $data, $options) {
       class: "focus:ring-indigo-500 focus:border-indigo-500 block w-full pr-10 sm:text-sm border-gray-300 rounded-md",
       onInput: _cache[0] || (_cache[0] = (...args) => ($options.updateInput && $options.updateInput(...args))),
       placeholder: _ctx.$t('global.placeholder.search')
-    }, null, 40 /* PROPS, HYDRATE_EVENTS */, _hoisted_1$2),
-    vue.createElementVNode("div", _hoisted_2$2, [
+    }, null, 40 /* PROPS, HYDRATE_EVENTS */, _hoisted_1$6),
+    vue.createElementVNode("div", _hoisted_2$6, [
       vue.createVNode(_component_font_awesome_icon, { icon: ['fal', 'search'] })
     ])
   ], 2 /* CLASS */))
 }
 
+script$6.render = render$6;
+script$6.__file = "src/components/BaseInput/BaseSimpleSearchInput.vue";
+
+var script$5 = {
+  name: "BaseSimpleShowEditCheckbox",
+  components: {LabelWitchCheckBoxChecked: script$E},
+  props: {
+    name: {
+      type: String,
+      default: ''
+    },
+    label: {
+      type: String,
+      default: "",
+      require: true,
+    },
+    translationExtention: {type: String, required: false},
+    translatable: {type: Boolean, required: false, default: true},
+    editionMode: {
+      type: Boolean,
+      default: true
+    },
+    modelValue: {
+      type: Boolean,
+      required: true,
+    },
+    required: {
+      type: Boolean,
+      required: false,
+      default: false
+    },
+    errors: {
+      type: Object,
+      required: false
+    },
+    identifier: {
+      type: String,
+      required: false,
+    }
+  },
+  data() {
+    return {
+      value: this.defaultValue,
+    }
+  },
+  computed: {
+    cPlacement() {
+      return this.isVertical ? '' : 'flex flex-col sm:flex-row mt-2'
+    },
+
+  },
+  methods: {
+    updateInput(event) {
+      this.$emit("update:modelValue", event.target.value);
+    },
+  },
+};
+
+const _hoisted_1$5 = { key: 0 };
+const _hoisted_2$5 = { class: "form-check mr-4 sm:mt-0" };
+const _hoisted_3$3 = ["id", "name", "value"];
+const _hoisted_4$3 = /*#__PURE__*/vue.createElementVNode("br", null, null, -1 /* HOISTED */);
+const _hoisted_5$2 = ["for"];
+const _hoisted_6$2 = /*#__PURE__*/vue.createElementVNode("br", null, null, -1 /* HOISTED */);
+const _hoisted_7$2 = { key: 1 };
+
+function render$5(_ctx, _cache, $props, $setup, $data, $options) {
+  const _component_BaseEditLabel = vue.resolveComponent("BaseEditLabel");
+  const _component_labelWitchCheckBoxChecked = vue.resolveComponent("labelWitchCheckBoxChecked");
+
+  return (vue.openBlock(), vue.createElementBlock("div", null, [
+    ($props.editionMode)
+      ? (vue.openBlock(), vue.createElementBlock("div", _hoisted_1$5, [
+          vue.createElementVNode("div", {
+            class: vue.normalizeClass($options.cPlacement)
+          }, [
+            vue.createElementVNode("div", _hoisted_2$5, [
+              vue.createElementVNode("input", {
+                id: `${$props.name}_checkbox_input_${$props.identifier}`,
+                class: "form-check-input",
+                type: "checkbox",
+                name: $props.name,
+                value: Boolean($props.modelValue),
+                onChange: _cache[0] || (_cache[0] = (...args) => ($options.updateInput && $options.updateInput(...args)))
+              }, null, 40 /* PROPS, HYDRATE_EVENTS */, _hoisted_3$3),
+              _hoisted_4$3,
+              vue.createElementVNode("label", {
+                class: "form-check-label capitalize-first",
+                for: `${$props.name}_checkbox_input_${$props.identifier}`
+              }, vue.toDisplayString($props.label), 9 /* TEXT, PROPS */, _hoisted_5$2)
+            ]),
+            ($props.errors)
+              ? (vue.openBlock(true), vue.createElementBlock(vue.Fragment, { key: 0 }, vue.renderList($props.errors, (error, index) => {
+                  return (vue.openBlock(), vue.createElementBlock("div", {
+                    key: index,
+                    class: "form-help text-red-600"
+                  }, vue.toDisplayString(_ctx.$t(error, {'attribute': _ctx.$t('attributes.' + $props.name)})), 1 /* TEXT */))
+                }), 128 /* KEYED_FRAGMENT */))
+              : vue.createCommentVNode("v-if", true)
+          ], 2 /* CLASS */)
+        ]))
+      : (vue.openBlock(), vue.createElementBlock(vue.Fragment, { key: 1 }, [
+          ($props.modelValue)
+            ? (vue.openBlock(), vue.createElementBlock(vue.Fragment, { key: 0 }, [
+                vue.createVNode(_component_BaseEditLabel, {
+                  label: $props.label,
+                  required: $props.required
+                }, null, 8 /* PROPS */, ["label", "required"]),
+                _hoisted_6$2,
+                (vue.openBlock(), vue.createElementBlock("span", {
+                  class: "inline-block mr-3",
+                  key: _ctx.index
+                }, [
+                  ($props.modelValue)
+                    ? (vue.openBlock(), vue.createBlock(_component_labelWitchCheckBoxChecked, {
+                        key: 0,
+                        element: $props.modelValue,
+                        translatable: $props.translatable,
+                        "translation-extention": $props.translationExtention
+                      }, null, 8 /* PROPS */, ["element", "translatable", "translation-extention"]))
+                    : vue.createCommentVNode("v-if", true)
+                ]))
+              ], 64 /* STABLE_FRAGMENT */))
+            : (vue.openBlock(), vue.createElementBlock("span", _hoisted_7$2))
+        ], 2112 /* STABLE_FRAGMENT, DEV_ROOT_FRAGMENT */))
+  ]))
+}
+
+script$5.render = render$5;
+script$5.__file = "src/components/BaseShowEditCheckBox/BaseSimpleShowEditCheckbox.vue";
+
+var script$4 = {
+  name: "BaseShowEditCheckbox",
+  components: { BaseEditLabel: script$1o },
+  props: {
+    extraId: {
+      type: String,
+      required: false,
+      default: null
+    },
+    modelValue: {
+      type: Array,
+      required: false,
+      default: () => {
+        return []
+      }
+    },
+    editionMode: {
+      type: Boolean,
+      required: true
+    },
+    options: {
+      type: Array,
+      required: true
+    },
+    name: {
+      type: String,
+      required: true
+    },
+    label: {
+      type: String,
+      required: false,
+      default: null
+    },
+    required: {
+      type: Boolean,
+      required: false,
+      default: false
+    },
+    attributeLabel:{
+      type: String,
+      required: false,
+      default:'name'
+    },
+    errors: {
+      type: Object,
+      required: false,
+      default: () => {
+        return {}
+      }
+    },
+    trackBy:{
+      type:String,
+      required:false,
+      default:null
+    }
+  },
+  emits: ['update:modelValue', 'change'],
+  data() {
+    return {
+      transitionData: []
+    }
+  },
+  watch: {
+    transitionData(newValue, oldValue) {
+      if(newValue && newValue !== oldValue){
+        this.$emit('update:modelValue', newValue);
+        this.$emit("change");
+      }
+    }
+  },
+  mounted() {
+    this.transitionData = this.modelValue;
+  },
+};
+
+const _hoisted_1$4 = { class: "mt-5 space-y-3" };
+const _hoisted_2$4 = { class: "flex items-center h-5" };
+const _hoisted_3$2 = ["id", "value"];
+const _hoisted_4$2 = { class: "ml-3 text-sm" };
+const _hoisted_5$1 = ["for", "innerHTML"];
+const _hoisted_6$1 = /*#__PURE__*/vue.createElementVNode("br", null, null, -1 /* HOISTED */);
+const _hoisted_7$1 = { class: "cursor-default select-none text-sm text-gray-900" };
+
+function render$4(_ctx, _cache, $props, $setup, $data, $options) {
+  const _component_BaseEditLabel = vue.resolveComponent("BaseEditLabel");
+  const _component_font_awesome_icon = vue.resolveComponent("font-awesome-icon");
+
+  return ($props.editionMode)
+    ? (vue.openBlock(), vue.createElementBlock(vue.Fragment, { key: 0 }, [
+        vue.createVNode(_component_BaseEditLabel, {
+          label: $props.label,
+          required: $props.required
+        }, null, 8 /* PROPS */, ["label", "required"]),
+        vue.createElementVNode("div", _hoisted_1$4, [
+          (vue.openBlock(true), vue.createElementBlock(vue.Fragment, null, vue.renderList($props.options, (option, index) => {
+            return (vue.openBlock(), vue.createElementBlock("div", {
+              key: index,
+              class: "relative flex items-start"
+            }, [
+              vue.createElementVNode("div", _hoisted_2$4, [
+                vue.withDirectives((vue.openBlock(), vue.createElementBlock("input", {
+                  id: $props.trackBy ? `${$props.name}_${option[$props.trackBy]}_${index}` : `${$props.name}_${option}`,
+                  key: $data.transitionData,
+                  "onUpdate:modelValue": _cache[0] || (_cache[0] = $event => (($data.transitionData) = $event)),
+                  type: "checkbox",
+                  value: $props.trackBy ? option[$props.trackBy] : option,
+                  class: "focus:ring-theme-primary h-4 w-4 text-theme_secondary border-gray-300 rounded"
+                }, null, 8 /* PROPS */, _hoisted_3$2)), [
+                  [vue.vModelCheckbox, $data.transitionData]
+                ])
+              ]),
+              vue.createElementVNode("div", _hoisted_4$2, [
+                vue.createElementVNode("label", {
+                  for: $props.trackBy ? `${$props.name}_${option[$props.trackBy]}_${index}` : `${$props.name}_${option}`,
+                  class: "cursor-pointer",
+                  innerHTML: $props.attributeLabel ? option[$props.attributeLabel] : option
+                }, null, 8 /* PROPS */, _hoisted_5$1)
+              ])
+            ]))
+          }), 128 /* KEYED_FRAGMENT */))
+        ]),
+        ($props.errors)
+          ? (vue.openBlock(true), vue.createElementBlock(vue.Fragment, { key: 0 }, vue.renderList($props.errors, (error, index) => {
+              return (vue.openBlock(), vue.createElementBlock("div", {
+                key: index,
+                class: "form-help text-red-600"
+              }, vue.toDisplayString(error), 1 /* TEXT */))
+            }), 128 /* KEYED_FRAGMENT */))
+          : vue.createCommentVNode("v-if", true)
+      ], 64 /* STABLE_FRAGMENT */))
+    : (vue.openBlock(), vue.createElementBlock(vue.Fragment, { key: 1 }, [
+        vue.createVNode(_component_BaseEditLabel, {
+          label: $props.label,
+          required: $props.required
+        }, null, 8 /* PROPS */, ["label", "required"]),
+        _hoisted_6$1,
+        (vue.openBlock(), vue.createElementBlock("div", {
+          key: $data.transitionData,
+          class: "flex flex-col gap-y-3"
+        }, [
+          (vue.openBlock(true), vue.createElementBlock(vue.Fragment, null, vue.renderList($data.transitionData, (val, key) => {
+            return (vue.openBlock(), vue.createElementBlock("div", { key: key }, [
+              vue.createVNode(_component_font_awesome_icon, {
+                icon: [`fas`,`check-square`],
+                class: "mr-2 text-theme-secondary mt-2"
+              }),
+              vue.createElementVNode("span", _hoisted_7$1, vue.toDisplayString($props.trackBy ? $props.options.find(option => option[$props.trackBy] === val)[$props.attributeLabel] : val), 1 /* TEXT */)
+            ]))
+          }), 128 /* KEYED_FRAGMENT */))
+        ]))
+      ], 64 /* STABLE_FRAGMENT */))
+}
+
+script$4.render = render$4;
+script$4.__file = "src/components/BaseShowEditCheckBox/BaseShowEditCheckBox.vue";
+
+var script$3 = {
+  name: "BaseShowEditIsoDateTimeInput",
+  props: {
+    modelValue: {
+      type: String,
+      required: false,
+      default: null
+    },
+    undefinedTimeValue: {
+      type: Boolean,
+      required: false,
+      default: null,
+    },
+    dateFormat: {
+      type: String,
+      required: false,
+      default: 'DD/MM/YYYY',
+    },
+    dateMask: {
+      type: String,
+      required: false,
+      default: '##/##/####'
+    },
+    timeFormat: {
+      type: String,
+      required: false,
+      default: 'HH:mm',
+    },
+    timeMask: {
+      type: String,
+      required: false,
+      default: '##:##'
+    },
+    label: {
+      type: String,
+      required: false,
+      default: null,
+    },
+    required: {
+      type: Boolean,
+      required: false,
+      default: false,
+    },
+    editionMode: {
+      type: Boolean,
+      required: false,
+      default: false,
+    },
+    datePlaceholder: {
+      type: String,
+      required: false,
+      default: null
+    },
+    timePlaceholder: {
+      type: String,
+      required: false,
+      default: null
+    },
+    errors: {
+      type: Array,
+      required: false,
+      default: null
+    },
+    displayTimeDifference: {
+      type: Boolean,
+      require: false,
+      default: false,
+    },
+    customReferenceDate: {
+      type: String,
+      required: false,
+      default: null
+    },
+    customReferenceDateFormat: {
+      type: String,
+      required: false,
+      default: 'DD/MM/YYYY'
+    }
+  },
+  emits: ['update:modelValue', 'update:undefinedTimeValue', 'change'],
+  data() {
+    return {
+      internalDate: null,
+      internalTime: null,
+      internalErrors: [],
+    }
+  },
+  computed: {
+    isAValidDate() {
+      const subValidation = moment__default["default"](this.joinedInternalValue, this.joinedFormat).format(this.joinedFormat);
+      this.internalErrors = [];
+      if(subValidation === this.joinedInternalValue){
+        return moment__default["default"](this.joinedInternalValue, this.joinedFormat).isValid()
+      }
+      if (!this.internalDateIsAValidDate && this.internalDate !== null && this.internalErrors.indexOf("validation.register_valid_date") === -1){
+        this.internalErrors.push('validation.register_valid_date');
+      }
+      if (!this.internalTimeIsAValidTime && this.internalErrors.indexOf("validation.register_valid_time") === -1){
+        if (!this.undefinedTimeValue) {
+          this.internalErrors.push('validation.register_valid_time');
+        }
+      }
+      return false
+    },
+    internalDateIsAValidDate(){
+      return moment__default["default"](this.internalDate, this.dateFormat).format(this.dateFormat) === this.internalDate
+    },
+    internalTimeIsAValidTime(){
+      return moment__default["default"](this.internalTime, this.timeFormat).format(this.timeFormat) === this.internalTime
+    },
+    joinedFormat(){
+      return [this.dateFormat, this.timeFormat].join(' - ')
+    },
+    joinedInternalValue(){
+      let temp = null;
+      if (!this.internalTime || this.internalTime === '') {
+        temp = this.timeMask.replaceAll('#', '0');
+        this.$emit('update:undefinedTimeValue', true);
+      } else {
+        this.$emit('update:undefinedTimeValue', false);
+        temp = this.internalTime;
+      }
+      return [this.internalDate, temp].join(' - ')
+    },
+    displayedValueWhenNotInEditMode(){
+      if((!this.internalDate || this.internalDate === '') && (!this.internalTime || this.internalTime === '')){
+        return null
+      } else {
+        if (this.undefinedTimeValue) {
+          return this.internalDate
+        }
+        return this.joinedInternalValue
+      }
+    },
+    timeDifference(){
+      if(!this.customReferenceDate){
+        if (this.isAValidDate) {
+          if (this.undefinedTimeValue){
+            return moment__default["default"](this.internalDate, this.dateFormat).lang('fr').from(moment__default["default"]().startOf('day'))
+          } else {
+            return moment__default["default"](this.joinedInternalValue, this.joinedFormat).lang('fr').from(moment__default["default"]())
+          }
+        }
+        return null
+      }
+      if (this.isAValidDate){
+        if(this.undefinedTimeValue){
+          return moment__default["default"](this.internalDate, this.dateFormat).lang('fr').from(moment__default["default"](this.customReferenceDate, this.customReferenceDateFormat))
+        } else {
+          return moment__default["default"](this.joinedInternalValue, this.joinedFormat).lang('fr').from(moment__default["default"](this.customReferenceDate, this.customReferenceDateFormat))
+        }
+      }
+      return null
+    },
+  },
+  watch: {
+    modelValue: {
+      handler(newValue){
+        if(newValue){
+          this.internalDate = moment__default["default"](newValue).format(this.dateFormat);
+          this.internalTime = this.undefinedTimeValue ? null : moment__default["default"](newValue).format(this.timeFormat);
+        } else {
+          this.internalDate = null;
+          this.internalTime = null;
+        }
+        
+      },
+      immediate: true,
+      deep:true,
+    }
+  },
+  methods: {
+    updateInput() {
+      if(this.isAValidDate){
+        console.log(moment__default["default"](this.joinedInternalValue, this.joinedFormat).format());
+        this.$emit('update:modelValue', moment__default["default"](this.joinedInternalValue, this.joinedFormat).format());
+        this.$emit('change', moment__default["default"](this.joinedInternalValue, this.joinedFormat).format());
+      }
+    },
+  },
+};
+
+const _hoisted_1$3 = { class: "flex" };
+const _hoisted_2$3 = {
+  key: 0,
+  class: "ml-2 text-sm text-gray-500 capitalize-first"
+};
+const _hoisted_3$1 = { class: "flex -space-x-px" };
+const _hoisted_4$1 = { class: "w-4/6 flex-1 min-w-0" };
+const _hoisted_5 = ["placeholder"];
+const _hoisted_6 = { class: "min-w-0" };
+const _hoisted_7 = ["placeholder"];
+
+function render$3(_ctx, _cache, $props, $setup, $data, $options) {
+  const _component_BaseEditLabel = vue.resolveComponent("BaseEditLabel");
+  const _component_BaseShowLabel = vue.resolveComponent("BaseShowLabel");
+  const _directive_mask = vue.resolveDirective("mask");
+
+  return (vue.openBlock(), vue.createElementBlock("div", null, [
+    ($props.editionMode)
+      ? (vue.openBlock(), vue.createElementBlock(vue.Fragment, { key: 0 }, [
+          vue.createElementVNode("div", _hoisted_1$3, [
+            vue.createVNode(_component_BaseEditLabel, {
+              label: $props.label,
+              required: $props.required
+            }, null, 8 /* PROPS */, ["label", "required"]),
+            ($props.displayTimeDifference && $options.timeDifference)
+              ? (vue.openBlock(), vue.createElementBlock("div", _hoisted_2$3, " ( " + vue.toDisplayString($options.timeDifference) + " ) ", 1 /* TEXT */))
+              : vue.createCommentVNode("v-if", true)
+          ]),
+          vue.createElementVNode("div", _hoisted_3$1, [
+            vue.createElementVNode("div", _hoisted_4$1, [
+              vue.withDirectives(vue.createElementVNode("input", {
+                id: "card-expiration-date",
+                "onUpdate:modelValue": _cache[0] || (_cache[0] = $event => (($data.internalDate) = $event)),
+                type: "text",
+                name: "card-expiration-date",
+                class: "focus:ring-blue-300 focus:border-blue-300 relative block w-full rounded-none rounded-bl-md rounded-tl-md bg-transparent focus:z-10 sm:text-sm border-gray-300",
+                placeholder: $props.datePlaceholder || _ctx.$t('global.date'),
+                onInput: _cache[1] || (_cache[1] = (...args) => ($options.updateInput && $options.updateInput(...args)))
+              }, null, 40 /* PROPS, HYDRATE_EVENTS */, _hoisted_5), [
+                [vue.vModelText, $data.internalDate],
+                [_directive_mask, $props.dateMask]
+              ])
+            ]),
+            vue.createElementVNode("div", _hoisted_6, [
+              vue.withDirectives(vue.createElementVNode("input", {
+                id: "card-cvc",
+                "onUpdate:modelValue": _cache[2] || (_cache[2] = $event => (($data.internalTime) = $event)),
+                type: "text",
+                name: "card-cvc",
+                class: "focus:ring-blue-300 focus:border-blue-300 relative block w-full rounded-none rounded-br-md rounded-tr-md bg-transparent focus:z-10 sm:text-sm border-gray-300",
+                placeholder: $props.timePlaceholder || _ctx.$t('global.time'),
+                onInput: _cache[3] || (_cache[3] = (...args) => ($options.updateInput && $options.updateInput(...args)))
+              }, null, 40 /* PROPS, HYDRATE_EVENTS */, _hoisted_7), [
+                [vue.vModelText, $data.internalTime],
+                [_directive_mask, $props.timeMask]
+              ])
+            ])
+          ]),
+          ($data.internalErrors)
+            ? (vue.openBlock(true), vue.createElementBlock(vue.Fragment, { key: 0 }, vue.renderList($data.internalErrors, (error, index) => {
+                return (vue.openBlock(), vue.createElementBlock("div", {
+                  key: index,
+                  class: "form-help text-red-600"
+                }, vue.toDisplayString(_ctx.$t(error)), 1 /* TEXT */))
+              }), 128 /* KEYED_FRAGMENT */))
+            : vue.createCommentVNode("v-if", true),
+          ($props.errors)
+            ? (vue.openBlock(true), vue.createElementBlock(vue.Fragment, { key: 1 }, vue.renderList($props.errors, (error, index) => {
+                return (vue.openBlock(), vue.createElementBlock("div", {
+                  key: index,
+                  class: "form-help text-red-600"
+                }, vue.toDisplayString(_ctx.$t(error, {attribute: _ctx.$t('attributes.' + _ctx.name)})), 1 /* TEXT */))
+              }), 128 /* KEYED_FRAGMENT */))
+            : vue.createCommentVNode("v-if", true)
+        ], 64 /* STABLE_FRAGMENT */))
+      : (vue.openBlock(), vue.createBlock(_component_BaseShowLabel, {
+          key: 1,
+          label: $props.label,
+          "model-value": $options.displayedValueWhenNotInEditMode,
+          "additional-information": $props.displayTimeDifference ? $options.timeDifference : null
+        }, null, 8 /* PROPS */, ["label", "model-value", "additional-information"]))
+  ]))
+}
+
+script$3.render = render$3;
+script$3.__file = "src/components/BaseShowEditInput/BaseShowEditIsoDateTimeInput.vue";
+
+var script$2 = {
+  name: 'BaseShowEditBooleanRadioGroup',
+  emits: ['change'],
+  data() {
+    return {
+      internalValue: false,
+      options: {1: true, 0: false}
+    }
+  },
+  props: {
+    modelValue: {
+      type: [Boolean, Number, String],
+      required: false,
+      default:null
+    },
+    name: { type: String, required: true },
+    label: { type: String, required: false },
+    disabled: { type: Boolean, required: false, default: false },
+    required: { type: Boolean, required: false, default: false },
+    extra_id: {required: false, default: ''},
+    errors: { type: Object, required: false },
+    isVertical: {type: Boolean, required: false, default: false },
+    editionMode: {
+      type: Boolean,
+      required: true
+    },
+  },
+  computed:{
+    temp_name(){
+      return this.name + this.extra_id
+    },
+    cPlacement(){
+      return this.isVertical ? '' : 'flex flex-col sm:flex-row mt-2'
+    },
+    displaydValueWhenNotInEditMode(){
+      return this.$t(`enums.yes_no.${Boolean(this.internalValue)}`)
+    },
+  },
+  watch: {
+    modelValue: {
+      handler(newValue) {
+        this.internalValue = Boolean(newValue);
+      },
+      immediate: true,
+      deep: true,
+    },
+    internalValue(newValue, oldValue) {
+      if (newValue !== oldValue) {
+        this.$emit('update:modelValue', Boolean(newValue));
+        this.$emit('change', Boolean(newValue));
+      }
+    }
+  },
+};
+
+const _hoisted_1$2 = ["id", "name", "value", "disabled"];
+const _hoisted_2$2 = ["for"];
+
+function render$2(_ctx, _cache, $props, $setup, $data, $options) {
+  const _component_BaseEditLabel = vue.resolveComponent("BaseEditLabel");
+  const _component_BaseShowLabel = vue.resolveComponent("BaseShowLabel");
+
+  return (vue.openBlock(), vue.createElementBlock("div", null, [
+    ($props.editionMode)
+      ? (vue.openBlock(), vue.createElementBlock(vue.Fragment, { key: 0 }, [
+          (vue.openBlock(), vue.createElementBlock("div", {
+            class: "mt-3",
+            key: $data.internalValue
+          }, [
+            vue.createVNode(_component_BaseEditLabel, {
+              label: $props.label,
+              required: $props.required
+            }, null, 8 /* PROPS */, ["label", "required"]),
+            vue.createElementVNode("div", {
+              class: vue.normalizeClass($options.cPlacement)
+            }, [
+              (vue.openBlock(true), vue.createElementBlock(vue.Fragment, null, vue.renderList($data.options, (val, key) => {
+                return (vue.openBlock(), vue.createElementBlock("div", {
+                  class: "form-check mr-2",
+                  key: key
+                }, [
+                  vue.withDirectives(vue.createElementVNode("input", {
+                    id: `${$props.name}-${key}-${$props.extra_id}`,
+                    class: "form-check-input",
+                    type: "radio",
+                    name: $options.temp_name,
+                    value: val,
+                    "onUpdate:modelValue": _cache[0] || (_cache[0] = $event => (($data.internalValue) = $event)),
+                    disabled: $props.disabled
+                  }, null, 8 /* PROPS */, _hoisted_1$2), [
+                    [vue.vModelRadio, $data.internalValue]
+                  ]),
+                  vue.createElementVNode("label", {
+                    class: "form-check-label capitalize-first",
+                    for: `${$props.name}-${key}-${$props.extra_id}`
+                  }, vue.toDisplayString(_ctx.$t(`enums.yes_no.${ key }`)), 9 /* TEXT, PROPS */, _hoisted_2$2)
+                ]))
+              }), 128 /* KEYED_FRAGMENT */))
+            ], 2 /* CLASS */)
+          ])),
+          ($props.errors)
+            ? (vue.openBlock(true), vue.createElementBlock(vue.Fragment, { key: 0 }, vue.renderList($props.errors, (error, index) => {
+                return (vue.openBlock(), vue.createElementBlock("div", {
+                  key: index,
+                  class: "form-help text-red-600"
+                }, vue.toDisplayString(_ctx.$t(error, { 'attribute': _ctx.$t('attributes.' + $props.name) })), 1 /* TEXT */))
+              }), 128 /* KEYED_FRAGMENT */))
+            : vue.createCommentVNode("v-if", true)
+        ], 64 /* STABLE_FRAGMENT */))
+      : (vue.openBlock(), vue.createBlock(_component_BaseShowLabel, {
+          key: 1,
+          label: $props.label,
+          "model-value": $options.displaydValueWhenNotInEditMode
+        }, null, 8 /* PROPS */, ["label", "model-value"]))
+  ]))
+}
+
 script$2.render = render$2;
-script$2.__file = "src/components/BaseInput/BaseSimpleSearchInput.vue";
+script$2.__file = "src/components/BaseRadioGroup/BaseShowEditBooleanRadioGroup.vue";
 
 var script$1 = {
   name: 'HelloWorld',
@@ -9087,19 +9886,23 @@ script$1.render = render$1;
 script$1.__file = "src/components/HelloWorld.vue";
 
 var script = {
-  directives: {mask: vueTheMask.mask},
   name: 'BaseShowEditIsoDateInput',
   data() {
     return {
       internalValue: null,
     }
   },
-  components: { BaseEditLabel: script$1j, BaseShowLabel: script$1k },
+  components: { BaseEditLabel: script$1o, BaseShowLabel: script$1p },
   props: {
     customReferenceDate: {
       type: String,
       required: false,
       default: null
+    },
+    customReferenceDateFormat: {
+      type: String,
+      required: false,
+      default: 'DD/MM/YYYY'
     },
     displayTimeDifference: {
       type: Boolean,
@@ -9146,6 +9949,11 @@ var script = {
         return ['##/##/####']
       }
     },
+    dateFormat: {
+      type: String,
+      required: false,
+      default: 'DD/MM/YYYY'
+    },
     inputClass: {
       type: String,
       required: false,
@@ -9169,27 +9977,37 @@ var script = {
       return this.inputClass === '' ? 'form-control' : this.inputClass
     },
     cDisplayedValueWhenNotEditionMode(){
-      return moment__default["default"](this.modelValue).format('DD/MM/YYYY') === 'Invalid date' ? null : moment__default["default"](this.modelValue).format('DD/MM/YYYY')
-    },
-    internalValueIsAFullDate(){
-      return this.isAValidDate(this.internalValue)
+      return this.internalValueIsAValidDate ? moment__default["default"](this.internalValue).format(this.dateFormat) : null
     },
     timeDifference(){
-      if(!this.customReferenceDate){
-        return moment__default["default"](this.modelValue).isValid()
-          ? moment__default["default"](this.modelValue).lang('fr').from(moment__default["default"]().startOf('day'))
-          : null
+      if(this.customReferenceDate) {
+        if (this.internalValueIsAValidDate) {
+         return moment__default["default"](this.internalValue, this.dateFormat).lang('fr').from(moment__default["default"](this.customReferenceDate, this.customReferenceDateFormat))
+        }
+        return null
+      } else {
+        if (this.internalValueIsAValidDate) {
+          return moment__default["default"](this.internalValue, this.dateFormat).lang('fr').from(moment__default["default"]().startOf('day'))
+        }
+        return null
       }
-      return moment__default["default"](this.modelValue).isValid()
-        ? moment__default["default"](this.modelValue).lang('fr').from(moment__default["default"](this.customReferenceDate, 'DD/MM/YYYY'))
-        : null
+    },
+    internalValueIsAValidDate(){
+      let subValidation = moment__default["default"](this.internalValue, this.dateFormat).format(this.dateFormat);
+      
+      if (subValidation === this.internalValue){
+        return moment__default["default"](this.internalValue, this.dateFormat).isValid()
+      }
+      return false
     }
   },
   watch: {
     modelValue: {
       handler(newValue){
         if(newValue){
-          this.internalValue = moment__default["default"](newValue).format('DD/MM/YYYY');
+          this.internalValue = moment__default["default"](newValue).format(this.dateFormat);
+        }else {
+          this.internalValue = null;
         }
       },
       immediate: true,
@@ -9197,12 +10015,9 @@ var script = {
     }
   },
   methods: {
-    isAValidDate(payload){
-      return /\d{2}\/\d{2}\/\d{4}/.test(payload) && moment__default["default"](payload).isValid()
-    },
     updateInput(event) {
-      if (this.isAValidDate(event.target.value)) {
-        this.$emit("update:modelValue", moment__default["default"](event.target.value).format());
+      if (this.internalValueIsAValidDate) {
+        this.$emit("update:modelValue", moment__default["default"](event.target.value, this.dateFormat).format());
       }
     }
   },
@@ -9244,7 +10059,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
           "onUpdate:modelValue": _cache[0] || (_cache[0] = $event => (($data.internalValue) = $event)),
           onInput: _cache[1] || (_cache[1] = (...args) => ($options.updateInput && $options.updateInput(...args))),
           id: $props.name,
-          class: vue.normalizeClass([ $options.internalValueIsAFullDate ? 'focus:border-green-300 focus:ring-green-300' : 'focus:border-red-300 focus:ring-red-300', 'border-gray-400 focus:ring-1', $options.cInputClass]),
+          class: vue.normalizeClass([ $options.internalValueIsAValidDate ? 'focus:border-green-300 focus:ring-green-300' : 'focus:border-red-300 focus:ring-red-300', 'border-gray-400 focus:ring-1', $options.cInputClass]),
           placeholder: $props.placeholder
         }, null, 42 /* CLASS, PROPS, HYDRATE_EVENTS */, _hoisted_3), [
           [vue.vModelText, $data.internalValue],
@@ -9260,7 +10075,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     : (vue.openBlock(), vue.createElementBlock("div", _hoisted_4, [
         vue.createVNode(_component_BaseShowLabel, {
           label: $props.label,
-          "model-value": $options.cDisplayedValueWhenNotEditionMode,
+          "model-value": $data.internalValue,
           "additional-information": this.displayTimeDifference && $options.timeDifference !== 'Invalid date' ? $options.timeDifference : null
         }, null, 8 /* PROPS */, ["label", "model-value", "additional-information"])
       ]))
@@ -9270,85 +10085,90 @@ script.render = render;
 script.__file = "src/components/BaseShowEditInput/BaseShowEditIsoDateInput.vue";
 
 var components = {
-    ActivityTable: script$1l,
-    BaseInputDynamicForm: script$6,
-    BaseShowEditTreeInput: script$3,
-    BaseShowEditInputButton: script$4,
-    BaseFileDropComponent: script$7,
-    DropdownStatus: script$b,
-    BaseContentTable: script$5,
-    DropdownColoredStatus: script$a,
-    DropdownWorkStatus: script$8,
-    DropdownTaskStatusSquare: script$9,
-    DynamicFormInput: script$c,
-    SelectCustomer: script$i,
-    SelectUserSimple: script$g,
-    BaseWysiwyg: script$e,
-    SelectLanguage: script$h,
-    SelectCompaniesMultiple: script$k,
-    SelectCompanySimple: script$j,
-    ActivityTableRow: script$1m,
-    BaseBankShowEditSelectSimple: script$1i,
-    BaseBooleanRadioGroup: script$1h,
-    BaseButton: script$1g,
-    BaseButtonInput: script$1f,
-    BaseCard: script$1e,
-    BaseCardSection: script$1d,
-    BaseCheckBox: script$1c,
-    BaseCompanyShowEditSelectMultiple: script$1b,
-    BaseCompanyShowEditSelectSimple: script$1a,
-    BaseCountryShowEditSelectSimple: script$19,
-    BaseCustomerShowEditSelectSimple: script$18,
-    BaseDateInput: script$16,
-    BaseDocShowEditSelectMultiple: script$15,
-    BaseEditLabel: script$1j,
-    BaseEventTypeShowEditSelectSimple: script$14,
-    BaseInput: script$13,
-    BaseLabel: script$12,
-    BaseLanguageShowEditSelectMultiple: script$11,
-    BaseLanguageShowEditSelectSimple: script$10,
-    BaseMaskedInput: script$17,
-    BasePageFull: script$X,
-    BasePhoneInput: script$W,
-    BaseRadioGroup: script$V,
-    BaseSearchInput: script$U,
-    BaseSelectMultiple: script$T,
-    BaseSelectSimple: script$S,
-    BaseSelectSimpleAjax: script$R,
-    BaseShowEditDateInput: script$Q,
-    BaseShowEditDatePicker: script$P,
-    BaseShowEditInput: script$O,
-    BaseShowEditPhoneInput: script$N,
-    BaseShowEditRadioGroup: script$L,
-    BaseShowEditSelectAjax: script$K,
-    BaseShowEditSelectMultiple: script$J,
-    BaseShowEditSelectSimple: script$I,
-    BaseShowEditTextArea: script$H,
-    BaseShowEditTimeInput: script$G,
-    BaseShowLabel: script$1k,
-    BaseShowPhoneLabel: script$F,
-    BaseSimpleCard: script$E,
-    BaseSimpleCheckboxGroup: script$D,
-    BaseSimpleDatePicker: script$C,
-    BaseSimpleRadioGroup: script$B,
-    BaseSimpleShowEditCheckboxGroup: script$y,
-    BaseSimpleTab: script$x,
-    BaseSwitch: script$w,
-    BaseTable: script$v,
-    BaseTextArea: script$u,
-    BaseThComponent: script$t,
-    BaseTimeInput: script$s,
-    BaseTrueFalseShowEditRadioGroup: script$r,
-    BaseUserShowEditSelectSimple: script$q,
-    CheckboxWithInput: script$z,
-    ColumnVisibilityDropDownComponent: script$p,
-    ContentTableCell: script$o,
-    IFramePdf: script$n,
-    LabelWitchCheckBoxChecked: script$A,
-    SettingsPageFull: script$m,
-    ToastUndoComponent: script$l,
-    BaseSimpleSearchInput: script$2,
+    ActivityTable: script$1q,
+    BaseInputDynamicForm: script$a,
+    BaseShowEditTreeInput: script$7,
+    BaseShowEditInputButton: script$8,
+    BaseFileDropComponent: script$b,
+    DropdownStatus: script$f,
+    BaseContentTable: script$9,
+    DropdownColoredStatus: script$e,
+    DropdownWorkStatus: script$c,
+    DropdownTaskStatusSquare: script$d,
+    DynamicFormInput: script$g,
+    SelectCustomer: script$m,
+    SelectUserSimple: script$k,
+    BaseWysiwyg: script$i,
+    SelectLanguage: script$l,
+    SelectCompaniesMultiple: script$o,
+    SelectCompanySimple: script$n,
+    ActivityTableRow: script$1r,
+    BaseBankShowEditSelectSimple: script$1n,
+    BaseBooleanRadioGroup: script$1m,
+    BaseButton: script$1l,
+    BaseThemeButton: script$1k,
+    BaseButtonInput: script$1j,
+    BaseCard: script$1i,
+    BaseCardSection: script$1h,
+    BaseCheckBox: script$1g,
+    BaseShowEditCheckBox: script$4,
+    BaseCompanyShowEditSelectMultiple: script$1f,
+    BaseCompanyShowEditSelectSimple: script$1e,
+    BaseCountryShowEditSelectSimple: script$1d,
+    BaseCustomerShowEditSelectSimple: script$1c,
+    BaseDateInput: script$1a,
+    BaseDocShowEditSelectMultiple: script$19,
+    BaseEditLabel: script$1o,
+    BaseEventTypeShowEditSelectSimple: script$18,
+    BaseInput: script$17,
+    BaseLabel: script$16,
+    BaseLanguageShowEditSelectMultiple: script$15,
+    BaseLanguageShowEditSelectSimple: script$14,
+    BaseMaskedInput: script$1b,
+    BasePageFull: script$$,
+    BasePhoneInput: script$_,
+    BaseRadioGroup: script$Z,
+    BaseSearchInput: script$Y,
+    BaseSelectMultiple: script$X,
+    BaseSelectSimple: script$W,
+    BaseSelectSimpleAjax: script$V,
+    BaseShowEditDateInput: script$U,
+    BaseShowEditDatePicker: script$T,
+    BaseShowEditInput: script$S,
+    BaseShowEditPhoneInput: script$R,
+    BaseShowEditRadioGroup: script$P,
+    BaseShowEditSelectAjax: script$O,
+    BaseShowEditSelectMultiple: script$N,
+    BaseShowEditSelectSimple: script$M,
+    BaseShowEditTextArea: script$L,
+    BaseShowEditTimeInput: script$K,
+    BaseShowLabel: script$1p,
+    BaseShowPhoneLabel: script$J,
+    BaseSimpleCard: script$I,
+    BaseSimpleCheckboxGroup: script$H,
+    BaseSimpleDatePicker: script$G,
+    BaseSimpleRadioGroup: script$F,
+    BaseSimpleShowEditCheckboxGroup: script$C,
+    BaseSimpleTab: script$B,
+    BaseSwitch: script$A,
+    BaseTable: script$z,
+    BaseTextArea: script$y,
+    BaseThComponent: script$x,
+    BaseTimeInput: script$w,
+    BaseTrueFalseShowEditRadioGroup: script$v,
+    BaseUserShowEditSelectSimple: script$u,
+    CheckboxWithInput: script$D,
+    ColumnVisibilityDropDownComponent: script$t,
+    ContentTableCell: script$s,
+    IFramePdf: script$r,
+    LabelWitchCheckBoxChecked: script$E,
+    SettingsPageFull: script$q,
+    ToastUndoComponent: script$p,
+    BaseSimpleSearchInput: script$6,
     BaseShowEditIsoDateInput: script,
+    BaseSimpleShowEditCheckbox: script$5,
+    BaseShowEditIsoDateTimeInput: script$3,
+    BaseShowEditBooleanRadioGroup: script$2,
 
     HelloWorld: script$1,
 };
