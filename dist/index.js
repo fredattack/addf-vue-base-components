@@ -864,7 +864,6 @@ function render$1k(_ctx, _cache, $props, $setup, $data, $options) {
   return (vue.openBlock(), vue.createElementBlock("button", {
     class: vue.normalizeClass(["w-full flex justify-center py-2 px-2 border border-transparent rounded-md shadow-sm text-sm font-medium focus:outline-none justify-center items-center gap-x-3", $options.buttonClasses])
   }, [
-    vue.createTextVNode(vue.toDisplayString($props.iconPrefix) + " ", 1 /* TEXT */),
     ($props.icon)
       ? (vue.openBlock(), vue.createBlock(_component_font_awesome_icon, {
           key: 0,
