@@ -5,7 +5,7 @@
   "main": "dist/index.js",
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "rollup -c",
+    "build": "yarn version && rollup -c",
     "build-library": "vue-cli-service build --target lib --name addf-vue-base-components ./src/install.js",
     "lint": "vue-cli-service lint"
   },
