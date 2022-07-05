@@ -8670,27 +8670,25 @@ function render$a(_ctx, _cache, $props, $setup, $data, $options) {
                       isOutline: column.metadata.outline,
                       title: column.metadata.title
                     }, null, 8 /* PROPS */, ["color", "icon", "onClick", "tooltip", "isOutline", "title"]))
-                  : vue.createCommentVNode("v-if", true),
-                (column.type === 'label' && model[column.metadata.value])
-                  ? (vue.openBlock(), vue.createBlock(_component_BaseLabel, {
-                      key: 1,
-                      icon: column.metadata.icon,
-                      content: model[column.metadata.value],
-                      color: model[column.metadata.color]
-                    }, null, 8 /* PROPS */, ["icon", "content", "color"]))
-                  : vue.createCommentVNode("v-if", true),
-                (column.type === 'icon' && model['condition'])
-                  ? (vue.openBlock(), vue.createBlock(_component_BaseLabel, {
-                      key: 2,
-                      icon: column.metadata.icon,
-                      content: '',
-                      color: column.metadata.color
-                    }, null, 8 /* PROPS */, ["icon", "color"]))
-                  : (vue.openBlock(), vue.createBlock(_component_ContentTableCell, {
-                      key: 3,
-                      model: model,
-                      column: column
-                    }, null, 8 /* PROPS */, ["model", "column"]))
+                  : (column.type === 'label' && model[column.metadata.value])
+                    ? (vue.openBlock(), vue.createBlock(_component_BaseLabel, {
+                        key: 1,
+                        icon: column.metadata.icon,
+                        content: model[column.metadata.value],
+                        color: model[column.metadata.color]
+                      }, null, 8 /* PROPS */, ["icon", "content", "color"]))
+                    : (column.type === 'icon' && model['condition'])
+                      ? (vue.openBlock(), vue.createBlock(_component_BaseLabel, {
+                          key: 2,
+                          icon: column.metadata.icon,
+                          content: '',
+                          color: column.metadata.color
+                        }, null, 8 /* PROPS */, ["icon", "color"]))
+                      : (vue.openBlock(), vue.createBlock(_component_ContentTableCell, {
+                          key: 3,
+                          model: model,
+                          column: column
+                        }, null, 8 /* PROPS */, ["model", "column"]))
               ], 2 /* CLASS */))
             }), 128 /* KEYED_FRAGMENT */))
           ], 10 /* CLASS, PROPS */, _hoisted_2$a))

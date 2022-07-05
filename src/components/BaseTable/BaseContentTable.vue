@@ -46,12 +46,13 @@
                         :title="column.metadata.title"
             />
 
-            <BaseLabel v-if="column.type === 'label' && model[column.metadata.value]"
+            <BaseLabel v-else-if="column.type === 'label' && model[column.metadata.value]"
                        :icon='column.metadata.icon'
                        :content="model[column.metadata.value]"
                        :color="model[column.metadata.color]"
             />
-            <BaseLabel v-if="column.type === 'icon' && model['condition']"
+            
+            <BaseLabel v-else-if="column.type === 'icon' && model['condition']"
                        :icon='column.metadata.icon'
                        :content="''"
                        :color="column.metadata.color"
