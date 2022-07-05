@@ -77,7 +77,7 @@ var script$1t = {
 };
 
 const _hoisted_1$1d = { class: "overflow-x-auto" };
-const _hoisted_2$12 = { class: "table" };
+const _hoisted_2$11 = { class: "table" };
 const _hoisted_3$J = {
   class: "border-b-2 dark:border-dark-5 whitespace-nowrap",
   style: {"width":"30%"}
@@ -97,7 +97,7 @@ function render$1t(_ctx, _cache, $props, $setup, $data, $options) {
   const _component_LogTableRow = resolveComponent("LogTableRow");
 
   return (openBlock(), createElementBlock("div", _hoisted_1$1d, [
-    createElementVNode("table", _hoisted_2$12, [
+    createElementVNode("table", _hoisted_2$11, [
       createElementVNode("thead", null, [
         createElementVNode("tr", null, [
           createElementVNode("th", _hoisted_3$J, toDisplayString(_ctx.$t('global.value_name')), 1 /* TEXT */),
@@ -213,13 +213,13 @@ var script$1r = {
 };
 
 const _hoisted_1$1b = { class: "overflow-x-auto" };
-const _hoisted_2$11 = { class: "table" };
+const _hoisted_2$10 = { class: "table" };
 
 function render$1r(_ctx, _cache, $props, $setup, $data, $options) {
   const _component_ActivityTableRow = resolveComponent("ActivityTableRow");
 
   return (openBlock(), createElementBlock("div", _hoisted_1$1b, [
-    createElementVNode("table", _hoisted_2$11, [
+    createElementVNode("table", _hoisted_2$10, [
       createElementVNode("thead", null, [
         createElementVNode("tr", null, [
           (openBlock(true), createElementBlock(Fragment, null, renderList($data.headers, (header, index) => {
@@ -287,7 +287,7 @@ const _hoisted_1$1a = {
   key: 1,
   class: "flex"
 };
-const _hoisted_2$10 = { class: "capitalize-first" };
+const _hoisted_2$$ = { class: "capitalize-first" };
 const _hoisted_3$I = {
   key: 2,
   class: "flex"
@@ -308,7 +308,7 @@ function render$1q(_ctx, _cache, $props, $setup, $data, $options) {
       : createCommentVNode("v-if", true),
     ($props.hideModelValue)
       ? (openBlock(), createElementBlock("div", _hoisted_1$1a, [
-          createElementVNode("dd", _hoisted_2$10, toDisplayString($props.modelValue === null || $props.modelValue === '' ? '-' : "**********"), 1 /* TEXT */)
+          createElementVNode("dd", _hoisted_2$$, toDisplayString($props.modelValue === null || $props.modelValue === '' ? '-' : "**********"), 1 /* TEXT */)
         ]))
       : (openBlock(), createElementBlock("div", _hoisted_3$I, [
           createElementVNode("dd", _hoisted_4$t, toDisplayString($props.modelValue === null || $props.modelValue === '' ? '-' : $props.modelValue), 1 /* TEXT */),
@@ -346,7 +346,7 @@ const _hoisted_1$19 = {
   key: 0,
   class: "text-sm text-gray-500 capitalize-first"
 };
-const _hoisted_2$$ = {
+const _hoisted_2$_ = {
   key: 0,
   class: "text-red-500 capitalize"
 };
@@ -356,7 +356,7 @@ function render$1p(_ctx, _cache, $props, $setup, $data, $options) {
     ? (openBlock(), createElementBlock("div", _hoisted_1$19, [
         createTextVNode(toDisplayString($props.label) + " ", 1 /* TEXT */),
         ($props.required)
-          ? (openBlock(), createElementBlock("span", _hoisted_2$$, "*"))
+          ? (openBlock(), createElementBlock("span", _hoisted_2$_, "*"))
           : createCommentVNode("v-if", true)
       ]))
     : createCommentVNode("v-if", true)
@@ -448,7 +448,7 @@ const _hoisted_1$18 = {
   key: 0,
   class: "mt-3"
 };
-const _hoisted_2$_ = {
+const _hoisted_2$Z = {
   key: 1,
   class: "mt-3"
 };
@@ -486,7 +486,7 @@ function render$1o(_ctx, _cache, $props, $setup, $data, $options) {
             }), 128 /* KEYED_FRAGMENT */))
           : createCommentVNode("v-if", true)
       ]))
-    : (openBlock(), createElementBlock("div", _hoisted_2$_, [
+    : (openBlock(), createElementBlock("div", _hoisted_2$Z, [
         createVNode(_component_BaseShowLabel, {
           label: $props.label ? $props.label : _ctx.$t('attributes.bank_id'),
           "model-value": $options.cDisplayedValueWhenNotEditionMode
@@ -533,7 +533,7 @@ const _hoisted_1$17 = {
   key: 0,
   class: "form-label capitalize-first"
 };
-const _hoisted_2$Z = {
+const _hoisted_2$Y = {
   key: 0,
   class: "text-red-600"
 };
@@ -550,7 +550,7 @@ function render$1n(_ctx, _cache, $props, $setup, $data, $options) {
         ? (openBlock(), createElementBlock("label", _hoisted_1$17, [
             createTextVNode(toDisplayString($props.label) + " ", 1 /* TEXT */),
             ($props.label && $props.required)
-              ? (openBlock(), createElementBlock("span", _hoisted_2$Z, "*"))
+              ? (openBlock(), createElementBlock("span", _hoisted_2$Y, "*"))
               : createCommentVNode("v-if", true)
           ]))
         : createCommentVNode("v-if", true),
@@ -716,7 +716,7 @@ var script$1m = {
 };
 
 const _hoisted_1$16 = { key: 0 };
-const _hoisted_2$Y = {
+const _hoisted_2$X = {
   key: 1,
   class: "inline-block capitalize-first"
 };
@@ -740,7 +740,7 @@ function render$1m(_ctx, _cache, $props, $setup, $data, $options) {
               }, null, 8 /* PROPS */, ["icon"]))
             : createCommentVNode("v-if", true),
           (this.title)
-            ? (openBlock(), createElementBlock("span", _hoisted_2$Y, toDisplayString(this.title), 1 /* TEXT */))
+            ? (openBlock(), createElementBlock("span", _hoisted_2$X, toDisplayString(this.title), 1 /* TEXT */))
             : createCommentVNode("v-if", true)
         ], 2 /* CLASS */)
       ]))
@@ -919,7 +919,7 @@ var script$1k = {
 };
 
 const _hoisted_1$14 = { class: "mt-3" };
-const _hoisted_2$X = ["for"];
+const _hoisted_2$W = ["for"];
 const _hoisted_3$F = {
   key: 0,
   class: "text-red-600"
@@ -941,7 +941,7 @@ function render$1k(_ctx, _cache, $props, $setup, $data, $options) {
           (_ctx.isRequired)
             ? (openBlock(), createElementBlock("span", _hoisted_3$F, "*"))
             : createCommentVNode("v-if", true)
-        ], 8 /* PROPS */, _hoisted_2$X))
+        ], 8 /* PROPS */, _hoisted_2$W))
       : createCommentVNode("v-if", true),
     createElementVNode("div", _hoisted_4$r, [
       withDirectives(createElementVNode("input", {
@@ -999,7 +999,7 @@ var script$1j = {
 };
 
 const _hoisted_1$13 = { class: "box lg:mt-5" };
-const _hoisted_2$W = {
+const _hoisted_2$V = {
   key: 0,
   class: "flex items-center p-5 border-b border-gray-200 dark:border-dark-5"
 };
@@ -1014,7 +1014,7 @@ function render$1j(_ctx, _cache, $props, $setup, $data, $options) {
     createElementVNode("div", _hoisted_1$13, [
       createCommentVNode(" header attention faut que je vérifie quand je lui passe une icone aussi  "),
       (_ctx.$slots.header || ($props.headerTitle && $props.headerTitle.length))
-        ? (openBlock(), createElementBlock("header", _hoisted_2$W, [
+        ? (openBlock(), createElementBlock("header", _hoisted_2$V, [
             renderSlot(_ctx.$slots, "header", {}, () => [
               createElementVNode("h2", _hoisted_3$E, toDisplayString($props.headerTitle), 1 /* TEXT */)
             ])
@@ -1048,14 +1048,14 @@ var script$1i = {
 };
 
 const _hoisted_1$12 = { key: 0 };
-const _hoisted_2$V = { class: "text-xl font-bold capitalize-first" };
+const _hoisted_2$U = { class: "text-xl font-bold capitalize-first" };
 
 function render$1i(_ctx, _cache, $props, $setup, $data, $options) {
   return (openBlock(), createElementBlock("section", null, [
     (_ctx.$slots.sectionTitle || ( $props.sectionTitle && $props.sectionTitle.length))
       ? (openBlock(), createElementBlock("header", _hoisted_1$12, [
           renderSlot(_ctx.$slots, "sectionTitle", {}, () => [
-            createElementVNode("h2", _hoisted_2$V, toDisplayString($props.sectionTitle), 1 /* TEXT */)
+            createElementVNode("h2", _hoisted_2$U, toDisplayString($props.sectionTitle), 1 /* TEXT */)
           ])
         ]))
       : createCommentVNode("v-if", true),
@@ -1113,7 +1113,7 @@ var script$1h = {
 };
 
 const _hoisted_1$11 = { class: "mt-3" };
-const _hoisted_2$U = {
+const _hoisted_2$T = {
   key: 0,
   class: "form-label"
 };
@@ -1128,7 +1128,7 @@ function render$1h(_ctx, _cache, $props, $setup, $data, $options) {
   return (openBlock(), createElementBlock(Fragment, null, [
     createElementVNode("div", _hoisted_1$11, [
       ($props.label)
-        ? (openBlock(), createElementBlock("label", _hoisted_2$U, toDisplayString($props.label), 1 /* TEXT */))
+        ? (openBlock(), createElementBlock("label", _hoisted_2$T, toDisplayString($props.label), 1 /* TEXT */))
         : createCommentVNode("v-if", true),
       ($props.label && $props.required)
         ? (openBlock(), createElementBlock("span", _hoisted_3$D, " *"))
@@ -1264,7 +1264,7 @@ const _hoisted_1$10 = {
   key: 0,
   class: "mt-3"
 };
-const _hoisted_2$T = {
+const _hoisted_2$S = {
   key: 1,
   class: "mt-3 flex flex-col"
 };
@@ -1311,7 +1311,7 @@ function render$1g(_ctx, _cache, $props, $setup, $data, $options) {
             }), 128 /* KEYED_FRAGMENT */))
           : createCommentVNode("v-if", true)
       ]))
-    : (openBlock(), createElementBlock("div", _hoisted_2$T, [
+    : (openBlock(), createElementBlock("div", _hoisted_2$S, [
         createVNode(_component_BaseShowLabel, {
           label: $props.label ? $props.label : _ctx.$t('attributes.companies'),
           required: $props.required
@@ -1424,7 +1424,7 @@ const _hoisted_1$$ = {
   key: 0,
   class: "mt-3"
 };
-const _hoisted_2$S = {
+const _hoisted_2$R = {
   key: 1,
   class: "mt-3"
 };
@@ -1462,7 +1462,7 @@ function render$1f(_ctx, _cache, $props, $setup, $data, $options) {
             }), 128 /* KEYED_FRAGMENT */))
           : createCommentVNode("v-if", true)
       ]))
-    : (openBlock(), createElementBlock("div", _hoisted_2$S, [
+    : (openBlock(), createElementBlock("div", _hoisted_2$R, [
         createVNode(_component_BaseShowLabel, {
           label: $props.label ? $props.label : _ctx.$t('attributes.company'),
           "model-value": $options.cDisplayedValueWhenNotEditionMode
@@ -1558,7 +1558,7 @@ const _hoisted_1$_ = {
   key: 0,
   class: "mt-3"
 };
-const _hoisted_2$R = {
+const _hoisted_2$Q = {
   key: 1,
   class: "mt-3"
 };
@@ -1596,7 +1596,7 @@ function render$1e(_ctx, _cache, $props, $setup, $data, $options) {
             }), 128 /* KEYED_FRAGMENT */))
           : createCommentVNode("v-if", true)
       ]))
-    : (openBlock(), createElementBlock("div", _hoisted_2$R, [
+    : (openBlock(), createElementBlock("div", _hoisted_2$Q, [
         createVNode(_component_BaseShowLabel, {
           label: $props.label ? $props.label : _ctx.$t('attributes.country'),
           "model-value": $options.cDisplayedValueWhenNotEditionMode
@@ -1691,7 +1691,7 @@ const _hoisted_1$Z = {
   key: 0,
   class: "mt-3"
 };
-const _hoisted_2$Q = {
+const _hoisted_2$P = {
   key: 1,
   class: "mt-3"
 };
@@ -1729,7 +1729,7 @@ function render$1d(_ctx, _cache, $props, $setup, $data, $options) {
             }), 128 /* KEYED_FRAGMENT */))
           : createCommentVNode("v-if", true)
       ]))
-    : (openBlock(), createElementBlock("div", _hoisted_2$Q, [
+    : (openBlock(), createElementBlock("div", _hoisted_2$P, [
         createVNode(_component_BaseShowLabel, {
           label: $props.label ? $props.label : _ctx.$t('attributes.customer'),
           "model-value": $options.cDisplayedValueWhenNotEditionMode
@@ -1801,7 +1801,7 @@ var script$1c = {
 };
 
 const _hoisted_1$Y = ["for"];
-const _hoisted_2$P = {
+const _hoisted_2$O = {
   key: 0,
   class: "text-red-600"
 };
@@ -1819,7 +1819,7 @@ function render$1c(_ctx, _cache, $props, $setup, $data, $options) {
     }, [
       createTextVNode(toDisplayString($props.label) + " ", 1 /* TEXT */),
       ($options.isRequired)
-        ? (openBlock(), createElementBlock("span", _hoisted_2$P, "*"))
+        ? (openBlock(), createElementBlock("span", _hoisted_2$O, "*"))
         : createCommentVNode("v-if", true)
     ], 10 /* CLASS, PROPS */, _hoisted_1$Y),
     withDirectives(createElementVNode("input", {
@@ -1999,7 +1999,7 @@ const _hoisted_1$X = {
   key: 0,
   class: "mt-3"
 };
-const _hoisted_2$O = {
+const _hoisted_2$N = {
   key: 1,
   class: "mt-3 flex flex-col"
 };
@@ -2046,7 +2046,7 @@ function render$1a(_ctx, _cache, $props, $setup, $data, $options) {
             }), 128 /* KEYED_FRAGMENT */))
           : createCommentVNode("v-if", true)
       ]))
-    : (openBlock(), createElementBlock("div", _hoisted_2$O, [
+    : (openBlock(), createElementBlock("div", _hoisted_2$N, [
         createVNode(_component_BaseShowLabel, {
           label: $props.label ? $props.label : _ctx.$t('attributes.available_docs'),
           required: $props.required
@@ -2157,7 +2157,7 @@ const _hoisted_1$W = {
   key: 0,
   class: "mt-3"
 };
-const _hoisted_2$N = {
+const _hoisted_2$M = {
   key: 1,
   class: "mt-3"
 };
@@ -2195,7 +2195,7 @@ function render$19(_ctx, _cache, $props, $setup, $data, $options) {
             }), 128 /* KEYED_FRAGMENT */))
           : createCommentVNode("v-if", true)
       ]))
-    : (openBlock(), createElementBlock("div", _hoisted_2$N, [
+    : (openBlock(), createElementBlock("div", _hoisted_2$M, [
         createVNode(_component_BaseShowLabel, {
           label: $props.label ? $props.label : _ctx.$t('attributes.event_type'),
           "model-value": $options.cDisplayedValueWhenNotEditionMode
@@ -2328,7 +2328,7 @@ var script$18 = {
 };
 
 const _hoisted_1$V = ["for"];
-const _hoisted_2$M = {
+const _hoisted_2$L = {
   key: 0,
   class: "text-red-600"
 };
@@ -2346,7 +2346,7 @@ function render$18(_ctx, _cache, $props, $setup, $data, $options) {
         }, [
           createTextVNode(toDisplayString($props.label) + " ", 1 /* TEXT */),
           ($props.label && $props.required)
-            ? (openBlock(), createElementBlock("span", _hoisted_2$M, "*"))
+            ? (openBlock(), createElementBlock("span", _hoisted_2$L, "*"))
             : createCommentVNode("v-if", true)
         ], 10 /* CLASS, PROPS */, _hoisted_1$V))
       : createCommentVNode("v-if", true),
@@ -2394,7 +2394,7 @@ const _hoisted_1$U = {
   key: 0,
   class: "flex-shrink-0"
 };
-const _hoisted_2$L = {
+const _hoisted_2$K = {
   key: 1,
   class: "capitalize-first"
 };
@@ -2418,7 +2418,7 @@ function render$17(_ctx, _cache, $props, $setup, $data, $options) {
               }, null, 8 /* PROPS */, ["icon"]))
             : createCommentVNode("v-if", true),
           ($props.content)
-            ? (openBlock(), createElementBlock("span", _hoisted_2$L, toDisplayString($props.content), 1 /* TEXT */))
+            ? (openBlock(), createElementBlock("span", _hoisted_2$K, toDisplayString($props.content), 1 /* TEXT */))
             : createCommentVNode("v-if", true)
         ], 2 /* CLASS */)
       ]))
@@ -2546,7 +2546,7 @@ const _hoisted_1$T = {
   key: 0,
   class: "mt-3"
 };
-const _hoisted_2$K = {
+const _hoisted_2$J = {
   key: 1,
   class: "mt-3 flex flex-col"
 };
@@ -2593,7 +2593,7 @@ function render$16(_ctx, _cache, $props, $setup, $data, $options) {
             }), 128 /* KEYED_FRAGMENT */))
           : createCommentVNode("v-if", true)
       ]))
-    : (openBlock(), createElementBlock("div", _hoisted_2$K, [
+    : (openBlock(), createElementBlock("div", _hoisted_2$J, [
         createVNode(_component_BaseShowLabel, {
           label: $props.label ? $props.label : _ctx.$t('attributes.language'),
           required: $props.required
@@ -2704,7 +2704,7 @@ const _hoisted_1$S = {
   key: 0,
   class: "mt-3"
 };
-const _hoisted_2$J = {
+const _hoisted_2$I = {
   key: 1,
   class: "mt-3"
 };
@@ -2742,7 +2742,7 @@ function render$15(_ctx, _cache, $props, $setup, $data, $options) {
             }), 128 /* KEYED_FRAGMENT */))
           : createCommentVNode("v-if", true)
       ]))
-    : (openBlock(), createElementBlock("div", _hoisted_2$J, [
+    : (openBlock(), createElementBlock("div", _hoisted_2$I, [
         createVNode(_component_BaseShowLabel, {
           label: $props.label ? $props.label : _ctx.$t('attributes.language'),
           "model-value": $options.cDisplayedValueWhenNotEditionMode
@@ -2963,7 +2963,7 @@ var script$$ = {
 };
 
 const _hoisted_1$O = { class: "mt-3" };
-const _hoisted_2$I = ["for"];
+const _hoisted_2$H = ["for"];
 const _hoisted_3$w = { class: "w-full relative" };
 const _hoisted_4$l = { class: "absolute inset-y-0 left-0 w-22" };
 const _hoisted_5$b = /*#__PURE__*/createElementVNode("label", { class: "sr-only" }, "Country", -1 /* HOISTED */);
@@ -2984,7 +2984,7 @@ function render$$(_ctx, _cache, $props, $setup, $data, $options) {
     createElementVNode("label", {
       for: $props.name,
       class: "form-label"
-    }, toDisplayString($props.label), 9 /* TEXT, PROPS */, _hoisted_2$I),
+    }, toDisplayString($props.label), 9 /* TEXT, PROPS */, _hoisted_2$H),
     createElementVNode("div", _hoisted_3$w, [
       createElementVNode("div", _hoisted_4$l, [
         _hoisted_5$b,
@@ -3074,7 +3074,7 @@ var script$_ = {
 };
 
 const _hoisted_1$N = /*#__PURE__*/createTextVNode(" Server size ");
-const _hoisted_2$H = { class: "space-y-4" };
+const _hoisted_2$G = { class: "space-y-4" };
 const _hoisted_3$v = { class: "flex items-center" };
 const _hoisted_4$k = { class: "text-sm" };
 
@@ -3097,7 +3097,7 @@ function render$_(_ctx, _cache, $props, $setup, $data, $options) {
         ]),
         _: 1 /* STABLE */
       }),
-      createElementVNode("div", _hoisted_2$H, [
+      createElementVNode("div", _hoisted_2$G, [
         (openBlock(true), createElementBlock(Fragment, null, renderList($props.options, (option) => {
           return (openBlock(), createBlock(_component_RadioGroupOption, {
             as: "template",
@@ -3174,7 +3174,7 @@ var script$Z = {
 };
 
 const _hoisted_1$M = ["placeholder"];
-const _hoisted_2$G = { class: "absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none" };
+const _hoisted_2$F = { class: "absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none" };
 
 function render$Z(_ctx, _cache, $props, $setup, $data, $options) {
   const _component_font_awesome_icon = resolveComponent("font-awesome-icon");
@@ -3193,7 +3193,7 @@ function render$Z(_ctx, _cache, $props, $setup, $data, $options) {
       }, null, 8 /* PROPS */, _hoisted_1$M), [
         [vModelText, $data.searchTerms]
       ]),
-      createElementVNode("div", _hoisted_2$G, [
+      createElementVNode("div", _hoisted_2$F, [
         createVNode(_component_font_awesome_icon, { icon: ['fal', 'search'] })
       ])
     ], 2 /* CLASS */)
@@ -3280,7 +3280,7 @@ var script$Y = {
 };
 
 const _hoisted_1$L = { class: "flex flex-col" };
-const _hoisted_2$F = {
+const _hoisted_2$E = {
   key: 0,
   class: "form-label capitalize-first mt-3"
 };
@@ -3294,7 +3294,7 @@ function render$Y(_ctx, _cache, $props, $setup, $data, $options) {
 
   return (openBlock(), createElementBlock("div", _hoisted_1$L, [
     ($props.label)
-      ? (openBlock(), createElementBlock("label", _hoisted_2$F, [
+      ? (openBlock(), createElementBlock("label", _hoisted_2$E, [
           createTextVNode(toDisplayString($props.label) + " ", 1 /* TEXT */),
           ($props.required)
             ? (openBlock(), createElementBlock("span", _hoisted_3$u, "*"))
@@ -3538,7 +3538,7 @@ const _hoisted_1$J = {
   key: 0,
   class: "text-red-600"
 };
-const _hoisted_2$E = { class: "custom__tag" };
+const _hoisted_2$D = { class: "custom__tag" };
 const _hoisted_3$t = ["onClick"];
 
 function render$W(_ctx, _cache, $props, $setup, $data, $options) {
@@ -3586,7 +3586,7 @@ function render$W(_ctx, _cache, $props, $setup, $data, $options) {
           onSearchChange: $options.fetchOption
         }, {
           tag: withCtx(({ option, remove }) => [
-            createElementVNode("span", _hoisted_2$E, [
+            createElementVNode("span", _hoisted_2$D, [
               createElementVNode("span", null, toDisplayString(option.name), 1 /* TEXT */),
               createElementVNode("span", {
                 class: "custom__remove",
@@ -3687,7 +3687,7 @@ var script$V = {
 };
 
 const _hoisted_1$I = ["name", "value", "id", "placeholder"];
-const _hoisted_2$D = {
+const _hoisted_2$C = {
   key: 1,
   class: "mt-3"
 };
@@ -3724,7 +3724,7 @@ function render$V(_ctx, _cache, $props, $setup, $data, $options) {
           }, toDisplayString(_ctx.$t(error, {attribute: _ctx.$t('attributes.' + $props.name)})), 1 /* TEXT */))
         }), 128 /* KEYED_FRAGMENT */))
       ], 2 /* CLASS */))
-    : (openBlock(), createElementBlock("div", _hoisted_2$D, [
+    : (openBlock(), createElementBlock("div", _hoisted_2$C, [
         createVNode(_component_BaseShowLabel, {
           label: $props.label,
           "model-value": $props.modelValue
@@ -4203,7 +4203,7 @@ var script$S = {
 };
 
 const _hoisted_1$G = { class: "mt-3" };
-const _hoisted_2$C = { key: 0 };
+const _hoisted_2$B = { key: 0 };
 const _hoisted_3$s = { class: "w-full relative" };
 const _hoisted_4$j = {
   key: 0,
@@ -4221,7 +4221,7 @@ function render$S(_ctx, _cache, $props, $setup, $data, $options) {
 
   return (openBlock(), createElementBlock("div", _hoisted_1$G, [
     ($props.editionMode)
-      ? (openBlock(), createElementBlock("div", _hoisted_2$C, [
+      ? (openBlock(), createElementBlock("div", _hoisted_2$B, [
           createVNode(_component_BaseEditLabel, {
             label: $props.label,
             required: $props.required
@@ -4325,7 +4325,7 @@ var script$R = {
 };
 
 const _hoisted_1$F = ["id", "name", "value", "checked"];
-const _hoisted_2$B = ["id", "name", "value", "checked"];
+const _hoisted_2$A = ["id", "name", "value", "checked"];
 const _hoisted_3$r = /*#__PURE__*/createElementVNode("br", null, null, -1 /* HOISTED */);
 const _hoisted_4$i = ["for"];
 
@@ -4352,7 +4352,7 @@ function render$R(_ctx, _cache, $props, $setup, $data, $options) {
           onChange: _cache[1] || (_cache[1] = (...args) => ($props.updateInput && $props.updateInput(...args))),
           "onUpdate:modelValue": _cache[2] || (_cache[2] = $event => (($data.value) = $event)),
           checked: $props.modelValue === ($props.trackBy === null ? $props.element : $props.element[$props.trackBy])
-        }, null, 40 /* PROPS, HYDRATE_EVENTS */, _hoisted_2$B)), [
+        }, null, 40 /* PROPS, HYDRATE_EVENTS */, _hoisted_2$A)), [
           [vModelRadio, $data.value]
         ]),
     _hoisted_3$r,
@@ -4454,7 +4454,7 @@ const _hoisted_1$E = {
   key: 0,
   class: "capitalize-first"
 };
-const _hoisted_2$A = { key: 1 };
+const _hoisted_2$z = { key: 1 };
 
 function render$Q(_ctx, _cache, $props, $setup, $data, $options) {
   const _component_BaseEditLabel = resolveComponent("BaseEditLabel");
@@ -4524,7 +4524,7 @@ function render$Q(_ctx, _cache, $props, $setup, $data, $options) {
                 }),
                 createTextVNode(" " + toDisplayString($options.cGetLabel), 1 /* TEXT */)
               ]))
-            : (openBlock(), createElementBlock("div", _hoisted_2$A, "- "))
+            : (openBlock(), createElementBlock("div", _hoisted_2$z, "- "))
         ], 64 /* STABLE_FRAGMENT */)),
     createCommentVNode("endregion")
   ], 2 /* CLASS */))
@@ -4612,7 +4612,7 @@ var script$P = {
 };
 
 const _hoisted_1$D = { key: 0 };
-const _hoisted_2$z = { class: "text-sm font-medium text-gray-500 capitalize-first mt-3" };
+const _hoisted_2$y = { class: "text-sm font-medium text-gray-500 capitalize-first mt-3" };
 const _hoisted_3$q = {
   key: 0,
   class: "text-red-600"
@@ -4633,7 +4633,7 @@ function render$P(_ctx, _cache, $props, $setup, $data, $options) {
               key: 0,
               class: normalizeClass($options.cGroupClass)
             }, [
-              createElementVNode("label", _hoisted_2$z, [
+              createElementVNode("label", _hoisted_2$y, [
                 createTextVNode(toDisplayString($props.label) + " ", 1 /* TEXT */),
                 (_ctx.required)
                   ? (openBlock(), createElementBlock("span", _hoisted_3$q, "*"))
@@ -4798,7 +4798,7 @@ const _hoisted_1$C = {
   key: 0,
   class: "mt-3"
 };
-const _hoisted_2$y = {
+const _hoisted_2$x = {
   key: 1,
   class: "mt-3 flex flex-col"
 };
@@ -4840,7 +4840,7 @@ function render$O(_ctx, _cache, $props, $setup, $data, $options) {
           }, toDisplayString(_ctx.$t(error, {attribute: _ctx.$t('attributes.' + $props.name)})), 1 /* TEXT */))
         }), 128 /* KEYED_FRAGMENT */))
       ]))
-    : (openBlock(), createElementBlock("div", _hoisted_2$y, [
+    : (openBlock(), createElementBlock("div", _hoisted_2$x, [
         createVNode(_component_BaseShowLabel, {
           label: $props.label,
           required: $props.required
@@ -4971,7 +4971,7 @@ const _hoisted_1$B = {
   key: 0,
   class: "mt-3"
 };
-const _hoisted_2$x = {
+const _hoisted_2$w = {
   key: 0,
   class: "form-help text-red-600"
 };
@@ -5003,7 +5003,7 @@ function render$N(_ctx, _cache, $props, $setup, $data, $options) {
           required: $props.required
         }, null, 8 /* PROPS */, ["options", "placeholder", "modelValue", "onUpdate:modelValue", "searchable", "label", "track-by", "disabled", "required"]),
         ($props.errors)
-          ? (openBlock(), createElementBlock("div", _hoisted_2$x, [
+          ? (openBlock(), createElementBlock("div", _hoisted_2$w, [
               (openBlock(true), createElementBlock(Fragment, null, renderList($props.errors, (error, index) => {
                 return (openBlock(), createElementBlock("div", { key: index }, toDisplayString(_ctx.$t(error, {'attribute': _ctx.$t('attributes.' + $props.name)})), 1 /* TEXT */))
               }), 128 /* KEYED_FRAGMENT */))
@@ -5162,7 +5162,7 @@ var script$L = {
 };
 
 const _hoisted_1$z = ["name", "value", "id", "placeholder"];
-const _hoisted_2$w = { key: 1 };
+const _hoisted_2$v = { key: 1 };
 
 function render$L(_ctx, _cache, $props, $setup, $data, $options) {
   const _component_BaseEditLabel = resolveComponent("BaseEditLabel");
@@ -5196,7 +5196,7 @@ function render$L(_ctx, _cache, $props, $setup, $data, $options) {
           }, toDisplayString(_ctx.$t(error, {attribute: _ctx.$t('attributes.' + $props.name)})), 1 /* TEXT */))
         }), 128 /* KEYED_FRAGMENT */))
       ], 2 /* CLASS */))
-    : (openBlock(), createElementBlock("div", _hoisted_2$w, [
+    : (openBlock(), createElementBlock("div", _hoisted_2$v, [
         createVNode(_component_BaseShowLabel, {
           label: $props.label,
           "model-value": $props.modelValue
@@ -5237,7 +5237,7 @@ var script$K = {
 };
 
 const _hoisted_1$y = { class: "mt-1.5 flex place-items-center" };
-const _hoisted_2$v = { class: "flex place-items-center" };
+const _hoisted_2$u = { class: "flex place-items-center" };
 const _hoisted_3$n = { class: "ml-1" };
 
 function render$K(_ctx, _cache, $props, $setup, $data, $options) {
@@ -5251,7 +5251,7 @@ function render$K(_ctx, _cache, $props, $setup, $data, $options) {
         }, toDisplayString($props.label), 3 /* TEXT, CLASS */))
       : createCommentVNode("v-if", true),
     createElementVNode("div", _hoisted_1$y, [
-      createElementVNode("span", _hoisted_2$v, [
+      createElementVNode("span", _hoisted_2$u, [
         ($props.countryValue)
           ? (openBlock(), createBlock(_component_country_flag, {
               key: 0,
@@ -5333,7 +5333,7 @@ var script$J = {
 };
 
 const _hoisted_1$x = { class: "box px-6 py-5" };
-const _hoisted_2$u = { class: "flex-1" };
+const _hoisted_2$t = { class: "flex-1" };
 const _hoisted_3$m = { class: "text-2xl font-bold capitalize-first" };
 
 function render$J(_ctx, _cache, $props, $setup, $data, $options) {
@@ -5359,7 +5359,7 @@ function render$J(_ctx, _cache, $props, $setup, $data, $options) {
                   onClick: _cache[0] || (_cache[0] = $event => ($props.buttonBackLeftRoute !== undefined && $props.buttonBackLeftRoute !== false ? _ctx.$router.push( $props.buttonBackLeftRoute ) : _ctx.$router.go(-1)))
                 }, null, 8 /* PROPS */, ["tooltip"]))
               : createCommentVNode("v-if", true),
-            createElementVNode("div", _hoisted_2$u, [
+            createElementVNode("div", _hoisted_2$t, [
               createElementVNode("h2", _hoisted_3$m, [
                 createTextVNode(toDisplayString($props.title) + " ", 1 /* TEXT */),
                 ($props.icon)
@@ -5419,7 +5419,7 @@ var script$I = {
 };
 
 const _hoisted_1$w = { class: "mt-3" };
-const _hoisted_2$t = {
+const _hoisted_2$s = {
   key: 0,
   class: "form-label capitalize-first"
 };
@@ -5431,7 +5431,7 @@ function render$I(_ctx, _cache, $props, $setup, $data, $options) {
   return (openBlock(), createElementBlock(Fragment, null, [
     createElementVNode("div", _hoisted_1$w, [
       ($props.label)
-        ? (openBlock(), createElementBlock("label", _hoisted_2$t, toDisplayString($props.label), 1 /* TEXT */))
+        ? (openBlock(), createElementBlock("label", _hoisted_2$s, toDisplayString($props.label), 1 /* TEXT */))
         : createCommentVNode("v-if", true),
       createElementVNode("div", _hoisted_3$l, [
         (openBlock(true), createElementBlock(Fragment, null, renderList($props.options, (val, key) => {
@@ -5541,7 +5541,7 @@ var script$H = {
 };
 
 const _hoisted_1$v = ["for"];
-const _hoisted_2$s = {
+const _hoisted_2$r = {
   key: 0,
   class: "text-red-600"
 };
@@ -5560,7 +5560,7 @@ function render$H(_ctx, _cache, $props, $setup, $data, $options) {
         }, [
           createTextVNode(toDisplayString($props.label) + " ", 1 /* TEXT */),
           ($props.label && $props.required)
-            ? (openBlock(), createElementBlock("span", _hoisted_2$s, "*"))
+            ? (openBlock(), createElementBlock("span", _hoisted_2$r, "*"))
             : createCommentVNode("v-if", true)
         ], 10 /* CLASS, PROPS */, _hoisted_1$v))
       : createCommentVNode("v-if", true),
@@ -5637,7 +5637,7 @@ var script$G = {
 };
 
 const _hoisted_1$u = { class: "mt-3" };
-const _hoisted_2$r = {
+const _hoisted_2$q = {
   key: 0,
   class: "form-label capitalize-first"
 };
@@ -5654,7 +5654,7 @@ function render$G(_ctx, _cache, $props, $setup, $data, $options) {
   return (openBlock(), createElementBlock(Fragment, null, [
     createElementVNode("div", _hoisted_1$u, [
       ($props.label)
-        ? (openBlock(), createElementBlock("label", _hoisted_2$r, [
+        ? (openBlock(), createElementBlock("label", _hoisted_2$q, [
             createTextVNode(toDisplayString($props.label) + " ", 1 /* TEXT */),
             ($props.label && $props.required)
               ? (openBlock(), createElementBlock("span", _hoisted_3$k, "*"))
@@ -5782,7 +5782,7 @@ var script$E = {
 };
 
 const _hoisted_1$t = ["id", "name", "value", "checked"];
-const _hoisted_2$q = /*#__PURE__*/createElementVNode("br", null, null, -1 /* HOISTED */);
+const _hoisted_2$p = /*#__PURE__*/createElementVNode("br", null, null, -1 /* HOISTED */);
 const _hoisted_3$j = ["for"];
 
 function render$E(_ctx, _cache, $props, $setup, $data, $options) {
@@ -5796,7 +5796,7 @@ function render$E(_ctx, _cache, $props, $setup, $data, $options) {
       onChange: _cache[0] || (_cache[0] = (...args) => ($props.updateInput && $props.updateInput(...args))),
       checked: $props.modelValue
     }, null, 40 /* PROPS, HYDRATE_EVENTS */, _hoisted_1$t),
-    _hoisted_2$q,
+    _hoisted_2$p,
     createElementVNode("label", {
       class: "form-check-label capitalize-first",
       for: `${$props.name}-${$props.key}`
@@ -5877,7 +5877,7 @@ var script$D = {
 };
 
 const _hoisted_1$s = { key: 0 };
-const _hoisted_2$p = /*#__PURE__*/createElementVNode("br", null, null, -1 /* HOISTED */);
+const _hoisted_2$o = /*#__PURE__*/createElementVNode("br", null, null, -1 /* HOISTED */);
 const _hoisted_3$i = { key: 1 };
 
 function render$D(_ctx, _cache, $props, $setup, $data, $options) {
@@ -5936,7 +5936,7 @@ function render$D(_ctx, _cache, $props, $setup, $data, $options) {
                       required: $props.required
                     }, null, 8 /* PROPS */, ["label", "required"]))
                   : createCommentVNode("v-if", true),
-                _hoisted_2$p,
+                _hoisted_2$o,
                 (openBlock(true), createElementBlock(Fragment, null, renderList($props.modelValue, (item, index) => {
                   return (openBlock(), createElementBlock("span", {
                     class: "inline-block mr-3",
@@ -5979,7 +5979,7 @@ var script$C = {
 };
 
 const _hoisted_1$r = { class: "block" };
-const _hoisted_2$o = { class: "border-b border-gray-200" };
+const _hoisted_2$n = { class: "border-b border-gray-200" };
 const _hoisted_3$h = {
   class: "-mb-px grid grid cols-1 sm:grid-cols 2 space-x-3 md:flex md:space-x-8 ursor-pointer",
   "aria-label": "Tabs"
@@ -5992,7 +5992,7 @@ function render$C(_ctx, _cache, $props, $setup, $data, $options) {
 
   return withDirectives((openBlock(), createElementBlock("div", null, [
     createElementVNode("div", _hoisted_1$r, [
-      createElementVNode("div", _hoisted_2$o, [
+      createElementVNode("div", _hoisted_2$n, [
         createElementVNode("nav", _hoisted_3$h, [
           (openBlock(true), createElementBlock(Fragment, null, renderList($props.tabs, (tab) => {
             return (openBlock(), createElementBlock(Fragment, {
@@ -6078,7 +6078,7 @@ var script$B = {
 };
 
 const _hoisted_1$q = { class: "flex" };
-const _hoisted_2$n = {
+const _hoisted_2$m = {
   key: 0,
   class: "mb-3 text-xl mr-6"
 };
@@ -6087,7 +6087,7 @@ const _hoisted_3$g = /*#__PURE__*/createElementVNode("span", { class: "sr-only" 
 function render$B(_ctx, _cache, $props, $setup, $data, $options) {
   return (openBlock(), createElementBlock("div", _hoisted_1$q, [
     ($props.label)
-      ? (openBlock(), createElementBlock("label", _hoisted_2$n, toDisplayString($props.label), 1 /* TEXT */))
+      ? (openBlock(), createElementBlock("label", _hoisted_2$m, toDisplayString($props.label), 1 /* TEXT */))
       : createCommentVNode("v-if", true),
     createElementVNode("button", {
       onClick: _cache[0] || (_cache[0] = (...args) => ($options.toggleSwicth && $options.toggleSwicth(...args))),
@@ -6247,7 +6247,7 @@ var script$z = {
 };
 
 const _hoisted_1$p = { class: "flex flex-col mt-2" };
-const _hoisted_2$m = ["for"];
+const _hoisted_2$l = ["for"];
 const _hoisted_3$f = {
   key: 0,
   class: "text-red-600"
@@ -6264,7 +6264,7 @@ function render$z(_ctx, _cache, $props, $setup, $data, $options) {
       ($props.required)
         ? (openBlock(), createElementBlock("span", _hoisted_3$f, "*"))
         : createCommentVNode("v-if", true)
-    ], 8 /* PROPS */, _hoisted_2$m),
+    ], 8 /* PROPS */, _hoisted_2$l),
     withDirectives(createElementVNode("textarea", {
       ref: "ta",
       class: "block w-full border rounded-md appearance-none placeholder-gray-500 dark:bg-dark-2 dark:border-transparent focus:outline-none disabled:bg-gray-100 disabled:cursor-not-allowed disabled:dark:bg-dark-2 disabled:dark:border-transparent border-gray-400 focus:border-blue-300 focus:ring-blue-300 focus:ring-1",
@@ -6487,7 +6487,7 @@ var script$w = {
 };
 
 const _hoisted_1$n = { key: 0 };
-const _hoisted_2$l = ["name", "value", "checked"];
+const _hoisted_2$k = ["name", "value", "checked"];
 const _hoisted_3$e = /*#__PURE__*/createElementVNode("br", null, null, -1 /* HOISTED */);
 const _hoisted_4$b = { class: "form-check-label capitalize-first" };
 
@@ -6520,7 +6520,7 @@ function render$w(_ctx, _cache, $props, $setup, $data, $options) {
                   value: val,
                   onChange: _cache[0] || (_cache[0] = (...args) => ($options.updateInput && $options.updateInput(...args))),
                   checked: $props.modelValue == val
-                }, null, 40 /* PROPS, HYDRATE_EVENTS */, _hoisted_2$l),
+                }, null, 40 /* PROPS, HYDRATE_EVENTS */, _hoisted_2$k),
                 _hoisted_3$e,
                 createElementVNode("label", _hoisted_4$b, toDisplayString(_ctx.$t(`enums.yes_no.${key}`)), 1 /* TEXT */)
               ]))
@@ -6628,7 +6628,7 @@ const _hoisted_1$m = {
   key: 0,
   class: "mt-3"
 };
-const _hoisted_2$k = {
+const _hoisted_2$j = {
   key: 1,
   class: "mt-3"
 };
@@ -6666,7 +6666,7 @@ function render$v(_ctx, _cache, $props, $setup, $data, $options) {
             }), 128 /* KEYED_FRAGMENT */))
           : createCommentVNode("v-if", true)
       ]))
-    : (openBlock(), createElementBlock("div", _hoisted_2$k, [
+    : (openBlock(), createElementBlock("div", _hoisted_2$j, [
         createVNode(_component_BaseShowLabel, {
           label: $props.label ? $props.label : _ctx.$t('attributes.user'),
           "model-value": $options.cDisplayedValueWhenNotEditionMode
@@ -6705,7 +6705,7 @@ const _hoisted_1$l = {
   class: "dropdown inline-block",
   "data-placement": "bottom-end"
 };
-const _hoisted_2$j = {
+const _hoisted_2$i = {
   class: "dropdown-toggle btn btn-primary space-x-3",
   "aria-expanded": "false"
 };
@@ -6726,7 +6726,7 @@ function render$u(_ctx, _cache, $props, $setup, $data, $options) {
   const _component_font_awesome_icon = resolveComponent("font-awesome-icon");
 
   return (openBlock(), createElementBlock("div", _hoisted_1$l, [
-    createElementVNode("button", _hoisted_2$j, [
+    createElementVNode("button", _hoisted_2$i, [
       _hoisted_3$d,
       createVNode(_component_font_awesome_icon, { icon: ["fal","chevron-down"] })
     ]),
@@ -6778,13 +6778,9 @@ var script$t = {
 };
 
 const _hoisted_1$k = ["innerHTML"];
-const _hoisted_2$i = /*#__PURE__*/createElementVNode("span", null, "shit", -1 /* HOISTED */);
 
 function render$t(_ctx, _cache, $props, $setup, $data, $options) {
-  return (openBlock(), createElementBlock(Fragment, null, [
-    createElementVNode("span", { innerHTML: $options.cellValue }, null, 8 /* PROPS */, _hoisted_1$k),
-    _hoisted_2$i
-  ], 64 /* STABLE_FRAGMENT */))
+  return (openBlock(), createElementBlock("span", { innerHTML: $options.cellValue }, null, 8 /* PROPS */, _hoisted_1$k))
 }
 
 script$t.render = render$t;
