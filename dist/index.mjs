@@ -5282,6 +5282,18 @@ var script$J = {
       type: String,
       required: false
     },
+    icon: {
+      type: String,
+      required: false
+    },
+    colorIcon: {
+      type: String,
+      required: false
+    },
+    classIcon: {
+      type: String,
+      required: false
+    },
     borderedHeader: {
       type: Boolean,
       default: false
@@ -5326,6 +5338,7 @@ const _hoisted_3$m = { class: "text-2xl font-bold capitalize-first" };
 
 function render$J(_ctx, _cache, $props, $setup, $data, $options) {
   const _component_BaseButton = resolveComponent("BaseButton");
+  const _component_font_awesome_icon = resolveComponent("font-awesome-icon");
 
   return (openBlock(), createElementBlock("div", {
     class: normalizeClass($props.classes)
@@ -5347,7 +5360,18 @@ function render$J(_ctx, _cache, $props, $setup, $data, $options) {
                 }, null, 8 /* PROPS */, ["tooltip"]))
               : createCommentVNode("v-if", true),
             createElementVNode("div", _hoisted_2$t, [
-              createElementVNode("h2", _hoisted_3$m, toDisplayString($props.title), 1 /* TEXT */),
+              createElementVNode("h2", _hoisted_3$m, [
+                createTextVNode(toDisplayString($props.title) + " ", 1 /* TEXT */),
+                ($props.icon)
+                  ? (openBlock(), createBlock(_component_font_awesome_icon, {
+                      key: 0,
+                      icon: ['fal', $props.icon],
+                      size: "x",
+                      color: $props.colorIcon,
+                      class: normalizeClass($props.classIcon)
+                    }, null, 8 /* PROPS */, ["icon", "color", "class"]))
+                  : createCommentVNode("v-if", true)
+              ]),
               renderSlot(_ctx.$slots, "header")
             ]),
             createElementVNode("div", null, [
@@ -8629,8 +8653,16 @@ function render$a(_ctx, _cache, $props, $setup, $data, $options) {
                       content: model[column.metadata.value],
                       color: model[column.metadata.color]
                     }, null, 8 /* PROPS */, ["icon", "content", "color"]))
-                  : (openBlock(), createBlock(_component_ContentTableCell, {
+                  : createCommentVNode("v-if", true),
+                (column.type === 'icon' && model['condition'])
+                  ? (openBlock(), createBlock(_component_BaseLabel, {
                       key: 2,
+                      icon: column.metadata.icon,
+                      content: '',
+                      color: column.metadata.color
+                    }, null, 8 /* PROPS */, ["icon", "color"]))
+                  : (openBlock(), createBlock(_component_ContentTableCell, {
+                      key: 3,
                       model: model,
                       column: column
                     }, null, 8 /* PROPS */, ["model", "column"]))
