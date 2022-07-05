@@ -1,5 +1,6 @@
 <template>
   <span v-html="cellValue"></span>
+  <span>shit</span>
 </template>
 <script>
 export default {
