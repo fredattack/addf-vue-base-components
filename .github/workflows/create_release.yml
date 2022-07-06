@@ -8,8 +8,7 @@ jobs:
       - name: Read package.json
         id: package-json-current-version
         uses: Saionaro/extract-package-version@v1.0.6
-        with:
-          path: fredattack/addf-vue-base-components
+
       - name: Print version
         id: create_release
         run: echo ${{ steps.package-json-current-version.outputs.version }}
