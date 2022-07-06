@@ -8515,7 +8515,6 @@ var script$a = {
     },
 
     filteredModels() {
-
       let copyModelList = this.modelList;
 
       if (this.searchTerms.length >= 1) {
@@ -8553,7 +8552,6 @@ var script$a = {
         });
       }
       return copyModelList;
-
     },
 
     filtrableColumns() {

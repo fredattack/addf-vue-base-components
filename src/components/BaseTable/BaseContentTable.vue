@@ -157,7 +157,6 @@ export default {
     },
 
     filteredModels() {
-
       let copyModelList = this.modelList;
 
       if (this.searchTerms.length >= 1) {
@@ -195,7 +194,6 @@ export default {
         })
       }
       return copyModelList;
-
     },
 
     filtrableColumns() {
