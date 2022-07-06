@@ -7,23 +7,26 @@ jobs:
     steps:
       - name: Read package.json
         id: package-json-current-version
-        uses: martinbeentjes/npm-get-version-action@main
+        uses: Saionaro/extract-package-version@v1.0.6
         with:
           path: fredattack/addf-vue-base-components
-      - name: Create Release
+      - name: Print version
         id: create_release
-        uses: actions/create-release@latest
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # This token is provided by Actions, you do not need to create your own token
-        with:
-          tag_name: ${{ steps.package-json-current-version.outputs.current-version }}
-          release_name: Release ${{ steps.package-json-current-version.outputs.current-version }}
+        run: echo ${{ steps.package-json-current-version.outputs.version }}
+#      - name: Create Release
+#        id: create_release
+#        uses: actions/create-release@latest
+#        env:
+#          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # This token is provided by Actions, you do not need to create your own token
+#        with:
+#          tag_name: ${{ steps.package-json-current-version.outputs.version }}
+#          release_name: Release ${{ steps.package-json-current-version.outputs.version }}
 #            body: |
 #              Changes in this Release
 #              - First Change
 #              - Second Change
-          draft: false
-          prerelease: false
+#          draft: false
+#          prerelease: false
 #        - name: Upload Release Asset
 #            id: upload-release-asset
 #            uses: actions/upload-release-asset@v1
