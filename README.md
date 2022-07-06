@@ -1,17 +1,17 @@
 https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax#lists
 
-# addf-vue-base-components-tailwind
+# addf-vue-base-components
 
 ## Project setup
 ```
-yarn install addf-vue-base-components-tailwind
+yarn add @addf/addf-vue-base-components
 ```
 
 ## Project global declaration
 
 ```
-
-import baseComponents from 'addf-vue-base-components'
+import '@addf/addf-vue-base-components/dist/index.css'
+import baseComponents from '@addf/addf-vue-base-components'
 
 const app = createApp(App)
     .use(baseComponents)
