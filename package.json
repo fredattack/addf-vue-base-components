@@ -1,7 +1,7 @@
 {
-  "name": "addf-vue-base-components",
-  "version": "1.1.6",
-  "private": true,
+  "name": "@addf/addf-vue-base-components",
+  "version": "1.1.7",
+  "public": true,
   "main": "dist/index.js",
   "scripts": {
     "serve": "vue-cli-service serve",
@@ -60,5 +60,20 @@
     "> 1%",
     "last 2 versions",
     "not dead"
-  ]
+  ],
+  "description": "https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax#lists",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fredattack/addf-vue-base-components.git"
+  },
+  "keywords": [
+    "tailwind",
+    "components"
+  ],
+  "author": "fred moras",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fredattack/addf-vue-base-components/issues"
+  },
+  "homepage": "https://github.com/fredattack/addf-vue-base-components#readme"
 }
