@@ -6,16 +6,16 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Read package.json
-        id: package-json-endpoint
-        uses: dutscher/read-package-json-endpoint-actions@v1.33.7
+        id: package-json-current-version
+        uses: martinbeentjes/npm-get-version-action@main
       - name: Create Release
         id: create_release
         uses: actions/create-release@latest
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # This token is provided by Actions, you do not need to create your own token
         with:
-          tag_name: ${{ steps.package-json-endpoint.outputs.endpoint }}
-          release_name: Release ${{ steps.package-json-endpoint.outputs.endpoint }}
+          tag_name: ${{ steps.package-json-current-version.outputs.current-version }}
+          release_name: Release ${{ steps.package-json-current-version.outputs.current-version }}
 #            body: |
 #              Changes in this Release
 #              - First Change
