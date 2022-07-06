@@ -5,13 +5,13 @@ jobs:
     name: Create Release
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout Code
+        uses: actions/checkout@master
+
       - name: Read package.json
         id: package-json-current-version
         uses: Saionaro/extract-package-version@v1.0.6
-        with:
-          path: [mysubdir]
       - name: Print version
-        id: create_release
         run: echo ${{ steps.package-json-current-version.outputs.version }}
 #      - name: Create Release
 #        id: create_release
