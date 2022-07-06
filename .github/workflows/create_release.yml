@@ -37,7 +37,8 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           release_id: ${{ steps.create_release.outputs.id }}
-      - name: publish
+      - name: Publish NPM
+        id: publish-npm
         uses: actions/setup-node@v3
         with:
           node-version: '16.x'
