@@ -9,4 +9,4 @@ read -r -p 'Commit message: ' desc
 git commit -m "$desc" && \
 git push
 
-echo "finished and release !!! "
+echo "pushed, new released will be created and automatically published !!! "
