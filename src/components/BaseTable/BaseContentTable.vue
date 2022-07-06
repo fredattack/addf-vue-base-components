@@ -155,7 +155,6 @@ export default {
     divClasses() {
       return this.isResponsive ? 'overflow-x-auto' : ''
     },
-
     filteredModels() {
       let copyModelList = this.modelList;
 
