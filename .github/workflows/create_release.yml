@@ -8,6 +8,8 @@ jobs:
       - name: Read package.json
         id: package-json-current-version
         uses: martinbeentjes/npm-get-version-action@main
+        with:
+          path: packages/<yourpackage>
       - name: Create Release
         id: create_release
         uses: actions/create-release@latest
