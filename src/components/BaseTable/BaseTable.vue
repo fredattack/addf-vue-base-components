@@ -14,9 +14,7 @@
     </table>
   </div>
 </template>
-
 <script>
-
 export default {
   name: 'BaseTable',
   props: {
