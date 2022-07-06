@@ -39,7 +39,6 @@ jobs:
           release_id: ${{ steps.create_release.outputs.id }}
       - name: run npm publish
         uses: actions/checkout@v3
-              # Setup .npmrc file to publish to npm
       - name: publish
         uses: actions/setup-node@v3
         with:
@@ -47,5 +46,5 @@ jobs:
           registry-url: 'https://registry.npmjs.org'
         - run: npm ci
         - run: npm publish  --access public
-          env:
-            NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
