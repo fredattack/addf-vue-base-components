@@ -10518,7 +10518,11 @@ var script$2 = {
       }
     },
     cDefaultValue(){
-      return this.rearrangedOptions.find(option => option[this.trackBy] === this.modelValue)
+      if (this.rearrangedOptions){
+        return this.rearrangedOptions.find(option => option[this.trackBy] === this.modelValue)
+      } else {
+        return null
+      }
     },
   },
   methods: {
