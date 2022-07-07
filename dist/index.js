@@ -10539,9 +10539,12 @@ var script$2 = {
       }
     },
     cDefaultValue(){
-      if (this.rearrangedOptions){
-        return this.rearrangedOptions.find(option => option[this.trackBy] === this.modelValue)
+      if (this.modelValue){
+        if (this.rearrangedOptions){
+          return this.rearrangedOptions.find(option => option[this.trackBy] === this.modelValue)
+        }
       }
+      return null
     },
   },
   methods: {
