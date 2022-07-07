@@ -143,7 +143,11 @@ export default {
   emits: ['update:modelValue', 'change'],
   computed: {
     rearrangedOptions(){
-      return this.metadata.map(val => val[this.groupValues]).flat()
+      if (this.metadata){
+        return this.metadata.map(val => val[this.groupValues]).flat()
+      } else {
+        return null
+      }
     },
     cDefaultValue(){
       return this.rearrangedOptions.find(option => option[this.trackBy] === this.modelValue)
