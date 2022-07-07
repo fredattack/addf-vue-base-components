@@ -105,6 +105,11 @@ export default {
       type: Boolean,
       required: false,
       default: false
+    },
+    canTrackByBeNull: {
+      type: Boolean,
+      required: false,
+      default: true
     }
   },
   computed: {
@@ -118,7 +123,9 @@ export default {
       if(newValue){
         this.$emit("update:modelValue", newValue[this.trackBy]);
       } else {
-        this.$emit("update:modelValue",null);
+        if(this.canTrackByBeNull) {
+          this.$emit("update:modelValue",null);
+        }
       }
     }
   },
