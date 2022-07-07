@@ -4970,7 +4970,7 @@ var script$P = {
       required: false,
       default: false
     },
-    CanTrackByBeNull: {
+    canTrackByBeNull: {
       type: Boolean,
       required: false,
       default: true
@@ -4987,7 +4987,7 @@ var script$P = {
       if(newValue){
         this.$emit("update:modelValue", newValue[this.trackBy]);
       } else {
-        if(this.CanTrackByBeNull) {
+        if(this.canTrackByBeNull) {
           this.$emit("update:modelValue",null);
         }
       }

@@ -106,7 +106,7 @@ export default {
       required: false,
       default: false
     },
-    CanTrackByBeNull: {
+    canTrackByBeNull: {
       type: Boolean,
       required: false,
       default: true
@@ -123,7 +123,7 @@ export default {
       if(newValue){
         this.$emit("update:modelValue", newValue[this.trackBy]);
       } else {
-        if(this.CanTrackByBeNull) {
+        if(this.canTrackByBeNull) {
           this.$emit("update:modelValue",null);
         }
       }
