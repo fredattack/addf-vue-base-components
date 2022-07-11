@@ -99,7 +99,7 @@ export default {
   methods: {
     addTag (newTag) {
       const tag = {}
-      tag[this.trackBy] = 'custom'
+      tag[this.trackBy] = newTag.substring(0, 2) + Math.floor((Math.random() * 10000000))
       tag[this.attributeLabel] = newTag
       
       this.options.push(tag)
