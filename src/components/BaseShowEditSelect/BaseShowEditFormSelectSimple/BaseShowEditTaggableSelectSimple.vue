@@ -2,7 +2,7 @@
   <template v-if="editionMode" >
     <div >
       
-      ahlala
+      ahla
       <BaseEditLabel :label="label" :required="required" />
       <multiselect
         v-model="cDefaultValue"
