@@ -10651,6 +10651,7 @@ script$3.__file = "src/components/BaseShowEditSelect/BaseShowEditFormSelectMulti
 
 var script$2 = {
   name: "BaseShowEditTaggableSelectSimple",
+  components: {multiselect: multiselect__default["default"]},
   props: {
     editionMode: {
       type: Boolean,

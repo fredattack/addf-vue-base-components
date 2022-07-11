@@ -29,8 +29,11 @@
 </template >
 
 <script >
+import multiselect from 'vue-multiselect'
+
 export default {
   name: "BaseShowEditTaggableSelectSimple",
+  components: {multiselect},
   props: {
     editionMode: {
       type: Boolean,
