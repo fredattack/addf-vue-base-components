@@ -10689,7 +10689,7 @@ var script$2 = {
       default: true,
     }
   },
-  emits: ['update:modelValue', 'change'],
+  emits: ['update:modelValue', 'update:options', 'change'],
   computed: {
     cDefaultValue(){
       if(this.options && this.options.find(t => t.id === this.modelValue)) return this.options.find(t => t.id === this.modelValue)
@@ -10702,6 +10702,7 @@ var script$2 = {
       tag[this.trackBy] = 'custom';
       tag[this.attributeLabel] = newTag;
       
+      this.$emit("update:options", [...this.options, tag]);
       this.$emit("update:modelValue", tag);
       this.$emit("change", tag);
     },
