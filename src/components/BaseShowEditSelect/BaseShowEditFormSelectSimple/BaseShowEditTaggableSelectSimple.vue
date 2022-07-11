@@ -1,6 +1,8 @@
 <template >
   <template v-if="editionMode" >
     <div >
+      
+      ahlala
       <BaseEditLabel :label="label" :required="required" />
       <multiselect
         v-model="cDefaultValue"
