@@ -99,7 +99,7 @@ export default {
   methods: {
     addTag (newTag) {
       const tag = {}
-      tag[this.trackBy] = 'tag'
+      tag[this.trackBy] = 'customTag'
       tag[this.attributeLabel] = newTag
       
       this.$emit("update:modelValue", tag);
