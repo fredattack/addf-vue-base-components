@@ -10720,7 +10720,7 @@ var script$2 = {
   methods: {
     addTag (newTag) {
       const tag = {};
-      tag[this.trackBy] = 'customTag';
+      tag[this.trackBy] = 'custom';
       tag[this.attributeLabel] = newTag;
       
       this.$emit("update:modelValue", tag);
