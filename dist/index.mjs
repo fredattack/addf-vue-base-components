@@ -10698,10 +10698,9 @@ var script$2 = {
   methods: {
     addTag (newTag) {
       const tag = {};
-      tag[this.trackBy] = newTag.substring(0, 2) + Math.floor((Math.random() * 10000000));
+      tag[this.trackBy] = 'tag';
       tag[this.attributeLabel] = newTag;
       
-      this.options.push(tag);
       this.$emit("update:modelValue", tag);
       this.$emit("change", tag);
     },
