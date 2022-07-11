@@ -84,7 +84,7 @@ export default {
     searchable: {
       type: Boolean,
       required: false,
-      default: false
+      default: true
     },
     modelValueCanBeNull: {
       type: Boolean,
