@@ -4605,7 +4605,7 @@ var script$T = {
   },
   computed:{
     cDisplayedValueWhenNotEditionMode(){
-      return this.defaultValue.title ? this.defaultValue.title : '-'
+      return this.defaultValue[this.attributeLabel] ? this.defaultValue[this.attributeLabel] : '-'
     },
     cGroupClass(){
       return this.groupClass === '' ? 'mt-3' : this.groupClass
