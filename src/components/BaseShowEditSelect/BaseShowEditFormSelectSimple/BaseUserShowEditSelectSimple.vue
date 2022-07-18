@@ -11,8 +11,8 @@
                  :track-by="trackBy"
                  :required="required" />
 
-    <template v-if="errors && errors.user_id">
-      <div v-for='(error,index) in errors.user_id' :key='index' class="form-help text-red-600">
+    <template v-if="errors && errors[errorsKey]">
+      <div v-for='(error,index) in errors[errorsKey]' :key='index' class="form-help text-red-600">
         {{ $t(error, {'attribute': $t('attributes.' + name)}) }}
       </div>
     </template>
@@ -62,6 +62,11 @@ export default {
       type: Object,
       required: false,
       default() {return {}},
+    },
+    errorsKey: {
+      type: String,
+      required: false,
+      default: 'user_id'
     },
     metadata: {
       type: Array,

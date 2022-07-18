@@ -6588,6 +6588,11 @@ var script$z = {
       required: false,
       default() {return {}},
     },
+    errorsKey: {
+      type: String,
+      required: false,
+      default: 'user_id'
+    },
     metadata: {
       type: Array,
       required: true,
@@ -6664,8 +6669,8 @@ function render$z(_ctx, _cache, $props, $setup, $data, $options) {
               required: $props.required
             }, null, 8 /* PROPS */, ["options", "placeholder", "modelValue", "onUpdate:modelValue", "searchable", "label", "track-by", "required"]))
           : createCommentVNode("v-if", true),
-        ($props.errors && $props.errors.user_id)
-          ? (openBlock(true), createElementBlock(Fragment, { key: 1 }, renderList($props.errors.user_id, (error, index) => {
+        ($props.errors && $props.errors[$props.errorsKey])
+          ? (openBlock(true), createElementBlock(Fragment, { key: 1 }, renderList($props.errors[$props.errorsKey], (error, index) => {
               return (openBlock(), createElementBlock("div", {
                 key: index,
                 class: "form-help text-red-600"
@@ -10720,7 +10725,7 @@ var script$2 = {
   },
 };
 
-const _hoisted_1$2 = /*#__PURE__*/createTextVNode(" ahlala ");
+const _hoisted_1$2 = /*#__PURE__*/createTextVNode(" ahla ");
 
 function render$2(_ctx, _cache, $props, $setup, $data, $options) {
   const _component_BaseEditLabel = resolveComponent("BaseEditLabel");

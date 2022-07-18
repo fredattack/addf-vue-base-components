@@ -6609,6 +6609,11 @@ var script$z = {
       required: false,
       default() {return {}},
     },
+    errorsKey: {
+      type: String,
+      required: false,
+      default: 'user_id'
+    },
     metadata: {
       type: Array,
       required: true,
@@ -6685,8 +6690,8 @@ function render$z(_ctx, _cache, $props, $setup, $data, $options) {
               required: $props.required
             }, null, 8 /* PROPS */, ["options", "placeholder", "modelValue", "onUpdate:modelValue", "searchable", "label", "track-by", "required"]))
           : vue.createCommentVNode("v-if", true),
-        ($props.errors && $props.errors.user_id)
-          ? (vue.openBlock(true), vue.createElementBlock(vue.Fragment, { key: 1 }, vue.renderList($props.errors.user_id, (error, index) => {
+        ($props.errors && $props.errors[$props.errorsKey])
+          ? (vue.openBlock(true), vue.createElementBlock(vue.Fragment, { key: 1 }, vue.renderList($props.errors[$props.errorsKey], (error, index) => {
               return (vue.openBlock(), vue.createElementBlock("div", {
                 key: index,
                 class: "form-help text-red-600"
@@ -10741,7 +10746,7 @@ var script$2 = {
   },
 };
 
-const _hoisted_1$2 = /*#__PURE__*/vue.createTextVNode(" ahlala ");
+const _hoisted_1$2 = /*#__PURE__*/vue.createTextVNode(" ahla ");
 
 function render$2(_ctx, _cache, $props, $setup, $data, $options) {
   const _component_BaseEditLabel = vue.resolveComponent("BaseEditLabel");
