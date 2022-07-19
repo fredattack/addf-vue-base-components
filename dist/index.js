@@ -2994,7 +2994,7 @@ const _hoisted_7$8 = {
   selected: ""
 };
 const _hoisted_8$4 = ["value", "disabled"];
-const _hoisted_9$2 = ["name", "id", "disabled", "placeholder"];
+const _hoisted_9$3 = ["name", "id", "disabled", "placeholder"];
 const _hoisted_10$1 = {
   key: 0,
   class: "form-help text-red-600"
@@ -3035,7 +3035,7 @@ function render$14(_ctx, _cache, $props, $setup, $data, $options) {
         disabled: $options.isDisabled,
         placeholder: $props.numberPlaceholder,
         "onUpdate:modelValue": _cache[1] || (_cache[1] = $event => (($data.numberValue) = $event))
-      }, null, 8 /* PROPS */, _hoisted_9$2), [
+      }, null, 8 /* PROPS */, _hoisted_9$3), [
         [vue.vModelText, $data.numberValue]
       ])
     ]),
@@ -4234,7 +4234,7 @@ const _hoisted_5$b = ["name"];
 const _hoisted_6$7 = { selected: "" };
 const _hoisted_7$7 = ["value"];
 const _hoisted_8$3 = ["name", "id", "placeholder"];
-const _hoisted_9$1 = { key: 1 };
+const _hoisted_9$2 = { key: 1 };
 
 function render$X(_ctx, _cache, $props, $setup, $data, $options) {
   const _component_BaseEditLabel = vue.resolveComponent("BaseEditLabel");
@@ -4289,7 +4289,7 @@ function render$X(_ctx, _cache, $props, $setup, $data, $options) {
               }), 128 /* KEYED_FRAGMENT */))
             : vue.createCommentVNode("v-if", true)
         ]))
-      : (vue.openBlock(), vue.createElementBlock("div", _hoisted_9$1, [
+      : (vue.openBlock(), vue.createElementBlock("div", _hoisted_9$2, [
           vue.createVNode(_component_BaseShowPhoneLabel, {
             label: $props.label,
             "model-value": $data.dNumberValue,
@@ -4574,6 +4574,7 @@ var script$U = {
     defaultAjax: {type: Object, required: false, default() { return {}}},
     url: {},
     name: {},
+    multiple: {type:Boolean,required:false,default:false},
     label: {type: String, required: false},
     groupClass:{ type: String, required: false, default:'' },
     labelClass:{ type: String, required: false, default:'' },
@@ -4633,31 +4634,33 @@ var script$U = {
 };
 
 const _hoisted_1$H = { key: 0 };
-const _hoisted_2$B = { class: "text-sm font-medium text-gray-500 capitalize-first mt-3" };
-const _hoisted_3$s = {
+const _hoisted_2$B = /*#__PURE__*/vue.createElementVNode("h1", null, "selected", -1 /* HOISTED */);
+const _hoisted_3$s = { class: "text-sm font-medium text-gray-500 capitalize-first mt-3" };
+const _hoisted_4$j = {
   key: 0,
   class: "text-red-600"
 };
-const _hoisted_4$j = { class: "custom__tag" };
-const _hoisted_5$a = ["onClick"];
-const _hoisted_6$6 = { key: 1 };
-const _hoisted_7$6 = { class: "text-sm font-medium text-gray-500 capitalize-first pt-1" };
-const _hoisted_8$2 = { class: "mt-1 text-sm text-gray-900" };
+const _hoisted_5$a = { class: "custom__tag" };
+const _hoisted_6$6 = ["onClick"];
+const _hoisted_7$6 = { key: 1 };
+const _hoisted_8$2 = { class: "text-sm font-medium text-gray-500 capitalize-first pt-1" };
+const _hoisted_9$1 = { class: "mt-1 text-sm text-gray-900" };
 
 function render$U(_ctx, _cache, $props, $setup, $data, $options) {
   const _component_multiselect = vue.resolveComponent("multiselect");
 
   return ($props.editionMode)
     ? (vue.openBlock(), vue.createElementBlock("div", _hoisted_1$H, [
+        _hoisted_2$B,
         ($props.defaultAjax)
           ? (vue.openBlock(), vue.createElementBlock("div", {
               key: 0,
               class: vue.normalizeClass($options.cGroupClass)
             }, [
-              vue.createElementVNode("label", _hoisted_2$B, [
+              vue.createElementVNode("label", _hoisted_3$s, [
                 vue.createTextVNode(vue.toDisplayString($props.label) + " ", 1 /* TEXT */),
                 (_ctx.required)
-                  ? (vue.openBlock(), vue.createElementBlock("span", _hoisted_3$s, "*"))
+                  ? (vue.openBlock(), vue.createElementBlock("span", _hoisted_4$j, "*"))
                   : vue.createCommentVNode("v-if", true)
               ]),
               (vue.openBlock(), vue.createBlock(_component_multiselect, {
@@ -4671,7 +4674,7 @@ function render$U(_ctx, _cache, $props, $setup, $data, $options) {
                 "open-direction": "bottom",
                 options: $data.options,
                 value: $props.defaultAjax,
-                multiple: false,
+                multiple: $props.multiple,
                 searchable: true,
                 loading: $data.loading,
                 "internal-search": true,
@@ -4686,22 +4689,22 @@ function render$U(_ctx, _cache, $props, $setup, $data, $options) {
                 onSearchChange: $options.fetchOption
               }, {
                 tag: vue.withCtx(({ option, remove }) => [
-                  vue.createElementVNode("span", _hoisted_4$j, [
+                  vue.createElementVNode("span", _hoisted_5$a, [
                     vue.createElementVNode("span", null, vue.toDisplayString(option.name), 1 /* TEXT */),
                     vue.createElementVNode("span", {
                       class: "custom__remove",
                       onClick: $event => (remove(option))
-                    }, "❌", 8 /* PROPS */, _hoisted_5$a)
+                    }, "❌", 8 /* PROPS */, _hoisted_6$6)
                   ])
                 ]),
                 _: 1 /* STABLE */
-              }, 8 /* PROPS */, ["modelValue", "id", "label", "track-by", "options", "value", "loading", "onSearchChange"]))
+              }, 8 /* PROPS */, ["modelValue", "id", "label", "track-by", "options", "value", "multiple", "loading", "onSearchChange"]))
             ], 2 /* CLASS */))
           : vue.createCommentVNode("v-if", true)
       ]))
-    : (vue.openBlock(), vue.createElementBlock("div", _hoisted_6$6, [
-        vue.createElementVNode("dt", _hoisted_7$6, vue.toDisplayString($props.label), 1 /* TEXT */),
-        vue.createElementVNode("dd", _hoisted_8$2, vue.toDisplayString($options.cDisplayedValueWhenNotEditionMode), 1 /* TEXT */)
+    : (vue.openBlock(), vue.createElementBlock("div", _hoisted_7$6, [
+        vue.createElementVNode("dt", _hoisted_8$2, vue.toDisplayString($props.label), 1 /* TEXT */),
+        vue.createElementVNode("dd", _hoisted_9$1, vue.toDisplayString($options.cDisplayedValueWhenNotEditionMode), 1 /* TEXT */)
       ]))
 }
 

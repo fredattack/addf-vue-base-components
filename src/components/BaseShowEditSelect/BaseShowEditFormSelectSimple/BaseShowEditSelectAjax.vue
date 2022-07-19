@@ -1,5 +1,6 @@
 <template>
   <div v-if='editionMode'>
+    <h1>selected</h1>
     <div :class="cGroupClass" v-if="defaultAjax">
       <label class="text-sm font-medium text-gray-500 capitalize-first mt-3">
         {{ label }}&nbsp;<span class="text-red-600" v-if="required">*</span>
@@ -14,7 +15,7 @@
           open-direction="bottom"
           :options="options"
           :value="defaultAjax"
-          :multiple="false"
+          :multiple="multiple"
           :searchable="true"
           :loading="loading"
           :internal-search="true"
@@ -69,6 +70,7 @@ export default {
     defaultAjax: {type: Object, required: false, default() { return {}}},
     url: {},
     name: {},
+    multiple: {type:Boolean,required:false,default:false},
     label: {type: String, required: false},
     groupClass:{ type: String, required: false, default:'' },
     labelClass:{ type: String, required: false, default:'' },
