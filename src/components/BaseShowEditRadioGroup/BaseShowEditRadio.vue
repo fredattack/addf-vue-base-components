@@ -87,8 +87,14 @@ export default {
       return this.isVertical ? '' : 'flex flex-col sm:flex-row mt-2'
     },
     displayedValueWhenNotInEditionMode() {
-      let value = this.options?.find(option => option[this.trackBy] === this.modelValue)
-      return value ? value[this.attributeLabel] : null
+      if (this.options){
+        let value = this.options.find(option => option[this.trackBy] === this.modelValue)
+        if (value){
+          return value[this.attributeLabel]
+        }
+        return null
+      }
+      return null
     }
   },
   methods: {
