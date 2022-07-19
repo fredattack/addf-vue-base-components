@@ -114,7 +114,7 @@ export default {
   },
   computed: {
     cDefautlValue(){
-      if(this.options && this.options.find(t => t.id === this.modelValue)) return this.options.find(t => t.id === this.modelValue)
+      if(this.options && this.options.find(option => option[this.trackBy] === this.modelValue)) return this.options.find(option => option[this.trackBy] === this.modelValue)
       else return null
     },
   },
