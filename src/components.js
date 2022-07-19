@@ -86,6 +86,7 @@ import BaseShowEditIsoDateToTimeInput from "./components/BaseShowEditInput/BaseS
 import BaseShowEditIsoDateAndTimeRangeInput from "./components/BaseShowEditInput/BaseShowEditIsoDateAndTimeRangeInput.vue";
 import BaseShowEditOptionGroupedSelectSimple from "./components/BaseShowEditSelect/BaseShowEditFormSelectMultiple/BaseShowEditOptionGroupedSelectSimple.vue";
 import BaseShowEditTaggableSelectSimple from "./components/BaseShowEditSelect/BaseShowEditFormSelectSimple/BaseShowEditTaggableSelectSimple.vue";
+import BaseShowEditRadio from "./components/BaseShowEditRadioGroup/BaseShowEditRadio.vue";
 
 
 import HelloWorld from './components/HelloWorld.vue'
@@ -182,6 +183,7 @@ export default {
     BaseShowEditIsoDateAndTimeRangeInput,
     BaseShowEditOptionGroupedSelectSimple,
     BaseShowEditTaggableSelectSimple,
+    BaseShowEditRadio,
 
     HelloWorld,
 }
