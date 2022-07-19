@@ -84,7 +84,7 @@ export default {
       return this.groupClass === '' ? 'mt-3 w-full' : this.groupClass
     },
     cPlacement(){
-      return this.isVertical ? '' : 'flex flex-col sm:flex-row mt-2'
+      return this.isVertical ? '' : 'flex flex-col sm:flex-row mt-2 '
     },
     displayedValueWhenNotInEditionMode() {
       if (this.options){
