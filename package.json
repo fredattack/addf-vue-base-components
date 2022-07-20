@@ -1,6 +1,6 @@
 {
   "name": "@addf/addf-vue-base-components",
-  "version": "1.1.32",
+  "version": "1.1.33",
   "public": true,
   "main": "dist/index.js",
   "scripts": {
