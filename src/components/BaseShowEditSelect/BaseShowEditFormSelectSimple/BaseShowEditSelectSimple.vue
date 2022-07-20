@@ -112,6 +112,7 @@ export default {
       default: true
     }
   },
+  emits: ['update:modelValue', 'change'],
   computed: {
     cDefautlValue(){
       if(this.options && this.options.find(t => t.id === this.modelValue)) return this.options.find(t => t.id === this.modelValue)
@@ -122,9 +123,11 @@ export default {
     updateValueAction( newValue ) {
       if(newValue){
         this.$emit("update:modelValue", newValue[this.trackBy]);
+        this.$emit('change', newValue[this.trackBy])
       } else {
         if(this.canTrackByBeNull) {
           this.$emit("update:modelValue",null);
+          this.$emit('change', null)
         }
       }
     }
