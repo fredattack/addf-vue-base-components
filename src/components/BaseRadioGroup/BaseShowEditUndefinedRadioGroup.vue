@@ -65,6 +65,9 @@ export default {
       return this.isVertical ? '' : 'flex flex-col sm:flex-row mt-2'
     },
     displaydValueWhenNotInEditMode(){
+      if(this.internalValue === null){
+        return this.$t(`enums.yes_no.undefined`)
+      }
       return this.$t(`enums.yes_no.${Boolean(this.internalValue)}`)
     },
   },
