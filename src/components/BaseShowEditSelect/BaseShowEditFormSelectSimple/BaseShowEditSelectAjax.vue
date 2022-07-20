@@ -14,7 +14,7 @@
           open-direction="bottom"
           :options="options"
           :value="defaultAjax"
-          :multiple="false"
+          :multiple="multiple"
           :searchable="true"
           :loading="loading"
           :internal-search="true"
@@ -69,6 +69,7 @@ export default {
     defaultAjax: {type: Object, required: false, default() { return {}}},
     url: {},
     name: {},
+    multiple: {type:Boolean,required:false,default:false},
     label: {type: String, required: false},
     groupClass:{ type: String, required: false, default:'' },
     labelClass:{ type: String, required: false, default:'' },
@@ -94,6 +95,7 @@ export default {
           console.log('nullify stringValue')
           this.$emit('update:modelValue', newValue[this.trackBy]);
           this.$emit('selected:value', newValue[this.trackBy]);
+          this.$emit('workSelect',newValue);
         }
       }
     },
