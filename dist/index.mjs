@@ -9901,8 +9901,8 @@ var script$7 = {
     },
     displaydValueWhenNotInEditMode(){
       console.log('name', this.name);
-      console.log('internalValue', this.internalValue);
-      if(typeof this.internalValue === 'boolean' || typeof this.internalValue === 'number' ){
+      console.log('internalValue + type ', this.internalValue, ' ', typeof this.internalValue);
+      if(typeof this.internalValue === Boolean || typeof this.internalValue === Number ){
         return this.$t(`enums.yes_no.undefined`)
       }
       return this.$t(`enums.yes_no.${Boolean(this.internalValue)}`)
