@@ -65,8 +65,6 @@ export default {
       return this.isVertical ? '' : 'flex flex-col sm:flex-row mt-2'
     },
     displaydValueWhenNotInEditMode(){
-      console.log('name', this.name)
-      console.log('internalValue + type ', this.internalValue, ' ', typeof this.internalValue)
       if(this.internalValue === 'undefined'){
         return this.$t(`enums.yes_no.undefined`)
       }
