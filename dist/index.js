@@ -4600,6 +4600,7 @@ var script$U = {
           console.log('nullify stringValue');
           this.$emit('update:modelValue', newValue[this.trackBy]);
           this.$emit('selected:value', newValue[this.trackBy]);
+          this.$emit('workSelect',newValue);
         }
       }
     },
