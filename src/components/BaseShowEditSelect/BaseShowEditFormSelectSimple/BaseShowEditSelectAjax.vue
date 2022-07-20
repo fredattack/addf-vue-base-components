@@ -1,6 +1,5 @@
 <template>
   <div v-if='editionMode'>
-    <h1>selected</h1>
     <div :class="cGroupClass" v-if="defaultAjax">
       <label class="text-sm font-medium text-gray-500 capitalize-first mt-3">
         {{ label }}&nbsp;<span class="text-red-600" v-if="required">*</span>
