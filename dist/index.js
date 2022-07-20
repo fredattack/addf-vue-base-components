@@ -9923,7 +9923,7 @@ var script$7 = {
     displaydValueWhenNotInEditMode(){
       console.log('name', this.name);
       console.log('internalValue + type ', this.internalValue, ' ', typeof this.internalValue);
-      if(typeof this.internalValue === Boolean || typeof this.internalValue === Number ){
+      if(this.internalValue === 'undefined'){
         return this.$t(`enums.yes_no.undefined`)
       }
       return this.$t(`enums.yes_no.${Boolean(this.internalValue)}`)
