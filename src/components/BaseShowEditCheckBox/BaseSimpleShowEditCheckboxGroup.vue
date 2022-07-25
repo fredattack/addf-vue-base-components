@@ -99,6 +99,7 @@ export default {
   },
   methods: {
     updateInput(event) {
+      console.log(event)
       let tempModelValue = this.modelValue
 
       if (Object.values(tempModelValue).indexOf(parseInt(event.target.value)) === -1) {
@@ -106,7 +107,7 @@ export default {
       } else {
         tempModelValue.splice(tempModelValue.indexOf(parseInt(event.target.value)), 1)
       }
-
+      console.log('tempModelValue',tempModelValue)
       this.$emit("update:modelValue", tempModelValue);
     },
     getElement(item) {

@@ -2973,7 +2973,7 @@ const _hoisted_7$8 = {
   selected: ""
 };
 const _hoisted_8$4 = ["value", "disabled"];
-const _hoisted_9$2 = ["name", "id", "disabled", "placeholder"];
+const _hoisted_9$3 = ["name", "id", "disabled", "placeholder"];
 const _hoisted_10$1 = {
   key: 0,
   class: "form-help text-red-600"
@@ -3014,7 +3014,7 @@ function render$14(_ctx, _cache, $props, $setup, $data, $options) {
         disabled: $options.isDisabled,
         placeholder: $props.numberPlaceholder,
         "onUpdate:modelValue": _cache[1] || (_cache[1] = $event => (($data.numberValue) = $event))
-      }, null, 8 /* PROPS */, _hoisted_9$2), [
+      }, null, 8 /* PROPS */, _hoisted_9$3), [
         [vModelText, $data.numberValue]
       ])
     ]),
@@ -4213,7 +4213,7 @@ const _hoisted_5$b = ["name"];
 const _hoisted_6$7 = { selected: "" };
 const _hoisted_7$7 = ["value"];
 const _hoisted_8$3 = ["name", "id", "placeholder"];
-const _hoisted_9$1 = { key: 1 };
+const _hoisted_9$2 = { key: 1 };
 
 function render$X(_ctx, _cache, $props, $setup, $data, $options) {
   const _component_BaseEditLabel = resolveComponent("BaseEditLabel");
@@ -4268,7 +4268,7 @@ function render$X(_ctx, _cache, $props, $setup, $data, $options) {
               }), 128 /* KEYED_FRAGMENT */))
             : createCommentVNode("v-if", true)
         ]))
-      : (openBlock(), createElementBlock("div", _hoisted_9$1, [
+      : (openBlock(), createElementBlock("div", _hoisted_9$2, [
           createVNode(_component_BaseShowPhoneLabel, {
             label: $props.label,
             "model-value": $data.dNumberValue,
@@ -4614,16 +4614,17 @@ var script$U = {
 };
 
 const _hoisted_1$H = { key: 0 };
-const _hoisted_2$B = { class: "text-sm font-medium text-gray-500 capitalize-first mt-3" };
-const _hoisted_3$s = {
+const _hoisted_2$B = /*#__PURE__*/createElementVNode("h1", null, "link boom2", -1 /* HOISTED */);
+const _hoisted_3$s = { class: "text-sm font-medium text-gray-500 capitalize-first mt-3" };
+const _hoisted_4$j = {
   key: 0,
   class: "text-red-600"
 };
-const _hoisted_4$j = { class: "custom__tag" };
-const _hoisted_5$a = ["onClick"];
-const _hoisted_6$6 = { key: 1 };
-const _hoisted_7$6 = { class: "text-sm font-medium text-gray-500 capitalize-first pt-1" };
-const _hoisted_8$2 = { class: "mt-1 text-sm text-gray-900" };
+const _hoisted_5$a = { class: "custom__tag" };
+const _hoisted_6$6 = ["onClick"];
+const _hoisted_7$6 = { key: 1 };
+const _hoisted_8$2 = { class: "text-sm font-medium text-gray-500 capitalize-first pt-1" };
+const _hoisted_9$1 = { class: "mt-1 text-sm text-gray-900" };
 
 function render$U(_ctx, _cache, $props, $setup, $data, $options) {
   const _component_multiselect = resolveComponent("multiselect");
@@ -4635,10 +4636,11 @@ function render$U(_ctx, _cache, $props, $setup, $data, $options) {
               key: 0,
               class: normalizeClass($options.cGroupClass)
             }, [
-              createElementVNode("label", _hoisted_2$B, [
+              _hoisted_2$B,
+              createElementVNode("label", _hoisted_3$s, [
                 createTextVNode(toDisplayString($props.label) + " ", 1 /* TEXT */),
                 (_ctx.required)
-                  ? (openBlock(), createElementBlock("span", _hoisted_3$s, "*"))
+                  ? (openBlock(), createElementBlock("span", _hoisted_4$j, "*"))
                   : createCommentVNode("v-if", true)
               ]),
               (openBlock(), createBlock(_component_multiselect, {
@@ -4667,12 +4669,12 @@ function render$U(_ctx, _cache, $props, $setup, $data, $options) {
                 onSearchChange: $options.fetchOption
               }, {
                 tag: withCtx(({ option, remove }) => [
-                  createElementVNode("span", _hoisted_4$j, [
+                  createElementVNode("span", _hoisted_5$a, [
                     createElementVNode("span", null, toDisplayString(option.name), 1 /* TEXT */),
                     createElementVNode("span", {
                       class: "custom__remove",
                       onClick: $event => (remove(option))
-                    }, "❌", 8 /* PROPS */, _hoisted_5$a)
+                    }, "❌", 8 /* PROPS */, _hoisted_6$6)
                   ])
                 ]),
                 _: 1 /* STABLE */
@@ -4680,9 +4682,9 @@ function render$U(_ctx, _cache, $props, $setup, $data, $options) {
             ], 2 /* CLASS */))
           : createCommentVNode("v-if", true)
       ]))
-    : (openBlock(), createElementBlock("div", _hoisted_6$6, [
-        createElementVNode("dt", _hoisted_7$6, toDisplayString($props.label), 1 /* TEXT */),
-        createElementVNode("dd", _hoisted_8$2, toDisplayString($options.cDisplayedValueWhenNotEditionMode), 1 /* TEXT */)
+    : (openBlock(), createElementBlock("div", _hoisted_7$6, [
+        createElementVNode("dt", _hoisted_8$2, toDisplayString($props.label), 1 /* TEXT */),
+        createElementVNode("dd", _hoisted_9$1, toDisplayString($options.cDisplayedValueWhenNotEditionMode), 1 /* TEXT */)
       ]))
 }
 
@@ -5868,6 +5870,7 @@ var script$I = {
   },
   methods: {
     updateInput(event) {
+      console.log(event);
       let tempModelValue = this.modelValue;
 
       if (Object.values(tempModelValue).indexOf(parseInt(event.target.value)) === -1) {
@@ -5875,7 +5878,7 @@ var script$I = {
       } else {
         tempModelValue.splice(tempModelValue.indexOf(parseInt(event.target.value)), 1);
       }
-
+      console.log('tempModelValue',tempModelValue);
       this.$emit("update:modelValue", tempModelValue);
     },
     getElement(item) {
@@ -9384,9 +9387,11 @@ var script$a = {
   },
   watch: {
     transitionData(newValue, oldValue) {
+      console.log('transitionData',this.transitionData);
       if(newValue && newValue !== oldValue){
         this.$emit('update:modelValue', newValue);
-        this.$emit("change");
+        console.log('newvalue',newValue);
+        this.$emit("change",newValue);
       }
     }
   },
