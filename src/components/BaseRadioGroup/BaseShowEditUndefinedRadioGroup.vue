@@ -86,7 +86,8 @@ export default {
     internalValue(newValue, oldValue) {
       if (newValue !== oldValue) {
         if (newValue !== this.options.undefined){
-          this.$emit('update:modelValue', Boolean(newValue))
+          // this.$emit('update:modelValue', Boolean(newValue))
+          newValue === true ? this.$emit('update:modelValue', 1) : this.$emit('update:modelValue', 0)
           this.$emit('change', Boolean(newValue))
         } else {
           this.$emit('update:modelValue', null)
