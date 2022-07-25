@@ -9267,7 +9267,9 @@ var script$b = {
  
   methods: {
     updateInput(event) {
+      console.log('value',this.value);
       console.log('event.target.value',event.target.value);
+      this.value= event.target.value;
       this.$emit("update:modelValue", event.target.value);
     },
   },
@@ -9276,7 +9278,7 @@ var script$b = {
 
 const _hoisted_1$a = { key: 0 };
 const _hoisted_2$9 = { class: "form-check mr-4 sm:mt-0" };
-const _hoisted_3$5 = ["id", "name", "value"];
+const _hoisted_3$5 = ["id", "name"];
 const _hoisted_4$5 = /*#__PURE__*/vue.createElementVNode("br", null, null, -1 /* HOISTED */);
 const _hoisted_5$3 = ["for"];
 const _hoisted_6$2 = /*#__PURE__*/vue.createElementVNode("br", null, null, -1 /* HOISTED */);
@@ -9293,14 +9295,16 @@ function render$b(_ctx, _cache, $props, $setup, $data, $options) {
             class: vue.normalizeClass($options.cPlacement)
           }, [
             vue.createElementVNode("div", _hoisted_2$9, [
-              vue.createElementVNode("input", {
+              vue.withDirectives(vue.createElementVNode("input", {
                 id: `${$props.name}_checkbox_input_${$props.identifier}`,
                 class: "form-check-input",
                 type: "checkbox",
                 name: $props.name,
-                value: $props.modelValue,
-                onChange: _cache[0] || (_cache[0] = (...args) => ($options.updateInput && $options.updateInput(...args)))
-              }, null, 40 /* PROPS, HYDRATE_EVENTS */, _hoisted_3$5),
+                "onUpdate:modelValue": _cache[0] || (_cache[0] = $event => (($data.value) = $event)),
+                onChange: _cache[1] || (_cache[1] = (...args) => ($options.updateInput && $options.updateInput(...args)))
+              }, null, 40 /* PROPS, HYDRATE_EVENTS */, _hoisted_3$5), [
+                [vue.vModelCheckbox, $data.value]
+              ]),
               _hoisted_4$5,
               vue.createElementVNode("label", {
                 class: "form-check-label capitalize-first",

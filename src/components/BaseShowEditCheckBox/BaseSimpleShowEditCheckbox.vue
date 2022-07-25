@@ -9,7 +9,7 @@
                    class='form-check-input'
                    type='checkbox'
                    :name='name'
-                   :value="modelValue"
+                   v-model="value"
                    @change="updateInput">
             <br>
             <label class='form-check-label capitalize-first' :for="`${name}_checkbox_input_${identifier}`">
@@ -100,7 +100,9 @@ export default {
  
   methods: {
     updateInput(event) {
+      console.log('value',this.value)
       console.log('event.target.value',event.target.value)
+      this.value= event.target.value
       this.$emit("update:modelValue", event.target.value);
     },
   },
