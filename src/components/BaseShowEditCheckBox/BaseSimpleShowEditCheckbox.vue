@@ -1,8 +1,8 @@
 <template>
   <div>
     <template v-if='editionMode'>
-
       <div>
+      <h1>edition</h1>
         <div :class="cPlacement">
           <div class='form-check mr-4 sm:mt-0' >
             <input :id="`${name}_checkbox_input_${identifier}`"
@@ -13,7 +13,7 @@
                    @change="updateInput">
             <br>
             <label class='form-check-label capitalize-first' :for="`${name}_checkbox_input_${identifier}`">
-              {{ label }}
+              {{ label }}+++
             </label>
             
           </div>
@@ -99,6 +99,7 @@ export default {
   },
   methods: {
     updateInput(event) {
+      console.log('event',event)
       this.$emit("update:modelValue", event.target.value);
     },
   },

@@ -133,11 +133,9 @@ export default {
   },
   watch: {
     transitionData(newValue, oldValue) {
-      console.log('transitionData',this.transitionData)
       if(newValue && newValue !== oldValue){
         this.$emit('update:modelValue', newValue)
-        console.log('newvalue',newValue)
-        this.$emit("change",newValue)
+        this.$emit("change")
       }
     }
   },
