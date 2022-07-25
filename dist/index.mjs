@@ -2972,7 +2972,7 @@ const _hoisted_7$8 = {
   disabled: "",
   selected: ""
 };
-const _hoisted_8$5 = ["value", "disabled"];
+const _hoisted_8$4 = ["value", "disabled"];
 const _hoisted_9$3 = ["name", "id", "disabled", "placeholder"];
 const _hoisted_10$1 = {
   key: 0,
@@ -3000,7 +3000,7 @@ function render$14(_ctx, _cache, $props, $setup, $data, $options) {
               key: key,
               value: model.id,
               disabled: !_ctx.$can('manage_content')
-            }, toDisplayString(model.id), 9 /* TEXT, PROPS */, _hoisted_8$5))
+            }, toDisplayString(model.id), 9 /* TEXT, PROPS */, _hoisted_8$4))
           }), 128 /* KEYED_FRAGMENT */))
         ], 8 /* PROPS */, _hoisted_6$8), [
           [vModelSelect, $data.countryValue]
@@ -4212,7 +4212,7 @@ const _hoisted_4$l = {
 const _hoisted_5$b = ["name"];
 const _hoisted_6$7 = { selected: "" };
 const _hoisted_7$7 = ["value"];
-const _hoisted_8$4 = ["name", "id", "placeholder"];
+const _hoisted_8$3 = ["name", "id", "placeholder"];
 const _hoisted_9$2 = { key: 1 };
 
 function render$X(_ctx, _cache, $props, $setup, $data, $options) {
@@ -4255,7 +4255,7 @@ function render$X(_ctx, _cache, $props, $setup, $data, $options) {
               placeholder: $props.numberPlaceholder,
               "onUpdate:modelValue": _cache[2] || (_cache[2] = $event => (($data.dNumberValue) = $event)),
               onInput: _cache[3] || (_cache[3] = (...args) => ($options.updateNumberField && $options.updateNumberField(...args)))
-            }, null, 40 /* PROPS, HYDRATE_EVENTS */, _hoisted_8$4), [
+            }, null, 40 /* PROPS, HYDRATE_EVENTS */, _hoisted_8$3), [
               [vModelText, $data.dNumberValue]
             ])
           ]),
@@ -4623,7 +4623,7 @@ const _hoisted_4$j = {
 const _hoisted_5$a = { class: "custom__tag" };
 const _hoisted_6$6 = ["onClick"];
 const _hoisted_7$6 = { key: 1 };
-const _hoisted_8$3 = { class: "text-sm font-medium text-gray-500 capitalize-first pt-1" };
+const _hoisted_8$2 = { class: "text-sm font-medium text-gray-500 capitalize-first pt-1" };
 const _hoisted_9$1 = { class: "mt-1 text-sm text-gray-900" };
 
 function render$U(_ctx, _cache, $props, $setup, $data, $options) {
@@ -4683,7 +4683,7 @@ function render$U(_ctx, _cache, $props, $setup, $data, $options) {
           : createCommentVNode("v-if", true)
       ]))
     : (openBlock(), createElementBlock("div", _hoisted_7$6, [
-        createElementVNode("dt", _hoisted_8$3, toDisplayString($props.label), 1 /* TEXT */),
+        createElementVNode("dt", _hoisted_8$2, toDisplayString($props.label), 1 /* TEXT */),
         createElementVNode("dd", _hoisted_9$1, toDisplayString($options.cDisplayedValueWhenNotEditionMode), 1 /* TEXT */)
       ]))
 }
@@ -6734,7 +6734,7 @@ const _hoisted_4$c = { class: "dropdown-menu" };
 const _hoisted_5$7 = { class: "dropdown-menu__content box p-2" };
 const _hoisted_6$4 = ["onClick"];
 const _hoisted_7$4 = { class: "flex-1 mr-5 whitespace-nowrap capitalize-first" };
-const _hoisted_8$2 = /*#__PURE__*/createElementVNode("div", { class: "flex items-center mt-3 space-x-3 hidden" }, [
+const _hoisted_8$1 = /*#__PURE__*/createElementVNode("div", { class: "flex items-center mt-3 space-x-3 hidden" }, [
   /*#__PURE__*/createElementVNode("button", {
     "data-dismiss": "dropdown",
     class: "btn btn-secondary"
@@ -6770,7 +6770,7 @@ function render$z(_ctx, _cache, $props, $setup, $data, $options) {
             ], 8 /* PROPS */, _hoisted_6$4))
           }), 256 /* UNKEYED_FRAGMENT */))
         ]),
-        _hoisted_8$2
+        _hoisted_8$1
       ])
     ])
   ]))
@@ -9027,7 +9027,7 @@ const _hoisted_4$6 = { class: "" };
 const _hoisted_5$4 = { class: "relative rounded-md shadow-sm" };
 const _hoisted_6$3 = { class: "absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none" };
 const _hoisted_7$3 = { class: "text-gray-500 sm:text-sm capitalize-first" };
-const _hoisted_8$1 = ["name", "id"];
+const _hoisted_8 = ["name", "id"];
 const _hoisted_9 = { class: "" };
 const _hoisted_10 = { class: "relative rounded-md shadow-sm" };
 const _hoisted_11 = { class: "absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none" };
@@ -9067,7 +9067,7 @@ function render$d(_ctx, _cache, $props, $setup, $data, $options) {
                   class: "block w-full pl-12 mr-12 sm:text-sm border-gray-300 rounded-tl-md focus:border-gray-300 focus:ring-0",
                   placeholder: " ",
                   onInput: _cache[1] || (_cache[1] = (...args) => ($options.updateFirstValue && $options.updateFirstValue(...args)))
-                }, null, 40 /* PROPS, HYDRATE_EVENTS */, _hoisted_8$1), [
+                }, null, 40 /* PROPS, HYDRATE_EVENTS */, _hoisted_8), [
                   [vModelText, $data.dFirstValue]
                 ])
               ])
@@ -9243,22 +9243,30 @@ var script$b = {
     },
 
   },
+  watch: {
+    value(newValue, oldValue) {
+      console.log("newValue", newValue);
+      console.log("oldValue", oldValue);
+    }
+  },
   methods: {
     updateInput(event) {
-      console.log('event',event);
+      console.log('event.target.value',event.target.value);
       this.$emit("update:modelValue", event.target.value);
     },
   },
+  mounted() {
+    console.log("this.defaultvalue", this.defaultValue);
+  }
 };
 
 const _hoisted_1$a = { key: 0 };
-const _hoisted_2$9 = /*#__PURE__*/createElementVNode("h1", null, "edition", -1 /* HOISTED */);
-const _hoisted_3$5 = { class: "form-check mr-4 sm:mt-0" };
-const _hoisted_4$5 = ["id", "name", "value"];
-const _hoisted_5$3 = /*#__PURE__*/createElementVNode("br", null, null, -1 /* HOISTED */);
-const _hoisted_6$2 = ["for"];
-const _hoisted_7$2 = /*#__PURE__*/createElementVNode("br", null, null, -1 /* HOISTED */);
-const _hoisted_8 = { key: 1 };
+const _hoisted_2$9 = { class: "form-check mr-4 sm:mt-0" };
+const _hoisted_3$5 = ["id", "name", "value"];
+const _hoisted_4$5 = /*#__PURE__*/createElementVNode("br", null, null, -1 /* HOISTED */);
+const _hoisted_5$3 = ["for"];
+const _hoisted_6$2 = /*#__PURE__*/createElementVNode("br", null, null, -1 /* HOISTED */);
+const _hoisted_7$2 = { key: 1 };
 
 function render$b(_ctx, _cache, $props, $setup, $data, $options) {
   const _component_BaseEditLabel = resolveComponent("BaseEditLabel");
@@ -9267,11 +9275,10 @@ function render$b(_ctx, _cache, $props, $setup, $data, $options) {
   return (openBlock(), createElementBlock("div", null, [
     ($props.editionMode)
       ? (openBlock(), createElementBlock("div", _hoisted_1$a, [
-          _hoisted_2$9,
           createElementVNode("div", {
             class: normalizeClass($options.cPlacement)
           }, [
-            createElementVNode("div", _hoisted_3$5, [
+            createElementVNode("div", _hoisted_2$9, [
               createElementVNode("input", {
                 id: `${$props.name}_checkbox_input_${$props.identifier}`,
                 class: "form-check-input",
@@ -9279,12 +9286,12 @@ function render$b(_ctx, _cache, $props, $setup, $data, $options) {
                 name: $props.name,
                 value: Boolean($props.modelValue),
                 onChange: _cache[0] || (_cache[0] = (...args) => ($options.updateInput && $options.updateInput(...args)))
-              }, null, 40 /* PROPS, HYDRATE_EVENTS */, _hoisted_4$5),
-              _hoisted_5$3,
+              }, null, 40 /* PROPS, HYDRATE_EVENTS */, _hoisted_3$5),
+              _hoisted_4$5,
               createElementVNode("label", {
                 class: "form-check-label capitalize-first",
                 for: `${$props.name}_checkbox_input_${$props.identifier}`
-              }, toDisplayString($props.label) + "+++ ", 9 /* TEXT, PROPS */, _hoisted_6$2)
+              }, toDisplayString($props.label), 9 /* TEXT, PROPS */, _hoisted_5$3)
             ]),
             ($props.errors)
               ? (openBlock(true), createElementBlock(Fragment, { key: 0 }, renderList($props.errors, (error, index) => {
@@ -9303,7 +9310,7 @@ function render$b(_ctx, _cache, $props, $setup, $data, $options) {
                   label: $props.label,
                   required: $props.required
                 }, null, 8 /* PROPS */, ["label", "required"]),
-                _hoisted_7$2,
+                _hoisted_6$2,
                 (openBlock(), createElementBlock("span", {
                   class: "inline-block mr-3",
                   key: _ctx.index
@@ -9318,7 +9325,7 @@ function render$b(_ctx, _cache, $props, $setup, $data, $options) {
                     : createCommentVNode("v-if", true)
                 ]))
               ], 64 /* STABLE_FRAGMENT */))
-            : (openBlock(), createElementBlock("span", _hoisted_8))
+            : (openBlock(), createElementBlock("span", _hoisted_7$2))
         ], 2112 /* STABLE_FRAGMENT, DEV_ROOT_FRAGMENT */))
   ]))
 }
