@@ -9243,21 +9243,14 @@ var script$b = {
     },
 
   },
-  watch: {
-    value(newValue, oldValue) {
-      console.log("newValue", newValue);
-      console.log("oldValue", oldValue);
-    }
-  },
+ 
   methods: {
     updateInput(event) {
       console.log('event.target.value',event.target.value);
       this.$emit("update:modelValue", event.target.value);
     },
   },
-  mounted() {
-    console.log("this.defaultvalue", this.defaultValue);
-  }
+  
 };
 
 const _hoisted_1$a = { key: 0 };
@@ -9284,7 +9277,7 @@ function render$b(_ctx, _cache, $props, $setup, $data, $options) {
                 class: "form-check-input",
                 type: "checkbox",
                 name: $props.name,
-                value: Boolean($props.modelValue),
+                value: $props.modelValue,
                 onChange: _cache[0] || (_cache[0] = (...args) => ($options.updateInput && $options.updateInput(...args)))
               }, null, 40 /* PROPS, HYDRATE_EVENTS */, _hoisted_3$5),
               _hoisted_4$5,

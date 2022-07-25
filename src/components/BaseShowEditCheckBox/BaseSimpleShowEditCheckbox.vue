@@ -9,7 +9,7 @@
                    class='form-check-input'
                    type='checkbox'
                    :name='name'
-                   :value="Boolean(modelValue)"
+                   :value="modelValue"
                    @change="updateInput">
             <br>
             <label class='form-check-label capitalize-first' :for="`${name}_checkbox_input_${identifier}`">
@@ -97,20 +97,13 @@ export default {
     },
 
   },
-  watch: {
-    value(newValue, oldValue) {
-      console.log("newValue", newValue)
-      console.log("oldValue", oldValue)
-    }
-  },
+ 
   methods: {
     updateInput(event) {
       console.log('event.target.value',event.target.value)
       this.$emit("update:modelValue", event.target.value);
     },
   },
-  mounted() {
-    console.log("this.defaultvalue", this.defaultValue)
-  }
+  
 }
 </script>
