@@ -9581,6 +9581,7 @@ var script$9 = {
     return {
       internalDate: null,
       internalTime: null,
+      internalUndefinedTime: null,
       internalErrors: [],
     }
   },
@@ -9595,7 +9596,7 @@ var script$9 = {
         this.internalErrors.push('validation.register_valid_date');
       }
       if (!this.internalTimeIsAValidTime && this.internalErrors.indexOf("validation.register_valid_time") === -1){
-        if (!this.undefinedTimeValue) {
+        if (!this.internalUndefinedTime) {
           this.internalErrors.push('validation.register_valid_time');
         }
       }
@@ -9625,7 +9626,7 @@ var script$9 = {
       if((!this.internalDate || this.internalDate === '') && (!this.internalTime || this.internalTime === '')){
         return null
       } else {
-        if (this.undefinedTimeValue) {
+        if (this.internalUndefinedTime) {
           return this.internalDate
         }
         return this.joinedInternalValue
@@ -9634,7 +9635,7 @@ var script$9 = {
     timeDifference(){
       if(!this.customReferenceDate){
         if (this.isAValidDate) {
-          if (this.undefinedTimeValue){
+          if (this.internalUndefinedTime){
             return moment__default["default"](this.internalDate, this.dateFormat).lang('fr').from(moment__default["default"]().startOf('day'))
           } else {
             return moment__default["default"](this.joinedInternalValue, this.joinedFormat).lang('fr').from(moment__default["default"]())
@@ -9643,7 +9644,7 @@ var script$9 = {
         return null
       }
       if (this.isAValidDate){
-        if(this.undefinedTimeValue){
+        if(this.internalUndefinedTime){
           return moment__default["default"](this.internalDate, this.dateFormat).lang('fr').from(moment__default["default"](this.customReferenceDate, this.customReferenceDateFormat))
         } else {
           return moment__default["default"](this.joinedInternalValue, this.joinedFormat).lang('fr').from(moment__default["default"](this.customReferenceDate, this.customReferenceDateFormat))
@@ -9657,7 +9658,7 @@ var script$9 = {
       handler(newValue){
         if(newValue){
           this.internalDate = moment__default["default"](newValue).format(this.dateFormat);
-          this.internalTime = this.undefinedTimeValue ? null : moment__default["default"](newValue).format(this.timeFormat);
+          this.internalTime = this.internalUndefinedTime ? null : moment__default["default"](newValue).format(this.timeFormat);
         } else {
           this.internalDate = null;
           this.internalTime = null;
@@ -9666,7 +9667,17 @@ var script$9 = {
       },
       immediate: true,
       deep:true,
-    }
+    },
+    undefinedTimeValue: {
+      handler(newValue, oldValue){
+        if(newValue !== oldValue){
+          this.internalUndefinedTime = Boolean(newValue);
+        }
+      },
+      immediate: true,
+      deep:true,
+    },
+    
   },
   methods: {
     updateInput() {
