@@ -171,9 +171,9 @@ export default {
       let temp = null
       if (!this.internalTime || this.internalTime === '') {
         temp = this.timeMask.replaceAll('#', '0')
-        this.$emit('update:undefinedTimeValue', Number(true))
+        this.$emit('update:undefinedTimeValue', 1)
       } else {
-        this.$emit('update:undefinedTimeValue', Number(false))
+        this.$emit('update:undefinedTimeValue', 0)
         temp = this.internalTime
       }
       return [this.internalDate, temp].join(' - ')
