@@ -9734,7 +9734,7 @@ function render$9(_ctx, _cache, $props, $setup, $data, $options) {
                 type: "text",
                 name: "card-expiration-date",
                 class: "focus:ring-blue-300 focus:border-blue-300 relative block w-full rounded-none rounded-bl-md rounded-tl-md bg-transparent focus:z-10 sm:text-sm border-gray-300",
-                placeholder: $props.datePlaceholder || _ctx.$t('global.date'),
+                placeholder: $props.datePlaceholder || _ctx.$t('global.date') ,
                 onInput: _cache[1] || (_cache[1] = (...args) => ($options.updateInput && $options.updateInput(...args)))
               }, null, 40 /* PROPS, HYDRATE_EVENTS */, _hoisted_5$1), [
                 [vue.vModelText, $data.internalDate],
