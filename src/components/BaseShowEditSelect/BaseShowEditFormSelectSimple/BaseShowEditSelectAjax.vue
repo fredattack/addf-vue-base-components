@@ -42,7 +42,7 @@
       {{ label }}
     </dt>
     <dd class='mt-1 text-sm text-gray-900'>
-      {{ cDisplayedValueWhenNotEditionMode }}
+       {{ cDisplayedValueWhenNotEditionMode }}
     </dd>
   </div>
 </template>
