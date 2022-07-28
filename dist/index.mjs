@@ -9602,9 +9602,9 @@ var script$9 = {
       let temp = null;
       if (!this.internalTime || this.internalTime === '') {
         temp = this.timeMask.replaceAll('#', '0');
-        this.$emit('update:undefinedTimeValue', true);
+        this.$emit('update:undefinedTimeValue', Number(true));
       } else {
-        this.$emit('update:undefinedTimeValue', false);
+        this.$emit('update:undefinedTimeValue', Number(false));
         temp = this.internalTime;
       }
       return [this.internalDate, temp].join(' - ')
