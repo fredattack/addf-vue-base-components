@@ -1,7 +1,6 @@
 <template>
   <div v-if='editionMode'>
     <div :class="cGroupClass" v-if="defaultAjax">
-      <h1>link boom2</h1>
       <label class="text-sm font-medium text-gray-500 capitalize-first mt-3">
         {{ label }}&nbsp;<span class="text-red-600" v-if="required">*</span>
       </label>
