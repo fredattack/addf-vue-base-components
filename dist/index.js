@@ -10455,7 +10455,7 @@ function render$5(_ctx, _cache, $props, $setup, $data, $options) {
             ])
           ]),
           ($data.internalErrors)
-            ? (vue.openBlock(true), vue.createElementBlock(vue.Fragment, { key: 0 }, vue.renderList($data.internalErrors, (error, index) => {
+            ? (vue.openBlock(true), vue.createElementBlock(vue.Fragment, { key: 0 }, vue.renderList(Object.values($data.internalErrors), (error, index) => {
                 return (vue.openBlock(), vue.createElementBlock("div", {
                   key: index,
                   class: "form-help text-red-600"

@@ -10434,7 +10434,7 @@ function render$5(_ctx, _cache, $props, $setup, $data, $options) {
             ])
           ]),
           ($data.internalErrors)
-            ? (openBlock(true), createElementBlock(Fragment, { key: 0 }, renderList($data.internalErrors, (error, index) => {
+            ? (openBlock(true), createElementBlock(Fragment, { key: 0 }, renderList(Object.values($data.internalErrors), (error, index) => {
                 return (openBlock(), createElementBlock("div", {
                   key: index,
                   class: "form-help text-red-600"
