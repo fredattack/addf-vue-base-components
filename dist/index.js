@@ -10462,7 +10462,20 @@ function render$5(_ctx, _cache, $props, $setup, $data, $options) {
                 return (vue.openBlock(), vue.createElementBlock("div", {
                   key: index,
                   class: "form-help text-red-600"
-                }, vue.toDisplayString(_ctx.$t(error, {attribute: _ctx.$t('attributes.' + _ctx.name)})), 1 /* TEXT */))
+                }, [
+                  (error === 'validation.date')
+                    ? (vue.openBlock(), vue.createElementBlock(vue.Fragment, { key: 0 }, [
+                        vue.createTextVNode(vue.toDisplayString(_ctx.$t(error, {attribute: _ctx.$t('attributes.' + _ctx.name)})), 1 /* TEXT */)
+                      ], 2112 /* STABLE_FRAGMENT, DEV_ROOT_FRAGMENT */))
+                    : vue.createCommentVNode("v-if", true),
+                  (error === 'validation.after')
+                    ? (vue.openBlock(), vue.createElementBlock(vue.Fragment, { key: 1 }, [
+                        vue.createTextVNode(vue.toDisplayString(_ctx.$t(error, {attribute: _ctx.$t('attributes.' + _ctx.name), date: this.internalTimeFrom})), 1 /* TEXT */)
+                      ], 2112 /* STABLE_FRAGMENT, DEV_ROOT_FRAGMENT */))
+                    : (vue.openBlock(), vue.createElementBlock(vue.Fragment, { key: 2 }, [
+                        vue.createTextVNode(vue.toDisplayString(_ctx.$t(error, {attribute: _ctx.$t('attributes.' + _ctx.name)})), 1 /* TEXT */)
+                      ], 2112 /* STABLE_FRAGMENT, DEV_ROOT_FRAGMENT */))
+                ]))
               }), 128 /* KEYED_FRAGMENT */))
             : vue.createCommentVNode("v-if", true)
         ], 64 /* STABLE_FRAGMENT */))

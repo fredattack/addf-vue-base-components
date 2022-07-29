@@ -10441,7 +10441,20 @@ function render$5(_ctx, _cache, $props, $setup, $data, $options) {
                 return (openBlock(), createElementBlock("div", {
                   key: index,
                   class: "form-help text-red-600"
-                }, toDisplayString(_ctx.$t(error, {attribute: _ctx.$t('attributes.' + _ctx.name)})), 1 /* TEXT */))
+                }, [
+                  (error === 'validation.date')
+                    ? (openBlock(), createElementBlock(Fragment, { key: 0 }, [
+                        createTextVNode(toDisplayString(_ctx.$t(error, {attribute: _ctx.$t('attributes.' + _ctx.name)})), 1 /* TEXT */)
+                      ], 2112 /* STABLE_FRAGMENT, DEV_ROOT_FRAGMENT */))
+                    : createCommentVNode("v-if", true),
+                  (error === 'validation.after')
+                    ? (openBlock(), createElementBlock(Fragment, { key: 1 }, [
+                        createTextVNode(toDisplayString(_ctx.$t(error, {attribute: _ctx.$t('attributes.' + _ctx.name), date: this.internalTimeFrom})), 1 /* TEXT */)
+                      ], 2112 /* STABLE_FRAGMENT, DEV_ROOT_FRAGMENT */))
+                    : (openBlock(), createElementBlock(Fragment, { key: 2 }, [
+                        createTextVNode(toDisplayString(_ctx.$t(error, {attribute: _ctx.$t('attributes.' + _ctx.name)})), 1 /* TEXT */)
+                      ], 2112 /* STABLE_FRAGMENT, DEV_ROOT_FRAGMENT */))
+                ]))
               }), 128 /* KEYED_FRAGMENT */))
             : createCommentVNode("v-if", true)
         ], 64 /* STABLE_FRAGMENT */))

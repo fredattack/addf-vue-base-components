@@ -49,7 +49,15 @@
       </div>
       <template v-if="internalErrors">
         <div v-for='(error,index) in displayableErrors' :key="index" class="form-help text-red-600">
-          {{ $t(error, {attribute: $t('attributes.' + name)}) }}
+          <template v-if="error === 'validation.date'">
+            {{ $t(error, {attribute: $t('attributes.' + name)}) }}
+          </template>
+          <template v-if="error === 'validation.after'">
+            {{ $t(error, {attribute: $t('attributes.' + name), date: this.internalTimeFrom}) }}
+          </template>
+          <template v-else>
+            {{ $t(error, {attribute: $t('attributes.' + name)}) }}
+          </template>
         </div>
       </template>
     </template>
