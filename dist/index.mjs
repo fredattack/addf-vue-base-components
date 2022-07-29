@@ -86,7 +86,7 @@ const _hoisted_4$w = {
   class: "border-b-2 dark:border-dark-5 whitespace-nowrap",
   style: {"width":"35%"}
 };
-const _hoisted_5$h = {
+const _hoisted_5$i = {
   class: "border-b-2 dark:border-dark-5 whitespace-nowrap",
   style: {"width":"35%"}
 };
@@ -102,7 +102,7 @@ function render$1y(_ctx, _cache, $props, $setup, $data, $options) {
         createElementVNode("tr", null, [
           createElementVNode("th", _hoisted_3$L, toDisplayString(_ctx.$t('global.value_name')), 1 /* TEXT */),
           createElementVNode("th", _hoisted_4$w, toDisplayString(_ctx.$t('global.old_value')), 1 /* TEXT */),
-          createElementVNode("th", _hoisted_5$h, toDisplayString(_ctx.$t('global.new_value')), 1 /* TEXT */)
+          createElementVNode("th", _hoisted_5$i, toDisplayString(_ctx.$t('global.new_value')), 1 /* TEXT */)
         ])
       ]),
       ($props.model.old)
@@ -293,7 +293,7 @@ const _hoisted_3$K = {
   class: "flex"
 };
 const _hoisted_4$v = { class: "capitalize-first" };
-const _hoisted_5$g = {
+const _hoisted_5$h = {
   key: 0,
   class: "ml-2"
 };
@@ -313,7 +313,7 @@ function render$1v(_ctx, _cache, $props, $setup, $data, $options) {
       : (openBlock(), createElementBlock("div", _hoisted_3$K, [
           createElementVNode("dd", _hoisted_4$v, toDisplayString($props.modelValue === null || $props.modelValue === '' ? '-' : $props.modelValue), 1 /* TEXT */),
           ($props.additionalInformation)
-            ? (openBlock(), createElementBlock("dd", _hoisted_5$g, "(" + toDisplayString($props.additionalInformation) + ")", 1 /* TEXT */))
+            ? (openBlock(), createElementBlock("dd", _hoisted_5$h, "(" + toDisplayString($props.additionalInformation) + ")", 1 /* TEXT */))
             : createCommentVNode("v-if", true)
         ]))
   ]))
@@ -925,7 +925,7 @@ const _hoisted_3$H = {
   class: "text-red-600"
 };
 const _hoisted_4$t = { class: "relative" };
-const _hoisted_5$f = ["name", "type", "min", "max", "value", "id", "placeholder", "disabled", "required"];
+const _hoisted_5$g = ["name", "type", "min", "max", "value", "id", "placeholder", "disabled", "required"];
 
 function render$1p(_ctx, _cache, $props, $setup, $data, $options) {
   const _component_font_awesome_icon = resolveComponent("font-awesome-icon");
@@ -956,7 +956,7 @@ function render$1p(_ctx, _cache, $props, $setup, $data, $options) {
         placeholder: $props.placeholder,
         disabled: $props.disabled,
         required: $props.required
-      }, null, 10 /* CLASS, PROPS */, _hoisted_5$f), [
+      }, null, 10 /* CLASS, PROPS */, _hoisted_5$g), [
         [vModelDynamic, $data.newValue]
       ]),
       ($props.isClickable)
@@ -1005,7 +1005,7 @@ const _hoisted_2$Y = {
 };
 const _hoisted_3$G = { class: "font-medium text-base mr-auto" };
 const _hoisted_4$s = { class: "p-5" };
-const _hoisted_5$e = { class: "flex justify-end mt-5" };
+const _hoisted_5$f = { class: "flex justify-end mt-5" };
 const _hoisted_6$9 = { class: "text-right" };
 
 function render$1o(_ctx, _cache, $props, $setup, $data, $options) {
@@ -1025,7 +1025,7 @@ function render$1o(_ctx, _cache, $props, $setup, $data, $options) {
         renderSlot(_ctx.$slots, "default")
       ]),
       createCommentVNode(" actions "),
-      createElementVNode("footer", _hoisted_5$e, [
+      createElementVNode("footer", _hoisted_5$f, [
         createElementVNode("menu", _hoisted_6$9, [
           renderSlot(_ctx.$slots, "actions")
         ])
@@ -1122,7 +1122,7 @@ const _hoisted_3$F = {
   class: "text-red-600"
 };
 const _hoisted_4$r = { class: "flex flex-col sm:flex-row mt-2" };
-const _hoisted_5$d = ["id", "name", "disabled"];
+const _hoisted_5$e = ["id", "name", "disabled"];
 
 function render$1m(_ctx, _cache, $props, $setup, $data, $options) {
   return (openBlock(), createElementBlock(Fragment, null, [
@@ -1141,7 +1141,7 @@ function render$1m(_ctx, _cache, $props, $setup, $data, $options) {
           name: $props.name,
           disabled: $props.disabled,
           "onUpdate:modelValue": _cache[0] || (_cache[0] = $event => (($data.newValue) = $event))
-        }, null, 8 /* PROPS */, _hoisted_5$d), [
+        }, null, 8 /* PROPS */, _hoisted_5$e), [
           [vModelCheckbox, $data.newValue]
         ])
       ])
@@ -2966,7 +2966,7 @@ const _hoisted_1$S = { class: "mt-3" };
 const _hoisted_2$K = ["for"];
 const _hoisted_3$y = { class: "w-full relative" };
 const _hoisted_4$n = { class: "absolute inset-y-0 left-0 w-22" };
-const _hoisted_5$c = /*#__PURE__*/createElementVNode("label", { class: "sr-only" }, "Country", -1 /* HOISTED */);
+const _hoisted_5$d = /*#__PURE__*/createElementVNode("label", { class: "sr-only" }, "Country", -1 /* HOISTED */);
 const _hoisted_6$8 = ["disabled", "name"];
 const _hoisted_7$8 = {
   disabled: "",
@@ -2987,7 +2987,7 @@ function render$14(_ctx, _cache, $props, $setup, $data, $options) {
     }, toDisplayString($props.label), 9 /* TEXT, PROPS */, _hoisted_2$K),
     createElementVNode("div", _hoisted_3$y, [
       createElementVNode("div", _hoisted_4$n, [
-        _hoisted_5$c,
+        _hoisted_5$d,
         withDirectives(createElementVNode("select", {
           disabled: $options.isDisabled,
           "onUpdate:modelValue": _cache[0] || (_cache[0] = $event => (($data.countryValue) = $event)),
@@ -4209,7 +4209,7 @@ const _hoisted_4$l = {
   key: 0,
   class: "absolute inset-y-0 left-0 w-22"
 };
-const _hoisted_5$b = ["name"];
+const _hoisted_5$c = ["name"];
 const _hoisted_6$7 = { selected: "" };
 const _hoisted_7$7 = ["value"];
 const _hoisted_8$3 = ["name", "id", "placeholder"];
@@ -4242,7 +4242,7 @@ function render$X(_ctx, _cache, $props, $setup, $data, $options) {
                         value: model.id
                       }, toDisplayString(`${model.id}`), 9 /* TEXT, PROPS */, _hoisted_7$7))
                     }), 128 /* KEYED_FRAGMENT */))
-                  ], 40 /* PROPS, HYDRATE_EVENTS */, _hoisted_5$b), [
+                  ], 40 /* PROPS, HYDRATE_EVENTS */, _hoisted_5$c), [
                     [vModelSelect, $data.dCountryValue]
                   ])
                 ]))
@@ -4620,7 +4620,7 @@ const _hoisted_3$s = {
   class: "text-red-600"
 };
 const _hoisted_4$j = { class: "custom__tag" };
-const _hoisted_5$a = ["onClick"];
+const _hoisted_5$b = ["onClick"];
 const _hoisted_6$6 = { key: 1 };
 const _hoisted_7$6 = { class: "text-sm font-medium text-gray-500 capitalize-first pt-1" };
 const _hoisted_8$2 = { class: "mt-1 text-sm text-gray-900" };
@@ -4672,7 +4672,7 @@ function render$U(_ctx, _cache, $props, $setup, $data, $options) {
                     createElementVNode("span", {
                       class: "custom__remove",
                       onClick: $event => (remove(option))
-                    }, "❌", 8 /* PROPS */, _hoisted_5$a)
+                    }, "❌", 8 /* PROPS */, _hoisted_5$b)
                   ])
                 ]),
                 _: 1 /* STABLE */
@@ -5437,7 +5437,7 @@ const _hoisted_2$v = {
 };
 const _hoisted_3$n = { class: "flex flex-col sm:flex-row mt-3" };
 const _hoisted_4$h = ["id", "value"];
-const _hoisted_5$9 = ["for"];
+const _hoisted_5$a = ["for"];
 
 function render$N(_ctx, _cache, $props, $setup, $data, $options) {
   return (openBlock(), createElementBlock(Fragment, null, [
@@ -5463,7 +5463,7 @@ function render$N(_ctx, _cache, $props, $setup, $data, $options) {
             createElementVNode("label", {
               class: "form-check-label capitalize-first",
               for: `${$props.name}-${key}`
-            }, toDisplayString(this.translatable ?   _ctx.$t(`${$props.translationExtention}.${key}`) : val[$props.attributeLabel]), 9 /* TEXT, PROPS */, _hoisted_5$9)
+            }, toDisplayString(this.translatable ?   _ctx.$t(`${$props.translationExtention}.${key}`) : val[$props.attributeLabel]), 9 /* TEXT, PROPS */, _hoisted_5$a)
           ]))
         }), 128 /* KEYED_FRAGMENT */))
       ])
@@ -5658,7 +5658,7 @@ const _hoisted_3$m = {
   class: "text-red-600"
 };
 const _hoisted_4$g = ["id", "name", "value", "disabled"];
-const _hoisted_5$8 = ["id", "value", "disabled", "name"];
+const _hoisted_5$9 = ["id", "value", "disabled", "name"];
 const _hoisted_6$5 = ["for"];
 const _hoisted_7$5 = ["for"];
 
@@ -5703,7 +5703,7 @@ function render$L(_ctx, _cache, $props, $setup, $data, $options) {
                   "onUpdate:modelValue": _cache[1] || (_cache[1] = $event => (($data.valueChecked) = $event)),
                   disabled: $props.disabled,
                   name: $data.temp_name
-                }, null, 8 /* PROPS */, _hoisted_5$8)), [
+                }, null, 8 /* PROPS */, _hoisted_5$9)), [
                   [vModelRadio, $data.valueChecked]
                 ]),
             ($props.isShowingKey === true )
@@ -6729,7 +6729,7 @@ const _hoisted_2$l = {
 };
 const _hoisted_3$f = /*#__PURE__*/createElementVNode("span", { class: "capitalize-first" }, "colonne", -1 /* HOISTED */);
 const _hoisted_4$c = { class: "dropdown-menu" };
-const _hoisted_5$7 = { class: "dropdown-menu__content box p-2" };
+const _hoisted_5$8 = { class: "dropdown-menu__content box p-2" };
 const _hoisted_6$4 = ["onClick"];
 const _hoisted_7$4 = { class: "flex-1 mr-5 whitespace-nowrap capitalize-first" };
 const _hoisted_8$1 = /*#__PURE__*/createElementVNode("div", { class: "flex items-center mt-3 space-x-3 hidden" }, [
@@ -6749,7 +6749,7 @@ function render$z(_ctx, _cache, $props, $setup, $data, $options) {
       createVNode(_component_font_awesome_icon, { icon: ["fal","chevron-down"] })
     ]),
     createElementVNode("div", _hoisted_4$c, [
-      createElementVNode("div", _hoisted_5$7, [
+      createElementVNode("div", _hoisted_5$8, [
         createElementVNode("div", null, [
           (openBlock(true), createElementBlock(Fragment, null, renderList($data.columns.filter( item => item.toggleable ), (column) => {
             return (openBlock(), createElementBlock("a", {
@@ -6858,7 +6858,7 @@ const _hoisted_3$e = {
   class: "flex justify-center"
 };
 const _hoisted_4$b = { class: "flex p-5" };
-const _hoisted_5$6 = { class: "flex-1" };
+const _hoisted_5$7 = { class: "flex-1" };
 
 function render$w(_ctx, _cache, $props, $setup, $data, $options) {
   return (openBlock(), createElementBlock(Fragment, null, [
@@ -6883,7 +6883,7 @@ function render$w(_ctx, _cache, $props, $setup, $data, $options) {
         ]))
       : createCommentVNode("v-if", true),
     createElementVNode("div", _hoisted_4$b, [
-      createElementVNode("div", _hoisted_5$6, [
+      createElementVNode("div", _hoisted_5$7, [
         renderSlot(_ctx.$slots, "body")
       ])
     ])
@@ -6910,7 +6910,7 @@ const _hoisted_1$l = {
 const _hoisted_2$j = /*#__PURE__*/createElementVNode("i", { "data-feather": "hard-drive" }, null, -1 /* HOISTED */);
 const _hoisted_3$d = { class: "ml-4 mr-4" };
 const _hoisted_4$a = { class: "font-medium capitalize-first" };
-const _hoisted_5$5 = { class: "font-medium flex mt-1.5 justify-center" };
+const _hoisted_5$6 = { class: "font-medium flex mt-1.5 justify-center" };
 
 function render$v(_ctx, _cache, $props, $setup, $data, $options) {
   const _component_BaseButton = resolveComponent("BaseButton");
@@ -6919,7 +6919,7 @@ function render$v(_ctx, _cache, $props, $setup, $data, $options) {
     _hoisted_2$j,
     createElementVNode("div", _hoisted_3$d, [
       createElementVNode("div", _hoisted_4$a, toDisplayString($props.text), 1 /* TEXT */),
-      createElementVNode("div", _hoisted_5$5, [
+      createElementVNode("div", _hoisted_5$6, [
         createVNode(_component_BaseButton, {
           id: "undo_btn",
           color: "success",
@@ -9022,7 +9022,7 @@ const _hoisted_2$b = {
 };
 const _hoisted_3$6 = { class: "flex" };
 const _hoisted_4$6 = { class: "" };
-const _hoisted_5$4 = { class: "relative rounded-md shadow-sm" };
+const _hoisted_5$5 = { class: "relative rounded-md shadow-sm" };
 const _hoisted_6$3 = { class: "absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none" };
 const _hoisted_7$3 = { class: "text-gray-500 sm:text-sm capitalize-first" };
 const _hoisted_8 = ["name", "id"];
@@ -9053,7 +9053,7 @@ function render$d(_ctx, _cache, $props, $setup, $data, $options) {
       ? (openBlock(), createElementBlock("div", _hoisted_2$b, [
           createElementVNode("div", _hoisted_3$6, [
             createElementVNode("div", _hoisted_4$6, [
-              createElementVNode("div", _hoisted_5$4, [
+              createElementVNode("div", _hoisted_5$5, [
                 createElementVNode("div", _hoisted_6$3, [
                   createElementVNode("span", _hoisted_7$3, toDisplayString($props.firstLabel), 1 /* TEXT */)
                 ]),
@@ -9257,7 +9257,7 @@ const _hoisted_1$a = { key: 0 };
 const _hoisted_2$9 = { class: "form-check mr-4 sm:mt-0" };
 const _hoisted_3$5 = ["id", "name"];
 const _hoisted_4$5 = /*#__PURE__*/createElementVNode("br", null, null, -1 /* HOISTED */);
-const _hoisted_5$3 = ["for"];
+const _hoisted_5$4 = ["for"];
 const _hoisted_6$2 = /*#__PURE__*/createElementVNode("br", null, null, -1 /* HOISTED */);
 const _hoisted_7$2 = { key: 1 };
 
@@ -9286,7 +9286,7 @@ function render$b(_ctx, _cache, $props, $setup, $data, $options) {
               createElementVNode("label", {
                 class: "form-check-label capitalize-first",
                 for: `${$props.name}_checkbox_input_${$props.identifier}`
-              }, toDisplayString($props.label), 9 /* TEXT, PROPS */, _hoisted_5$3)
+              }, toDisplayString($props.label), 9 /* TEXT, PROPS */, _hoisted_5$4)
             ]),
             ($props.errors)
               ? (openBlock(true), createElementBlock(Fragment, { key: 0 }, renderList($props.errors, (error, index) => {
@@ -9407,7 +9407,7 @@ const _hoisted_1$9 = { class: "mt-5 space-y-3" };
 const _hoisted_2$8 = { class: "flex items-center h-5" };
 const _hoisted_3$4 = ["id", "value"];
 const _hoisted_4$4 = { class: "ml-3 text-sm" };
-const _hoisted_5$2 = ["for", "innerHTML"];
+const _hoisted_5$3 = ["for", "innerHTML"];
 const _hoisted_6$1 = /*#__PURE__*/createElementVNode("br", null, null, -1 /* HOISTED */);
 const _hoisted_7$1 = { class: "cursor-default select-none text-sm text-gray-900" };
 
@@ -9444,7 +9444,7 @@ function render$a(_ctx, _cache, $props, $setup, $data, $options) {
                   for: $props.trackBy ? `${$props.name}_${option[$props.trackBy]}_${index}` : `${$props.name}_${option}`,
                   class: "cursor-pointer",
                   innerHTML: $props.attributeLabel ? option[$props.attributeLabel] : option
-                }, null, 8 /* PROPS */, _hoisted_5$2)
+                }, null, 8 /* PROPS */, _hoisted_5$3)
               ])
             ]))
           }), 128 /* KEYED_FRAGMENT */))
@@ -9684,7 +9684,7 @@ const _hoisted_2$7 = {
 };
 const _hoisted_3$3 = { class: "flex -space-x-px" };
 const _hoisted_4$3 = { class: "w-4/6 flex-1 min-w-0" };
-const _hoisted_5$1 = ["placeholder"];
+const _hoisted_5$2 = ["placeholder"];
 const _hoisted_6 = { class: "min-w-0" };
 const _hoisted_7 = ["placeholder"];
 
@@ -9715,7 +9715,7 @@ function render$9(_ctx, _cache, $props, $setup, $data, $options) {
                 class: "focus:ring-blue-300 focus:border-blue-300 relative block w-full rounded-none rounded-bl-md rounded-tl-md bg-transparent focus:z-10 sm:text-sm border-gray-300",
                 placeholder: $props.datePlaceholder || _ctx.$t('global.date') ,
                 onInput: _cache[1] || (_cache[1] = (...args) => ($options.updateInput && $options.updateInput(...args)))
-              }, null, 40 /* PROPS, HYDRATE_EVENTS */, _hoisted_5$1), [
+              }, null, 40 /* PROPS, HYDRATE_EVENTS */, _hoisted_5$2), [
                 [vModelText, $data.internalDate],
                 [_directive_mask, $props.dateMask]
               ])
@@ -10560,9 +10560,9 @@ var script$4 = {
     },
   },
   methods: {
-    getElement(item) {
+    getElement(payload) {
       if (this.rearrangedOptions ) {
-        return this.rearrangedOptions.find(data => data[this.trackBy] === item)[this.attributeLabel]
+        return this.rearrangedOptions.find(data => data[this.trackBy] === payload)[this.attributeLabel]
       }
       return null
     },
@@ -10587,7 +10587,8 @@ const _hoisted_2$3 = {
   class: "mt-3 flex flex-col"
 };
 const _hoisted_3$2 = { key: 0 };
-const _hoisted_4$2 = /*#__PURE__*/createTextVNode(/*#__PURE__*/toDisplayString('-'));
+const _hoisted_4$2 = { class: "inline-block mr-3" };
+const _hoisted_5$1 = /*#__PURE__*/createTextVNode(/*#__PURE__*/toDisplayString('-'));
 
 function render$4(_ctx, _cache, $props, $setup, $data, $options) {
   const _component_BaseEditLabel = resolveComponent("BaseEditLabel");
@@ -10637,23 +10638,18 @@ function render$4(_ctx, _cache, $props, $setup, $data, $options) {
           label: $props.label,
           required: $props.required
         }, null, 8 /* PROPS */, ["label", "required"]),
-        ($props.modelValue.length >= 1)
+        ($props.modelValue)
           ? (openBlock(), createElementBlock("div", _hoisted_3$2, [
-              (openBlock(true), createElementBlock(Fragment, null, renderList($props.modelValue, (item, index) => {
-                return (openBlock(), createElementBlock("span", {
-                  key: index,
-                  class: "inline-block mr-3"
-                }, [
-                  createVNode(_component_font_awesome_icon, {
-                    icon: ["fal","check-square"],
-                    class: "mr-1 text-blue-900 mt-2"
-                  }),
-                  createTextVNode(" " + toDisplayString($options.getElement(item)), 1 /* TEXT */)
-                ]))
-              }), 128 /* KEYED_FRAGMENT */))
+              createElementVNode("span", _hoisted_4$2, [
+                createVNode(_component_font_awesome_icon, {
+                  icon: ["fal","check-square"],
+                  class: "mr-1 text-blue-900 mt-2"
+                }),
+                createTextVNode(" " + toDisplayString($options.getElement($props.modelValue)), 1 /* TEXT */)
+              ])
             ]))
           : (openBlock(), createElementBlock(Fragment, { key: 1 }, [
-              _hoisted_4$2
+              _hoisted_5$1
             ], 2112 /* STABLE_FRAGMENT, DEV_ROOT_FRAGMENT */))
       ]))
 }

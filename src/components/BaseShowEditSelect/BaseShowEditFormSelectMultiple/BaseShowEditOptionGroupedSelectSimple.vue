@@ -1,4 +1,4 @@
-<template>
+  <template>
   <div v-if='editionMode' class='mt-3'>
     <div>
       <BaseEditLabel :label="label" :required="required"/>
@@ -28,10 +28,10 @@
   </div>
   <div v-else class='mt-3 flex flex-col '>
     <BaseShowLabel :label="label" :required="required"/>
-    <div v-if='modelValue.length >= 1'>
-      <span v-for="(item, index) in modelValue" :key="index" class="inline-block mr-3">
+    <div v-if='modelValue'>
+      <span class="inline-block mr-3">
         <font-awesome-icon :icon='["fal","check-square"]' class='mr-1 text-blue-900 mt-2' />
-        {{ getElement(item) }}
+        {{ getElement(modelValue) }}
       </span>
     </div>
     <template v-else>
@@ -159,9 +159,9 @@ export default {
     },
   },
   methods: {
-    getElement(item) {
+    getElement(payload) {
       if (this.rearrangedOptions ) {
-        return this.rearrangedOptions.find(data => data[this.trackBy] === item)[this.attributeLabel]
+        return this.rearrangedOptions.find(data => data[this.trackBy] === payload)[this.attributeLabel]
       }
       return null
     },
