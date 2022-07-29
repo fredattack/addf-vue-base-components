@@ -48,7 +48,7 @@
         </div >
       </div>
       <template v-if="internalErrors">
-        <div v-for='(error,index) in Object.values(internalErrors)' :key="index" class="form-help text-red-600">
+        <div v-for='(error,index) in displayableErrors' :key="index" class="form-help text-red-600">
           {{ $t(error, {attribute: $t('attributes.' + name)}) }}
         </div>
       </template>
@@ -142,6 +142,9 @@ export default {
     }
   },
   computed: {
+    displayableErrors(){
+      return Object.values(this.internalErrors).flat()
+    },
     cGroupClass() {
       return this.groupClass === '' ? 'mt-3 w-full' : this.groupClass
     },

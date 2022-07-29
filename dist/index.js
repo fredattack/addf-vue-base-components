@@ -10272,6 +10272,9 @@ var script$5 = {
     }
   },
   computed: {
+    displayableErrors(){
+      return Object.values(this.internalErrors).flat()
+    },
     cGroupClass() {
       return this.groupClass === '' ? 'mt-3 w-full' : this.groupClass
     },
@@ -10455,7 +10458,7 @@ function render$5(_ctx, _cache, $props, $setup, $data, $options) {
             ])
           ]),
           ($data.internalErrors)
-            ? (vue.openBlock(true), vue.createElementBlock(vue.Fragment, { key: 0 }, vue.renderList(Object.values($data.internalErrors), (error, index) => {
+            ? (vue.openBlock(true), vue.createElementBlock(vue.Fragment, { key: 0 }, vue.renderList($options.displayableErrors, (error, index) => {
                 return (vue.openBlock(), vue.createElementBlock("div", {
                   key: index,
                   class: "form-help text-red-600"
