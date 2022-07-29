@@ -10185,6 +10185,11 @@ var script$5 = {
       required: false,
       default: null
     },
+    timeToName: {
+      type: String,
+      required: false,
+      default: 'date_to'
+    },
     dateFormat: {
       type: String,
       required: false,
@@ -10253,7 +10258,10 @@ var script$5 = {
       return this.inputClass === '' ? 'form-control' : this.inputClass
     },
     displayedValueWhenNotInEditionMode(){
-      return `${this.internalDate}: ${this.internalTimeFrom} - ${this.internalTimeTo}`
+      if (this.modelValue){
+        return `${this.internalDate ?  this.internalDate + ':' : ''} ${this.internalTimeFrom || ''} ${this.internalTimeTo ? '- ' + this.internalTimeTo : ''}`
+      }
+      return null
     },
     internalDateIsAValidDate(){
       return moment(this.internalDate, this.dateFormat).format(this.dateFormat) === this.internalDate
@@ -10300,7 +10308,6 @@ var script$5 = {
       }else {
         tempDate = this.internalDate;
       }
-      
       return [tempDate, tempTime].join(' - ')
     },
   },
@@ -10326,7 +10333,7 @@ var script$5 = {
     },
     errors:{
       handler(newValue) {
-        this.internalErrors =  _.pick(newValue,[`${this.name}_country`,`${this.name}_field`]);
+        this.internalErrors =  _.pick(newValue,[this.name, this.timeToName]);
       },
       deep: true,
       immediate: true,
