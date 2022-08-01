@@ -139,6 +139,10 @@ export default {
       required: false,
       default: ''
     },
+    name: {
+      type: String,
+      required: true,
+    }
   },
   emits: ['update:modelValue', 'update:timeToValue', 'change'],
   data() {

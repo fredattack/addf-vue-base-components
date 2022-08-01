@@ -10240,6 +10240,10 @@ var script$5 = {
       required: false,
       default: ''
     },
+    name: {
+      type: String,
+      required: true,
+    }
   },
   emits: ['update:modelValue', 'update:timeToValue', 'change'],
   data() {
@@ -10444,15 +10448,15 @@ function render$5(_ctx, _cache, $props, $setup, $data, $options) {
                 }, [
                   (error === 'validation.date')
                     ? (openBlock(), createElementBlock(Fragment, { key: 0 }, [
-                        createTextVNode(toDisplayString(_ctx.$t(error, {attribute: _ctx.$t('attributes.' + _ctx.name)})), 1 /* TEXT */)
+                        createTextVNode(toDisplayString(_ctx.$t(error, {attribute: _ctx.$t('attributes.' + $props.name)})), 1 /* TEXT */)
                       ], 2112 /* STABLE_FRAGMENT, DEV_ROOT_FRAGMENT */))
                     : createCommentVNode("v-if", true),
                   (error === 'validation.after')
                     ? (openBlock(), createElementBlock(Fragment, { key: 1 }, [
-                        createTextVNode(toDisplayString(_ctx.$t(error, {attribute: _ctx.$t('attributes.' + _ctx.name), date: this.internalTimeFrom})), 1 /* TEXT */)
+                        createTextVNode(toDisplayString(_ctx.$t(error, {attribute: _ctx.$t('attributes.' + $props.name), date: this.internalTimeFrom})), 1 /* TEXT */)
                       ], 2112 /* STABLE_FRAGMENT, DEV_ROOT_FRAGMENT */))
                     : (openBlock(), createElementBlock(Fragment, { key: 2 }, [
-                        createTextVNode(toDisplayString(_ctx.$t(error, {attribute: _ctx.$t('attributes.' + _ctx.name)})), 1 /* TEXT */)
+                        createTextVNode(toDisplayString(_ctx.$t(error, {attribute: _ctx.$t('attributes.' + $props.name)})), 1 /* TEXT */)
                       ], 2112 /* STABLE_FRAGMENT, DEV_ROOT_FRAGMENT */))
                 ]))
               }), 128 /* KEYED_FRAGMENT */))
