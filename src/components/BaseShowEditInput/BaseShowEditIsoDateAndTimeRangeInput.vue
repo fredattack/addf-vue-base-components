@@ -53,7 +53,7 @@
             {{ $t(error, {attribute: $t('attributes.' + name)}) }}
           </template>
           <template v-if="error === 'validation.after'">
-            {{ $t(error, {attribute: $t('attributes.' + name), date: this.internalTimeFrom}) }}
+            {{ $t(error, {attribute: $t('attributes.time_to'), date: this.internalTimeFrom}) }}
           </template>
           <template v-else>
             {{ $t(error, {attribute: $t('attributes.' + name)}) }}

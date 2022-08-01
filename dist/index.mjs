@@ -10453,7 +10453,7 @@ function render$5(_ctx, _cache, $props, $setup, $data, $options) {
                     : createCommentVNode("v-if", true),
                   (error === 'validation.after')
                     ? (openBlock(), createElementBlock(Fragment, { key: 1 }, [
-                        createTextVNode(toDisplayString(_ctx.$t(error, {attribute: _ctx.$t('attributes.' + $props.name), date: this.internalTimeFrom})), 1 /* TEXT */)
+                        createTextVNode(toDisplayString(_ctx.$t(error, {attribute: _ctx.$t('attributes.time_to'), date: this.internalTimeFrom})), 1 /* TEXT */)
                       ], 2112 /* STABLE_FRAGMENT, DEV_ROOT_FRAGMENT */))
                     : (openBlock(), createElementBlock(Fragment, { key: 2 }, [
                         createTextVNode(toDisplayString(_ctx.$t(error, {attribute: _ctx.$t('attributes.' + $props.name)})), 1 /* TEXT */)

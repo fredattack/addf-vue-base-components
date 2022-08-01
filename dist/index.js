@@ -10474,7 +10474,7 @@ function render$5(_ctx, _cache, $props, $setup, $data, $options) {
                     : vue.createCommentVNode("v-if", true),
                   (error === 'validation.after')
                     ? (vue.openBlock(), vue.createElementBlock(vue.Fragment, { key: 1 }, [
-                        vue.createTextVNode(vue.toDisplayString(_ctx.$t(error, {attribute: _ctx.$t('attributes.' + $props.name), date: this.internalTimeFrom})), 1 /* TEXT */)
+                        vue.createTextVNode(vue.toDisplayString(_ctx.$t(error, {attribute: _ctx.$t('attributes.time_to'), date: this.internalTimeFrom})), 1 /* TEXT */)
                       ], 2112 /* STABLE_FRAGMENT, DEV_ROOT_FRAGMENT */))
                     : (vue.openBlock(), vue.createElementBlock(vue.Fragment, { key: 2 }, [
                         vue.createTextVNode(vue.toDisplayString(_ctx.$t(error, {attribute: _ctx.$t('attributes.' + $props.name)})), 1 /* TEXT */)
