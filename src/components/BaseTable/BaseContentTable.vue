@@ -180,8 +180,8 @@ export default {
             fa = a[this.sortColumn] ? a[this.sortColumn]['sort_value'] : ( this.sortDirection === 'up' ? '9999999999999999' : ( this.sortDirection === 'down' ? '00000000000000000' : '' ) )
             fb = b[this.sortColumn] ? b[this.sortColumn]['sort_value'] : ( this.sortDirection === 'up' ? '9999999999999999' : ( this.sortDirection === 'down' ? '00000000000000000' : '' ) )
           } else {
-            fa = a[this.sortColumn].toLowerCase()
-            fb = b[this.sortColumn].toLowerCase()
+            fa = a[this.sortColumn]?.toLowerCase()
+            fb = b[this.sortColumn]?.toLowerCase()
           }
           if (fa < fb) {
             return this.sortDirection ==='up' ? -1 : 1

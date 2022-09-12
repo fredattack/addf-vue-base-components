@@ -102,7 +102,11 @@ export default {
   },
   computed:{
     cDisplayedValueWhenNotEditionMode(){
-      return this.defaultValue[this.attributeLabel] ? this.defaultValue[this.attributeLabel] : '-'
+      if (this.defaultValue) {
+        return this.defaultValue[this.attributeLabel]
+      } else {
+        return '-'
+      }
     },
     cGroupClass(){
       return this.groupClass === '' ? 'mt-3' : this.groupClass
