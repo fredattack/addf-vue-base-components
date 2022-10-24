@@ -4,19 +4,15 @@
     ref="pond"
     instantUpload="false"
     :server="server"
-    label-idle="Glissez ici vos fichiers ou <span class='filepond--label-action'>cliquez ici</span> pour selectionnez sur votre ordinateur"
-    allow-multiple="true"
     accepted-file-types="
     image/jpeg, image/png,image/gif,
-    file-image, file-word,text/csv,application/vnd.ms-excel,application/pdf,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet,
-    file-excel,application/vnd.ms-powerpoint,
-    application/vnd.openxmlformats-officedocument.presentationml.presentation,
-    file-powerpoint,file-alt
-     'application/doc',
-     'application/docx',
-        'application/txt',
-        'application/odf',
-"
+    application/pdf,
+    application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document,
+    text/csv,application/vnd.ms-excel,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet,
+    application/vnd.ms-powerpoint,
+    application/vnd.openxmlformats-officedocument.presentationml.presentation"
+    label-idle="Glissez ici vos fichiers ou <span class='filepond--label-action'>cliquez ici</span> pour selectionnez sur votre ordinateur"
+    allow-multiple="true"
     @addfile="handleAddFile"
     @processfiles="afterSubmit()"
     :files="myFiles"
