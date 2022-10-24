@@ -13,6 +13,7 @@
     application/vnd.openxmlformats-officedocument.presentationml.presentation,
     file-powerpoint,file-alt
      'application/doc',
+     'application/docx',
         'application/txt',
         'application/odf',
 "
