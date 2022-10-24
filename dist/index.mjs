@@ -8225,7 +8225,7 @@ function render$h(_ctx, _cache, $props, $setup, $data, $options) {
       server: $options.server,
       "label-idle": "Glissez ici vos fichiers ou <span class='filepond--label-action'>cliquez ici</span> pour selectionnez sur votre ordinateur",
       "allow-multiple": "true",
-      "accepted-file-types": "image/jpeg, image/png,application/pdf",
+      "accepted-file-types": "image/jpeg, image/png,image/gif, file-image, file-word,text/csv,application/vnd.ms-excel,application/pdf,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet,file-excel,application/vnd.ms-powerpoint,application/vnd.openxmlformats-officedocument.presentationml.presentation,file-powerpoint,file-alt",
       onAddfile: $options.handleAddFile,
       onProcessfiles: _cache[0] || (_cache[0] = $event => ($options.afterSubmit())),
       files: _ctx.myFiles
