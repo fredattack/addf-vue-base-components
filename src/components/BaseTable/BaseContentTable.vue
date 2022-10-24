@@ -173,7 +173,7 @@ export default {
         });
       }
 
-      if( this.sortDirection && this.sortColumn ){
+     /* if( this.sortDirection && this.sortColumn ){
         copyModelList = copyModelList.sort((a,b) => {
           let fa, fb
           if( this.sortType && this.sortType === 'date' ){
@@ -191,7 +191,7 @@ export default {
           }
           return 0
         })
-      }
+      }*/
       return copyModelList;
     },
 
