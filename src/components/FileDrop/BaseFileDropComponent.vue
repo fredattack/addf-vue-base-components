@@ -7,7 +7,7 @@
     label-idle="Glissez ici vos fichiers ou <span class='filepond--label-action'>cliquez ici</span> pour selectionnez sur votre ordinateur"
     allow-multiple="true"
     accepted-file-types="
-    image/jpeg, image/png,image/gif, '.docx',
+    image/jpeg, image/png,image/gif,
     file-image, file-word,text/csv,application/vnd.ms-excel,application/pdf,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet,
     file-excel,application/vnd.ms-powerpoint,
     application/vnd.openxmlformats-officedocument.presentationml.presentation,
