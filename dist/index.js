@@ -8553,15 +8553,15 @@ var script$f = {
         });
       }
 
-      if( this.sortDirection && this.sortColumn ){
+     /* if( this.sortDirection && this.sortColumn ){
         copyModelList = copyModelList.sort((a,b) => {
-          let fa, fb;
+          let fa, fb
           if( this.sortType && this.sortType === 'date' ){
-            fa = a[this.sortColumn] ? a[this.sortColumn]['sort_value'] : ( this.sortDirection === 'up' ? '9999999999999999' : ( this.sortDirection === 'down' ? '00000000000000000' : '' ) );
-            fb = b[this.sortColumn] ? b[this.sortColumn]['sort_value'] : ( this.sortDirection === 'up' ? '9999999999999999' : ( this.sortDirection === 'down' ? '00000000000000000' : '' ) );
+            fa = a[this.sortColumn] ? a[this.sortColumn]['sort_value'] : ( this.sortDirection === 'up' ? '9999999999999999' : ( this.sortDirection === 'down' ? '00000000000000000' : '' ) )
+            fb = b[this.sortColumn] ? b[this.sortColumn]['sort_value'] : ( this.sortDirection === 'up' ? '9999999999999999' : ( this.sortDirection === 'down' ? '00000000000000000' : '' ) )
           } else {
-            fa = a[this.sortColumn]?.toLowerCase();
-            fb = b[this.sortColumn]?.toLowerCase();
+            fa = a[this.sortColumn]?.toLowerCase()
+            fb = b[this.sortColumn]?.toLowerCase()
           }
           if (fa < fb) {
             return this.sortDirection ==='up' ? -1 : 1
@@ -8570,8 +8570,8 @@ var script$f = {
             return this.sortDirection ==='up' ? 1 : -1
           }
           return 0
-        });
-      }
+        })
+      }*/
       return copyModelList;
     },
 
