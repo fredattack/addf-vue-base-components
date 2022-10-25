@@ -6497,8 +6497,9 @@ var script$B = {
   },
   methods: {
     updateInput(event) {
+      console.log('addf package', event.target.value === true);
       this.$emit("update:modelValue", event.target.value === 'true');
-      this.$emit('change', event.target.value);
+      this.$emit('change', event.target.value === true);
     }
   }
 };
